@@ -302,20 +302,17 @@ export function DrVladHome({ locale }: { locale: Locale }) {
       <footer className="bg-background py-9">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 px-5 md:flex-row lg:px-8">
             <div className="flex items-center gap-3"><img src={logoAsset.url} alt="" className="size-12 rounded-full"/><div><p className="font-display text-xl">Dr. Vlad Tettegah</p><p className="text-xs text-muted-foreground">{c.footer.role}</p></div></div>
-           <div className="md:text-right">
-             <div className="flex items-center gap-3 md:justify-end">
-               <a href={`mailto:${contactEmail}`} className="text-sm text-gold hover:text-foreground">{contactEmail}</a>
-               <div className="flex items-center gap-1.5">
-                 {socialLinks.map((social) => (
-                   <a key={social.type} href={social.url} target="_blank" rel="noreferrer" aria-label={social.label}
-                      className="flex size-9 items-center justify-center rounded-full border border-border/60 text-muted-foreground transition-colors hover:border-gold/50 hover:text-gold">
-                     <SocialIcon type={social.type} className="size-4" />
-                   </a>
-                 ))}
-               </div>
-             </div>
-             <p className="mt-2 text-xs text-muted-foreground">{c.footer.disclaimer}</p>
-           </div>
+            <div className="md:text-right">
+              <div className="flex items-center gap-1.5 md:justify-end">
+                {socialLinks.map((social) => (
+                  <a key={social.type} href={social.url} target="_blank" rel="noreferrer" aria-label={social.label}
+                     className="flex size-9 items-center justify-center rounded-full border border-border/60 text-muted-foreground transition-colors hover:border-gold/50 hover:text-gold">
+                    <SocialIcon type={social.type} className="size-4" />
+                  </a>
+                ))}
+              </div>
+              <p className="mt-2 text-xs text-muted-foreground">{c.footer.disclaimer}</p>
+            </div>
         </div>
       </footer>
     </div>

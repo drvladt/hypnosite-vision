@@ -48,7 +48,7 @@ export const contactEmail = "dr.vladt375@gmail.com";
 export const socialLinks = [
   { type: "whatsapp", url: "https://wa.me/qr/UB2Q7VHXS4TOE1", label: "WhatsApp" },
   { type: "telegram", url: "https://t.me/Dr_vladt49", label: "Telegram" },
-  { type: "instagram", url: "https://www.instagram.com/dr_vladt?stkn=YWF2ZDk0cjEwMjYx", label: "Instagram" },
+  { type: "instagram", url: "https://www.instagram.com/dr_vladt", label: "Instagram" },
   { type: "tiktok", url: "https://tiktok.com/@dr_vladt", label: "TikTok" },
 ] as const;
 
