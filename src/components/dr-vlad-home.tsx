@@ -247,8 +247,12 @@ export function DrVladHome({ locale }: { locale: Locale }) {
             <div><p className="eyebrow">{c.faq.eyebrow}</p><h2 className="section-title mt-4">{c.faq.title}</h2></div>
             <div>{c.faq.items.map(([question, answer]) => (
               <details key={question} className="group border-t border-border py-6 last:border-b">
-                <summary className="flex cursor-pointer list-none items-start justify-between gap-5 font-display text-xl marker:content-none"><span>{question}</span><ChevronDown className="mt-1 size-5 shrink-0 text-gold transition-transform duration-200 group-open:rotate-180" /></summary>
-                <p className="max-w-3xl pt-5 leading-7 text-foreground/70">{answer}</p>
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-5 font-display text-xl marker:content-none"><span>{question}</span><ChevronDown className="mt-1 size-5 shrink-0 text-gold transition-transform duration-300 ease-out group-open:rotate-180" /></summary>
+                <div className="grid grid-rows-[0fr] opacity-0 transition-[grid-template-rows,opacity] duration-300 ease-out group-open:grid-rows-[1fr] group-open:opacity-100">
+                  <div className="overflow-hidden">
+                    <p className="max-w-3xl pt-5 leading-7 text-foreground/70">{answer}</p>
+                  </div>
+                </div>
               </details>
             ))}</div>
           </div>
