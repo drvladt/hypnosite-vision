@@ -1,5 +1,25 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowLeft, ArrowRight, Brain, CalendarDays, ChevronDown, Earth, HeartPulse, Menu, MessageCircle, Play, Stethoscope, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, Brain, CalendarDays, ChevronDown, HeartPulse, Menu, MessageCircle, Play, Stethoscope, X } from "lucide-react";
+
+// Custom realistic globe icon for "Международная практика"
+function GlobeRealistic({ className, strokeWidth = 1.5 }: { className?: string; strokeWidth?: number }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+      <circle cx="12" cy="12" r="9.25" fill="currentColor" fillOpacity="0.12" stroke="currentColor" strokeWidth={strokeWidth} />
+      {/* latitude lines */}
+      <ellipse cx="12" cy="12" rx="9.25" ry="3.4" stroke="currentColor" strokeWidth={strokeWidth * 0.8} />
+      <line x1="2.95" y1="12" x2="21.05" y2="12" stroke="currentColor" strokeWidth={strokeWidth * 0.8} />
+      <ellipse cx="12" cy="12" rx="9.25" ry="7.2" stroke="currentColor" strokeWidth={strokeWidth * 0.6} opacity="0.55" />
+      {/* meridians */}
+      <ellipse cx="12" cy="12" rx="3.4" ry="9.25" stroke="currentColor" strokeWidth={strokeWidth * 0.8} />
+      <line x1="12" y1="2.75" x2="12" y2="21.25" stroke="currentColor" strokeWidth={strokeWidth * 0.8} />
+      {/* simplified continents */}
+      <path d="M6.6 8.4c1.1-.7 2.3-.5 3 .2.6.6.5 1.5-.1 2.1-.8.7-2 .6-2.9.2-.9-.4-1-1.7 0-2.5z" fill="currentColor" fillOpacity="0.85" />
+      <path d="M11.2 13.1c1.4-.4 3 .2 3.6 1.4.5 1-.1 2.1-1.1 2.4-1.2.4-2.7-.2-3.2-1.3-.4-.9.1-2.1.7-2.5z" fill="currentColor" fillOpacity="0.85" />
+      <path d="M14.9 7.2c1-.5 2.2-.1 2.6.9.3.8-.2 1.6-1 1.8-.9.2-1.8-.3-2-1.1-.2-.7.1-1.4.4-1.6z" fill="currentColor" fillOpacity="0.85" />
+    </svg>
+  );
+}
 
 import portraitAsset from "@/assets/fotoMe.png.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
