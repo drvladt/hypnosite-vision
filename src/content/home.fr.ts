@@ -146,9 +146,8 @@ export const homeFr: HomeContent = {
         "La consultation a lieu en ligne et dure jusqu'à 60 minutes. La rencontre est entièrement consacrée à l'analyse détaillée de votre situation, à l'identification des liens possibles entre manifestations corporelles, facteurs psychologiques et schémas de comportement habituels, puis à la définition de la stratégie à suivre.",
       ],
     ],
-    noHypnosisNote: "Aucune séance d'hypnothérapie n'est réalisée lors de la première consultation.",
     closing:
-      "Même si l'hypnothérapie n'est pas indiquée pour vous, ou si un travail avec moi ne correspond pas à votre situation, vous repartirez avec une vision plus claire des démarches possibles et du spécialiste à consulter.",
+      "Aucune séance d'hypnothérapie n'est réalisée lors de la première consultation. Même si l'hypnothérapie n'est pas indiquée pour vous, ou si un travail avec moi ne correspond pas à votre situation, vous repartirez avec une vision plus claire des démarches possibles et du spécialiste à consulter.",
   },
   faq: {
     eyebrow: "Réponses",

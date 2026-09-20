@@ -234,7 +234,6 @@ export function DrVladHome({ locale }: { locale: Locale }) {
                     <h3 className="font-display text-lg leading-snug">{title}</h3>
                   </div>
                   <p className="mt-3 text-sm leading-6 text-foreground/70">{text}</p>
-                  {index === c.steps.items.length - 1 && <p className="mt-3 text-sm font-semibold">{c.steps.noHypnosisNote}</p>}
                 </article>
               ))}
             </div>
