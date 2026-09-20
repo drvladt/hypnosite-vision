@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowLeft, ArrowRight, BrainCircuit, ChevronDown, Globe2, HeartPulse, Menu, MessageCircle, Play, Stethoscope, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, Brain, CalendarDays, ChevronDown, Globe2, HeartPulse, Menu, MessageCircle, Play, Stethoscope, X } from "lucide-react";
 
 import portraitAsset from "@/assets/fotoMe.png.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
