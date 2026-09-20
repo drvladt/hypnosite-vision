@@ -67,7 +67,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
     reviewsRef.current?.scrollBy({ left: direction * 360, behavior: "smooth" });
   };
 
-  const badgeIcons = [Stethoscope, CalendarDays, Earth, Brain];
+  const badgeIcons = [Stethoscope, CalendarDays, GlobeRealistic, Brain];
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
