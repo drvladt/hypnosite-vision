@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowLeft, ArrowRight, Brain, CalendarDays, ChevronDown, Globe2, HeartPulse, Menu, MessageCircle, Play, Stethoscope, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, Brain, CalendarDays, ChevronDown, Earth, HeartPulse, Menu, MessageCircle, Play, Stethoscope, X } from "lucide-react";
 
 import portraitAsset from "@/assets/fotoMe.png.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
@@ -47,7 +47,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
     reviewsRef.current?.scrollBy({ left: direction * 360, behavior: "smooth" });
   };
 
-  const badgeIcons = [Stethoscope, CalendarDays, Globe2, Brain];
+  const badgeIcons = [Stethoscope, CalendarDays, Earth, Brain];
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
