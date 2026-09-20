@@ -228,7 +228,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
             <h2 className="section-title mt-4 max-w-4xl">{c.steps.title}</h2>
             <div className="mt-10 grid gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
               {c.steps.items.map(([title, text], index) => (
-                <article key={title} className="bg-background p-5 lg:p-6">
+                <article key={title} className="bg-background p-5 lg:p-6" data-reveal style={{ "--reveal-delay": `${index * 120}ms` } as React.CSSProperties}>
                   <div className="flex items-baseline gap-3">
                     <span className="font-display text-2xl text-gold">0{index + 1}</span>
                     <h3 className="font-display text-lg leading-snug">{title}</h3>
