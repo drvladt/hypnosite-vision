@@ -238,8 +238,8 @@ export function DrVladHome({ locale }: { locale: Locale }) {
                 </article>
               ))}
             </div>
-            <p className="mt-6 max-w-3xl leading-7 text-foreground/75">{c.steps.closing}</p>
-            <div className="mt-6"><ConsultationButton label={c.cta.primary} /></div>
+            <p className="mt-6 max-w-3xl leading-7 text-foreground/75" data-reveal style={{ "--reveal-delay": `${c.steps.items.length * 120}ms` } as React.CSSProperties}>{c.steps.closing}</p>
+            <div className="mt-6" data-reveal style={{ "--reveal-delay": `${(c.steps.items.length + 1) * 120}ms` } as React.CSSProperties}><ConsultationButton label={c.cta.primary} /></div>
           </div>
         </section>
 
