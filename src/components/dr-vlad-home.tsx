@@ -131,19 +131,25 @@ export function DrVladHome({ locale }: { locale: Locale }) {
           </div>
         </section>
 
-        <section id="concerns" className="section-space scroll-mt-24 bg-primary text-primary-foreground">
+        <section id="concerns" className="section-space scroll-mt-24 bg-secondary/40">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <div className="grid gap-10 lg:grid-cols-[.55fr_1.45fr] lg:gap-20">
               <div><p className="eyebrow">{c.concerns.eyebrow}</p><h2 className="section-title mt-4">{c.concerns.title}</h2></div>
-               <div className="grid gap-3 md:grid-cols-2">
+              <div className="grid gap-4 md:grid-cols-2">
                 {c.concerns.items.map((text, index) => (
-                   <article key={text} className="group relative min-h-56 overflow-hidden rounded-md border border-primary-foreground/12 bg-primary-foreground/[0.035] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-gold/55 hover:bg-primary-foreground/[0.065] md:p-8" data-reveal style={{ "--reveal-delay": `${index * 75}ms` } as React.CSSProperties}><span className="font-display text-4xl text-gold/70">0{index + 1}</span><div className="mt-7 h-px w-10 bg-gold/45 transition-all duration-300 group-hover:w-16"/><p className="mt-6 leading-7 text-primary-foreground/78">{text}</p></article>
+                  <article key={text} className="group relative overflow-hidden rounded-2xl border border-border/60 bg-card p-6 shadow-[0_10px_30px_-18px_color-mix(in_oklab,var(--primary)_25%,transparent)] transition-all duration-300 hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_18px_40px_-20px_color-mix(in_oklab,var(--primary)_32%,transparent)] md:p-7" data-reveal style={{ "--reveal-delay": `${index * 75}ms` } as React.CSSProperties}>
+                    <div className="flex items-center gap-3">
+                      <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/[0.08] font-display text-sm font-semibold text-primary ring-1 ring-inset ring-primary/15">0{index + 1}</span>
+                      <span className="h-px flex-1 bg-gradient-to-r from-gold/45 via-gold/20 to-transparent" />
+                    </div>
+                    <p className="mt-5 leading-7 text-foreground/78">{text}</p>
+                  </article>
                 ))}
               </div>
             </div>
-            <div className="mt-12 border-t border-primary-foreground/15 pt-10 lg:ml-[calc(27.5%+2.5rem)]">
-              <p className="max-w-4xl text-lg leading-8 text-primary-foreground/82">{c.concerns.summary}</p>
-              <div className="mt-7 flex flex-col items-start gap-4 sm:flex-row sm:items-center"><Button asChild size="lg" className="h-12 rounded-full bg-gold px-6 text-primary shadow-none hover:bg-gold-light sm:px-8"><a href="#consultation">{c.cta.primary}<MessageCircle aria-hidden="true" /></a></Button><span className="text-sm text-primary-foreground/55">{c.cta.note}</span></div>
+            <div className="mt-12 border-t border-border pt-10 lg:ml-[calc(27.5%+2.5rem)]">
+              <p className="max-w-4xl text-lg leading-8 text-foreground/80">{c.concerns.summary}</p>
+              <div className="mt-7 flex flex-col items-start gap-4 sm:flex-row sm:items-center"><Button asChild size="lg" className="h-12 rounded-full bg-primary px-6 text-primary-foreground shadow-none hover:bg-primary/90 sm:px-8"><a href="#consultation">{c.cta.primary}<MessageCircle aria-hidden="true" /></a></Button><span className="text-sm text-muted-foreground">{c.cta.note}</span></div>
             </div>
           </div>
         </section>
