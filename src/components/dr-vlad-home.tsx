@@ -228,7 +228,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
             <h2 className="section-title mt-4 max-w-4xl">{c.steps.title}</h2>
             <div className="mt-10 grid gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
               {c.steps.items.map(([title, text], index) => (
-                <article key={title} className="bg-background p-5 lg:p-6">
+                <article key={title} className="bg-background p-5 lg:p-6" data-reveal style={{ "--reveal-delay": `${index * 120}ms` } as React.CSSProperties}>
                   <div className="flex items-baseline gap-3">
                     <span className="font-display text-2xl text-gold">0{index + 1}</span>
                     <h3 className="font-display text-lg leading-snug">{title}</h3>
@@ -238,8 +238,8 @@ export function DrVladHome({ locale }: { locale: Locale }) {
                 </article>
               ))}
             </div>
-            <p className="mt-6 max-w-3xl leading-7 text-foreground/75">{c.steps.closing}</p>
-            <div className="mt-6"><ConsultationButton label={c.cta.primary} /></div>
+            <p className="mt-6 max-w-3xl leading-7 text-foreground/75" data-reveal style={{ "--reveal-delay": `${c.steps.items.length * 120}ms` } as React.CSSProperties}>{c.steps.closing}</p>
+            <div className="mt-6" data-reveal style={{ "--reveal-delay": `${(c.steps.items.length + 1) * 120}ms` } as React.CSSProperties}><ConsultationButton label={c.cta.primary} /></div>
           </div>
         </section>
 
