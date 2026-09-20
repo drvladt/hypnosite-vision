@@ -61,12 +61,17 @@ export type HomeContent = {
     paragraphs: string[];
     logoAlt: string;
     bannerAlt: string;
-    research: { eyebrow: string; text: string };
+    research: { eyebrow: string; text: string; linkLabel: string };
   };
   reviews: {
     eyebrow: string;
     title: string;
     emptyLabel: string;
+    previousLabel: string;
+    nextLabel: string;
+    playLabel: string;
+    concernLabel: string;
+    items: { name: string; concern: string; videoUrl: string; posterUrl?: string }[];
   };
   steps: {
     eyebrow: string;

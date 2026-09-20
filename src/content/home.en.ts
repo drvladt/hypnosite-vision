@@ -2,17 +2,17 @@ import type { HomeContent } from "./home-types";
 
 export const homeEn: HomeContent = {
   meta: {
-    title: "Dr Vlad — cardiologist and hypnotherapist · integrative consultation",
+    title: "Dr. Vlad — cardiologist and hypnotherapist · integrative consultation",
     description:
-      "An integrative review of cardiac symptoms, anxiety and psychosomatic complaints with Dr Vlad, cardiologist and hypnotherapist. Initial online consultation, up to 60 minutes.",
-    ogTitle: "Dr Vlad — integrative consultation online",
+      "An integrative review of cardiac symptoms, anxiety and psychosomatic complaints with Dr. Vlad, cardiologist and hypnotherapist. Initial online consultation, up to 60 minutes.",
+    ogTitle: "Dr. Vlad — integrative consultation online",
     ogDescription:
       "Chest discomfort, palpitations or blood-pressure swings continuing despite normal test results? An individual integrative review of your situation.",
   },
   nav: {
     label: "Main navigation",
     mobileLabel: "Mobile navigation",
-    toTop: "Dr Vlad — back to top",
+    toTop: "Dr. Vlad — back to top",
     openMenu: "Open menu",
     closeMenu: "Close menu",
     languageLabel: "Site language",
@@ -28,17 +28,17 @@ export const homeEn: HomeContent = {
   cta: {
     primary: "Review my case",
     note: "Free consultation · Online · Up to 60 minutes · Confidential",
-    write: "Write to Dr Vlad",
+    write: "Write to Dr. Vlad",
   },
   hero: {
     eyebrow: "Integrative medicine · Hypnotherapy",
     title:
       "Chest pain, palpitations, skipped beats or blood-pressure swings still bothering you — even though you have completed your tests and follow your doctors' advice?",
-    lead: "Dr Vlad works according to the principles of integrative medicine. The goal is not to silence a single symptom, but to understand which medical, emotional and behavioural factors may have created the problem or keep it going.",
-    portraitAlt: "Dr Vlad — cardiologist and hypnotherapist",
+    lead: "Dr. Vlad works according to the principles of integrative medicine. The goal is not to silence a single symptom, but to understand which medical, emotional and behavioural factors may have created the problem or keep it going.",
+    portraitAlt: "Dr. Vlad — cardiologist and hypnotherapist",
     portraitCaption:
       "Work with health anxiety, intrusive thoughts, fears and bodily reactions — combining a physician's perspective with non-directive hypnotherapy where it is genuinely indicated.",
-    badges: ["Cardiologist", "In medicine since 2019", "International practice", "Trained in clinical hypnosis"],
+    badges: ["Cardiologist", "In medicine since 2019", "International practice", "Specialised in hypnotherapy"],
   },
   concerns: {
     eyebrow: "Why people come",
@@ -55,7 +55,7 @@ export const homeEn: HomeContent = {
       "If you recognise yourself in even one of these situations, your well-being is shaped by more than your physical condition alone. In the initial consultation we look at whether there are additional factors that can and should be addressed.",
   },
   bigPicture: {
-    eyebrow: "Seeing the whole picture",
+    eyebrow: "A new direction in modern medicine",
     title: "Why the symptom alone is not enough",
     paragraphs: [
       "Medicine is gradually moving away from treating isolated symptoms and towards a more holistic, person-centred model of care.",
@@ -65,7 +65,7 @@ export const homeEn: HomeContent = {
       "\u201cA symptom is the visible tip of the iceberg. Beneath it there is often a combination of interconnected physical and psychological factors. My task is therefore not simply to address one manifestation, but to understand the whole picture.\u201d",
   },
   approach: {
-    eyebrow: "Dr Vlad's integrative approach",
+    eyebrow: "Dr. Vlad’s integrative approach",
     title: "Not separating body from mind, but seeing the whole person",
     paragraphs: [
       "The body is not a set of independent parts. Physical condition shapes emotions and behaviour, while stress, anxiety, sleep and habits are reflected in how the body feels.",
@@ -78,7 +78,7 @@ export const homeEn: HomeContent = {
   },
   consultation: {
     eyebrow: "An individual review",
-    title: "Your situation calls for a careful individual review, not general advice",
+    title: "If your situation calls for a careful individual review rather than general advice",
     lead: "The initial consultation brings scattered information together into one picture and clarifies what to do next. We go through your symptoms, the history of your condition, the tests you already have and the possible influence of emotional factors. Afterwards you will understand more clearly:",
     outcomes: [
       "whether further examination is needed;",
@@ -100,24 +100,30 @@ export const homeEn: HomeContent = {
   },
   about: {
     eyebrow: "About me",
-    title: "Dr Vlad — cardiologist and hypnotherapist",
+    title: "Dr. Vlad Tettegah — cardiologist and hypnotherapist",
     paragraphs: [
       "I have worked in medicine since 2019. My professional experience includes medical institutions in Belarus, among them the Republican Scientific and Practical Centre of Cardiology and the Minsk City Emergency Hospital.",
       "I currently work as part of a humanitarian medical mission at the specialised cardiac surgery centre MHCC in Libya.",
       "I completed professional training in clinical hypnosis and am an Associate Member of the American Society of Clinical Hypnosis (ASCH).",
       "My work rests on the principles of evidence-based and integrative medicine, complemented by a holistic approach to the mind and subconscious processes. I do not view the body separately from the mind, and I do not apply the same template method to every patient.",
     ],
-    logoAlt: "Dr Vlad emblem — integrative and holistic medicine",
-    bannerAlt: "Dr Vlad — bridging science, mind and body",
+    logoAlt: "Dr. Vlad emblem — integrative and holistic medicine",
+    bannerAlt: "Dr. Vlad — bridging science, mind and body",
     research: {
       eyebrow: "Research",
-      text: "One direction of my professional and academic work is the study of how hypnotherapeutic methods can be integrated into the comprehensive treatment of patients with arterial hypertension. The study is registered in the international ISRCTN registry under the number ISRCTN21345687, and recruitment has begun. Detailed information and the participation form will be added later on a dedicated research page.",
+      text: "One direction of my professional and academic work explores how hypnotherapeutic methods may be integrated into comprehensive care for people with arterial hypertension. The project has now entered an important practical phase: we have begun inviting participants to help evaluate this approach in clinical practice.",
+      linkLabel: "Learn more about the project here",
     },
   },
   reviews: {
     eyebrow: "Results and reviews",
     title: "Stories from people who have completed individual work",
-    emptyLabel: "This section is not filled in yet",
+    emptyLabel: "Video stories will appear here once participants have given permission to publish them.",
+    previousLabel: "Previous review",
+    nextLabel: "Next review",
+    playLabel: "Play video review",
+    concernLabel: "Came for help with:",
+    items: [],
   },
   steps: {
     eyebrow: "How it works",
@@ -158,15 +164,15 @@ export const homeEn: HomeContent = {
       ],
       [
         "Does an integrative approach mean giving up medication?",
-        "No. Dr Vlad does not suggest stopping prescribed medication on your own or replacing necessary medical treatment with hypnotherapy or psychological methods. The aim of the integrative approach is to combine the required evidence-based treatment with complementary psychotherapeutic methods within one well-founded plan.",
+        "No. Dr. Vlad does not suggest stopping prescribed medication on your own or replacing necessary medical treatment with hypnotherapy or psychological methods. The aim of the integrative approach is to combine the required evidence-based treatment with complementary psychotherapeutic methods within one well-founded plan.",
       ],
       [
         "Is hypnotherapy suitable for everyone?",
-        "No. The decision is made individually after reviewing symptoms, medical history, goals and possible contraindications. If hypnotherapy is not suitable, Dr Vlad will explain which other steps or forms of help are worth considering.",
+        "No. The decision is made individually after reviewing symptoms, medical history, goals and possible contraindications. If hypnotherapy is not suitable, Dr. Vlad will explain which other steps or forms of help are worth considering.",
       ],
       [
         "Is hypnotherapy performed during the initial consultation?",
-        "No. The initial consultation is for a detailed review of your situation and for deciding the next steps. If hypnotherapy could help, Dr Vlad will explain separately which goals it would address and how further work could be organised.",
+        "No. The initial consultation is for a detailed review of your situation and for deciding the next steps. If hypnotherapy could help, Dr. Vlad will explain separately which goals it would address and how further work could be organised.",
       ],
       [
         "Will I lose control during hypnotherapy?",
@@ -174,7 +180,7 @@ export const homeEn: HomeContent = {
       ],
       [
         "What if my situation does not match your specialisation?",
-        "Dr Vlad will tell you so and, as far as the available information allows, will suggest a further route: additional examination, in-person medical care, or another specialist in the relevant field.",
+        "Dr. Vlad will tell you so and, as far as the available information allows, will suggest a further route: additional examination, in-person medical care, or another specialist in the relevant field.",
       ],
       [
         "Which documents should I prepare?",
@@ -182,7 +188,7 @@ export const homeEn: HomeContent = {
       ],
       [
         "How much does further work cost?",
-        "The initial consultation is free of charge. If further individual work is indicated, Dr Vlad will explain the recommended format, the likely duration and the cost. The decision to continue is entirely yours.",
+        "The initial consultation is free of charge. If further individual work is indicated, Dr. Vlad will explain the recommended format, the likely duration and the cost. The decision to continue is entirely yours.",
       ],
     ],
   },
