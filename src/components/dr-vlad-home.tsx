@@ -163,7 +163,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
                 <p key={text} className={`${index === 0 ? "mt-7" : "mt-5"} max-w-xl leading-7 text-foreground/75`}>{text}</p>
               ))}
             </div>
-            <blockquote className="self-end border-l-2 border-gold py-2 pl-7 font-display text-2xl leading-relaxed md:text-3xl">{c.bigPicture.quote}<footer className="mt-7 flex items-center gap-3"><span className="h-px w-10 bg-gold/55" aria-hidden="true" /><span className="font-display text-base font-semibold text-gold">Dr. Vlad</span></footer></blockquote>
+            <blockquote className="self-end border-l-2 border-gold py-2 pl-7 font-display text-2xl leading-relaxed md:text-3xl">{c.bigPicture.quote}<footer className="mt-7 flex items-center gap-3"><span className="h-px w-5 bg-gold/55" aria-hidden="true" /><span className="font-display text-base font-semibold text-gold">Dr. Vlad</span></footer></blockquote>
           </div>
         </section>
 
