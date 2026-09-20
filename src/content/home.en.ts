@@ -164,15 +164,15 @@ export const homeEn: HomeContent = {
       ],
       [
         "Does an integrative approach mean giving up medication?",
-        "No. Dr Vlad does not suggest stopping prescribed medication on your own or replacing necessary medical treatment with hypnotherapy or psychological methods. The aim of the integrative approach is to combine the required evidence-based treatment with complementary psychotherapeutic methods within one well-founded plan.",
+        "No. Dr. Vlad does not suggest stopping prescribed medication on your own or replacing necessary medical treatment with hypnotherapy or psychological methods. The aim of the integrative approach is to combine the required evidence-based treatment with complementary psychotherapeutic methods within one well-founded plan.",
       ],
       [
         "Is hypnotherapy suitable for everyone?",
-        "No. The decision is made individually after reviewing symptoms, medical history, goals and possible contraindications. If hypnotherapy is not suitable, Dr Vlad will explain which other steps or forms of help are worth considering.",
+        "No. The decision is made individually after reviewing symptoms, medical history, goals and possible contraindications. If hypnotherapy is not suitable, Dr. Vlad will explain which other steps or forms of help are worth considering.",
       ],
       [
         "Is hypnotherapy performed during the initial consultation?",
-        "No. The initial consultation is for a detailed review of your situation and for deciding the next steps. If hypnotherapy could help, Dr Vlad will explain separately which goals it would address and how further work could be organised.",
+        "No. The initial consultation is for a detailed review of your situation and for deciding the next steps. If hypnotherapy could help, Dr. Vlad will explain separately which goals it would address and how further work could be organised.",
       ],
       [
         "Will I lose control during hypnotherapy?",
@@ -180,7 +180,7 @@ export const homeEn: HomeContent = {
       ],
       [
         "What if my situation does not match your specialisation?",
-        "Dr Vlad will tell you so and, as far as the available information allows, will suggest a further route: additional examination, in-person medical care, or another specialist in the relevant field.",
+        "Dr. Vlad will tell you so and, as far as the available information allows, will suggest a further route: additional examination, in-person medical care, or another specialist in the relevant field.",
       ],
       [
         "Which documents should I prepare?",
@@ -188,7 +188,7 @@ export const homeEn: HomeContent = {
       ],
       [
         "How much does further work cost?",
-        "The initial consultation is free of charge. If further individual work is indicated, Dr Vlad will explain the recommended format, the likely duration and the cost. The decision to continue is entirely yours.",
+        "The initial consultation is free of charge. If further individual work is indicated, Dr. Vlad will explain the recommended format, the likely duration and the cost. The decision to continue is entirely yours.",
       ],
     ],
   },

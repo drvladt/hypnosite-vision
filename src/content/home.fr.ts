@@ -28,7 +28,7 @@ export const homeFr: HomeContent = {
   cta: {
     primary: "Analyser mon cas",
     note: "Consultation gratuite · En ligne · Jusqu'à 60 minutes · Confidentiel",
-    write: "Écrire au Dr Vlad",
+    write: "Écrire au Dr. Vlad",
   },
   hero: {
     eyebrow: "Médecine intégrative · Hypnothérapie",
@@ -164,15 +164,15 @@ export const homeFr: HomeContent = {
       ],
       [
         "L'approche intégrative signifie-t-elle renoncer aux médicaments ?",
-        "Non. Le Dr Vlad ne propose pas d'arrêter de vous-même un traitement prescrit ni de remplacer un traitement médical nécessaire par l'hypnothérapie ou des méthodes psychologiques. L'objectif de l'approche intégrative est de réunir les traitements fondés sur les preuves et les méthodes psychothérapeutiques complémentaires dans un plan unique et justifié.",
+        "Non. Le Dr. Vlad ne propose pas d'arrêter de vous-même un traitement prescrit ni de remplacer un traitement médical nécessaire par l'hypnothérapie ou des méthodes psychologiques. L'objectif de l'approche intégrative est de réunir les traitements fondés sur les preuves et les méthodes psychothérapeutiques complémentaires dans un plan unique et justifié.",
       ],
       [
         "L'hypnothérapie convient-elle à tout le monde ?",
-        "Non. La décision est prise individuellement après l'étude des symptômes, des antécédents, des objectifs et des limites éventuelles. Si l'hypnothérapie ne convient pas, le Dr Vlad expliquera quelles autres démarches ou formes d'aide envisager.",
+        "Non. La décision est prise individuellement après l'étude des symptômes, des antécédents, des objectifs et des limites éventuelles. Si l'hypnothérapie ne convient pas, le Dr. Vlad expliquera quelles autres démarches ou formes d'aide envisager.",
       ],
       [
         "L'hypnothérapie est-elle pratiquée pendant la première consultation ?",
-        "Non. La première consultation sert à analyser en détail votre situation et à définir les étapes suivantes. Si l'hypnothérapie peut être utile, le Dr Vlad expliquera séparément quels objectifs elle viserait et comment le travail pourrait être organisé.",
+        "Non. La première consultation sert à analyser en détail votre situation et à définir les étapes suivantes. Si l'hypnothérapie peut être utile, le Dr. Vlad expliquera séparément quels objectifs elle viserait et comment le travail pourrait être organisé.",
       ],
       [
         "Vais-je perdre le contrôle pendant l'hypnothérapie ?",
@@ -180,7 +180,7 @@ export const homeFr: HomeContent = {
       ],
       [
         "Et si ma situation ne relève pas de votre spécialité ?",
-        "Le Dr Vlad vous le dira et, dans la mesure où les informations disponibles le permettent, vous orientera : examens complémentaires, prise en charge médicale en présentiel ou autre spécialiste du domaine concerné.",
+        "Le Dr. Vlad vous le dira et, dans la mesure où les informations disponibles le permettent, vous orientera : examens complémentaires, prise en charge médicale en présentiel ou autre spécialiste du domaine concerné.",
       ],
       [
         "Quels documents faut-il préparer ?",
@@ -188,7 +188,7 @@ export const homeFr: HomeContent = {
       ],
       [
         "Combien coûte la suite du travail ?",
-        "La première consultation est gratuite. Si un travail individuel ultérieur est indiqué, le Dr Vlad en expliquera le format recommandé, la durée prévisible et le coût. La décision de continuer vous appartient.",
+        "La première consultation est gratuite. Si un travail individuel ultérieur est indiqué, le Dr. Vlad en expliquera le format recommandé, la durée prévisible et le coût. La décision de continuer vous appartient.",
       ],
     ],
   },

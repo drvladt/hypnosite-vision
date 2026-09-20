@@ -138,7 +138,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
                 <p key={text} className={`${index === 0 ? "mt-7" : "mt-5"} max-w-xl leading-7 text-foreground/75`}>{text}</p>
               ))}
             </div>
-            <blockquote className="self-end border-l-2 border-gold py-2 pl-7 font-display text-2xl leading-relaxed md:text-3xl">{c.bigPicture.quote}<footer className="mt-6 font-sans text-sm text-muted-foreground">— Dr Vlad</footer></blockquote>
+            <blockquote className="self-end border-l-2 border-gold py-2 pl-7 font-display text-2xl leading-relaxed md:text-3xl">{c.bigPicture.quote}<footer className="mt-6 font-sans text-sm text-muted-foreground">— Dr. Vlad</footer></blockquote>
           </div>
         </section>
 
