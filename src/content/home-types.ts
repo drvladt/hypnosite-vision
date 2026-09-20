@@ -62,6 +62,8 @@ export type HomeContent = {
     logoAlt: string;
     bannerAlt: string;
     research: { eyebrow: string; text: string; linkLabel: string };
+    moreAboutLabel: string;
+    bookLabel: string;
   };
   reviews: {
     eyebrow: string;
