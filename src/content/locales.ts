@@ -43,3 +43,36 @@ export function pagePath(locale: Locale, page: PageKey) {
 }
 
 export const contactEmail = "dr.vladt375@gmail.com";
+
+const LOCALE_STORAGE_KEY = "drvlad-preferred-locale";
+
+/** Remembers the visitor's manual language choice (wins over auto-detection). */
+export function rememberLocale(locale: Locale) {
+  try {
+    window.localStorage.setItem(LOCALE_STORAGE_KEY, locale);
+  } catch {
+    /* private mode — ignore */
+  }
+}
+
+/**
+ * Picks the home locale for a first-time visitor:
+ * 1) a language the visitor previously chose manually,
+ * 2) otherwise the device/browser language (ru / fr, everything else → en).
+ * Geo-IP is not used: language preference matches the visitor better than location.
+ */
+export function detectPreferredLocale(): Locale {
+  if (typeof window === "undefined") return "en";
+  try {
+    const saved = window.localStorage.getItem(LOCALE_STORAGE_KEY);
+    if (saved && (locales as readonly string[]).includes(saved)) return saved as Locale;
+  } catch {
+    /* private mode — ignore */
+  }
+  const languages = navigator.languages?.length ? navigator.languages : [navigator.language];
+  for (const lang of languages) {
+    const base = lang.toLowerCase().split("-")[0];
+    if ((locales as readonly string[]).includes(base)) return base as Locale;
+  }
+  return "en";
+}

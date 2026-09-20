@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 
-import { homePath, localeNames, localeShortNames, locales, type Locale } from "@/content/locales";
+import { homePath, localeNames, localeShortNames, locales, rememberLocale, type Locale } from "@/content/locales";
 import { cn } from "@/lib/utils";
 
 export function LanguageSwitcher({
@@ -19,6 +19,7 @@ export function LanguageSwitcher({
           key={item}
           to={homePath[item]}
           hrefLang={item}
+          onClick={() => rememberLocale(item)}
           aria-current={item === locale ? "true" : undefined}
           title={localeNames[item]}
           className={cn(
