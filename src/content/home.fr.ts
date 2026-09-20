@@ -114,6 +114,8 @@ export const homeFr: HomeContent = {
       text: "L'un des axes de mon travail professionnel et scientifique explore l'intégration des méthodes d'hypnothérapie dans la prise en charge globale des personnes souffrant d'hypertension artérielle. Le projet est désormais entré dans une étape pratique importante : nous invitons les premiers participants afin d'évaluer cette approche en situation clinique.",
       linkLabel: "En savoir plus sur le projet ici",
     },
+    moreAboutLabel: "En savoir plus sur moi",
+    bookLabel: "Prendre rendez-vous",
   },
   reviews: {
     eyebrow: "Résultats et témoignages",

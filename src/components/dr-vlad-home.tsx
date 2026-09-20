@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, Brain, CalendarDays, ChevronDown, HeartPulse, Menu, MessageCircle, Play, Stethoscope, X } from "lucide-react";
-import { socialLinks, type SocialType } from "@/content/locales";
+import { pagePath, socialLinks, type SocialType } from "@/content/locales";
 
 // Minimal universally-recognizable globe: circle + equator + two meridians, no extra parallels
 function GlobeMinimal({ className, strokeWidth = 1.5 }: { className?: string; strokeWidth?: number }) {
@@ -243,6 +243,10 @@ export function DrVladHome({ locale }: { locale: Locale }) {
             <div>
               <h2 className="section-title">{c.about.title}</h2>
               <div className="mt-5 space-y-4 leading-7 text-foreground/75">{c.about.paragraphs.map((text) => <p key={text}>{text}</p>)}</div>
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <Button asChild variant="default" size="lg" className="font-semibold"><a href={pagePath(locale, "about")}>{c.about.moreAboutLabel}</a></Button>
+                <Button asChild variant="outline" size="lg" className="font-semibold"><a href={pagePath(locale, "consultation")}>{c.about.bookLabel}</a></Button>
+              </div>
               <div id="research" className="mt-7 scroll-mt-28 rounded-md bg-primary p-7 text-primary-foreground md:p-8"><p className="eyebrow text-gold-light">{c.about.research.eyebrow}</p><p className="mt-4 max-w-3xl leading-7 text-primary-foreground/78">{c.about.research.text}</p><a className="mt-5 inline-flex items-center gap-2 border-b border-gold/60 pb-1 text-sm font-semibold text-gold-light transition-colors hover:text-primary-foreground" href="https://www.isrctn.com/ISRCTN21345687" target="_blank" rel="noreferrer">{c.about.research.linkLabel}<ArrowRight className="size-4" aria-hidden="true" /></a></div>
             </div>
           </div>

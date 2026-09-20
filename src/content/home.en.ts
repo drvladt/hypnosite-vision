@@ -114,6 +114,8 @@ export const homeEn: HomeContent = {
       text: "One direction of my professional and academic work explores how hypnotherapeutic methods may be integrated into comprehensive care for people with arterial hypertension. The project has now entered an important practical phase: we have begun inviting participants to help evaluate this approach in clinical practice.",
       linkLabel: "Learn more about the project here",
     },
+    moreAboutLabel: "More about me",
+    bookLabel: "Book a consultation",
   },
   reviews: {
     eyebrow: "Results and reviews",
