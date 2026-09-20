@@ -226,18 +226,20 @@ export function DrVladHome({ locale }: { locale: Locale }) {
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <p className="eyebrow">{c.steps.eyebrow}</p>
             <h2 className="section-title mt-4 max-w-4xl">{c.steps.title}</h2>
-            <div className="mt-14 grid gap-px overflow-hidden rounded-lg border border-border bg-border lg:grid-cols-4">
+            <div className="mt-10 grid gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
               {c.steps.items.map(([title, text], index) => (
-                <article key={title} className="bg-background p-7">
-                  <span className="font-display text-4xl text-gold">0{index + 1}</span>
-                  <h3 className="mt-8 font-display text-xl leading-snug">{title}</h3>
-                  <p className="mt-4 text-sm leading-6 text-foreground/70">{text}</p>
-                  {index === c.steps.items.length - 1 && <p className="mt-4 text-sm font-semibold">{c.steps.noHypnosisNote}</p>}
+                <article key={title} className="bg-background p-5 lg:p-6">
+                  <div className="flex items-baseline gap-3">
+                    <span className="font-display text-2xl text-gold">0{index + 1}</span>
+                    <h3 className="font-display text-lg leading-snug">{title}</h3>
+                  </div>
+                  <p className="mt-3 text-sm leading-6 text-foreground/70">{text}</p>
+                  {index === c.steps.items.length - 1 && <p className="mt-3 text-sm font-semibold">{c.steps.noHypnosisNote}</p>}
                 </article>
               ))}
             </div>
-            <p className="mt-8 max-w-3xl leading-7 text-foreground/75">{c.steps.closing}</p>
-            <div className="mt-7"><ConsultationButton label={c.cta.primary} /></div>
+            <p className="mt-6 max-w-3xl leading-7 text-foreground/75">{c.steps.closing}</p>
+            <div className="mt-6"><ConsultationButton label={c.cta.primary} /></div>
           </div>
         </section>
 
