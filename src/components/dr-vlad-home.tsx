@@ -1,16 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, Brain, CalendarDays, ChevronDown, HeartPulse, Menu, MessageCircle, Play, Stethoscope, X } from "lucide-react";
 
-// Custom globe icon for "Международная практика" — clean meridian/latitude grid, universally readable
-function GlobeRealistic({ className, strokeWidth = 1.5 }: { className?: string; strokeWidth?: number }) {
+// Minimal universally-recognizable globe: circle + equator + two meridians, no extra parallels
+function GlobeMinimal({ className, strokeWidth = 1.5 }: { className?: string; strokeWidth?: number }) {
   return (
     <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
       <circle cx="12" cy="12" r="9.25" stroke="currentColor" strokeWidth={strokeWidth} />
-      <ellipse cx="12" cy="12" rx="9.25" ry="3.6" stroke="currentColor" strokeWidth={strokeWidth * 0.85} />
-      <ellipse cx="12" cy="12" rx="9.25" ry="7.4" stroke="currentColor" strokeWidth={strokeWidth * 0.7} opacity="0.6" />
-      <line x1="2.75" y1="12" x2="21.25" y2="12" stroke="currentColor" strokeWidth={strokeWidth * 0.85} />
-      <ellipse cx="12" cy="12" rx="3.6" ry="9.25" stroke="currentColor" strokeWidth={strokeWidth * 0.85} />
-      <line x1="12" y1="2.75" x2="12" y2="21.25" stroke="currentColor" strokeWidth={strokeWidth * 0.85} />
+      <line x1="2.75" y1="12" x2="21.25" y2="12" stroke="currentColor" strokeWidth={strokeWidth} />
+      <ellipse cx="12" cy="12" rx="4.2" ry="9.25" stroke="currentColor" strokeWidth={strokeWidth} />
     </svg>
   );
 }
@@ -61,7 +58,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
     reviewsRef.current?.scrollBy({ left: direction * 360, behavior: "smooth" });
   };
 
-  const badgeIcons = [Stethoscope, CalendarDays, GlobeRealistic, Brain];
+  const badgeIcons = [Stethoscope, CalendarDays, GlobeMinimal, Brain];
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
