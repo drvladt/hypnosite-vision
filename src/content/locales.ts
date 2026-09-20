@@ -71,7 +71,7 @@ export function detectPreferredLocale(): Locale {
   }
   const languages = navigator.languages?.length ? navigator.languages : [navigator.language];
   for (const lang of languages) {
-    const base = lang.toLowerCase().split("-")[0];
+    const base = lang.toLowerCase().split("-")[0] ?? "";
     if ((locales as readonly string[]).includes(base)) return base as Locale;
   }
   return "en";
