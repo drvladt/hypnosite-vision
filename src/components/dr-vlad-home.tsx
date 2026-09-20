@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, Brain, CalendarDays, ChevronDown, HeartPulse, Menu, MessageCircle, Play, Stethoscope, X } from "lucide-react";
+import { socialLinks, type SocialType } from "@/content/locales";
 
 // Minimal universally-recognizable globe: circle + equator + two meridians, no extra parallels
 function GlobeMinimal({ className, strokeWidth = 1.5 }: { className?: string; strokeWidth?: number }) {
