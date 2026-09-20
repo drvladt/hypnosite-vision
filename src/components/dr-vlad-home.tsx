@@ -103,10 +103,18 @@ export function DrVladHome({ locale }: { locale: Locale }) {
                 <p className="max-w-4xl text-base leading-7 text-primary-foreground/85">{c.hero.portraitCaption}</p>
               </div>
             </div>
-            <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-5 grid grid-cols-2 gap-3 md:max-w-2xl md:gap-4">
               {c.hero.badges.map((badge, index) => {
                 const Icon = badgeIcons[index] ?? HeartPulse;
-                return <div key={badge} className="group flex min-h-28 items-end justify-between gap-4 rounded-md border border-border bg-card p-5 transition-colors duration-300 hover:border-gold/60" data-reveal style={{ "--reveal-delay": `${index * 70}ms` } as React.CSSProperties}><p className="max-w-40 text-sm font-semibold leading-5">{badge}</p><Icon className="size-5 shrink-0 text-gold transition-transform duration-300 group-hover:-translate-y-1" aria-hidden="true" /></div>;
+                const accent = index % 2 === 0;
+                return (
+                  <div key={badge} className="group flex h-full flex-col items-start gap-4 rounded-2xl border border-primary/10 bg-card p-4 shadow-[0_4px_14px_-6px_color-mix(in_oklab,var(--primary)_22%,transparent)] transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/45 md:p-5" data-reveal style={{ "--reveal-delay": `${index * 80}ms` } as React.CSSProperties}>
+                    <span className={`flex size-10 items-center justify-center rounded-xl ${accent ? "bg-primary/10" : "bg-gold/12"}`}>
+                      <Icon className={`size-5 ${accent ? "text-primary" : "text-gold"} transition-transform duration-300 group-hover:-translate-y-0.5`} strokeWidth={1.5} aria-hidden="true" />
+                    </span>
+                    <p className="font-display text-sm font-medium leading-tight text-primary md:text-[15px]">{badge}</p>
+                  </div>
+                );
               })}
             </div>
           </div>
