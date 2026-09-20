@@ -2,17 +2,17 @@ import type { HomeContent } from "./home-types";
 
 export const homeFr: HomeContent = {
   meta: {
-    title: "Dr Vlad — cardiologue et hypnothérapeute · consultation intégrative",
+    title: "Dr. Vlad — cardiologue et hypnothérapeute · consultation intégrative",
     description:
-      "Analyse intégrative des symptômes cardiaques, de l'anxiété et des troubles psychosomatiques avec le Dr Vlad, cardiologue et hypnothérapeute. Première consultation en ligne, jusqu'à 60 minutes.",
-    ogTitle: "Dr Vlad — consultation intégrative en ligne",
+      "Analyse intégrative des symptômes cardiaques, de l'anxiété et des troubles psychosomatiques avec le Dr. Vlad, cardiologue et hypnothérapeute. Première consultation en ligne, jusqu'à 60 minutes.",
+    ogTitle: "Dr. Vlad — consultation intégrative en ligne",
     ogDescription:
       "Douleurs thoraciques, palpitations ou variations de tension malgré des examens rassurants ? Une analyse intégrative et individuelle de votre situation.",
   },
   nav: {
     label: "Navigation principale",
     mobileLabel: "Navigation mobile",
-    toTop: "Dr Vlad — revenir en haut",
+    toTop: "Dr. Vlad — revenir en haut",
     openMenu: "Ouvrir le menu",
     closeMenu: "Fermer le menu",
     languageLabel: "Langue du site",
@@ -34,11 +34,11 @@ export const homeFr: HomeContent = {
     eyebrow: "Médecine intégrative · Hypnothérapie",
     title:
       "Douleurs thoraciques, palpitations, extrasystoles ou variations de tension qui persistent — alors que vos examens sont faits et que vous suivez les recommandations de vos médecins ?",
-    lead: "Le Dr Vlad travaille selon les principes de la médecine intégrative. L'objectif n'est pas de faire taire un symptôme isolé, mais de comprendre quels facteurs médicaux, émotionnels et comportementaux ont pu créer le problème ou continuent de l'entretenir.",
-    portraitAlt: "Dr Vlad — cardiologue et hypnothérapeute",
+    lead: "Le Dr. Vlad travaille selon les principes de la médecine intégrative. L'objectif n'est pas de faire taire un symptôme isolé, mais de comprendre quels facteurs médicaux, émotionnels et comportementaux ont pu créer le problème ou continuent de l'entretenir.",
+    portraitAlt: "Dr. Vlad — cardiologue et hypnothérapeute",
     portraitCaption:
       "Travail sur l'anxiété liée à la santé, les pensées obsédantes, les peurs et les réactions corporelles — en associant le regard du médecin aux méthodes d'hypnothérapie non directive lorsqu'elles sont réellement indiquées.",
-    badges: ["Cardiologue", "En médecine depuis 2019", "Pratique internationale", "Formation en hypnose clinique"],
+    badges: ["Cardiologue", "En médecine depuis 2019", "Pratique internationale", "Spécialisation en hypnothérapie"],
   },
   concerns: {
     eyebrow: "Motifs de consultation",
@@ -55,7 +55,7 @@ export const homeFr: HomeContent = {
       "Si vous vous reconnaissez dans au moins une de ces situations, votre état ne dépend pas uniquement du physique. Lors de la première consultation, nous examinons s'il existe d'autres facteurs sur lesquels il est possible et utile d'agir.",
   },
   bigPicture: {
-    eyebrow: "Voir l'ensemble",
+    eyebrow: "Une nouvelle orientation de la médecine moderne",
     title: "Pourquoi le symptôme seul ne suffit pas",
     paragraphs: [
       "La médecine s'éloigne peu à peu du traitement isolé des symptômes pour aller vers un modèle de soin plus global, centré sur la personne.",
@@ -65,7 +65,7 @@ export const homeFr: HomeContent = {
       "«\u00a0Le symptôme est la partie visible de l'iceberg. En dessous se trouve souvent une combinaison de facteurs physiques et psychologiques liés entre eux. Ma tâche n'est donc pas de traiter une seule manifestation, mais de comprendre l'ensemble.\u00a0»",
   },
   approach: {
-    eyebrow: "L'approche intégrative du Dr Vlad",
+    eyebrow: "L'approche intégrative du Dr. Vlad",
     title: "Ne pas séparer le corps et le psychisme, mais voir la personne entière",
     paragraphs: [
       "L'organisme n'est pas un assemblage de parties indépendantes. L'état physique influence les émotions et le comportement, tandis que le stress, l'anxiété, le sommeil et les habitudes se reflètent dans le corps.",
@@ -78,7 +78,7 @@ export const homeFr: HomeContent = {
   },
   consultation: {
     eyebrow: "Une analyse individuelle",
-    title: "Votre situation demande une analyse individuelle attentive, non des conseils généraux",
+    title: "Si votre situation demande une analyse individuelle attentive plutôt que des conseils généraux",
     lead: "La première consultation permet de rassembler des informations dispersées en une vue d'ensemble et de comprendre la suite. Nous passons en revue vos symptômes, l'histoire de votre état, les examens déjà réalisés et l'influence possible de facteurs émotionnels. À l'issue de la rencontre, vous comprendrez mieux :",
     outcomes: [
       "si des examens complémentaires sont nécessaires ;",
@@ -100,24 +100,30 @@ export const homeFr: HomeContent = {
   },
   about: {
     eyebrow: "À propos de moi",
-    title: "Dr Vlad — cardiologue et hypnothérapeute",
+    title: "Dr. Vlad Tettegah — cardiologue et hypnothérapeute",
     paragraphs: [
       "J'exerce la médecine depuis 2019. Mon expérience professionnelle comprend des établissements médicaux du Bélarus, dont le Centre scientifique et pratique républicain de cardiologie et l'Hôpital des urgences de Minsk.",
       "Je travaille actuellement, dans le cadre d'une mission médicale humanitaire, au centre spécialisé de chirurgie cardiaque MHCC en Libye.",
       "J'ai suivi une formation professionnelle en hypnose clinique et je suis Associate Member de l'American Society of Clinical Hypnosis (ASCH).",
       "Mon travail repose sur les principes de la médecine fondée sur les preuves et de la médecine intégrative, complétés par une approche globale du psychisme et des processus inconscients. Je ne considère pas le corps séparément du psychisme et je n'applique pas la même méthode standardisée à tous les patients.",
     ],
-    logoAlt: "Emblème du Dr Vlad — médecine intégrative et holistique",
-    bannerAlt: "Dr Vlad — science, psychisme et corps reliés",
+    logoAlt: "Emblème du Dr. Vlad — médecine intégrative et holistique",
+    bannerAlt: "Dr. Vlad — science, psychisme et corps reliés",
     research: {
       eyebrow: "Recherche",
-      text: "L'un des axes de mon travail professionnel et scientifique est l'étude de l'intégration des méthodes d'hypnothérapie dans la prise en charge globale des patients souffrant d'hypertension artérielle. L'étude est enregistrée dans le registre international ISRCTN sous le numéro ISRCTN21345687 et le recrutement a commencé. Les informations détaillées et le formulaire de participation seront ajoutés plus tard sur une page dédiée à la recherche.",
+      text: "L'un des axes de mon travail professionnel et scientifique explore l'intégration des méthodes d'hypnothérapie dans la prise en charge globale des personnes souffrant d'hypertension artérielle. Le projet est désormais entré dans une étape pratique importante : nous invitons les premiers participants afin d'évaluer cette approche en situation clinique.",
+      linkLabel: "En savoir plus sur le projet ici",
     },
   },
   reviews: {
     eyebrow: "Résultats et témoignages",
     title: "Les parcours de personnes ayant suivi un travail individuel",
-    emptyLabel: "Cette section n'est pas encore remplie",
+    emptyLabel: "Les témoignages vidéo seront publiés ici après accord des participants.",
+    previousLabel: "Témoignage précédent",
+    nextLabel: "Témoignage suivant",
+    playLabel: "Lire le témoignage vidéo",
+    concernLabel: "Motif de consultation :",
+    items: [],
   },
   steps: {
     eyebrow: "Comment cela se déroule",
