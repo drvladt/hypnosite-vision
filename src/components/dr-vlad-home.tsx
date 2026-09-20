@@ -261,7 +261,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
         <section className="border-t border-border bg-primary text-primary-foreground">
           <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-5 py-16 md:flex-row md:items-end lg:px-8 lg:py-20">
             <div><p className="eyebrow text-gold-light">{c.finalCta.eyebrow}</p><h2 className="mt-4 max-w-3xl font-display text-4xl leading-tight md:text-5xl">{c.finalCta.title}</h2></div>
-            <Button asChild size="lg" className="h-13 shrink-0 rounded-full bg-gold px-7 text-primary hover:bg-gold-light"><a href={`mailto:${contactEmail}`}>{c.cta.write} <ArrowRight /></a></Button>
+            <Button asChild size="lg" className="h-13 shrink-0 rounded-full bg-gold px-7 text-background hover:bg-gold-light hover:text-background"><a href={`mailto:${contactEmail}`}>{c.cta.write} <ArrowRight /></a></Button>
           </div>
         </section>
       </main>
