@@ -146,9 +146,8 @@ export const homeEn: HomeContent = {
         "The consultation takes place online and lasts up to 60 minutes. The meeting is devoted entirely to a detailed analysis of your situation, to identifying possible links between bodily symptoms, psychological factors and habitual patterns of behaviour, and to defining the strategy ahead.",
       ],
     ],
-    noHypnosisNote: "No hypnotherapy is carried out during the first consultation.",
     closing:
-      "Even if hypnotherapy is not indicated for you, or working with me does not match your situation, you will leave with a clearer sense of the possible next actions and of which specialist to turn to.",
+      "No hypnotherapy is carried out during the first consultation. Even if hypnotherapy is not indicated for you, or working with me does not match your situation, you will leave with a clearer sense of the possible next actions and of which specialist to turn to.",
   },
   faq: {
     eyebrow: "Answers",
