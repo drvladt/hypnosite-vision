@@ -103,7 +103,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
                 <p className="max-w-4xl text-base leading-7 text-primary-foreground/85">{c.hero.portraitCaption}</p>
               </div>
             </div>
-            <div className="mt-5 grid grid-cols-2 gap-3 md:max-w-2xl md:gap-4">
+            <div className="mt-5 grid grid-cols-2 gap-3 md:max-w-xl md:gap-4">
               {c.hero.badges.map((badge, index) => {
                 const Icon = badgeIcons[index] ?? HeartPulse;
                 const accent = index % 2 === 0;
