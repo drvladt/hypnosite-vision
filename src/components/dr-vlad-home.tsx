@@ -98,9 +98,9 @@ export function DrVladHome({ locale }: { locale: Locale }) {
             </div>
             <div className="overflow-hidden rounded-lg bg-primary">
               <img src={portraitAsset.url} alt={c.hero.portraitAlt} className="aspect-[4/3] w-full object-cover object-center md:aspect-[16/7]" />
-              <div className="grid gap-5 border-t border-primary-foreground/15 px-6 py-7 text-primary-foreground md:grid-cols-[auto_1fr] md:items-start md:px-8">
-                <span className="font-display text-4xl leading-none text-gold-light">“</span>
-                <p className="max-w-4xl text-base leading-7 text-primary-foreground/82">{c.hero.portraitCaption}</p>
+              <div className="flex items-start gap-4 border-t border-primary-foreground/15 px-6 py-6 text-primary-foreground md:px-8 md:py-7">
+                <span className="font-display text-3xl leading-[0.6] text-gold-light md:text-4xl" aria-hidden="true">“</span>
+                <p className="max-w-4xl text-base leading-7 text-primary-foreground/85">{c.hero.portraitCaption}</p>
               </div>
             </div>
             <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
