@@ -181,9 +181,18 @@ export function DrVladHome({ locale }: { locale: Locale }) {
 
         <section id="consultation" className="section-space scroll-mt-20">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
-            <div className="max-w-4xl"><p className="eyebrow">{c.consultation.eyebrow}</p><h2 className="section-title mt-4">{c.consultation.title}</h2><p className="mt-7 text-lg leading-8 text-foreground/75">{c.consultation.lead}</p></div>
-            <div className="mt-12 rounded-md bg-primary px-6 py-4 text-primary-foreground md:px-9 md:py-6">
-              {c.consultation.outcomes.map((item, index) => <div key={item} className="grid gap-3 border-b border-primary-foreground/12 py-6 last:border-b-0 md:grid-cols-[4rem_1fr] md:items-start" data-reveal style={{ "--reveal-delay": `${index * 75}ms` } as React.CSSProperties}><span className="font-display text-2xl text-gold-light">0{index + 1}</span><p className="max-w-3xl text-base leading-7 text-primary-foreground/82">{item}</p></div>)}
+            <div className="max-w-4xl">
+              <p className="eyebrow">{c.consultation.eyebrow}</p>
+              <h2 className="section-title mt-4">{c.consultation.title}</h2>
+              <p className="mt-7 text-lg leading-8 text-foreground/75">{c.consultation.lead}</p>
+              <ul className="mt-8 space-y-4 border-l-2 border-gold/40 pl-6" data-reveal>
+                {c.consultation.outcomes.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-lg leading-8 text-foreground/80">
+                    <span className="mt-2.5 size-1.5 shrink-0 rotate-45 bg-gold" aria-hidden="true" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
             <div className="mt-16 grid gap-8 border-t border-border pt-12 lg:grid-cols-[.55fr_1.45fr]">
               <h3 className="font-display text-3xl">{c.consultation.suitableTitle}</h3>
