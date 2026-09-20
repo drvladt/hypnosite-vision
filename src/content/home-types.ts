@@ -77,7 +77,6 @@ export type HomeContent = {
     eyebrow: string;
     title: string;
     items: [string, string][];
-    noHypnosisNote: string;
     closing: string;
   };
   faq: {
