@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as EnRouteImport } from './routes/en'
 import { Route as FrRouteImport } from './routes/fr'
 import { Route as RuRouteImport } from './routes/ru'
+import { Route as LocaleSlugRouteImport } from './routes/$locale/$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -34,18 +35,25 @@ const RuRoute = RuRouteImport.update({
   path: '/ru',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LocaleSlugRoute = LocaleSlugRouteImport.update({
+  id: '/$locale/$slug',
+  path: '/$locale/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/en': typeof EnRoute
   '/fr': typeof FrRoute
   '/ru': typeof RuRoute
+  '/$locale/$slug': typeof LocaleSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/en': typeof EnRoute
   '/fr': typeof FrRoute
   '/ru': typeof RuRoute
+  '/$locale/$slug': typeof LocaleSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +61,14 @@ export interface FileRoutesById {
   '/en': typeof EnRoute
   '/fr': typeof FrRoute
   '/ru': typeof RuRoute
+  '/$locale/$slug': typeof LocaleSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/en' | '/fr' | '/ru'
+  fullPaths: '/' | '/en' | '/fr' | '/ru' | '/$locale/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/en' | '/fr' | '/ru'
-  id: '__root__' | '/' | '/en' | '/fr' | '/ru'
+  to: '/' | '/en' | '/fr' | '/ru' | '/$locale/$slug'
+  id: '__root__' | '/' | '/en' | '/fr' | '/ru' | '/$locale/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,6 +76,7 @@ export interface RootRouteChildren {
   EnRoute: typeof EnRoute
   FrRoute: typeof FrRoute
   RuRoute: typeof RuRoute
+  LocaleSlugRoute: typeof LocaleSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -99,6 +109,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RuRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$locale/$slug': {
+      id: '/$locale/$slug'
+      path: '/$locale/$slug'
+      fullPath: '/$locale/$slug'
+      preLoaderRoute: typeof LocaleSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -107,6 +124,7 @@ const rootRouteChildren: RootRouteChildren = {
   EnRoute: EnRoute,
   FrRoute: FrRoute,
   RuRoute: RuRoute,
+  LocaleSlugRoute: LocaleSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

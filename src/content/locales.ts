@@ -31,10 +31,18 @@ export const pageSlugs = {
   research: { ru: "issledovaniya", en: "research", fr: "recherche" },
   stories: { ru: "istorii-patsientov", en: "stories-and-results", fr: "histoires-et-resultats" },
   consultation: { ru: "konsultatsiya", en: "consultation", fr: "consultation" },
+  intake: { ru: "anketa", en: "intake", fr: "questionnaire" },
+  documents: { ru: "dokumenty", en: "documents", fr: "documents" },
+  thanks: { ru: "spasibo", en: "thank-you", fr: "merci" },
   contact: { ru: "kontakty", en: "contact", fr: "contact" },
   privacy: { ru: "politika-konfidentsialnosti", en: "privacy", fr: "confidentialite" },
   terms: { ru: "usloviya-ispolzovaniya", en: "terms", fr: "conditions-utilisation" },
 } as const satisfies Record<string, Record<Locale, string>>;
+
+/** Reverse lookup: which page a localized slug belongs to (used by the /$locale/$slug route). */
+export function pageKeyFromSlug(locale: Locale, slug: string): PageKey | undefined {
+  return (Object.keys(pageSlugs) as PageKey[]).find((key) => pageSlugs[key][locale] === slug);
+}
 
 export type PageKey = keyof typeof pageSlugs;
 
