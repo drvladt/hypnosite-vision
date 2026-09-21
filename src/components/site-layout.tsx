@@ -23,6 +23,13 @@ const FOOTER_PAGES: PageKey[] = [
   "terms",
 ];
 
+/** Short labels keep the header on one line; full titles are used in the footer. */
+function shortLabelFor(locale: Locale, page: PageKey) {
+  const content = siteContent[locale];
+  if (page === "consultation") return content.consultation.eyebrow;
+  return content.info[page as Exclude<PageKey, "consultation" | "intake" | "documents" | "thanks">].eyebrow;
+}
+
 function labelFor(locale: Locale, page: PageKey) {
   const content = siteContent[locale];
   if (page === "consultation") return content.consultation.title;
