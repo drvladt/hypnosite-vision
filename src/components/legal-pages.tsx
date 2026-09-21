@@ -91,7 +91,7 @@ export function LegalDocView({ locale, page }: { locale: Locale; page: LegalPage
             <h2 className="font-display text-xl font-medium text-primary md:text-2xl">{section.heading}</h2>
             <Block paragraphs={section.paragraphs} bullets={section.bullets} />
             {section.subsections?.map((sub, i) => (
-              <Block key={i} block={sub} />
+              <Block key={i} heading={sub.heading} paragraphs={sub.paragraphs} bullets={sub.bullets} />
             ))}
           </section>
         ))}
