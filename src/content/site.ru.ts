@@ -187,7 +187,7 @@ export const siteRu: SiteContent = {
   },
   consultation: {
     eyebrow: "Консультация",
-    title: "Как проходит консультация",
+    title: "Как проходит первичная интегративная консультация",
     lead: "",
     metaTitle: "Как проходит консультация — Dr. Vlad",
     metaDescription:
