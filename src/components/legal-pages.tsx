@@ -83,7 +83,7 @@ export function LegalDocView({ locale, page }: { locale: Locale; page: LegalPage
         {doc.sections.map((section) => (
           <section key={section.id} id={section.id} className="scroll-mt-28">
             <h2 className="font-display text-xl font-medium text-primary md:text-2xl">{section.heading}</h2>
-            <Block block={{ paragraphs: section.paragraphs, bullets: section.bullets }} />
+            <Block block={{ ...section, heading: undefined } as LegalBlock} />
             {section.subsections?.map((sub, i) => (
               <Block key={i} block={sub} />
             ))}
