@@ -21,7 +21,15 @@ function NotReadyBanner({ text }: { text: string }) {
   );
 }
 
-function Block({ heading, paragraphs, bullets }: LegalBlock) {
+function Block({
+  heading,
+  paragraphs,
+  bullets,
+}: {
+  heading?: string | undefined;
+  paragraphs?: string[] | undefined;
+  bullets?: string[] | undefined;
+}) {
   return (
     <div className="mt-5">
       {heading && <h3 className="font-display text-base font-medium text-primary md:text-lg">{heading}</h3>}
