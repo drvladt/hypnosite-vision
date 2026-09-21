@@ -10,7 +10,7 @@ import {
 } from "@/components/site-pages";
 import { pageHead } from "@/content/page-head";
 import { siteContent } from "@/content/site";
-import { locales, pageKeyFromSlug, type InfoPageKeyGuard, type Locale, type PageKey } from "@/content/locales";
+import { locales, pageKeyFromSlug, type Locale, type PageKey } from "@/content/locales";
 import type { InfoPageKey } from "@/content/site-types";
 
 const FLOW_PAGES = ["consultation", "intake", "documents", "thanks"] as const;
@@ -77,4 +77,3 @@ function SlugPage() {
   );
 }
 
-export type { InfoPageKeyGuard };
