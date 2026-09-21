@@ -5,7 +5,7 @@ import { AlertTriangle, ArrowRight, Check, FileText, Info, MessageCircle, Paperc
 import { Button } from "@/components/ui/button";
 import { siteContent } from "@/content/site";
 import type { InfoPage } from "@/content/site-types";
-import { contactEmail, pagePath, type Locale } from "@/content/locales";
+import { contactEmail, homePath, pagePath, type Locale } from "@/content/locales";
 import {
   markIntakeDone,
   readIntakeSession,
@@ -289,7 +289,11 @@ export function DocumentsPageView({ locale }: { locale: Locale }) {
               {page.restoreAction}
             </Button>
           </div>
-          {restoreError && <p className="mt-3 text-xs text-destructive">{page.restorePlaceholder}</p>}
+          {restoreError && (
+            <p className="mt-3 text-xs text-destructive">
+              {page.restoreLabel}: {page.restorePlaceholder}
+            </p>
+          )}
           <div className="mt-6">
             <Link to={pagePath(locale, "consultation")} className="text-sm text-primary underline underline-offset-4">
               {c.intake.missingConsentAction}
@@ -354,9 +358,7 @@ export function ThanksPageView({ locale }: { locale: Locale }) {
       )}
       <div className="mt-10">
         <Button asChild size="lg" variant="outline" className="h-12 rounded-full px-6 text-sm shadow-none">
-          <Link to={pagePath(locale, "thanks")} disabled>
-            {page.homeLabel}
-          </Link>
+          <Link to={homePath[locale]}>{page.homeLabel}</Link>
         </Button>
       </div>
     </div>
