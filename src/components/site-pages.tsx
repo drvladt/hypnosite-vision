@@ -6,13 +6,14 @@ import { Button } from "@/components/ui/button";
 import { siteContent } from "@/content/site";
 import type { InfoPage } from "@/content/site-types";
 import { contactEmail, homePath, pagePath, type Locale } from "@/content/locales";
+import { intakeFormUrl } from "@/lib/case-api";
 import {
   markIntakeDone,
   readIntakeSession,
   restoreIntakeSession,
-  startIntakeSession,
   type IntakeSession,
 } from "@/lib/intake-session";
+
 
 const WRAP = "mx-auto w-full max-w-4xl px-5 lg:px-8";
 
@@ -77,13 +78,15 @@ function FlowCard({ children }: { children: React.ReactNode }) {
   );
 }
 
-function CaseCode({ label, code }: { label: string; code: string }) {
+function CaseCode({ label, code }: { label: string; code: string | null }) {
+  if (!code) return null;
   return (
     <p className="text-xs uppercase tracking-widest text-muted-foreground">
       {label}: <span className="font-display text-base normal-case tracking-normal text-gold">{code}</span>
     </p>
   );
 }
+
 
 /** Information and legal pages. */
 export function InfoPageView({ locale, page }: { locale: Locale; page: InfoPage }) {
@@ -109,85 +112,8 @@ export function InfoPageView({ locale, page }: { locale: Locale; page: InfoPage 
   );
 }
 
-/** Consultation page: conditions + required confirmations that open the intake form. */
-export function ConsultationPageView({ locale }: { locale: Locale }) {
-  const c = siteContent[locale];
-  const page = c.consultation;
-  const navigate = useNavigate();
-  const [checked, setChecked] = useState({ policy: false, health: false, medical: false });
-  const allChecked = checked.policy && checked.health && checked.medical;
-
-  const proceed = () => {
-    if (!allChecked) return;
-    startIntakeSession(page.consent.version);
-    void navigate({ to: pagePath(locale, "intake") });
-  };
-
-  return (
-    <div className={`${WRAP} pb-16`}>
-      <PageHeader page={page} />
-      <Sections page={page} />
-
-      <FlowCard>
-        <h2 className="font-display text-xl font-medium text-primary md:text-2xl">{page.consent.title}</h2>
-        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{page.consent.lead}</p>
-
-        <div className="mt-6 space-y-4">
-          {page.consent.items.map((item) => (
-            <div
-              key={item.id}
-              className="flex gap-3 rounded-2xl border border-border/70 bg-background p-4 transition-colors duration-200 hover:border-gold/45"
-            >
-              <input
-                id={`consent-${item.id}`}
-                type="checkbox"
-                checked={checked[item.id]}
-                onChange={(event) => setChecked((value) => ({ ...value, [item.id]: event.target.checked }))}
-                className="mt-0.5 size-4 shrink-0 cursor-pointer accent-[var(--primary)]"
-              />
-              <label
-                htmlFor={`consent-${item.id}`}
-                className="cursor-pointer text-sm leading-relaxed text-foreground/90"
-              >
-                {item.text}
-              </label>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-5 flex flex-wrap gap-4 text-sm">
-          <Link to={pagePath(locale, "privacy")} className="text-primary underline underline-offset-4">
-            {page.consent.policyLinkLabel}
-          </Link>
-          <Link to={pagePath(locale, "terms")} className="text-primary underline underline-offset-4">
-            {page.consent.termsLinkLabel}
-          </Link>
-        </div>
-
-        <div className="mt-7 flex flex-wrap items-center gap-4">
-          <Button
-            size="lg"
-            disabled={!allChecked}
-            onClick={proceed}
-            className="h-12 rounded-full px-6 text-sm shadow-none"
-          >
-            {page.consent.continueLabel}
-            <ArrowRight aria-hidden="true" />
-          </Button>
-          {!allChecked && <p className="text-xs text-muted-foreground">{page.consent.blockedNote}</p>}
-        </div>
-
-        <p className="mt-6 text-xs uppercase tracking-widest text-muted-foreground">
-          {page.consent.versionLabel}: {page.consent.version}
-        </p>
-      </FlowCard>
-
-      <Notice text={page.consent.emergency} tone="warn" />
-    </div>
-  );
-}
-
 /** Guard: the flow pages only open once the consents are given. */
+
 function useFlowSession() {
   const [state, setState] = useState<{ ready: boolean; session: IntakeSession | null }>({
     ready: false,
@@ -235,13 +161,25 @@ export function IntakePageView({ locale }: { locale: Locale }) {
       ) : (
         <FlowCard>
           <CaseCode label={page.caseLabel} code={session.caseCode} />
-          <div className="mt-5 flex min-h-40 items-center justify-center rounded-2xl border border-dashed border-primary/25 bg-secondary/30 p-6 text-center">
-            <p className="flex items-center gap-2 text-sm text-muted-foreground">
-              <FileText className="size-4 text-primary" aria-hidden="true" />
-              {page.formPlaceholder}
-            </p>
-          </div>
+          {session.caseCode ? (
+            <div className="mt-5 overflow-hidden rounded-2xl border border-primary/20">
+              <iframe
+                src={`${intakeFormUrl(session.caseCode)}&embedded=true`}
+                title={page.title}
+                className="h-[70vh] w-full"
+                loading="lazy"
+              />
+            </div>
+          ) : (
+            <div className="mt-5 flex min-h-40 items-center justify-center rounded-2xl border border-dashed border-primary/25 bg-secondary/30 p-6 text-center">
+              <p className="flex items-center gap-2 text-sm text-muted-foreground">
+                <FileText className="size-4 text-primary" aria-hidden="true" />
+                {page.formPlaceholder}
+              </p>
+            </div>
+          )}
           <p className="mt-4 text-xs leading-relaxed text-muted-foreground">{page.demoNote}</p>
+
           <Button size="lg" onClick={continueToDocuments} className="mt-6 h-12 rounded-full px-6 text-sm shadow-none">
             {page.continueLabel}
             <ArrowRight aria-hidden="true" />

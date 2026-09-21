@@ -7,10 +7,18 @@ import { legalContent, type LegalPageKey } from "@/content/legal";
 import { legalConfig, missingLegalVars } from "@/content/legal-config";
 import type { LegalBlock, LegalDoc } from "@/content/legal-types";
 import { homePath, pagePath, type Locale } from "@/content/locales";
+import { createCase } from "@/lib/case-api";
 import { startIntakeSession } from "@/lib/intake-session";
+
 
 const WRAP = "mx-auto w-full max-w-4xl px-5 lg:px-8";
 const NOT_READY = missingLegalVars.length > 0;
+const CASE_LABEL: Record<Locale, string> = {
+  ru: "Код обращения",
+  en: "Reference code",
+  fr: "Code de dossier",
+};
+
 
 function NotReadyBanner({ text }: { text: string }) {
   return (
@@ -125,19 +133,26 @@ export function ConsentGatePageView({ locale }: { locale: Locale }) {
   const page = content.consultation;
   const navigate = useNavigate();
   const [checked, setChecked] = useState({ policy: false, health: false, boundaries: false });
-  const [error, setError] = useState(false);
+  const [status, setStatus] = useState<"idle" | "pending" | "issued" | "error">("idle");
+  const [caseCode, setCaseCode] = useState<string | null>(null);
   const allChecked = checked.policy && checked.health && checked.boundaries;
 
-  const proceed = () => {
-    if (!allChecked) return;
+  const proceed = async () => {
+    if (!allChecked || status === "pending") return;
+    setStatus("pending");
     try {
-      startIntakeSession(legalConfig.consentVersion);
-      setError(false);
-      void navigate({ to: pagePath(locale, "intake") });
+      const result = await createCase(locale, checked);
+      startIntakeSession(legalConfig.consentVersion, result.patientId);
+      setCaseCode(result.patientId);
+      setStatus("issued");
+      window.setTimeout(() => {
+        void navigate({ to: pagePath(locale, "intake") });
+      }, result.patientId ? 1600 : 200);
     } catch {
-      setError(true);
+      setStatus("error");
     }
   };
+
 
   return (
     <div className={`${WRAP} pb-16`}>
@@ -265,24 +280,32 @@ export function ConsentGatePageView({ locale }: { locale: Locale }) {
               ))}
             </div>
 
-            {error && (
+            {status === "error" && (
               <p role="alert" tabIndex={-1} className="mt-5 text-sm leading-relaxed text-destructive">
                 {page.panel.errorText}
               </p>
             )}
 
+            {status === "issued" && caseCode && (
+              <div className="mt-5 rounded-2xl border border-gold/50 bg-gold/10 p-4">
+                <p className="text-xs uppercase tracking-widest text-muted-foreground">{CASE_LABEL[locale]}</p>
+                <p className="mt-1 font-display text-2xl text-gold">{caseCode}</p>
+              </div>
+            )}
+
             <Button
               size="lg"
-              disabled={!allChecked}
-              onClick={proceed}
+              disabled={!allChecked || status === "pending" || status === "issued"}
+              onClick={() => void proceed()}
               className="mt-6 h-12 w-full rounded-full px-6 text-sm shadow-none"
             >
-              {page.panel.button}
-              <ArrowRight aria-hidden="true" />
+              {status === "pending" ? page.panel.loadingLabel : page.panel.button}
+              {status !== "pending" && <ArrowRight aria-hidden="true" />}
             </Button>
             <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
               {allChecked ? page.panel.buttonNote : page.panel.blockedNote}
             </p>
+
 
             <div className="mt-5">
               <Link to={homePath[locale]} className="text-sm text-primary underline underline-offset-4">
