@@ -52,10 +52,10 @@ import { Button } from "@/components/ui/button";
 import { homeContent } from "@/content/home";
 import { contactEmail, type Locale } from "@/content/locales";
 
-function ConsultationButton({ label, outline = false }: { label: string; outline?: boolean }) {
+function ConsultationButton({ label, locale, outline = false }: { label: string; locale: Locale; outline?: boolean }) {
   return (
     <Button asChild size="lg" variant={outline ? "outline" : "default"} className="h-12 rounded-full px-6 text-sm shadow-none sm:px-8">
-      <a href="#consultation">{label}<MessageCircle aria-hidden="true" /></a>
+      <a href={pagePath(locale, "consultation")}>{label}<MessageCircle aria-hidden="true" /></a>
     </Button>
   );
 }
