@@ -6,10 +6,13 @@ import { contactEmail, type Locale } from "./locales";
  * While anything required is null, production collection of health data stays off.
  */
 export const legalConfig = {
-  controllerLegalName: null as string | null,
-  controllerCountry: null as string | null,
-  /** Dr Vlad: the address must not be published. */
-  controllerAddress: null as string | null,
+  /** Confirmed: "Dr. Vlad Holistic medicine and consulting" (RCCM TG/LFW/RCCM/26-B-00129, Director: Dr. Vlad Tettegah). */
+  controllerLegalName: "Dr. Vlad Holistic medicine and consulting" as string | null,
+  /** Confirmed: République Togolaise. Clients accepted worldwide. */
+  controllerCountry: "Республика Того" as string | null,
+  /** Dr Vlad: the address must not be published — internal use only. */
+  controllerAddress: "Bd. de la Kara M.2334, Lome, Togo" as string | null,
+  /** Separate privacy-requests email — still to be provided (official: director@drvladt.com, +22890442523). */
   privacyEmail: null as string | null,
   publicContactEmail: contactEmail as string | null,
   effectiveDate: null as string | null,
@@ -17,11 +20,15 @@ export const legalConfig = {
   consentVersion: "1.0",
   termsVersion: "1.0",
   hostingProvider: null as string | null,
+  /** Services in use: Google Workspace; exact storage countries still to be confirmed. */
   dataStorageCountries: null as string | null,
   transferSafeguards: null as string | null,
   supervisoryAuthority: null as string | null,
   googleFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSd2DJROKIpPEHXbz9oz35_AuxNnSRpms-4WP-zZNepPFeFu_w/viewform",
-  /** Google Form field id (entry.XXXXXXX) for the Patient ID prefill — still to be confirmed. */
+  /**
+   * Google Form field id (entry.XXXXXXX) for the Patient ID prefill — still to be confirmed.
+   * Confirmed field semantics: name "Patient ID", visible label «Код обращения», value = case_id DV000001.
+   */
   googleFormPatientIdEntry: null as string | null,
 };
 
