@@ -136,8 +136,7 @@ export function ConsentGatePageView({ locale }: { locale: Locale }) {
   return (
     <div className={`${WRAP} pb-16`}>
       <header className="pt-12 md:pt-16">
-        <p className="text-xs uppercase tracking-widest text-muted-foreground">{page.step}</p>
-        <p className="eyebrow mt-3">{page.eyebrow}</p>
+        <p className="eyebrow">{page.step}</p>
         <h1 className="section-title mt-3">{page.title}</h1>
         {page.intro.map((text, i) => (
           <p key={i} className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
