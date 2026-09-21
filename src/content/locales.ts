@@ -36,6 +36,7 @@ export const pageSlugs = {
   thanks: { ru: "spasibo", en: "thank-you", fr: "merci" },
   contact: { ru: "kontakty", en: "contact", fr: "contact" },
   privacy: { ru: "politika-konfidentsialnosti", en: "privacy", fr: "confidentialite" },
+  consent: { ru: "soglasie-na-obrabotku-dannyh", en: "consent", fr: "consentement" },
   terms: { ru: "usloviya-ispolzovaniya", en: "terms", fr: "conditions-utilisation" },
 } as const satisfies Record<string, Record<Locale, string>>;
 
