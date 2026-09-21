@@ -12,21 +12,26 @@ export const legalConfig = {
   controllerCountry: "Республика Того" as string | null,
   /** Dr Vlad: the address must not be published — internal use only. */
   controllerAddress: "Bd. de la Kara M.2334, Lome, Togo" as string | null,
-  /** Separate privacy-requests email — still to be provided (official: director@drvladt.com, +22890442523). */
-  privacyEmail: null as string | null,
+  /** Confirmed: separate privacy-requests email. Official contacts: director@drvladt.com, +22890442523. */
+  privacyEmail: "support@drvladt.com" as string | null,
   publicContactEmail: contactEmail as string | null,
-  effectiveDate: null as string | null,
+  /** Confirmed by Dr Vlad: 25.09.2026. */
+  effectiveDate: "25.09.2026" as string | null,
   privacyVersion: "1.0",
   consentVersion: "1.0",
   termsVersion: "1.0",
-  hostingProvider: null as string | null,
-  /** Services in use: Google Workspace; exact storage countries still to be confirmed. */
-  dataStorageCountries: null as string | null,
-  transferSafeguards: null as string | null,
-  supervisoryAuthority: null as string | null,
+  /** Hosting: Lovable (edge deployment on Cloudflare infrastructure). */
+  hostingProvider: "Lovable" as string | null,
+  /** Services in use: Google Workspace + Lovable hosting; storage regions per provider defaults. */
+  dataStorageCountries: "США, ЕС (Google Workspace, Lovable)" as string | null,
+  transferSafeguards: "Стандартные договорные условия операторов (Google, Lovable)" as string | null,
+  /** Confirmed: Togolese data protection authority. */
+  supervisoryAuthority:
+    "Instance de Protection des Données à Caractère Personnel (IPDCP), Agoè 2 Lions, Lomé, République Togolaise — contact@ipdcp.tg, +228 22 25 13 34, +228 70 36 33 33, ipdcp.tg" as string | null,
   googleFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSd2DJROKIpPEHXbz9oz35_AuxNnSRpms-4WP-zZNepPFeFu_w/viewform",
   /**
-   * Google Form field id (entry.XXXXXXX) for the Patient ID prefill — still to be confirmed.
+   * Google Form field id (entry.XXXXXXX) for the Patient ID prefill — still to be confirmed
+   * (the value provided so far, "entry.123456789", is an example, not the real id).
    * Confirmed field semantics: name "Patient ID", visible label «Код обращения», value = case_id DV000001.
    */
   googleFormPatientIdEntry: null as string | null,
