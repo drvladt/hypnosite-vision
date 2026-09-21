@@ -1,18 +1,15 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 
 import { SiteLayout } from "@/components/site-layout";
-import {
-  ConsultationPageView,
-  DocumentsPageView,
-  InfoPageView,
-  IntakePageView,
-  ThanksPageView,
-} from "@/components/site-pages";
+import { DocumentsPageView, InfoPageView, IntakePageView, ThanksPageView } from "@/components/site-pages";
+import { ConsentGatePageView, LegalDocView } from "@/components/legal-pages";
 import { pageHead } from "@/content/page-head";
 import { siteContent } from "@/content/site";
+import { legalContent, type LegalPageKey } from "@/content/legal";
 import { locales, pageKeyFromSlug, type Locale, type PageKey } from "@/content/locales";
 import type { InfoPageKey } from "@/content/site-types";
 
+const LEGAL_PAGES = ["privacy", "consent", "terms"] as const;
 const FLOW_PAGES = ["consultation", "intake", "documents", "thanks"] as const;
 
 type Resolved = { locale: Locale; page: PageKey };
@@ -37,15 +34,21 @@ export const Route = createFileRoute("/$locale/$slug")({
   component: SlugPage,
 });
 
+function isLegalPage(page: PageKey): page is LegalPageKey {
+  return (LEGAL_PAGES as readonly string[]).includes(page);
+}
+
 function isFlowPage(page: PageKey): page is (typeof FLOW_PAGES)[number] {
   return (FLOW_PAGES as readonly string[]).includes(page);
 }
 
 function crumbFor(locale: Locale, page: PageKey) {
   const content = siteContent[locale];
+  const legal = legalContent[locale];
+  if (isLegalPage(page)) return legal[page].title;
   switch (page) {
     case "consultation":
-      return content.consultation.title;
+      return legal.consultation.eyebrow;
     case "intake":
       return content.intake.title;
     case "documents":
@@ -62,10 +65,12 @@ function SlugPage() {
 
   return (
     <SiteLayout locale={locale} page={page} crumb={crumbFor(locale, page)}>
-      {!isFlowPage(page) ? (
+      {isLegalPage(page) ? (
+        <LegalDocView locale={locale} page={page} />
+      ) : !isFlowPage(page) ? (
         <InfoPageView locale={locale} page={siteContent[locale].info[page as InfoPageKey]} />
       ) : page === "consultation" ? (
-        <ConsultationPageView locale={locale} />
+        <ConsentGatePageView locale={locale} />
       ) : page === "intake" ? (
         <IntakePageView locale={locale} />
       ) : page === "documents" ? (
@@ -76,4 +81,3 @@ function SlugPage() {
     </SiteLayout>
   );
 }
-
