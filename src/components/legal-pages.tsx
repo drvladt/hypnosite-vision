@@ -7,7 +7,9 @@ import { legalContent, type LegalPageKey } from "@/content/legal";
 import { legalConfig, missingLegalVars } from "@/content/legal-config";
 import type { LegalBlock, LegalDoc } from "@/content/legal-types";
 import { homePath, pagePath, type Locale } from "@/content/locales";
+import { createCase } from "@/lib/case-api";
 import { startIntakeSession } from "@/lib/intake-session";
+
 
 const WRAP = "mx-auto w-full max-w-4xl px-5 lg:px-8";
 const NOT_READY = missingLegalVars.length > 0;
@@ -125,19 +127,26 @@ export function ConsentGatePageView({ locale }: { locale: Locale }) {
   const page = content.consultation;
   const navigate = useNavigate();
   const [checked, setChecked] = useState({ policy: false, health: false, boundaries: false });
-  const [error, setError] = useState(false);
+  const [status, setStatus] = useState<"idle" | "pending" | "issued" | "error">("idle");
+  const [caseCode, setCaseCode] = useState<string | null>(null);
   const allChecked = checked.policy && checked.health && checked.boundaries;
 
-  const proceed = () => {
-    if (!allChecked) return;
+  const proceed = async () => {
+    if (!allChecked || status === "pending") return;
+    setStatus("pending");
     try {
-      startIntakeSession(legalConfig.consentVersion);
-      setError(false);
-      void navigate({ to: pagePath(locale, "intake") });
+      const result = await createCase(locale, checked);
+      startIntakeSession(legalConfig.consentVersion, result.patientId);
+      setCaseCode(result.patientId);
+      setStatus("issued");
+      window.setTimeout(() => {
+        void navigate({ to: pagePath(locale, "intake") });
+      }, result.patientId ? 1600 : 200);
     } catch {
-      setError(true);
+      setStatus("error");
     }
   };
+
 
   return (
     <div className={`${WRAP} pb-16`}>
