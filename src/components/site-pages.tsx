@@ -6,13 +6,14 @@ import { Button } from "@/components/ui/button";
 import { siteContent } from "@/content/site";
 import type { InfoPage } from "@/content/site-types";
 import { contactEmail, homePath, pagePath, type Locale } from "@/content/locales";
+import { intakeFormUrl } from "@/lib/case-api";
 import {
   markIntakeDone,
   readIntakeSession,
   restoreIntakeSession,
-  startIntakeSession,
   type IntakeSession,
 } from "@/lib/intake-session";
+
 
 const WRAP = "mx-auto w-full max-w-4xl px-5 lg:px-8";
 
@@ -77,13 +78,15 @@ function FlowCard({ children }: { children: React.ReactNode }) {
   );
 }
 
-function CaseCode({ label, code }: { label: string; code: string }) {
+function CaseCode({ label, code }: { label: string; code: string | null }) {
+  if (!code) return null;
   return (
     <p className="text-xs uppercase tracking-widest text-muted-foreground">
       {label}: <span className="font-display text-base normal-case tracking-normal text-gold">{code}</span>
     </p>
   );
 }
+
 
 /** Information and legal pages. */
 export function InfoPageView({ locale, page }: { locale: Locale; page: InfoPage }) {
@@ -158,13 +161,25 @@ export function IntakePageView({ locale }: { locale: Locale }) {
       ) : (
         <FlowCard>
           <CaseCode label={page.caseLabel} code={session.caseCode} />
-          <div className="mt-5 flex min-h-40 items-center justify-center rounded-2xl border border-dashed border-primary/25 bg-secondary/30 p-6 text-center">
-            <p className="flex items-center gap-2 text-sm text-muted-foreground">
-              <FileText className="size-4 text-primary" aria-hidden="true" />
-              {page.formPlaceholder}
-            </p>
-          </div>
+          {session.caseCode ? (
+            <div className="mt-5 overflow-hidden rounded-2xl border border-primary/20">
+              <iframe
+                src={`${intakeFormUrl(session.caseCode)}&embedded=true`}
+                title={page.title}
+                className="h-[70vh] w-full"
+                loading="lazy"
+              />
+            </div>
+          ) : (
+            <div className="mt-5 flex min-h-40 items-center justify-center rounded-2xl border border-dashed border-primary/25 bg-secondary/30 p-6 text-center">
+              <p className="flex items-center gap-2 text-sm text-muted-foreground">
+                <FileText className="size-4 text-primary" aria-hidden="true" />
+                {page.formPlaceholder}
+              </p>
+            </div>
+          )}
           <p className="mt-4 text-xs leading-relaxed text-muted-foreground">{page.demoNote}</p>
+
           <Button size="lg" onClick={continueToDocuments} className="mt-6 h-12 rounded-full px-6 text-sm shadow-none">
             {page.continueLabel}
             <ArrowRight aria-hidden="true" />
