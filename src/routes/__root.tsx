@@ -8,9 +8,12 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
+import { useRouterState } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { siteContent } from "../content/site";
+import { homePath, locales, pagePath, type Locale } from "../content/locales";
 
 /** Localised 404: the language comes from the first segment of the URL. */
 function NotFoundComponent() {
