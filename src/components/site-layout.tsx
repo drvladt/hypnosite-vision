@@ -8,6 +8,7 @@ import { SocialIcon } from "@/components/social-icon";
 import { Button } from "@/components/ui/button";
 import { homeContent } from "@/content/home";
 import { siteContent } from "@/content/site";
+import { legalContent } from "@/content/legal";
 import { homePath, pagePath, socialLinks, type Locale, type PageKey } from "@/content/locales";
 
 const NAV_PAGES: PageKey[] = ["approach", "about", "hypnotherapy", "research", "consultation", "contact"];
@@ -20,19 +21,30 @@ const FOOTER_PAGES: PageKey[] = [
   "consultation",
   "contact",
   "privacy",
+  "consent",
   "terms",
 ];
+
+const LEGAL_PAGES = ["privacy", "consent", "terms"] as const;
+
+function isLegal(page: PageKey): page is (typeof LEGAL_PAGES)[number] {
+  return (LEGAL_PAGES as readonly string[]).includes(page);
+}
 
 /** Short labels keep the header on one line; full titles are used in the footer. */
 function shortLabelFor(locale: Locale, page: PageKey) {
   const content = siteContent[locale];
-  if (page === "consultation") return content.consultation.eyebrow;
-  return content.info[page as Exclude<PageKey, "consultation" | "intake" | "documents" | "thanks">].eyebrow;
+  const legal = legalContent[locale];
+  if (isLegal(page)) return legal[page].title;
+  if (page === "consultation") return legal.consultation.eyebrow;
+  return content.info[page as Exclude<PageKey, "consultation" | "intake" | "documents" | "thanks" | "privacy" | "consent" | "terms">].eyebrow;
 }
 
 function labelFor(locale: Locale, page: PageKey) {
   const content = siteContent[locale];
-  if (page === "consultation") return content.consultation.title;
+  const legal = legalContent[locale];
+  if (isLegal(page)) return legal[page].title;
+  if (page === "consultation") return legal.consultation.eyebrow;
   if (page === "intake") return content.intake.title;
   if (page === "documents") return content.documents.title;
   if (page === "thanks") return content.thanks.title;

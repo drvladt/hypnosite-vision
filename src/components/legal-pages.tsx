@@ -21,20 +21,26 @@ function NotReadyBanner({ text }: { text: string }) {
   );
 }
 
-function Block({ block }: { block: LegalBlock }) {
+function Block({
+  heading,
+  paragraphs,
+  bullets,
+}: {
+  heading?: string | undefined;
+  paragraphs?: string[] | undefined;
+  bullets?: string[] | undefined;
+}) {
   return (
     <div className="mt-5">
-      {block.heading && (
-        <h3 className="font-display text-base font-medium text-primary md:text-lg">{block.heading}</h3>
-      )}
-      {block.paragraphs?.map((text, i) => (
+      {heading && <h3 className="font-display text-base font-medium text-primary md:text-lg">{heading}</h3>}
+      {paragraphs?.map((text, i) => (
         <p key={i} className="mt-3 text-base leading-relaxed text-foreground/90">
           {text}
         </p>
       ))}
-      {block.bullets && (
+      {bullets && (
         <ul className="mt-4 space-y-2.5 border-l-2 border-gold/40 pl-6">
-          {block.bullets.map((text, i) => (
+          {bullets.map((text, i) => (
             <li key={i} className="relative text-base leading-relaxed text-foreground/90">
               <span className="absolute -left-[1.85rem] top-2.5 size-1.5 rotate-45 bg-gold" aria-hidden="true" />
               {text}
@@ -83,9 +89,9 @@ export function LegalDocView({ locale, page }: { locale: Locale; page: LegalPage
         {doc.sections.map((section) => (
           <section key={section.id} id={section.id} className="scroll-mt-28">
             <h2 className="font-display text-xl font-medium text-primary md:text-2xl">{section.heading}</h2>
-            <Block block={section} />
+            <Block paragraphs={section.paragraphs} bullets={section.bullets} />
             {section.subsections?.map((sub, i) => (
-              <Block key={i} block={sub} />
+              <Block key={i} heading={sub.heading} paragraphs={sub.paragraphs} bullets={sub.bullets} />
             ))}
           </section>
         ))}
@@ -136,8 +142,7 @@ export function ConsentGatePageView({ locale }: { locale: Locale }) {
   return (
     <div className={`${WRAP} pb-16`}>
       <header className="pt-12 md:pt-16">
-        <p className="text-xs uppercase tracking-widest text-muted-foreground">{page.step}</p>
-        <p className="eyebrow mt-3">{page.eyebrow}</p>
+        <p className="eyebrow">{page.step}</p>
         <h1 className="section-title mt-3">{page.title}</h1>
         {page.intro.map((text, i) => (
           <p key={i} className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
