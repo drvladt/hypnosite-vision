@@ -134,18 +134,24 @@ export function ConsultationPageView({ locale }: { locale: Locale }) {
 
         <div className="mt-6 space-y-4">
           {page.consent.items.map((item) => (
-            <label
+            <div
               key={item.id}
-              className="flex cursor-pointer gap-3 rounded-2xl border border-border/70 bg-background p-4 transition-colors duration-200 hover:border-gold/45"
+              className="flex gap-3 rounded-2xl border border-border/70 bg-background p-4 transition-colors duration-200 hover:border-gold/45"
             >
               <input
+                id={`consent-${item.id}`}
                 type="checkbox"
                 checked={checked[item.id]}
                 onChange={(event) => setChecked((value) => ({ ...value, [item.id]: event.target.checked }))}
-                className="mt-0.5 size-4 shrink-0 accent-[var(--primary)]"
+                className="mt-0.5 size-4 shrink-0 cursor-pointer accent-[var(--primary)]"
               />
-              <span className="text-sm leading-relaxed text-foreground/90">{item.text}</span>
-            </label>
+              <label
+                htmlFor={`consent-${item.id}`}
+                className="cursor-pointer text-sm leading-relaxed text-foreground/90"
+              >
+                {item.text}
+              </label>
+            </div>
           ))}
         </div>
 
