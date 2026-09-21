@@ -78,7 +78,7 @@ export function SiteLayout({
                 className="nav-link"
                 activeProps={{ className: "nav-link text-primary" }}
               >
-                {labelFor(locale, item)}
+                {shortLabelFor(locale, item)}
               </Link>
             ))}
             <LanguageSwitcher locale={locale} label={home.nav.languageLabel} page={page} />
@@ -105,7 +105,7 @@ export function SiteLayout({
                   onClick={() => setMenuOpen(false)}
                   className="border-b border-border/60 py-3 text-sm"
                 >
-                  {labelFor(locale, item)}
+                  {shortLabelFor(locale, item)}
                 </Link>
               ))}
             </div>
