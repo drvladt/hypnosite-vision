@@ -30,11 +30,12 @@ export const legalConfig = {
     "Instance de Protection des Données à Caractère Personnel (IPDCP), Agoè 2 Lions, Lomé, République Togolaise — contact@ipdcp.tg, +228 22 25 13 34, +228 70 36 33 33, ipdcp.tg" as string | null,
   googleFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSd2DJROKIpPEHXbz9oz35_AuxNnSRpms-4WP-zZNepPFeFu_w/viewform",
   /**
-   * Google Form field id (entry.XXXXXXX) for the Patient ID prefill — still to be confirmed
-   * (the value provided so far, "entry.123456789", is an example, not the real id).
-   * Confirmed field semantics: name "Patient ID", visible label «Код обращения», value = case_id DV000001.
+   * Confirmed via prefilled link from Dr Vlad: the Patient ID field id.
+   * Field semantics: name "Patient ID", visible label «Код обращения», value = case_id format DV000001.
    */
-  googleFormPatientIdEntry: null as string | null,
+  googleFormPatientIdEntry: "entry.319514281" as string | null,
+  /** Confirmed: case_id format used for the Patient ID value. */
+  caseIdFormat: "DV000001" as string,
 };
 
 /** Retention periods, confirmed by Dr Vlad: one month for every case category. */
