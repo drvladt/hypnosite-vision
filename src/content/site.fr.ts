@@ -263,7 +263,7 @@ export const siteFr: SiteContent = {
     missingConsentAction: "Aller aux conditions",
   },
   documents: {
-    eyebrow: "Étape 2 sur 3",
+    eyebrow: "ÉTAPE 3 SUR 3",
     title: "Documents médicaux",
     lead: "Étape facultative : vous pouvez joindre comptes rendus, résultats d'examens et avis spécialisés.",
     metaTitle: "Documents médicaux — Dr. Vlad",

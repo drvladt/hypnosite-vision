@@ -261,7 +261,7 @@ export const siteEn: SiteContent = {
     missingConsentAction: "Go to the conditions",
   },
   documents: {
-    eyebrow: "Step 2 of 3",
+    eyebrow: "STEP 3 OF 3",
     title: "Medical documents",
     lead: "An optional step: you can attach discharge summaries, test results and specialist reports.",
     metaTitle: "Medical documents — Dr. Vlad",

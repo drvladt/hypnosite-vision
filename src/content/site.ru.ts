@@ -262,7 +262,7 @@ export const siteRu: SiteContent = {
     missingConsentAction: "Перейти к условиям",
   },
   documents: {
-    eyebrow: "Шаг 2 из 3",
+    eyebrow: "ШАГ 3 ИЗ 3",
     title: "Медицинские документы",
     lead: "Необязательный шаг: вы можете приложить выписки, результаты обследований и заключения.",
     metaTitle: "Медицинские документы — Dr. Vlad",
