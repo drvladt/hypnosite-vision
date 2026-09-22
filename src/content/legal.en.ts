@@ -359,22 +359,15 @@ export const legalEn: LegalContent = {
         ],
       },
       {
-        id: "no-guarantees",
-        heading: "8. No guarantees",
-        paragraphs: [
-          "Individual response, the course of a condition and the outcome of any follow-up work cannot be guaranteed. The site makes no promise of complete symptom relief, of identifying one single cause, or that hypnotherapy will be suitable.",
-        ],
-      },
-      {
         id: "privacy",
-        heading: "9. Confidentiality",
+        heading: "8. Confidentiality",
         paragraphs: [
           "Processing of personal data is governed by the Privacy Policy and a separate consent. Medical information should not be sent through public social networks or unsecured channels.",
         ],
       },
       {
         id: "contacts",
-        heading: "10. Contacts",
+        heading: "9. Contacts",
         paragraphs: [
           `Scheduling questions: ${L("publicContactEmail")}.`,
           `Data protection questions: ${L("privacyEmail")}.`,

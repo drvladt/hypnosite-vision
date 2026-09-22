@@ -364,22 +364,15 @@ export const legalFr: LegalContent = {
         ],
       },
       {
-        id: "no-guarantees",
-        heading: "8. Absence de garanties",
-        paragraphs: [
-          "La réaction individuelle, l'évolution de l'état et le résultat d'un travail ultérieur ne peuvent être garantis. Le site ne promet ni disparition complète des symptômes, ni identification d'une cause unique, ni pertinence assurée de l'hypnothérapie.",
-        ],
-      },
-      {
         id: "privacy",
-        heading: "9. Confidentialité",
+        heading: "8. Confidentialité",
         paragraphs: [
           "Le traitement des données personnelles est régi par la Politique de confidentialité et un consentement distinct. Les informations médicales ne doivent pas être envoyées via les réseaux sociaux publics ou des canaux non sécurisés.",
         ],
       },
       {
         id: "contacts",
-        heading: "10. Contacts",
+        heading: "9. Contacts",
         paragraphs: [
           `Questions d'organisation : ${L("publicContactEmail")}.`,
           `Questions relatives aux données : ${L("privacyEmail")}.`,
