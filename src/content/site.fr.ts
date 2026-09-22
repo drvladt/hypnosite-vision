@@ -8,8 +8,7 @@ export const siteFr: SiteContent = {
     ctaSecondary: "Comment se déroule la consultation",
     pendingNotice:
       "Le texte complet de cette page est en préparation. Voici l'essentiel dès à présent.",
-    draftNotice:
-      "Brouillon. Ce texte doit être validé juridiquement avant la mise en ligne.",
+    draftNotice: "Brouillon. Ce texte doit être validé juridiquement avant la mise en ligne.",
     emergencyShort:
       "En cas de situation aiguë — douleur thoracique intense, difficulté à respirer, perte de conscience, danger vital — contactez les secours médicaux, pas ce site.",
     backHome: "Retour à l'accueil",
@@ -243,7 +242,8 @@ export const siteFr: SiteContent = {
     title: "Questionnaire préalable",
     lead: "Le questionnaire me permet d'étudier votre situation avant la rencontre et de vérifier que le format convient.",
     metaTitle: "Questionnaire préalable — Dr. Vlad",
-    metaDescription: "Questionnaire préalable à la consultation, accessible après confirmation des conditions.",
+    metaDescription:
+      "Questionnaire préalable à la consultation, accessible après confirmation des conditions.",
     sections: [
       {
         paragraphs: [
@@ -254,6 +254,7 @@ export const siteFr: SiteContent = {
     caseLabel: "Code de demande",
     formNote:
       "Le code de demande a été ajouté automatiquement dans le champ Patient ID. Remplissez et envoyez le formulaire, puis revenez sur le site pour continuer.",
+    formSubmittedLabel: "J’ai rempli et envoyé le formulaire Google.",
     formPlaceholder: "Le questionnaire apparaîtra ici",
     continueLabel: "Continuer vers les documents médicaux",
     missingConsentTitle: "Les conditions doivent d'abord être confirmées",
@@ -303,7 +304,8 @@ export const siteFr: SiteContent = {
       },
     ],
     caseLabel: "Code de demande",
-    caseHint: "Conservez ce code : il sera utile si vous souhaitez ajouter des documents plus tard.",
+    caseHint:
+      "Conservez ce code : il sera utile si vous souhaitez ajouter des documents plus tard.",
     homeLabel: "Retour à l'accueil",
   },
 };

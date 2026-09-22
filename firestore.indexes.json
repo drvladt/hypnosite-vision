@@ -1,0 +1,11 @@
+{
+  "indexes": [],
+  "fieldOverrides": [
+    {
+      "collectionGroup": "consentRecords",
+      "fieldPath": "retention_expires_at_utc",
+      "ttl": true,
+      "indexes": []
+    }
+  ]
+}

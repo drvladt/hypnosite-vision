@@ -1,5 +1,15 @@
 import { contactEmail, type Locale } from "./locales";
 
+type LocalizedLegalValue = Record<Locale, string>;
+
+const localized = (value: LocalizedLegalValue): LocalizedLegalValue => value;
+
+function isLocalizedLegalValue(value: unknown): value is LocalizedLegalValue {
+  return (
+    typeof value === "object" && value !== null && "ru" in value && "en" in value && "fr" in value
+  );
+}
+
 /**
  * Confirmed legal variables for the consent flow (LOVABLE_CONSENT_FLOW_PROMPTS_RU.md).
  * `null` means "not confirmed yet" — never invent these values.
@@ -9,9 +19,12 @@ export const legalConfig = {
   /** Confirmed: "Dr. Vlad Holistic medicine and consulting" (RCCM TG/LFW/RCCM/26-B-00129, Director: Dr. Vlad Tettegah). */
   controllerLegalName: "Dr. Vlad Holistic medicine and consulting" as string | null,
   /** Confirmed: République Togolaise. Clients accepted worldwide. */
-  controllerCountry: "Республика Того" as string | null,
-  /** Dr Vlad: the address must not be published — internal use only. */
-  controllerAddress: "Bd. de la Kara M.2334, Lome, Togo" as string | null,
+  controllerCountry: localized({
+    ru: "Республика Того",
+    en: "Republic of Togo",
+    fr: "République togolaise",
+  }),
+  // The non-public legal address is intentionally absent from frontend source code.
   /** Confirmed: separate privacy-requests email. Official contacts: director@drvladt.com, +22890442523. */
   privacyEmail: "support@drvladt.com" as string | null,
   publicContactEmail: contactEmail as string | null,
@@ -25,17 +38,28 @@ export const legalConfig = {
   /** Consent log + case code generation: Google Cloud / Firebase (Firestore + Cloud Function). */
   consentLogProvider: "Google Cloud / Firebase (Firestore, Cloud Function)" as string | null,
   /** Confirmed 22.09.2026: Firestore and the Cloud Function run in europe-west1 (Belgium). */
-  consentLogRegion: "europe-west1 (Бельгия)" as string | null,
+  consentLogRegion: localized({
+    ru: "europe-west1 (Бельгия)",
+    en: "europe-west1 (Belgium)",
+    fr: "europe-west1 (Belgique)",
+  }),
   /** Services in use: Google Cloud/Firebase, Google Workspace + Lovable hosting. */
-  dataStorageCountries:
-    "Бельгия (europe-west1 — журнал согласий, Google Cloud/Firebase), ЕС и США (Google Workspace, Lovable)" as
-      | string
-      | null,
-  transferSafeguards: "Стандартные договорные условия операторов (Google, Lovable)" as string | null,
+  dataStorageCountries: localized({
+    ru: "Бельгия (europe-west1 — журнал согласий, Google Cloud/Firebase), ЕС и США (Google Workspace, Lovable)",
+    en: "Belgium (europe-west1 — consent log, Google Cloud/Firebase), the EU and the United States (Google Workspace, Lovable)",
+    fr: "Belgique (europe-west1 — journal des consentements, Google Cloud/Firebase), Union européenne et États-Unis (Google Workspace, Lovable)",
+  }),
+  transferSafeguards: localized({
+    ru: "Стандартные договорные положения, применяемые провайдерами (Google, Lovable)",
+    en: "Standard Contractual Clauses used by the providers (Google, Lovable)",
+    fr: "Clauses contractuelles types appliquées par les prestataires (Google, Lovable)",
+  }),
   /** Confirmed: Togolese data protection authority. */
   supervisoryAuthority:
-    "Instance de Protection des Données à Caractère Personnel (IPDCP), Agoè 2 Lions, Lomé, République Togolaise — contact@ipdcp.tg, +228 22 25 13 34, +228 70 36 33 33, ipdcp.tg" as string | null,
-  googleFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSd2DJROKIpPEHXbz9oz35_AuxNnSRpms-4WP-zZNepPFeFu_w/viewform",
+    "Instance de Protection des Données à Caractère Personnel (IPDCP), Agoè 2 Lions, Lomé, République Togolaise — contact@ipdcp.tg, +228 22 25 13 34, +228 70 36 33 33, ipdcp.tg" as
+      string | null,
+  googleFormUrl:
+    "https://docs.google.com/forms/d/e/1FAIpQLSd2DJROKIpPEHXbz9oz35_AuxNnSRpms-4WP-zZNepPFeFu_w/viewform",
   /**
    * Confirmed via prefilled link from Dr Vlad: the Patient ID field id.
    * Field semantics: name "Patient ID", visible label «Код обращения», value = case_id format DV000001.
@@ -46,7 +70,10 @@ export const legalConfig = {
 };
 
 /** Retention periods, confirmed by Dr Vlad: one month for every case category. */
-export const retention: Record<"abandoned" | "declined" | "consultation" | "consentLog", Record<Locale, string>> = {
+export const retention: Record<
+  "abandoned" | "declined" | "consultation" | "consentLog",
+  Record<Locale, string>
+> = {
   abandoned: { ru: "1 месяц", en: "1 month", fr: "1 mois" },
   declined: { ru: "1 месяц", en: "1 month", fr: "1 mois" },
   consultation: { ru: "1 месяц", en: "1 month", fr: "1 mois" },
@@ -62,6 +89,7 @@ const placeholder: Record<Locale, string> = {
 /** Reads a legal variable, falling back to a visible "not confirmed yet" marker. */
 export function lv(key: keyof typeof legalConfig, locale: Locale): string {
   const value = legalConfig[key];
+  if (isLocalizedLegalValue(value)) return value[locale] || placeholder[locale];
   return typeof value === "string" && value.length > 0 ? value : placeholder[locale];
 }
 
@@ -82,6 +110,9 @@ const REQUIRED_KEYS: (keyof typeof legalConfig)[] = [
 /** Which required variables are still empty. */
 export const missingLegalVars = REQUIRED_KEYS.filter((key) => {
   const value = legalConfig[key];
+  if (isLocalizedLegalValue(value)) {
+    return Object.values(value).some((localizedValue) => localizedValue.length === 0);
+  }
   return !(typeof value === "string" && value.length > 0);
 });
 

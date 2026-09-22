@@ -249,7 +249,7 @@ export const legalFr: LegalContent = {
         heading: "8. Traitement transfrontalier",
         paragraphs: [
           `Les données peuvent être techniquement traitées ou conservées dans les pays ou régions suivants : ${L("dataStorageCountries")}.`,
-          `Le journal des consentements et l'attribution du code de dossier sont assurés par ${L("consentLogProvider")}, dans la région ${L("consentLogRegion")}. Le journal n'enregistre que le fait des trois confirmations, les versions des documents, l'heure UTC du serveur et le code de dossier — sans nom, coordonnées, symptômes, diagnostics, réponses au questionnaire ni documents médicaux. Ces enregistrements sont conservés un mois calendaire.`,
+          `Le journal des consentements et l'attribution du code de dossier sont assurés par ${L("consentLogProvider")}, dans la région ${L("consentLogRegion")}. Le journal n'enregistre que le fait des trois confirmations, les versions des documents, l'heure UTC du serveur et le code de dossier — sans nom, coordonnées, symptômes, diagnostics, réponses au questionnaire ni documents médicaux. Chaque enregistrement est programmé pour une suppression automatique après un mois calendaire ; le mécanisme TTL du prestataire effectue la suppression technique après cette échéance.`,
           `Garanties de transfert appliquées : ${L("transferSafeguards")}.`,
         ],
       },
@@ -340,7 +340,10 @@ export const legalFr: LegalContent = {
       },
     ],
     actions: [{ label: "Revenir aux confirmations", page: "consultation" }],
-    mailAction: { label: "Nous écrire au sujet des données", email: legalConfig.privacyEmail ?? "" },
+    mailAction: {
+      label: "Nous écrire au sujet des données",
+      email: legalConfig.privacyEmail ?? "",
+    },
   },
 
   consent: {

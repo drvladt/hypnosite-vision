@@ -247,7 +247,7 @@ export const legalEn: LegalContent = {
         heading: "8. Cross-border processing",
         paragraphs: [
           `Data may technically be processed or stored in the following countries or regions: ${L("dataStorageCountries")}.`,
-          `The consent log and the issuing of the reference code run in ${L("consentLogProvider")}, located in the ${L("consentLogRegion")} region. The log records only the fact of the three confirmations, the document versions, the server UTC time and the reference code — no name, contacts, symptoms, diagnoses, form answers or medical documents. Log entries are kept for one calendar month.`,
+          `The consent log and the issuing of the reference code run in ${L("consentLogProvider")}, located in the ${L("consentLogRegion")} region. The log records only the fact of the three confirmations, the document versions, the server UTC time and the reference code — no name, contacts, symptoms, diagnoses, form answers or medical documents. Each record is scheduled for automatic deletion after one calendar month; the provider's TTL mechanism performs the technical deletion after that time.`,
           `Transfer safeguards applied: ${L("transferSafeguards")}.`,
         ],
       },

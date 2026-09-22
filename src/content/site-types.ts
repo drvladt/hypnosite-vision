@@ -18,14 +18,7 @@ export type InfoPage = {
 };
 
 export type InfoPageKey =
-  | "approach"
-  | "about"
-  | "hypnotherapy"
-  | "research"
-  | "stories"
-  | "contact"
-  | "privacy"
-  | "terms";
+  "approach" | "about" | "hypnotherapy" | "research" | "stories" | "contact" | "privacy" | "terms";
 
 export type ConsultationPage = InfoPage & {
   consent: {
@@ -45,6 +38,7 @@ export type ConsultationPage = InfoPage & {
 export type IntakePage = InfoPage & {
   caseLabel: string;
   formNote: string;
+  formSubmittedLabel: string;
   formPlaceholder: string;
   continueLabel: string;
   missingConsentTitle: string;

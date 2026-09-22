@@ -6,7 +6,8 @@ export const siteEn: SiteContent = {
     navLabel: "Site sections",
     ctaPrimary: "Discuss my case",
     ctaSecondary: "How the consultation works",
-    pendingNotice: "The full text of this section is in preparation. Below is what matters most for now.",
+    pendingNotice:
+      "The full text of this section is in preparation. Below is what matters most for now.",
     draftNotice: "Draft. This text requires legal review and will be finalised before launch.",
     emergencyShort:
       "In acute situations — severe chest pain, difficulty breathing, fainting, any threat to life — contact emergency medical services, not this website.",
@@ -105,7 +106,8 @@ export const siteEn: SiteContent = {
       title: "Stories and results",
       lead: "This section exists and will be filled with real stories — only once participants have given their consent.",
       metaTitle: "Stories and results — Dr. Vlad",
-      metaDescription: "Real patient stories and results will be published here once consent is given.",
+      metaDescription:
+        "Real patient stories and results will be published here once consent is given.",
       sections: [
         {
           paragraphs: [
@@ -250,10 +252,12 @@ export const siteEn: SiteContent = {
     caseLabel: "Reference code",
     formNote:
       "The reference code has been added automatically to the Patient ID field. Complete and submit the form, then return to the website to continue.",
+    formSubmittedLabel: "I have completed and submitted the Google Form.",
     formPlaceholder: "The intake form will appear here",
     continueLabel: "Continue to medical documents",
     missingConsentTitle: "The conditions need to be confirmed first",
-    missingConsentText: "The intake form opens only after the confirmations on the consultation page.",
+    missingConsentText:
+      "The intake form opens only after the confirmations on the consultation page.",
     missingConsentAction: "Go to the conditions",
   },
   documents: {
