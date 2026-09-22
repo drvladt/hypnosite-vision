@@ -247,7 +247,7 @@ export const siteFr: SiteContent = {
     sections: [
       {
         paragraphs: [
-          "Prenez votre temps et écrivez avec vos propres mots. Si certaines informations vous manquent, laissez le champ vide : cela n'empêchera pas l'examen de votre demande.",
+          "Prenez votre temps et écrivez avec vos propres mots. Si certaines informations vous manquent, laissez le champ vide.",
         ],
       },
     ],
