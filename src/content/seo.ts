@@ -2,6 +2,9 @@ import portraitAsset from "@/assets/fotoMe.png.asset.json";
 
 import { homePath, locales, pagePath, socialLinks, type Locale, type PageKey } from "./locales";
 
+/** Canonical production origin, used when the loader data is not available yet. */
+export const canonicalSiteOrigin = "https://drvladt.com";
+
 export const publicRobots =
   "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
 export const privateFlowRobots = "noindex, follow";

@@ -18,7 +18,9 @@ function normalizeOrigin(value: string | undefined): string | undefined {
  */
 export function resolveSiteOrigin(request: Request): string {
   const configuredOrigin = normalizeOrigin(
-    process.env["SITE_URL"] ?? process.env["VITE_SITE_URL"] ?? import.meta.env.VITE_SITE_URL,
+    process.env["SITE_URL"] ??
+      process.env["VITE_SITE_URL"] ??
+      (import.meta.env["VITE_SITE_URL"] as string | undefined),
   );
   return configuredOrigin ?? new URL(request.url).origin;
 }
