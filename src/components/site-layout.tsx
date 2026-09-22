@@ -11,14 +11,13 @@ import { siteContent } from "@/content/site";
 import { legalContent } from "@/content/legal";
 import { homePath, pagePath, socialLinks, type Locale, type PageKey } from "@/content/locales";
 
-const NAV_PAGES: PageKey[] = ["approach", "about", "hypnotherapy", "research", "consultation", "contact"];
+const NAV_PAGES: PageKey[] = ["approach", "about", "hypnotherapy", "research", "contact"];
 const FOOTER_PAGES: PageKey[] = [
   "about",
   "hypnotherapy",
   "approach",
   "research",
   "stories",
-  "consultation",
   "contact",
   "privacy",
   "terms",
