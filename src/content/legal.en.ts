@@ -190,7 +190,6 @@ export const legalEn: LegalContent = {
             paragraphs: [
               `You can send a request to ${L("privacyEmail")}. To protect your data, identity confirmation may be required before the request is fulfilled.`,
               "Consent can be withdrawn at any time. Withdrawal does not affect the lawfulness of processing carried out before it was received. If the request cannot be reviewed further without processing the information provided, the review will be stopped after consent is withdrawn.",
-              `You also have the right to contact the competent data protection authority of the Republic of Togo — ${L("supervisoryAuthority")}.`,
             ],
           },
         ],
