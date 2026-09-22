@@ -13,7 +13,7 @@ import { useRouterState } from "@tanstack/react-router";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { siteContent } from "../content/site";
-import { homePath, locales, pagePath, type Locale } from "../content/locales";
+import { homePath, locales, pagePath, socialLinks, type Locale } from "../content/locales";
 
 /** Localised 404: the language comes from the first segment of the URL. */
 function NotFoundComponent() {
@@ -92,6 +92,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "author", content: "Dr. Vlad Tettegah" },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Dr. Vlad" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
@@ -104,6 +105,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Nunito+Sans:wght@400;500;600;700&display=swap" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Dr. Vlad Holistic medicine and consulting",
+          alternateName: "Dr. Vlad",
+          description: "Integrative online consultation — cardiology and hypnotherapy.",
+          areaServed: "Worldwide",
+          knowsLanguage: ["ru", "en", "fr"],
+          sameAs: socialLinks.map((link) => link.url),
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -111,9 +127,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
+/** Derives the page language from the first URL segment for <html lang>. */
+function localeFromPath(pathname: string): Locale {
+  const segment = pathname.split("/")[1] ?? "";
+  return (locales as readonly string[]).includes(segment) ? (segment as Locale) : "en";
+}
+
 function RootShell({ children }: { children: ReactNode }) {
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+  const lang = localeFromPath(pathname);
   return (
-    <html lang="ru">
+    <html lang={lang}>
       <head>
         <HeadContent />
       </head>

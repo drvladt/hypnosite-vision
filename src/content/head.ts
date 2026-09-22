@@ -17,6 +17,7 @@ export function homeHead(locale: Locale) {
     links: [
       ...locales.map((item) => ({ rel: "alternate", hrefLang: item, href: homePath[item] })),
       { rel: "alternate", hrefLang: "x-default", href: homePath.ru },
+      { rel: "canonical", href: homePath[locale] },
     ],
   };
 }

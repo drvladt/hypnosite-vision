@@ -2,10 +2,16 @@ import { useEffect } from "react";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 
 import { detectPreferredLocale, homePath } from "@/content/locales";
-import { homeHead } from "@/content/head";
 
 export const Route = createFileRoute("/")({
-  head: () => homeHead("en"),
+  // The root path only redirects to the visitor's language version; keep it
+  // out of search results so the spinner placeholder is never indexed.
+  head: () => ({
+    meta: [
+      { title: "Dr. Vlad" },
+      { name: "robots", content: "noindex, nofollow" },
+    ],
+  }),
   component: LocaleRedirect,
 });
 
