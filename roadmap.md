@@ -43,6 +43,9 @@
 - [x] Технический номер поля Patient ID: entry.319514281 (подтверждён предзаполненной ссылкой).
 - [x] Backend-синхронизация (22.09.2026): VITE_CASE_API_URL → Cloud Function createCase (europe-west1), контракт POST {locale, версии, consents}, ответ 201 {patient_id}, fail-closed без переменной.
 - [x] Серверная фиксация согласия во внешнем Firebase (Firestore + Cloud Function), код обращения DV000001+ атомарно, retention_expires_at_utc TTL 1 месяц.
+- [x] Публичный вызов createCase восстановлен через отключение Cloud Run Invoker IAM check; CORS проверен для drvladt.com, www и Lovable Preview.
+- [x] Исходники Firebase Functions добавлены в основной репозиторий; запрещённый организацией allUsers не используется.
+- [x] Artifact Registry cleanup: автоматическое удаление container images старше 7 дней в europe-west1.
 - [x] Подключение Google Form с pre-filled Patient ID (entry.319514281).
 - [ ] Подключение реальной защищённой загрузки медицинских документов — отключено намеренно, отдельный backend (не Lovable).
 - [x] drvladt.com выбран и приобретён как официальный production/canonical-домен; DNS, привязка к hosting и redirect с www выполняются при deployment.

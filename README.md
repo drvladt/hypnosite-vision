@@ -32,3 +32,9 @@ npm run dev
 - `SITE_URL` may override the committed origin at runtime when the hosting platform provides it.
 - Configure `https://www.drvladt.com/*` to permanently redirect to the matching path on
   `https://drvladt.com/*` when the custom domain is connected.
+
+## Firebase backend
+
+The versioned `functions/createCase` backend records the three legal confirmations and issues the
+sequential case reference. Deployment and Cloud Run public-access requirements are documented in
+`functions/README.md`.
