@@ -245,7 +245,7 @@ export const siteEn: SiteContent = {
     sections: [
       {
         paragraphs: [
-          "Take your time and write in your own words. If you don't have some of the details, leave the field empty — it will not prevent your request from being reviewed.",
+          "Take your time and write in your own words. If you don't have some of the details, leave the field empty.",
         ],
       },
     ],
