@@ -77,7 +77,7 @@ export const homeEn: HomeContent = {
     ],
   },
   consultation: {
-    eyebrow: "An individual review",
+    eyebrow: "ONLINE CONSULTATION",
     title: "If your situation calls for a careful individual review rather than general advice",
     lead: "The initial consultation brings scattered information together into one picture and clarifies what to do next. We go through your symptoms, the history of your condition, the tests you already have and the possible influence of emotional factors. Afterwards you will understand more clearly:",
     outcomes: [
