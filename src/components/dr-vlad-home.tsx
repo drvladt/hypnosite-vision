@@ -97,14 +97,28 @@ export function DrVladHome({ locale }: { locale: Locale }) {
     reviewsRef.current?.scrollBy({ left: direction * 360, behavior: "smooth" });
   };
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    setMenuOpen(false);
+  const scrollToSection = (href: string) => {
     const id = href.replace(/^#/, "");
     const el = document.getElementById(id);
+    if (!el) return;
+    const header = document.querySelector<HTMLElement>("[data-home-header]");
+    const headerHeight = header?.getBoundingClientRect().height ?? 0;
+    const top = window.scrollY + el.getBoundingClientRect().top - headerHeight - 12;
+    window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+  };
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const wasMenuOpen = menuOpen;
+    setMenuOpen(false);
     // Scroll without writing the hash into the URL: a stored hash would make
-    // a page reload jump straight to that section.
-    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+    // a page reload jump straight to that section. On mobile, wait until the
+    // dropdown is removed so its height cannot push the target past the title.
+    if (wasMenuOpen) {
+      window.setTimeout(() => scrollToSection(href), 80);
+      return;
+    }
+    scrollToSection(href);
   };
 
 
@@ -112,7 +126,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
-      <header className="sticky top-0 z-50 border-b border-border/70 bg-background/92 backdrop-blur-md">
+      <header data-home-header className="sticky top-0 z-50 border-b border-border/70 bg-background/92 backdrop-blur-md">
         <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 lg:px-8">
           <a href="#top" className="flex items-center gap-3" aria-label={c.nav.toTop}>
             <img src={logoAsset.url} alt="" className="size-11 rounded-full object-cover" />
