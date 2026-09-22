@@ -171,33 +171,49 @@ export function ConsentGatePageView({ locale }: { locale: Locale }) {
 
       <div className="mt-10 grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
         <div className="space-y-8">
-          <section>
-            <h2 className="font-display text-xl font-medium text-primary md:text-2xl">{page.next.title}</h2>
-            <ol className="mt-4 space-y-3">
-              {page.next.items.map((text, i) => (
-                <li key={i} className="flex gap-3 text-base leading-relaxed text-foreground/90">
-                  <span className="mt-0.5 font-display text-sm text-gold">{i + 1}</span>
-                  <span>{text}</span>
-                </li>
-              ))}
-            </ol>
-          </section>
+          {page.next && (
+            <section>
+              <h2 className="font-display text-xl font-medium text-primary md:text-2xl">{page.next.title}</h2>
+              <ol className="mt-4 space-y-3">
+                {page.next.items.map((text, i) => (
+                  <li key={i} className="flex gap-3 text-base leading-relaxed text-foreground/90">
+                    <span className="mt-0.5 font-display text-sm text-gold">{i + 1}</span>
+                    <span>{text}</span>
+                  </li>
+                ))}
+              </ol>
+            </section>
+          )}
 
           <section className="rounded-2xl border border-primary/12 bg-secondary/40 p-5">
             <h2 className="font-display text-lg font-medium text-primary">{page.access.title}</h2>
-            <p className="mt-3 text-base leading-relaxed text-foreground/90">{page.access.text}</p>
+            {page.access.paragraphs.map((text, i) => (
+              <p key={i} className="mt-3 text-base leading-relaxed text-foreground/90">{text}</p>
+            ))}
+            {page.access.links && page.access.links.length > 0 && (
+              <ul className="mt-4 space-y-2">
+                {page.access.links.map((link) => (
+                  <li key={link.page}>
+                    <Link
+                      to={pagePath(locale, link.page)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 text-sm text-primary underline underline-offset-4"
+                    >
+                      {link.label}
+                      <ExternalLink className="size-3.5" aria-hidden="true" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
           </section>
 
           <section>
             <h2 className="font-display text-xl font-medium text-primary md:text-2xl">{page.important.title}</h2>
-            <ul className="mt-4 space-y-3 border-l-2 border-gold/40 pl-6">
-              {page.important.bullets.map((text, i) => (
-                <li key={i} className="relative text-base leading-relaxed text-foreground/90">
-                  <span className="absolute -left-[1.85rem] top-2.5 size-1.5 rotate-45 bg-gold" aria-hidden="true" />
-                  {text}
-                </li>
-              ))}
-            </ul>
+            {page.important.paragraphs.map((text, i) => (
+              <p key={i} className="mt-3 text-base leading-relaxed text-foreground/90">{text}</p>
+            ))}
           </section>
 
           <div className="flex gap-3 rounded-2xl border border-gold/50 bg-gold/10 p-4 text-sm leading-relaxed text-foreground">
@@ -212,21 +228,23 @@ export function ConsentGatePageView({ locale }: { locale: Locale }) {
                 {text}
               </p>
             ))}
-            <ul className="mt-4 space-y-2">
-              {page.summary.links.map((link) => (
-                <li key={link.page}>
-                  <Link
-                    to={pagePath(locale, link.page)}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 text-sm text-primary underline underline-offset-4"
-                  >
-                    {link.label}
-                    <ExternalLink className="size-3.5" aria-hidden="true" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {page.summary.links && page.summary.links.length > 0 && (
+              <ul className="mt-4 space-y-2">
+                {page.summary.links.map((link) => (
+                  <li key={link.page}>
+                    <Link
+                      to={pagePath(locale, link.page)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 text-sm text-primary underline underline-offset-4"
+                    >
+                      {link.label}
+                      <ExternalLink className="size-3.5" aria-hidden="true" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
           </section>
         </div>
 
