@@ -174,6 +174,11 @@ export function ConsentGatePageView({ locale }: { locale: Locale }) {
     try {
       const result = await createCase(locale, checked);
       startIntakeSession(legalConfig.consentVersion, result.patientId);
+      try {
+        window.sessionStorage.removeItem(CONSENT_DRAFT_KEY);
+      } catch {
+        // Nothing to clean up if storage is unavailable.
+      }
       setCaseCode(result.patientId);
       setStatus("issued");
       window.setTimeout(() => {
