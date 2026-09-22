@@ -93,234 +93,116 @@ export const legalFr: LegalContent = {
       "Traitement et protection des données personnelles des visiteurs du site du Dr Vlad.",
     tocTitle: "Sommaire",
     lead: [
-      "Le questionnaire pouvant contenir des informations sur votre santé physique et psycho-émotionnelle, ces données bénéficient de mesures renforcées de confidentialité et de sécurité.",
+      "La présente Politique explique quelles données personnelles peuvent être traitées lors de l'utilisation du site et de l'envoi d'une demande, pourquoi elles sont nécessaires, qui y a accès et quels droits vous disposez.",
     ],
     sections: [
       {
         id: "controller",
         heading: "1. Qui est responsable du traitement",
         paragraphs: [
-          `Responsable du traitement : ${L("controllerLegalName")}.`,
-          `Pays : ${L("controllerCountry")}.`,
-          `Pour toute question sur les données, l'exercice des droits ou le retrait du consentement : ${L("privacyEmail")}.`,
+          `Responsable du traitement : ${L("controllerLegalName")}, ${L("controllerCountry")}.`,
+          `Pour les questions relatives aux données personnelles, l'exercice des droits ou le retrait du consentement : ${L("privacyEmail")}.`,
           `Pour les questions d'organisation : ${L("publicContactEmail")}.`,
-        ],
-      },
-      {
-        id: "scope",
-        heading: "2. À qui s'applique cette Politique",
-        paragraphs: [
-          "Elle s'applique aux visiteurs majeurs qui consultent les pages publiques, initient une demande, remplissent le questionnaire, joignent des documents ou écrivent pour des questions d'organisation.",
-          `Le site et le format en ligne ne sont pas destinés aux personnes de moins de 18 ans. Si les données d'un mineur ont été transmises sans base valable, merci de le signaler à ${L("privacyEmail")}.`,
+          "Le site et le format en ligne sont réservés aux personnes de plus de 18 ans.",
         ],
       },
       {
         id: "data",
-        heading: "3. Quelles données peuvent être traitées",
+        heading: "2. Quelles données sont traitées",
+        paragraphs: ["Selon l'utilisation du site, les données suivantes peuvent être traitées :"],
+        bullets: [
+          "données de contact : nom, âge ou date de naissance, pays et ville, e-mail, téléphone ou messagerie, langue de communication ;",
+          "informations de santé indiquées volontairement dans le questionnaire : plaintes, antécédents, diagnostics, résultats d'examens, traitements, médicaments en cours, ainsi que des informations sur le sommeil, le stress et l'état psycho-émotionnel ;",
+          "documents médicaux que vous décidez de joindre ;",
+          "correspondance et informations d'organisation ;",
+          "données techniques minimales nécessaires au fonctionnement et à la sécurité du site : code de dossier, date et heure des actions, statut d'envoi du formulaire et des fichiers, données de session sécurisée et journaux de sécurité ;",
+          "informations attestant le consentement : date, heure et version des documents acceptés.",
+        ],
         subsections: [
           {
-            heading: "3.1. Données de contact et d'identification",
-            bullets: [
-              "nom et prénom ;",
-              "âge ou date de naissance si nécessaire à l'évaluation de la demande ;",
-              "pays et ville ;",
-              "e-mail, téléphone ou messagerie choisie ;",
-              "langue de communication préférée.",
-            ],
-          },
-          {
-            heading: "3.2. Données de santé",
-            bullets: [
-              "description des symptômes et du ressenti ;",
-              "historique de l'état de santé ;",
-              "diagnostics déjà posés ;",
-              "résultats d'examens et d'analyses ;",
-              "traitements prescrits et médicaments en cours ;",
-              "informations sur l'anxiété, le sommeil, le stress, les facteurs émotionnels et comportementaux ;",
-              "objectifs et attentes concernant un éventuel travail ;",
-              "toute autre information que vous indiquez volontairement.",
-            ],
-          },
-          {
-            heading: "3.3. Documents médicaux",
             paragraphs: [
-              "Vous pouvez, si vous le souhaitez, téléverser des comptes rendus, résultats d'examens, analyses et la liste de vos médicaments. Ce n'est pas une condition d'envoi du questionnaire.",
-            ],
-          },
-          {
-            heading: "3.4. Données techniques",
-            bullets: [
-              "code de dossier technique ;",
-              "langue de l'interface ;",
-              "date et heure des étapes de la demande ;",
-              "statut d'envoi du questionnaire et de téléversement ;",
-              "type, taille et statut technique du fichier ;",
-              "données de session sécurisée et journaux de sécurité ;",
-              "choix de cookies sur les pages publiques.",
-            ],
-            paragraphs: [
-              "Le code de dossier ne contient ni nom, ni e-mail, ni diagnostic, ni symptôme, et n'est pas un mot de passe d'accès.",
-            ],
-          },
-          {
-            heading: "3.5. Preuve du consentement",
-            bullets: [
-              "version de la Politique ;",
-              "version du texte de consentement ;",
-              "version des conditions d'utilisation ;",
-              "langue des documents ;",
-              "date et heure de la confirmation ;",
-              "état des cases obligatoires ;",
-              "date du retrait, le cas échéant.",
-            ],
-          },
-          {
-            heading: "3.6. Correspondance",
-            paragraphs: [
-              "Les messages d'organisation, les demandes relatives aux droits et l'historique des réponses peuvent être traités.",
+              "Le code de dossier technique ne contient ni nom, ni coordonnées, ni diagnostic, ni symptômes, ni documents médicaux.",
             ],
           },
         ],
       },
       {
         id: "purposes",
-        heading: "4. Finalités du traitement",
+        heading: "3. Pourquoi les données sont utilisées",
+        paragraphs: ["Les données sont utilisées uniquement pour :"],
         bullets: [
-          "réception et enregistrement de la demande ;",
-          "étude personnelle de la situation par le Dr Vlad ;",
-          "détermination du caractère approprié du format en ligne et de la compétence ;",
-          "organisation d'une éventuelle consultation ;",
-          "examen préalable des documents transmis volontairement ;",
-          "prise de contact pour les questions d'organisation ;",
-          "sécurité du questionnaire et du téléversement ;",
-          "prévention des abus et des erreurs techniques ;",
-          "respect des obligations légales applicables ;",
-          "traitement de vos demandes d'accès, de rectification, de suppression, de limitation ou de retrait du consentement.",
-        ],
-        paragraphs: [
-          "Les données du questionnaire et les documents médicaux ne sont jamais utilisés pour du profilage publicitaire, la création d'audiences, une vente à des tiers ou une décision médicale automatisée.",
-        ],
-      },
-      {
-        id: "basis",
-        heading: "5. Bases légales",
-        paragraphs: [
-          "Lorsque le traitement repose sur le consentement, celui-ci est libre, spécifique, éclairé et univoque. Les données de santé reposent sur un consentement explicite distinct.",
-          "Les données techniques strictement nécessaires à la sécurité, à la session sécurisée et à la fourniture du service demandé sont traitées dans la seule mesure utile.",
-          "Si la loi applicable impose une autre base obligatoire pour certaines données, cette information devra figurer dans la présente Politique avant le début d'un tel traitement.",
-        ],
-      },
-      {
-        id: "access",
-        heading: "6. Qui peut avoir accès",
-        paragraphs: [
-          "Le contenu médical du questionnaire et les documents sont consultés par le Dr Vlad, uniquement dans la mesure nécessaire à l'examen de la demande.",
-          "Une assistante peut recevoir les informations de contact et d'organisation seulement après la décision du Dr Vlad, sans accès au contenu médical.",
-          `Des prestataires d'infrastructure agissant comme sous-traitants peuvent intervenir, dont, après confirmation définitive de la configuration : Google Forms, Google Workspace, Google Drive, Google Cloud, ${L("hostingProvider")}, un service de messagerie et la plateforme de visioconférence retenue.`,
-          "Les données peuvent aussi être communiquées à une autorité publique lorsque la loi l'impose. Elles ne sont pas transmises aux plateformes publicitaires en tant que données de santé ou résultat de la demande.",
-        ],
-      },
-      {
-        id: "google",
-        heading: "7. Google Forms, Workspace et documents médicaux",
-        paragraphs: [
-          "Le questionnaire préalable peut être hébergé dans Google Forms. Les réponses et documents associés sont conservés dans un espace Google Workspace et Google Drive fermé, à accès restreint.",
-          "Les documents sont téléversés via une interface sécurisée distincte du site, font l'objet d'une vérification technique et ne sont pas placés dans un dossier Drive public.",
-          "Vous n'avez jamais à communiquer un mot de passe Google ni à partager votre Drive personnel.",
-        ],
-      },
-      {
-        id: "transfers",
-        heading: "8. Traitement transfrontalier",
-        paragraphs: [
-          `Les données peuvent être techniquement traitées ou conservées dans les pays ou régions suivants : ${L("dataStorageCountries")}.`,
-          `Le journal des consentements et l'attribution du code de dossier sont assurés par ${L("consentLogProvider")}, dans la région ${L("consentLogRegion")}. Le journal n'enregistre que le fait des trois confirmations, les versions des documents, l'heure UTC du serveur et le code de dossier — sans nom, coordonnées, symptômes, diagnostics, réponses au questionnaire ni documents médicaux. Chaque enregistrement est programmé pour une suppression automatique après un mois calendaire ; le mécanisme TTL du prestataire effectue la suppression technique après cette échéance.`,
-          `Garanties de transfert appliquées : ${L("transferSafeguards")}.`,
-        ],
-      },
-      {
-        id: "retention",
-        heading: "9. Durées de conservation",
-        bullets: [
-          `demandes non finalisées : ${R("abandoned")} ;`,
-          `demandes sans consultation : ${R("declined")} ;`,
-          `données et documents d'une consultation réalisée : ${R("consultation")} ;`,
-          `journaux de consentement et de retrait : ${R("consentLog")} ;`,
-          "journaux techniques de sécurité : uniquement la durée minimale confirmée.",
-        ],
-        paragraphs: [
-          "À l'expiration du délai, les données sont supprimées ou anonymisées de façon irréversible, sauf si leur conservation est requise par la loi applicable, pour la défense de droits ou le règlement d'un litige.",
-        ],
-      },
-      {
-        id: "security",
-        heading: "10. Sécurité",
-        paragraphs: [
-          "Des mesures organisationnelles et techniques adaptées à la nature des données sont appliquées : accès limité par rôle, connexion sécurisée, stockage fermé, journalisation des actions d'administration, vérification des fichiers téléversés et minimisation des données.",
-          "Aucun moyen de transmission ou de conservation ne peut garantir une sécurité absolue. En cas d'incident, les mesures prévues par la loi et la procédure interne s'appliquent.",
-        ],
-      },
-      {
-        id: "cookies",
-        heading: "11. Cookies, analyse et publicité",
-        paragraphs: [
-          "Des cookies nécessaires peuvent être utilisés pour la session sécurisée, la prévention des abus et la mémorisation de la langue.",
-          "Les technologies d'analyse et de publicité sur les pages publiques sont désactivées par défaut jusqu'à votre choix. Sur les pages du questionnaire, des documents, de confirmation, de récupération et les erreurs associées, aucun pixel publicitaire, session replay, heatmap ou enregistrement d'écran n'est utilisé, quel que soit le choix de cookies.",
-          "Les informations médicales, le code de dossier, le résultat de l'examen et les réponses au questionnaire ne sont jamais transmis à l'analyse marketing.",
-        ],
-      },
-      {
-        id: "automated",
-        heading: "12. Décisions automatisées",
-        paragraphs: [
-          "Aucune décision entièrement automatisée ayant des effets juridiques ou comparables n'est prise sur la base du questionnaire. La possibilité d'un échange ultérieur est décidée par le Dr Vlad après examen personnel.",
-        ],
-      },
-      {
-        id: "rights",
-        heading: "13. Vos droits",
-        paragraphs: ["Selon la loi applicable, vous pouvez avoir le droit de :"],
-        bullets: [
-          "être informé du traitement ;",
-          "demander l'accès à vos données ;",
-          "rectifier des données inexactes ;",
-          "demander la suppression ;",
-          "limiter le traitement ;",
-          "recevoir vos données dans un format portable ;",
-          "vous opposer au traitement dans les cas prévus par la loi ;",
-          "retirer votre consentement ;",
-          "introduire une réclamation auprès de l'autorité de contrôle compétente.",
+          "recevoir et examiner préalablement la demande ;",
+          "permettre au Dr Vlad d'évaluer la possibilité et la pertinence d'une consultation ;",
+          "prendre connaissance des documents médicaux fournis volontairement ;",
+          "organiser la suite des échanges ;",
+          "assurer le fonctionnement et la sécurité du site ;",
+          "respecter les obligations légales applicables et traiter vos demandes relatives à vos données.",
         ],
         subsections: [
           {
             paragraphs: [
-              `Pour exercer vos droits, écrivez à ${L("privacyEmail")}. Une vérification raisonnable d'identité peut être nécessaire afin de ne pas divulguer vos données à un tiers.`,
+              "Les informations de santé ne sont pas vendues, ne servent pas au profilage publicitaire et ne sont pas transmises aux plateformes publicitaires. Aucune décision médicale entièrement automatisée n'est prise sur la base du questionnaire.",
+              "Le traitement des informations de santé repose sur votre consentement explicite distinct. Les données techniques ne sont traitées que dans la mesure nécessaire au fonctionnement et à la sécurité du service, ou dans les autres cas prévus par la loi applicable.",
             ],
           },
         ],
       },
       {
-        id: "withdrawal",
-        heading: "14. Retrait du consentement",
+        id: "access",
+        heading: "4. Qui a accès aux données",
         paragraphs: [
-          `Vous pouvez retirer votre consentement à tout moment en écrivant à ${L("privacyEmail")}. Le retrait ne remet pas en cause la licéité des traitements antérieurs.`,
-          "Après le retrait, les traitements fondés sur le consentement cessent et les données sont supprimées ou anonymisées, sauf conservation requise par la loi ou nécessaire à la défense de droits.",
-          "Un retrait avant la fin de l'examen peut rendre l'analyse en ligne impossible, celle-ci nécessitant le traitement des informations transmises.",
+          "La partie médicale du questionnaire et les documents joints sont examinés par le Dr Vlad.",
+          "Une assistante peut recevoir les données de contact et d'organisation après la décision de poursuivre les échanges, mais n'a pas accès au contenu médical du questionnaire ni aux documents.",
+          "Google Forms, Google Workspace, Google Drive, Google Cloud/Firebase, Lovable, un service de messagerie et une plateforme de visioconférence peuvent être utilisés pour le fonctionnement technique du site et le stockage des informations. Ces services peuvent traiter les données en qualité de prestataires techniques.",
+          "Les données peuvent également être communiquées aux autorités publiques lorsque la loi applicable l'exige directement.",
         ],
       },
       {
-        id: "complaints",
-        heading: "15. Réclamations",
+        id: "retention",
+        heading: "5. Conservation et transfert des données",
         paragraphs: [
-          `Adressez-vous d'abord au responsable du traitement : ${L("privacyEmail")}.`,
-          `Si la question n'est pas résolue, vous pouvez saisir l'autorité de contrôle compétente : ${L("supervisoryAuthority")}.`,
+          "Les réponses au questionnaire et les documents médicaux sont conservés dans un espace de travail fermé à accès restreint. Les documents téléversés ne sont pas placés dans des dossiers publics.",
+          "En raison de l'utilisation de services cloud, les données peuvent être techniquement traitées ou conservées hors de la République togolaise, notamment dans l'Union européenne et aux États-Unis. Pour les transferts internationaux, les mécanismes de protection prévus par les prestataires et la loi applicable sont appliqués.",
+          "Le journal des consentements est hébergé dans Google Cloud/Firebase, région europe-west1 (Belgique), et ne contient ni nom, ni coordonnées, ni informations médicales.",
+          "En règle générale, les données de la demande, les documents médicaux et les informations de consentement sont conservés jusqu'à un mois, puis supprimés ou anonymisés de façon irréversible, sauf si une conservation plus longue est requise par la loi ou pour la défense de droits légitimes.",
+        ],
+      },
+      {
+        id: "security",
+        heading: "6. Sécurité et cookies",
+        paragraphs: [
+          "Pour protéger les informations, la limitation des accès, des connexions sécurisées, un stockage fermé, la vérification des fichiers téléversés et d'autres mesures organisationnelles et techniques de sécurité sont utilisées.",
+          "Des cookies nécessaires peuvent être utilisés pour la session sécurisée, la sécurité du site et la mémorisation de la langue choisie.",
+          "Aucun pixel publicitaire, heatmap, session replay ou enregistrement d'écran n'est utilisé sur les pages du questionnaire et du téléversement de documents médicaux. Les informations médicales et les réponses au questionnaire ne sont pas transmises aux systèmes d'analyse marketing.",
+        ],
+      },
+      {
+        id: "rights",
+        heading: "7. Vos droits",
+        paragraphs: ["Conformément à la loi applicable, vous pouvez avoir le droit de demander :"],
+        bullets: [
+          "des informations sur le traitement et l'accès à vos données ;",
+          "la rectification ou la suppression de vos données ;",
+          "la limitation du traitement ;",
+          "la portabilité des données ou l'opposition au traitement, lorsque ce droit s'applique ;",
+          "le retrait du consentement précédemment donné.",
+        ],
+        subsections: [
+          {
+            paragraphs: [
+              `Vous pouvez adresser votre demande à ${L("privacyEmail")}. Pour protéger vos données, une confirmation d'identité peut être requise avant le traitement de la demande.`,
+              "Le consentement peut être retiré à tout moment. Le retrait ne remet pas en cause la licéité des traitements effectués avant sa réception. Si l'examen de la demande devient impossible sans le traitement des informations fournies, il sera interrompu après le retrait du consentement.",
+              `Vous pouvez également saisir l'autorité compétente de protection des données personnelles de la République togolaise — ${L("supervisoryAuthority")}.`,
+            ],
+          },
         ],
       },
       {
         id: "changes",
-        heading: "16. Modifications de la Politique",
+        heading: "8. Modifications de la Politique",
         paragraphs: [
-          "La Politique peut être mise à jour en cas d'évolution des processus, des prestataires ou des exigences applicables. La version en vigueur et sa date figurent toujours sur cette page. Si une modification affecte sensiblement un traitement soumis au consentement, une nouvelle confirmation est demandée avant de poursuivre.",
+          "La Politique peut être mise à jour en cas d'évolution du fonctionnement du site, des services utilisés ou des exigences applicables. La version actuelle du document et sa date d'entrée en vigueur sont publiées sur cette page.",
+          "Si les modifications affectent sensiblement un traitement soumis au consentement, une nouvelle confirmation sera demandée si nécessaire.",
         ],
       },
     ],
