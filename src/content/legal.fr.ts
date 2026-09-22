@@ -10,7 +10,7 @@ export const legalFr: LegalContent = {
   tocTitle: "Sommaire",
 
   consultation: {
-    step: "Étape 1 sur 3 · Avant le questionnaire",
+    step: "ÉTAPE 1 SUR 3 · Avant le questionnaire",
     eyebrow: "Avant de commencer le questionnaire",
     title: "Avant de remplir le questionnaire",
     metaTitle: "Avant de commencer le questionnaire — Dr Vlad",

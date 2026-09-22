@@ -10,7 +10,7 @@ export const legalRu: LegalContent = {
   tocTitle: "Содержание",
 
   consultation: {
-    step: "Шаг 1 из 3 · Перед анкетой",
+    step: "ШАГ 1 ИЗ 3 · Перед анкетой",
     eyebrow: "Перед началом анкеты",
     title: "Перед заполнением анкеты",
     metaTitle: "Перед началом анкеты — Dr Vlad",
