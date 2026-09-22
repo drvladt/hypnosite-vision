@@ -26,7 +26,9 @@ npm run dev
 ## Production environment
 
 - `VITE_CASE_API_URL` — deployed case-code API endpoint.
-- `VITE_SITE_URL=https://www.drvladt.com` is committed in `.env.production` because the official
+- `VITE_SITE_URL=https://drvladt.com` is committed in `.env.production` because the official
   public domain is not a secret. It fixes canonical URLs, Open Graph, `robots.txt`, and
   `sitemap.xml` to the production site even when a preview domain serves the build.
 - `SITE_URL` may override the committed origin at runtime when the hosting platform provides it.
+- Configure `https://www.drvladt.com/*` to permanently redirect to the matching path on
+  `https://drvladt.com/*` when the custom domain is connected.

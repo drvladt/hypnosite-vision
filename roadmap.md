@@ -45,4 +45,4 @@
 - [x] Серверная фиксация согласия во внешнем Firebase (Firestore + Cloud Function), код обращения DV000001+ атомарно, retention_expires_at_utc TTL 1 месяц.
 - [x] Подключение Google Form с pre-filled Patient ID (entry.319514281).
 - [ ] Подключение реальной защищённой загрузки медицинских документов — отключено намеренно, отдельный backend (не Lovable).
-- [x] www.drvladt.com выбран и приобретён как официальный production/canonical-домен; DNS и привязка к hosting выполняются при deployment.
+- [x] drvladt.com выбран и приобретён как официальный production/canonical-домен; DNS, привязка к hosting и redirect с www выполняются при deployment.
