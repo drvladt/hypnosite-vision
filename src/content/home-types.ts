@@ -45,6 +45,7 @@ export type HomeContent = {
     title: string;
     paragraphs: string[];
     hypnotherapy: string[];
+    moreHypnotherapyLabel: string;
   };
   consultation: {
     eyebrow: string;
