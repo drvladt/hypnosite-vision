@@ -57,7 +57,7 @@ export function pagePath(locale: Locale, page: PageKey) {
   return `/${locale}/${pageSlugs[page][locale]}`;
 }
 
-export const contactEmail = "dr.vladt375@gmail.com";
+export const contactEmail = "support@drvladt.com";
 
 /** Social and messenger links shown in the footer — shared across all languages. */
 export const socialLinks = [
