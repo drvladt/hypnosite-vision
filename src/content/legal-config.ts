@@ -25,8 +25,8 @@ export const legalConfig = {
     fr: "République togolaise",
   }),
   // The non-public legal address is intentionally absent from frontend source code.
-  /** Confirmed: separate privacy-requests email. Official contacts: director@drvladt.com, +22890442523. */
-  privacyEmail: "support@drvladt.com" as string | null,
+  /** Privacy-requests and significant data-protection questions: director@drvladt.com. Organizational/scheduling contact: support@drvladt.com. */
+  privacyEmail: "director@drvladt.com" as string | null,
   publicContactEmail: contactEmail as string | null,
   /** Confirmed by Dr Vlad: 25.09.2026. */
   effectiveDate: "25.09.2026" as string | null,
