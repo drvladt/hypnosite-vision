@@ -137,6 +137,35 @@ export function ConsentGatePageView({ locale }: { locale: Locale }) {
   const [caseCode, setCaseCode] = useState<string | null>(null);
   const allChecked = checked.policy && checked.health && checked.boundaries;
 
+  // Restore the three boolean confirmations after mount (hydration-safe, no medical data,
+  // no Patient ID) so an accidental remount or reload does not silently clear them.
+  useEffect(() => {
+    try {
+      const raw = window.sessionStorage.getItem(CONSENT_DRAFT_KEY);
+      if (!raw) return;
+      const parsed = JSON.parse(raw) as Partial<Record<"policy" | "health" | "boundaries", boolean>>;
+      setChecked({
+        policy: parsed.policy === true,
+        health: parsed.health === true,
+        boundaries: parsed.boundaries === true,
+      });
+    } catch {
+      // Ignore unavailable or malformed storage: the user simply re-confirms.
+    }
+  }, []);
+
+  const updateChecked = (id: "policy" | "health" | "boundaries", value: boolean) => {
+    setChecked((current) => {
+      const next = { ...current, [id]: value };
+      try {
+        window.sessionStorage.setItem(CONSENT_DRAFT_KEY, JSON.stringify(next));
+      } catch {
+        // Storage is optional; the in-memory state still drives the UI.
+      }
+      return next;
+    });
+  };
+
   const proceed = async () => {
     if (!allChecked || status === "pending") return;
     setStatus("pending");
