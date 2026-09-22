@@ -14,7 +14,6 @@ import { legalContent, type LegalPageKey } from "@/content/legal";
 import { locales, pageKeyFromSlug, type Locale, type PageKey } from "@/content/locales";
 import { canonicalSiteOrigin } from "@/content/seo";
 import type { InfoPageKey } from "@/content/site-types";
-import { getSiteOrigin } from "@/lib/site-origin.functions";
 
 const LEGAL_PAGES = ["privacy", "consent", "terms"] as const;
 const FLOW_PAGES = ["consultation", "intake", "documents", "thanks"] as const;
