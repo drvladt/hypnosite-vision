@@ -20,6 +20,7 @@ const CONSENT_COLLECTION = db.collection("consentRecords");
 const ALLOWED_ORIGINS = [
   /^https:\/\/([a-z0-9-]+\.)?drvladt\.com$/i,
   /^https:\/\/[a-z0-9-]+\.lovable\.app$/i,
+  /^https:\/\/[a-z0-9-]+\.lovableproject\.com$/i,
   /^http:\/\/localhost(?::\d+)?$/i,
   /^http:\/\/127\.0\.0\.1(?::\d+)?$/i,
 ];
