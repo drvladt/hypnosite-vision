@@ -77,6 +77,7 @@ export const homeEn: HomeContent = {
       "Where it is indicated, hypnotherapy can be used as a complementary method for anxiety, fears, bodily reactions and persistent emotional or behavioural patterns.",
       "It is never set in opposition to medical treatment and is not prescribed automatically to everyone.",
     ],
+    moreHypnotherapyLabel: "More about hypnotherapy",
   },
   consultation: {
     eyebrow: "ONLINE CONSULTATION",
