@@ -18,11 +18,13 @@ export const homeRu: HomeContent = {
     languageLabel: "Язык сайта",
     bookShort: "Записаться",
     items: [
-      { label: "Мой подход", href: "#approach" },
       { label: "С чем я работаю", href: "#concerns" },
+      { label: "Мой подход", href: "#approach" },
+      { label: "С кем я работаю", href: "#consultation" },
       { label: "Обо мне", href: "#about" },
-      { label: "Гипнотерапия", href: "#hypnotherapy" },
       { label: "Исследование", href: "#research" },
+      { label: "Как я провожу консультации", href: "#steps" },
+      { label: "Частые вопросы", href: "#faq" },
     ],
   },
   cta: {

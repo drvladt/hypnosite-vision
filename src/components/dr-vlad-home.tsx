@@ -265,7 +265,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
           </div>
         </section>
 
-        <section className="section-space bg-secondary/35">
+        <section id="steps" className="section-space scroll-mt-20 bg-secondary/35">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <p className="eyebrow">{c.steps.eyebrow}</p>
             <h2 className="section-title mt-4 max-w-4xl">{c.steps.title}</h2>
@@ -285,7 +285,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
           </div>
         </section>
 
-        <section className="section-space">
+        <section id="faq" className="section-space scroll-mt-20">
           <div className="mx-auto grid max-w-7xl gap-8 px-5 lg:grid-cols-[.55fr_1.45fr] lg:gap-10 lg:px-8">
             <div><p className="eyebrow">{c.faq.eyebrow}</p><h2 className="section-title mt-4">{c.faq.title}</h2></div>
             <div>{c.faq.items.map(([question, answer]) => (
