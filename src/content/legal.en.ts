@@ -62,7 +62,7 @@ export const legalEn: LegalContent = {
         {
           id: "health",
           textBefore:
-            "I explicitly and voluntarily consent to the processing of the personal data I provide, including information about my physical and emotional health, investigation results, treatment details and medical documents, for the purpose of pre-assessing my request and arranging a possible consultation.",
+            "I voluntarily consent to the processing of the personal data I provide, including information about my physical and emotional health, for the purpose of pre-assessing my request and arranging a possible consultation.",
           extraLinkLabel: "Read the full consent text",
           extraLinkPage: "consent",
         },
@@ -406,7 +406,7 @@ export const legalEn: LegalContent = {
         id: "confirmation",
         heading: "8. Confirmation",
         paragraphs: [
-          "By ticking the box “I explicitly and voluntarily consent…” and pressing “Agree and continue to the form”, I give explicit consent to the processing of personal data, including health data, as described.",
+          "By ticking the box “I voluntarily consent…” and pressing “Agree and continue to the form”, I give consent to the processing of personal data, including health data, as described.",
         ],
       },
     ],
