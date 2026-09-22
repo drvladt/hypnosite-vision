@@ -170,6 +170,7 @@ export function pageStructuredData(
 ) {
   const graph = entityGraph(siteOrigin, locale);
   const pageUrl = absoluteUrl(siteOrigin, pagePath(locale, page));
+  const breadcrumbId = `${pageUrl}#breadcrumb`;
   const isProfile = page === "about";
 
   return jsonLd({
@@ -184,9 +185,28 @@ export function pageStructuredData(
         description,
         inLanguage: locale,
         isPartOf: { "@id": graph.websiteId },
+        breadcrumb: { "@id": breadcrumbId },
         ...(isProfile
           ? { mainEntity: { "@id": graph.personId } }
           : { about: { "@id": graph.personId } }),
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": breadcrumbId,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Dr Vlad",
+            item: absoluteUrl(siteOrigin, homePath[locale]),
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: title,
+            item: pageUrl,
+          },
+        ],
       },
     ],
   });

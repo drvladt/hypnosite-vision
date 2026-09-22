@@ -44,3 +44,19 @@ export function homeHead(locale: Locale, siteOrigin: string) {
     ],
   };
 }
+
+/** Metadata for the technical root path that redirects to a localized home page. */
+export function localeRedirectHead(siteOrigin: string) {
+  const meta = homeContent.en.meta;
+  const canonicalUrl = absoluteUrl(siteOrigin, homePath.en);
+
+  return {
+    meta: [
+      { title: meta.title },
+      { name: "description", content: meta.description },
+      { name: "robots", content: "noindex, follow" },
+      { name: "googlebot", content: "noindex, follow" },
+    ],
+    links: [...homeAlternateLinks(siteOrigin), { rel: "canonical", href: canonicalUrl }],
+  };
+}

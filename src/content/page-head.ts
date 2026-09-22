@@ -44,6 +44,7 @@ export function pageHead(locale: Locale, page: PageKey, siteOrigin: string) {
   const canonicalUrl = absoluteUrl(siteOrigin, pagePath(locale, page));
   const imageUrl = socialImage(siteOrigin);
   const robotsDirective = robots ?? publicRobots;
+  const indexable = !robots;
 
   return {
     meta: [
@@ -65,11 +66,13 @@ export function pageHead(locale: Locale, page: PageKey, siteOrigin: string) {
       { name: "twitter:image", content: imageUrl },
     ],
     links: [...pageAlternateLinks(siteOrigin, page), { rel: "canonical", href: canonicalUrl }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: pageStructuredData(siteOrigin, locale, page, metaTitle, metaDescription),
-      },
-    ],
+    scripts: indexable
+      ? [
+          {
+            type: "application/ld+json",
+            children: pageStructuredData(siteOrigin, locale, page, metaTitle, metaDescription),
+          },
+        ]
+      : [],
   };
 }
