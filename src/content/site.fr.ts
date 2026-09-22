@@ -138,7 +138,6 @@ export const siteFr: SiteContent = {
       metaTitle: "Politique de confidentialité — Dr. Vlad",
       metaDescription:
         "Politique de confidentialité : finalités du traitement, durées de conservation et vos droits.",
-      draft: true,
       sections: [
         {
           heading: "Qui traite les données",

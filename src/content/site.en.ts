@@ -137,7 +137,6 @@ export const siteEn: SiteContent = {
       lead: "Who processes the data you provide, for which purposes and for how long.",
       metaTitle: "Privacy policy — Dr. Vlad",
       metaDescription: "Privacy policy: purposes of processing, retention periods and your rights.",
-      draft: true,
       sections: [
         {
           heading: "Who processes the data",
