@@ -90,7 +90,9 @@ export const legalEn: LegalContent = {
       blockedNote: "The button becomes active after all three confirmations.",
       secondaryLabel: "Back to the home page",
       errorText:
-        "We could not start your request securely. Your medical data has not been sent yet. Please try again or come back later.",
+        "Your request could not be created right now. No medical data has been sent. Please try again later.",
+      configErrorText:
+        "New requests are temporarily unavailable for technical reasons. No data has been sent. Please try again later.",
       loadingLabel: "Saving your confirmation…",
     },
   },

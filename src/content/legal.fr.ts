@@ -91,7 +91,9 @@ export const legalFr: LegalContent = {
       blockedNote: "Le bouton s'active après les trois confirmations.",
       secondaryLabel: "Revenir à l'accueil",
       errorText:
-        "Impossible de démarrer votre demande en toute sécurité. Vos données médicales n'ont pas encore été envoyées. Merci de réessayer ou de revenir plus tard.",
+        "Votre demande n'a pas pu être créée pour le moment. Aucune donnée médicale n'a été envoyée. Merci de réessayer plus tard.",
+      configErrorText:
+        "La création de demandes est momentanément indisponible pour des raisons techniques. Aucune donnée n'a été envoyée. Merci de réessayer plus tard.",
       loadingLabel: "Enregistrement de votre confirmation…",
     },
   },
