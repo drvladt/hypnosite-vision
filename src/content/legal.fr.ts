@@ -87,7 +87,7 @@ export const legalFr: LegalContent = {
   privacy: {
     eyebrow: "Document juridique",
     title: "Politique de confidentialité",
-    versionLine: `Version ${legalConfig.privacyVersion} · En vigueur depuis le ${L("effectiveDate")}`,
+    versionLine: "",
     metaTitle: "Politique de confidentialité — Dr Vlad",
     metaDescription:
       "Traitement et protection des données personnelles des visiteurs du site du Dr Vlad.",
@@ -335,7 +335,7 @@ export const legalFr: LegalContent = {
   consent: {
     eyebrow: "Document juridique",
     title: "Consentement au traitement des données personnelles, y compris les données de santé",
-    versionLine: `Version ${legalConfig.consentVersion} · En vigueur depuis le ${L("effectiveDate")}`,
+    versionLine: "",
     metaTitle: "Consentement au traitement des données — Dr Vlad",
     metaDescription:
       "Texte complet du consentement au traitement des données personnelles, y compris les données de santé, avant le questionnaire préalable.",
@@ -424,7 +424,7 @@ export const legalFr: LegalContent = {
   terms: {
     eyebrow: "Document juridique",
     title: "Conditions d'utilisation et limites du format en ligne",
-    versionLine: `Version ${legalConfig.termsVersion} · En vigueur depuis le ${L("effectiveDate")}`,
+    versionLine: "",
     metaTitle: "Conditions d'utilisation — Dr Vlad",
     metaDescription:
       "Objet du site, nature de la première consultation intégrative et limites du format en ligne.",
