@@ -109,14 +109,14 @@ export function SiteLayout({
         {menuOpen && (
           <nav className="border-t border-border bg-background px-5 py-5 lg:hidden" aria-label={home.nav.mobileLabel}>
             <div className="mx-auto grid max-w-7xl gap-1">
-              {NAV_PAGES.map((item) => (
+              {FOOTER_PAGES.map((item) => (
                 <Link
                   key={item}
                   to={pagePath(locale, item)}
                   onClick={() => setMenuOpen(false)}
                   className="border-b border-border/60 py-3 text-sm"
                 >
-                  {shortLabelFor(locale, item)}
+                  {labelFor(locale, item)}
                 </Link>
               ))}
             </div>
