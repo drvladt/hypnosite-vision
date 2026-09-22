@@ -198,7 +198,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
         <section className="section-space bg-secondary/40">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <div className="grid gap-8 lg:grid-cols-[.55fr_1.45fr] lg:gap-14">
-              <div><p className="eyebrow">{c.concerns.eyebrow}</p><h2 id="concerns" className="section-title mt-4">{c.concerns.title}</h2></div>
+              <div><p id="concerns" className="eyebrow">{c.concerns.eyebrow}</p><h2 className="section-title mt-4">{c.concerns.title}</h2></div>
               <div className="grid gap-4 md:grid-cols-2">
                 {c.concerns.items.map((text, index) => (
                   <article key={text} className="group relative overflow-hidden rounded-2xl border border-border/60 bg-card p-6 shadow-[0_10px_30px_-18px_color-mix(in_oklab,var(--primary)_25%,transparent)] transition-all duration-300 hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_18px_40px_-20px_color-mix(in_oklab,var(--primary)_32%,transparent)] md:p-7" data-reveal style={{ "--reveal-delay": `${index * 75}ms` } as React.CSSProperties}>
@@ -270,9 +270,9 @@ export function DrVladHome({ locale }: { locale: Locale }) {
 
         <section className="border-y border-border bg-secondary/35">
           <div className="mx-auto grid max-w-7xl items-start gap-8 px-5 py-14 lg:grid-cols-[.55fr_1.45fr] lg:gap-10 lg:px-8 lg:py-20">
-            <div><p className="eyebrow">{c.about.eyebrow}</p><div className="mt-6 h-px w-16 bg-gold"/></div>
+            <div><p id="about" className="eyebrow">{c.about.eyebrow}</p><div className="mt-6 h-px w-16 bg-gold"/></div>
             <div>
-              <h2 id="about" className="section-title">{c.about.title}</h2>
+              <h2 className="section-title">{c.about.title}</h2>
               <div className="mt-5 space-y-4 leading-7 text-foreground/75">{c.about.paragraphs.map((text) => <p key={text}>{text}</p>)}</div>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <Button asChild variant="default" size="lg" className="font-semibold"><a href={pagePath(locale, "about")}>{c.about.moreAboutLabel}</a></Button>
