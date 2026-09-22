@@ -139,7 +139,6 @@ export const siteRu: SiteContent = {
       metaTitle: "Политика конфиденциальности — Dr. Vlad",
       metaDescription:
         "Политика конфиденциальности: цели обработки данных, сроки хранения и права посетителя.",
-      draft: true,
       sections: [
         {
           heading: "Кто обрабатывает данные",
