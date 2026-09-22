@@ -97,6 +97,19 @@ export function DrVladHome({ locale }: { locale: Locale }) {
     reviewsRef.current?.scrollBy({ left: direction * 360, behavior: "smooth" });
   };
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setMenuOpen(false);
+    const id = href.replace(/^#/, "");
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (window.location.hash !== href) {
+        history.replaceState(null, "", href);
+      }
+    }
+  };
+
   const badgeIcons = [Stethoscope, CalendarDays, GlobeMinimal, Brain];
 
   return (
