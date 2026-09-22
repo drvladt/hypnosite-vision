@@ -69,7 +69,7 @@ export const legalFr: LegalContent = {
         {
           id: "boundaries",
           textBefore:
-            "Je confirme avoir 18 ans ou plus, comprendre les limites du format en ligne et savoir que remplir ce questionnaire ne constitue pas une aide d'urgence, ne garantit pas une consultation et ne remplace pas le suivi médical présentiel et le traitement prescrits.",
+            "Je confirme avoir 18 ans ou plus, comprendre les limites du format en ligne et avoir conscience qu'une consultation en ligne ne remplace pas le suivi médical présentiel et le traitement nécessaires.",
         },
       ],
       button: "Accepter et continuer vers le questionnaire",

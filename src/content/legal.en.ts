@@ -69,7 +69,7 @@ export const legalEn: LegalContent = {
         {
           id: "boundaries",
           textBefore:
-            "I confirm that I am 18 or older, that I understand the limits of the online format, and that completing this form is not emergency care, does not guarantee a consultation, and does not replace the in-person medical follow-up and treatment I need.",
+            "I confirm that I am 18 or older, understand the limits of the online format, and realize that an online consultation does not replace the necessary in-person medical follow-up and treatment.",
         },
       ],
       button: "Agree and continue to the form",
