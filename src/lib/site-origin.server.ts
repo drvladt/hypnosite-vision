@@ -13,10 +13,12 @@ function normalizeOrigin(value: string | undefined): string | undefined {
 }
 
 /**
- * Prefer an explicitly configured canonical origin once the final domain is connected.
- * Until then, use the public origin that served the current request.
+ * Prefer the official production origin so previews and alternate hosting URLs
+ * always point search engines to the same canonical site.
  */
 export function resolveSiteOrigin(request: Request): string {
-  const configuredOrigin = normalizeOrigin(process.env["SITE_URL"] ?? process.env["VITE_SITE_URL"]);
+  const configuredOrigin = normalizeOrigin(
+    process.env["SITE_URL"] ?? process.env["VITE_SITE_URL"] ?? import.meta.env.VITE_SITE_URL,
+  );
   return configuredOrigin ?? new URL(request.url).origin;
 }

@@ -26,7 +26,7 @@ npm run dev
 ## Production environment
 
 - `VITE_CASE_API_URL` — deployed case-code API endpoint.
-- `SITE_URL` — final canonical site origin, for example `https://example.com`. Until it is set,
-  canonical URLs, Open Graph, `robots.txt`, and `sitemap.xml` use the origin of the incoming
-  request. Set this value when the final custom domain is connected so preview domains point to
-  the same canonical production site.
+- `VITE_SITE_URL=https://www.drvladt.com` is committed in `.env.production` because the official
+  public domain is not a secret. It fixes canonical URLs, Open Graph, `robots.txt`, and
+  `sitemap.xml` to the production site even when a preview domain serves the build.
+- `SITE_URL` may override the committed origin at runtime when the hosting platform provides it.
