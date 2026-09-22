@@ -82,7 +82,7 @@ export const homeEn: HomeContent = {
   consultation: {
     eyebrow: "ONLINE CONSULTATION",
     title: "If your situation calls for a careful individual review rather than general advice",
-    lead: "The initial consultation brings scattered information together into one picture and clarifies what to do next. We go through your symptoms, the history of your condition, the tests you already have and the possible influence of emotional factors. Afterwards you will understand more clearly:",
+    lead: "The initial consultation brings scattered information together into one picture and clarifies what to do next. We go through your symptoms, the history of your illness, the tests you already have and the possible influence of emotional factors. Afterwards you will understand more clearly:",
     outcomes: [
       "whether further examination is needed;",
       "which emotional factors may be sustaining how unwell you feel;",
@@ -93,13 +93,13 @@ export const homeEn: HomeContent = {
     suitableTitle: "Who this format is suitable for",
     suitableFor: [
       "adults aged 18 and over in a planned and relatively stable situation;",
-      "patients who have already completed tests or received a diagnosis but have not gained the improvement they hoped for;",
+      "people who have already completed tests or received a diagnosis but have not gained the improvement they hoped for;",
       "people who notice that stress, anxiety or inner tension affects their physical state;",
       "people living with intrusive thoughts, fears, inner limitations and bodily or psychosomatic symptoms;",
       "those who want to understand whether clinical hypnotherapy could help in their particular situation.",
     ],
     suitableNote:
-      "You do not need to decide for yourself whether the problem is medical, psychological or psychosomatic. The purpose of the initial consultation is to review the available information and identify a sensible direction to move in.",
+      "You do not need to decide for yourself whether the problem is medical, psychological or psychosomatic. The purpose of the initial consultation is precisely to review the available information and identify a sensible direction to move in.",
   },
   about: {
     eyebrow: "About me",
@@ -188,7 +188,7 @@ export const homeEn: HomeContent = {
       ],
       [
         "Which documents should I prepare?",
-        "If available, prepare medical reports, test and investigation results from the past year, and a list of your current medication with dosages.",
+        "If available, it is necessary to prepare medical reports, test and investigation results from the past year, and a list of your current medication with dosages.",
       ],
       [
         "How much does further work cost?",
