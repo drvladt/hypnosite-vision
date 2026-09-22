@@ -193,11 +193,11 @@ export function IntakePageView({ locale }: { locale: Locale }) {
         <FlowCard>
           <CaseCode label={page.caseLabel} code={session.caseCode} />
           {session.caseCode ? (
-            <div className="mt-5 overflow-hidden rounded-2xl border border-primary/20">
+            <div className="-mx-4 mt-5 overflow-hidden rounded-2xl border border-primary/20 sm:-mx-6 md:mx-0">
               <iframe
                 src={`${intakeFormUrl(session.caseCode)}&embedded=true`}
                 title={page.title}
-                className="h-[70vh] w-full"
+                className="h-[85vh] min-h-[560px] w-full md:h-[90vh]"
                 loading="lazy"
               />
             </div>
