@@ -13,9 +13,9 @@ import { homePath, pagePath, socialLinks, type Locale, type PageKey } from "@/co
 
 const NAV_PAGES: PageKey[] = ["approach", "about", "hypnotherapy", "research", "consultation", "contact"];
 const FOOTER_PAGES: PageKey[] = [
-  "approach",
   "about",
   "hypnotherapy",
+  "approach",
   "research",
   "stories",
   "consultation",
