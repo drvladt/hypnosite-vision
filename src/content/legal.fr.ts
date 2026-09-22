@@ -200,8 +200,7 @@ export const legalFr: LegalContent = {
         id: "changes",
         heading: "8. Modifications de la Politique",
         paragraphs: [
-          "La Politique peut être mise à jour en cas d'évolution du fonctionnement du site, des services utilisés ou des exigences applicables. La version actuelle du document et sa date d'entrée en vigueur sont publiées sur cette page.",
-          "Si les modifications affectent sensiblement un traitement soumis au consentement, une nouvelle confirmation sera demandée si nécessaire.",
+          "La Politique peut être mise à jour en cas d'évolution du fonctionnement du site, des services utilisés ou des exigences applicables. La version actuelle du document est publiée sur cette page.",
         ],
       },
     ],
