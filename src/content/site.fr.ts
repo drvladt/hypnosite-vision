@@ -291,7 +291,7 @@ export const siteFr: SiteContent = {
     restoreAction: "Restaurer la session",
   },
   thanks: {
-    eyebrow: "Étape 3 sur 3",
+    eyebrow: "ÉTAPE 3 SUR 3",
     title: "Votre demande est envoyée",
     lead: "Merci. Votre demande a bien été reçue.",
     metaTitle: "Demande envoyée — Dr. Vlad",

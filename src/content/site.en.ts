@@ -289,7 +289,7 @@ export const siteEn: SiteContent = {
     restoreAction: "Restore session",
   },
   thanks: {
-    eyebrow: "Step 3 of 3",
+    eyebrow: "STEP 3 OF 3",
     title: "Your request has been sent",
     lead: "Thank you. Your request has been received.",
     metaTitle: "Request sent — Dr. Vlad",

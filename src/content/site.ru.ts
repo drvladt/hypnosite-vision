@@ -290,7 +290,7 @@ export const siteRu: SiteContent = {
     restoreAction: "Восстановить сессию",
   },
   thanks: {
-    eyebrow: "Шаг 3 из 3",
+    eyebrow: "ШАГ 3 ИЗ 3",
     title: "Обращение отправлено",
     lead: "Спасибо. Ваше обращение получено.",
     metaTitle: "Обращение отправлено — Dr. Vlad",
