@@ -42,7 +42,6 @@ export const legalFr: LegalContent = {
     summary: {
       title: "Traitement des données",
       paragraphs: [
-        `Responsable du traitement : ${L("controllerLegalName")}, ${L("controllerCountry")}.`,
         "En continuant, vous confirmez avoir pris connaissance des conditions de traitement des données et acceptez le traitement des informations nécessaires à l'examen de votre demande.",
         `Vous pouvez retirer votre consentement en écrivant à ${L("privacyEmail")}. Le retrait ne remet pas en cause la licéité des traitements effectués avant sa réception.`,
       ],
