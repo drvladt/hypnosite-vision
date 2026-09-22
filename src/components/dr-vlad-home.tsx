@@ -97,6 +97,19 @@ export function DrVladHome({ locale }: { locale: Locale }) {
     reviewsRef.current?.scrollBy({ left: direction * 360, behavior: "smooth" });
   };
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setMenuOpen(false);
+    const id = href.replace(/^#/, "");
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (window.location.hash !== href) {
+        history.replaceState(null, "", href);
+      }
+    }
+  };
+
   const badgeIcons = [Stethoscope, CalendarDays, GlobeMinimal, Brain];
 
   return (
@@ -109,7 +122,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
           </a>
           <nav className="hidden items-center gap-7 text-sm lg:flex" aria-label={c.nav.label}>
             {c.nav.items.map((item) => (
-              <a key={item.href} className="nav-link" href={item.href}>{item.label}</a>
+              <a key={item.href} className="nav-link" href={item.href} onClick={(e) => handleNavClick(e, item.href)}>{item.label}</a>
             ))}
             <LanguageSwitcher locale={locale} label={c.nav.languageLabel} />
             <ConsultationButton label={c.nav.bookShort} locale={locale} outline />
@@ -125,7 +138,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
           <nav className="border-t border-border bg-background px-5 py-5 lg:hidden" aria-label={c.nav.mobileLabel}>
             <div className="mx-auto grid max-w-7xl gap-1">
               {c.nav.items.map((item) => (
-                <a key={item.href} href={item.href} onClick={() => setMenuOpen(false)} className="border-b border-border/60 py-3 text-sm">{item.label}</a>
+                <a key={item.href} href={item.href} onClick={(e) => handleNavClick(e, item.href)} className="border-b border-border/60 py-3 text-sm">{item.label}</a>
               ))}
               <div className="pt-4"><ConsultationButton label={c.cta.primary} locale={locale} /></div>
             </div>
@@ -193,7 +206,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
           </div>
         </section>
 
-        <section className="section-space">
+        <section id="bigPicture" className="section-space scroll-mt-24">
           <div className="mx-auto grid max-w-7xl gap-9 px-5 lg:grid-cols-2 lg:gap-12 lg:px-8">
             <div>
               <p className="eyebrow">{c.bigPicture.eyebrow}</p>
