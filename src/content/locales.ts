@@ -65,6 +65,7 @@ export const socialLinks = [
   { type: "telegram", url: "https://t.me/Dr_vladt49", label: "Telegram" },
   { type: "instagram", url: "https://www.instagram.com/dr_vladt", label: "Instagram" },
   { type: "tiktok", url: "https://tiktok.com/@dr_vladt", label: "TikTok" },
+  { type: "youtube", url: "https://www.youtube.com/@DrVladT", label: "YouTube" },
 ] as const;
 
 export type SocialType = (typeof socialLinks)[number]["type"];
