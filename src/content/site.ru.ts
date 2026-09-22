@@ -167,7 +167,6 @@ export const siteRu: SiteContent = {
       lead: "Правила использования сайта и границы формата консультации.",
       metaTitle: "Условия использования — Dr. Vlad",
       metaDescription: "Условия использования сайта и границы формата онлайн-консультации.",
-      draft: true,
       sections: [
         {
           heading: "Медицинский дисклеймер",

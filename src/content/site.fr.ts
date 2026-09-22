@@ -166,7 +166,6 @@ export const siteFr: SiteContent = {
       lead: "Règles d'utilisation du site et limites du format de consultation.",
       metaTitle: "Conditions d'utilisation — Dr. Vlad",
       metaDescription: "Conditions d'utilisation du site et limites de la consultation en ligne.",
-      draft: true,
       sections: [
         {
           heading: "Avertissement médical",
