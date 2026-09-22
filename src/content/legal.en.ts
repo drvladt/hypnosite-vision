@@ -198,8 +198,7 @@ export const legalEn: LegalContent = {
         id: "changes",
         heading: "8. Changes to this Policy",
         paragraphs: [
-          "The Policy may be updated when the operation of the site, the services used or applicable requirements change. The current version of the document and its effective date are published on this page.",
-          "If changes materially affect processing that requires consent, a new confirmation will be requested where necessary.",
+          "The Policy may be updated when the operation of the site, the services used or applicable requirements change. The current version of the document is published on this page.",
         ],
       },
     ],
