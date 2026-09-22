@@ -91,7 +91,6 @@ export const legalEn: LegalContent = {
     metaDescription: "How personal data of Dr Vlad website visitors is processed and protected.",
     tocTitle: "Contents",
     lead: [
-      "This Policy explains which personal data may be processed when you use the Dr Vlad website, complete the pre-consultation form, share medical documents, or communicate about scheduling, for which purposes this happens, and which rights you have.",
       "Because the form may contain information about your physical and emotional health, such data is handled with strengthened confidentiality and security measures.",
     ],
     sections: [
