@@ -165,7 +165,6 @@ export const siteEn: SiteContent = {
       lead: "Rules for using this website and the boundaries of the consultation format.",
       metaTitle: "Terms of use — Dr. Vlad",
       metaDescription: "Terms of use and the boundaries of the online consultation format.",
-      draft: true,
       sections: [
         {
           heading: "Medical disclaimer",
