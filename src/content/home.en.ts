@@ -18,11 +18,13 @@ export const homeEn: HomeContent = {
     languageLabel: "Site language",
     bookShort: "Book a consultation",
     items: [
-      { label: "My approach", href: "#approach" },
       { label: "What I work with", href: "#concerns" },
+      { label: "My approach", href: "#approach" },
+      { label: "Who I work with", href: "#consultation" },
       { label: "About me", href: "#about" },
-      { label: "Hypnotherapy", href: "#hypnotherapy" },
       { label: "Research", href: "#research" },
+      { label: "How I run consultations", href: "#steps" },
+      { label: "FAQ", href: "#faq" },
     ],
   },
   cta: {

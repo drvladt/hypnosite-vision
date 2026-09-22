@@ -18,11 +18,13 @@ export const homeFr: HomeContent = {
     languageLabel: "Langue du site",
     bookShort: "Prendre rendez-vous",
     items: [
-      { label: "Mon approche", href: "#approach" },
       { label: "Ce que je traite", href: "#concerns" },
+      { label: "Mon approche", href: "#approach" },
+      { label: "Avec qui je travaille", href: "#consultation" },
       { label: "À propos", href: "#about" },
-      { label: "Hypnothérapie", href: "#hypnotherapy" },
       { label: "Recherche", href: "#research" },
+      { label: "Comment je mène mes consultations", href: "#steps" },
+      { label: "Questions fréquentes", href: "#faq" },
     ],
   },
   cta: {
