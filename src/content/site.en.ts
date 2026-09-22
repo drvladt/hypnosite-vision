@@ -237,7 +237,7 @@ export const siteEn: SiteContent = {
     },
   },
   intake: {
-    eyebrow: "Step 1 of 3",
+    eyebrow: "STEP 2 OF 3",
     title: "Pre-consultation intake form",
     lead: "The form lets me study your situation before we meet and see whether the format fits.",
     metaTitle: "Pre-consultation intake form — Dr. Vlad",

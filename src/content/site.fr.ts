@@ -238,7 +238,7 @@ export const siteFr: SiteContent = {
     },
   },
   intake: {
-    eyebrow: "Étape 1 sur 3",
+    eyebrow: "ÉTAPE 2 SUR 3",
     title: "Questionnaire préalable",
     lead: "Le questionnaire me permet d'étudier votre situation avant la rencontre et de vérifier que le format convient.",
     metaTitle: "Questionnaire préalable — Dr. Vlad",
