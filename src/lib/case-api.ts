@@ -18,8 +18,8 @@
 import { legalConfig } from "@/content/legal-config";
 import type { Locale } from "@/content/locales";
 
-export const caseApiEndpoint = (import.meta.env['VITE_CASE_API_URL'] as string | undefined)?.trim() ?? "";
-export const caseApiConfigured = caseApiEndpoint.length > 0;
+export const caseApiEndpoint = "/api/public/create-case";
+export const caseApiConfigured = true;
 
 export type ConsentValues = { policy: boolean; health: boolean; boundaries: boolean };
 
