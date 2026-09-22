@@ -77,7 +77,7 @@ export const homeFr: HomeContent = {
       "Lorsqu'elle est indiquée, l'hypnothérapie peut être utilisée comme méthode complémentaire face à l'anxiété, aux peurs, aux réactions corporelles et aux schémas émotionnels ou comportementaux persistants.",
       "Elle ne s'oppose en rien au traitement médicamenteux et n'est pas prescrite automatiquement à chaque personne.",
     ],
-    moreHypnotherapyLabel: "En savoir plus sur l'hypnothérapie",
+    moreHypnotherapyLabel: "Comment fonctionne l'hypnothérapie",
   },
   consultation: {
     eyebrow: "CONSULTATION EN LIGNE",
