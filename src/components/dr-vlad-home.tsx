@@ -122,7 +122,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
           </a>
           <nav className="hidden items-center gap-7 text-sm lg:flex" aria-label={c.nav.label}>
             {c.nav.items.map((item) => (
-              <a key={item.href} className="nav-link" href={item.href}>{item.label}</a>
+              <a key={item.href} className="nav-link" href={item.href} onClick={(e) => handleNavClick(e, item.href)}>{item.label}</a>
             ))}
             <LanguageSwitcher locale={locale} label={c.nav.languageLabel} />
             <ConsultationButton label={c.nav.bookShort} locale={locale} outline />
