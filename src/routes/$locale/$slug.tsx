@@ -12,6 +12,7 @@ import { pageHead } from "@/content/page-head";
 import { siteContent } from "@/content/site";
 import { legalContent, type LegalPageKey } from "@/content/legal";
 import { locales, pageKeyFromSlug, type Locale, type PageKey } from "@/content/locales";
+import { canonicalSiteOrigin } from "@/content/seo";
 import type { InfoPageKey } from "@/content/site-types";
 import { getSiteOrigin } from "@/lib/site-origin.functions";
 
@@ -35,7 +36,9 @@ export const Route = createFileRoute("/$locale/$slug")({
   },
   head: ({ params, loaderData }) => {
     const resolved = resolve(params.locale, params.slug);
-    return resolved ? pageHead(resolved.locale, resolved.page, loaderData.siteOrigin) : {};
+    return resolved
+      ? pageHead(resolved.locale, resolved.page, loaderData?.siteOrigin ?? canonicalSiteOrigin)
+      : {};
   },
   component: SlugPage,
 });
