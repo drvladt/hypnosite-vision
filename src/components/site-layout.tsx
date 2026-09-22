@@ -21,7 +21,6 @@ const FOOTER_PAGES: PageKey[] = [
   "consultation",
   "contact",
   "privacy",
-  "consent",
   "terms",
 ];
 
