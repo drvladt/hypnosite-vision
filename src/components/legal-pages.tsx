@@ -293,7 +293,7 @@ export function ConsentGatePageView({ locale }: { locale: Locale }) {
                     type="checkbox"
                     checked={checked[item.id]}
                     onChange={(event) =>
-                      setChecked((value) => ({ ...value, [item.id]: event.target.checked }))
+                      updateChecked(item.id, event.target.checked)
                     }
                     className="mt-0.5 size-4 shrink-0 cursor-pointer accent-[var(--primary)]"
                   />
