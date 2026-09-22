@@ -18,6 +18,8 @@ const CASE_LABEL: Record<Locale, string> = {
   en: "Reference code",
   fr: "Code de dossier",
 };
+/** Only the three boolean confirmations are kept here — never health data or a Patient ID. */
+const CONSENT_DRAFT_KEY = "consent-confirmations";
 
 
 function NotReadyBanner({ text }: { text: string }) {
