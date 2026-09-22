@@ -20,7 +20,7 @@ export const homeFr: HomeContent = {
     items: [
       { label: "Ce que je traite", href: "#concerns" },
       { label: "Mon approche", href: "#bigPicture" },
-      { label: "Avec qui je travaille", href: "#consultation" },
+      { label: "Avec qui je travaille", href: "#suitable" },
       { label: "À propos", href: "#about" },
       { label: "Recherche", href: "#research" },
       { label: "Comment je mène mes consultations", href: "#steps" },
