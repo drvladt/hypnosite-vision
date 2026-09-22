@@ -102,13 +102,11 @@ export function DrVladHome({ locale }: { locale: Locale }) {
     setMenuOpen(false);
     const id = href.replace(/^#/, "");
     const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-      if (window.location.hash !== href) {
-        history.replaceState(null, "", href);
-      }
-    }
+    // Scroll without writing the hash into the URL: a stored hash would make
+    // a page reload jump straight to that section.
+    el?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
+
 
   const badgeIcons = [Stethoscope, CalendarDays, GlobeMinimal, Brain];
 
