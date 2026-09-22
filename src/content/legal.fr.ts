@@ -192,7 +192,6 @@ export const legalFr: LegalContent = {
             paragraphs: [
               `Vous pouvez adresser votre demande à ${L("privacyEmail")}. Pour protéger vos données, une confirmation d'identité peut être requise avant le traitement de la demande.`,
               "Le consentement peut être retiré à tout moment. Le retrait ne remet pas en cause la licéité des traitements effectués avant sa réception. Si l'examen de la demande devient impossible sans le traitement des informations fournies, il sera interrompu après le retrait du consentement.",
-              `Vous pouvez également saisir l'autorité compétente de protection des données personnelles de la République togolaise — ${L("supervisoryAuthority")}.`,
             ],
           },
         ],
