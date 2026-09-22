@@ -138,7 +138,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
           <nav className="border-t border-border bg-background px-5 py-5 lg:hidden" aria-label={c.nav.mobileLabel}>
             <div className="mx-auto grid max-w-7xl gap-1">
               {c.nav.items.map((item) => (
-                <a key={item.href} href={item.href} onClick={() => setMenuOpen(false)} className="border-b border-border/60 py-3 text-sm">{item.label}</a>
+                <a key={item.href} href={item.href} onClick={(e) => handleNavClick(e, item.href)} className="border-b border-border/60 py-3 text-sm">{item.label}</a>
               ))}
               <div className="pt-4"><ConsultationButton label={c.cta.primary} locale={locale} /></div>
             </div>
