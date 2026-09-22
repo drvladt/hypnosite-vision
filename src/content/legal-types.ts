@@ -61,6 +61,7 @@ export type ConsentFlowPage = {
     blockedNote: string;
     secondaryLabel: string;
     errorText: string;
+    configErrorText: string;
     loadingLabel: string;
   };
 };

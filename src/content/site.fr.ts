@@ -252,8 +252,8 @@ export const siteFr: SiteContent = {
       },
     ],
     caseLabel: "Code de demande",
-    demoNote:
-      "Le questionnaire fonctionne pour l'instant en mode démonstration : aucune donnée n'est collectée ni transmise. Il sera connecté après la validation juridique.",
+    formNote:
+      "Le code de demande a été ajouté automatiquement dans le champ Patient ID. Remplissez et envoyez le formulaire, puis revenez sur le site pour continuer.",
     formPlaceholder: "Le questionnaire apparaîtra ici",
     continueLabel: "Continuer vers les documents médicaux",
     missingConsentTitle: "Les conditions doivent d'abord être confirmées",
@@ -275,6 +275,8 @@ export const siteFr: SiteContent = {
       },
     ],
     caseLabel: "Code de demande",
+    uploadPendingNote:
+      "Le téléversement sécurisé des documents n'est pas encore connecté : les fichiers sélectionnés ne sont ni envoyés ni conservés. Vous pouvez passer cette étape pour l'instant.",
     optionalNote: "Vous pouvez passer cette étape.",
     pickLabel: "Choisir des fichiers",
     selectedLabel: "Fichiers sélectionnés",

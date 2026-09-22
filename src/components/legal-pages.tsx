@@ -7,7 +7,7 @@ import { legalContent, type LegalPageKey } from "@/content/legal";
 import { legalConfig, missingLegalVars } from "@/content/legal-config";
 import type { LegalBlock, LegalDoc } from "@/content/legal-types";
 import { homePath, pagePath, type Locale } from "@/content/locales";
-import { createCase } from "@/lib/case-api";
+import { CaseApiNotConfiguredError, createCase } from "@/lib/case-api";
 import { startIntakeSession } from "@/lib/intake-session";
 
 
@@ -133,7 +133,7 @@ export function ConsentGatePageView({ locale }: { locale: Locale }) {
   const page = content.consultation;
   const navigate = useNavigate();
   const [checked, setChecked] = useState({ policy: false, health: false, boundaries: false });
-  const [status, setStatus] = useState<"idle" | "pending" | "issued" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "pending" | "issued" | "error" | "config-error">("idle");
   const [caseCode, setCaseCode] = useState<string | null>(null);
   const allChecked = checked.policy && checked.health && checked.boundaries;
 
@@ -147,9 +147,10 @@ export function ConsentGatePageView({ locale }: { locale: Locale }) {
       setStatus("issued");
       window.setTimeout(() => {
         void navigate({ to: pagePath(locale, "intake") });
-      }, result.patientId ? 1600 : 200);
-    } catch {
-      setStatus("error");
+      }, 1600);
+    } catch (error) {
+      // Fail closed: no navigation, no locally generated code, nothing logged.
+      setStatus(error instanceof CaseApiNotConfiguredError ? "config-error" : "error");
     }
   };
 
@@ -280,9 +281,9 @@ export function ConsentGatePageView({ locale }: { locale: Locale }) {
               ))}
             </div>
 
-            {status === "error" && (
+            {(status === "error" || status === "config-error") && (
               <p role="alert" tabIndex={-1} className="mt-5 text-sm leading-relaxed text-destructive">
-                {page.panel.errorText}
+                {status === "config-error" ? page.panel.configErrorText : page.panel.errorText}
               </p>
             )}
 

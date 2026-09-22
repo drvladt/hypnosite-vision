@@ -91,7 +91,9 @@ export const legalFr: LegalContent = {
       blockedNote: "Le bouton s'active après les trois confirmations.",
       secondaryLabel: "Revenir à l'accueil",
       errorText:
-        "Impossible de démarrer votre demande en toute sécurité. Vos données médicales n'ont pas encore été envoyées. Merci de réessayer ou de revenir plus tard.",
+        "Votre demande n'a pas pu être créée pour le moment. Aucune donnée médicale n'a été envoyée. Merci de réessayer plus tard.",
+      configErrorText:
+        "La création de demandes est momentanément indisponible pour des raisons techniques. Aucune donnée n'a été envoyée. Merci de réessayer plus tard.",
       loadingLabel: "Enregistrement de votre confirmation…",
     },
   },
@@ -247,8 +249,8 @@ export const legalFr: LegalContent = {
         heading: "8. Traitement transfrontalier",
         paragraphs: [
           `Les données peuvent être techniquement traitées ou conservées dans les pays ou régions suivants : ${L("dataStorageCountries")}.`,
+          `Le journal des consentements et l'attribution du code de dossier sont assurés par ${L("consentLogProvider")}, dans la région ${L("consentLogRegion")}. Le journal n'enregistre que le fait des trois confirmations, les versions des documents, l'heure UTC du serveur et le code de dossier — sans nom, coordonnées, symptômes, diagnostics, réponses au questionnaire ni documents médicaux. Ces enregistrements sont conservés un mois calendaire.`,
           `Garanties de transfert appliquées : ${L("transferSafeguards")}.`,
-          "Tant que ces informations ne sont pas complétées et les contrats des prestataires vérifiés, la collecte de données de santé en production doit rester désactivée.",
         ],
       },
       {

@@ -248,8 +248,8 @@ export const siteEn: SiteContent = {
       },
     ],
     caseLabel: "Reference code",
-    demoNote:
-      "The form currently runs in demonstration mode: no data is collected or transmitted. It will be connected after legal review.",
+    formNote:
+      "The reference code has been added automatically to the Patient ID field. Complete and submit the form, then return to the website to continue.",
     formPlaceholder: "The intake form will appear here",
     continueLabel: "Continue to medical documents",
     missingConsentTitle: "The conditions need to be confirmed first",
@@ -270,6 +270,8 @@ export const siteEn: SiteContent = {
       },
     ],
     caseLabel: "Reference code",
+    uploadPendingNote:
+      "Secure document upload is not connected yet: selected files are not sent or stored anywhere. You can skip this step for now.",
     optionalNote: "You can skip this step.",
     pickLabel: "Choose files",
     selectedLabel: "Files selected",

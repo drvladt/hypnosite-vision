@@ -22,8 +22,15 @@ export const legalConfig = {
   termsVersion: "1.0",
   /** Hosting: Lovable (edge deployment on Cloudflare infrastructure). */
   hostingProvider: "Lovable" as string | null,
-  /** Services in use: Google Workspace + Lovable hosting; storage regions per provider defaults. */
-  dataStorageCountries: "США, ЕС (Google Workspace, Lovable)" as string | null,
+  /** Consent log + case code generation: Google Cloud / Firebase (Firestore + Cloud Function). */
+  consentLogProvider: "Google Cloud / Firebase (Firestore, Cloud Function)" as string | null,
+  /** Confirmed 22.09.2026: Firestore and the Cloud Function run in europe-west1 (Belgium). */
+  consentLogRegion: "europe-west1 (Бельгия)" as string | null,
+  /** Services in use: Google Cloud/Firebase, Google Workspace + Lovable hosting. */
+  dataStorageCountries:
+    "Бельгия (europe-west1 — журнал согласий, Google Cloud/Firebase), ЕС и США (Google Workspace, Lovable)" as
+      | string
+      | null,
   transferSafeguards: "Стандартные договорные условия операторов (Google, Lovable)" as string | null,
   /** Confirmed: Togolese data protection authority. */
   supervisoryAuthority:

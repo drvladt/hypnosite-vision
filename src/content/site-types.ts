@@ -44,7 +44,7 @@ export type ConsultationPage = InfoPage & {
 
 export type IntakePage = InfoPage & {
   caseLabel: string;
-  demoNote: string;
+  formNote: string;
   formPlaceholder: string;
   continueLabel: string;
   missingConsentTitle: string;
@@ -54,6 +54,7 @@ export type IntakePage = InfoPage & {
 
 export type DocumentsPage = InfoPage & {
   caseLabel: string;
+  uploadPendingNote: string;
   optionalNote: string;
   pickLabel: string;
   selectedLabel: string;
