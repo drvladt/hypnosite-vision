@@ -93,7 +93,6 @@ export const legalFr: LegalContent = {
       "Traitement et protection des données personnelles des visiteurs du site du Dr Vlad.",
     tocTitle: "Sommaire",
     lead: [
-      "Cette Politique explique quelles données personnelles peuvent être traitées lors de l'utilisation du site du Dr Vlad, du remplissage du questionnaire préalable, de la transmission de documents médicaux et des échanges d'organisation, à quelles fins et quels droits vous conservez.",
       "Le questionnaire pouvant contenir des informations sur votre santé physique et psycho-émotionnelle, ces données bénéficient de mesures renforcées de confidentialité et de sécurité.",
     ],
     sections: [
