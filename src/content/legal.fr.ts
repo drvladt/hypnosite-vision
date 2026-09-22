@@ -154,7 +154,6 @@ export const legalFr: LegalContent = {
           "La partie médicale du questionnaire et les documents joints sont examinés par le Dr Vlad.",
           "Une assistante peut recevoir les données de contact et d'organisation après la décision de poursuivre les échanges, mais n'a pas accès au contenu médical du questionnaire ni aux documents.",
           "Google Forms, Google Workspace, Google Drive, Google Cloud/Firebase, Lovable, un service de messagerie et une plateforme de visioconférence peuvent être utilisés pour le fonctionnement technique du site et le stockage des informations. Ces services peuvent traiter les données en qualité de prestataires techniques.",
-          "Les données peuvent également être communiquées aux autorités publiques lorsque la loi applicable l'exige directement.",
         ],
       },
       {
@@ -164,7 +163,6 @@ export const legalFr: LegalContent = {
           "Les réponses au questionnaire et les documents médicaux sont conservés dans un espace de travail fermé à accès restreint. Les documents téléversés ne sont pas placés dans des dossiers publics.",
           "En raison de l'utilisation de services cloud, les données peuvent être techniquement traitées ou conservées hors de la République togolaise, notamment dans l'Union européenne et aux États-Unis. Pour les transferts internationaux, les mécanismes de protection prévus par les prestataires et la loi applicable sont appliqués.",
           "Le journal des consentements est hébergé dans Google Cloud/Firebase, région europe-west1 (Belgique), et ne contient ni nom, ni coordonnées, ni informations médicales.",
-          "En règle générale, les données de la demande, les documents médicaux et les informations de consentement sont conservés jusqu'à un mois, puis supprimés ou anonymisés de façon irréversible, sauf si une conservation plus longue est requise par la loi ou pour la défense de droits légitimes.",
         ],
       },
       {
@@ -228,7 +226,7 @@ export const legalFr: LegalContent = {
         id: "data",
         heading: "1. Données couvertes",
         paragraphs: [
-          "Ce consentement couvre les coordonnées, les informations indiquées dans le questionnaire préalable, les données relatives à la santé physique et psycho-émotionnelle, les symptômes, l'historique, les examens, les diagnostics, les traitements et médicaments, ainsi que les documents médicaux téléversés volontairement.",
+          "Ce consentement couvre les coordonnées, les informations indiquées dans le questionnaire préalable, les données relatives à la santé physique et psycho-émotionnelle, les symptômes, l'historique de la maladie, les examens, les diagnostics, les traitements et médicaments, ainsi que les documents médicaux téléversés volontairement.",
           "Il couvre également les données techniques nécessaires à la création de la demande, à la session sécurisée, au lien entre le questionnaire et les documents et à l'enregistrement de mon choix.",
         ],
       },

@@ -152,7 +152,6 @@ export const legalEn: LegalContent = {
           "The medical part of the form and the attached documents are reviewed by Dr Vlad.",
           "An assistant may receive contact and scheduling details after the decision to continue is made, but has no access to the medical content of the form or the documents.",
           "Google Forms, Google Workspace, Google Drive, Google Cloud/Firebase, Lovable, an email service and a video platform may be used for the technical operation of the site and for storing information. These services may process data as technical providers.",
-          "Data may also be disclosed to public authorities where this is directly required by applicable law.",
         ],
       },
       {
@@ -162,7 +161,6 @@ export const legalEn: LegalContent = {
           "Form answers and medical documents are stored in a closed workspace with restricted access. Uploaded documents are not placed in public folders.",
           "Because cloud services are used, data may technically be processed or stored outside the Republic of Togo, including in the European Union and the United States. For international transfer, the data protection mechanisms provided by the providers and applicable law are applied.",
           "The consent log is hosted in Google Cloud/Firebase in the europe-west1 region (Belgium) and contains no name, contacts or medical information.",
-          "As a rule, request data, medical documents and consent records are kept for up to one month, after which they are deleted or irreversibly anonymised, unless longer retention is required by law or to defend legitimate rights.",
         ],
       },
       {
@@ -223,7 +221,7 @@ export const legalEn: LegalContent = {
         id: "data",
         heading: "1. Which data this consent covers",
         paragraphs: [
-          "This consent covers contact details, the information given in the pre-consultation form, information about physical and emotional health, symptoms, history, investigations, diagnoses, treatment and medication, and any medical documents uploaded voluntarily.",
+          "This consent covers contact details, the information given in the pre-consultation form, information about physical and emotional health, symptoms, history of the condition, investigations, diagnoses, treatment and medication, and any medical documents uploaded voluntarily.",
           "It also covers the technical data needed to create the request, the secure session, the link between the form and the documents, and the record of my choice.",
         ],
       },
