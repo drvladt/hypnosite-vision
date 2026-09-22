@@ -247,8 +247,8 @@ export const legalFr: LegalContent = {
         heading: "8. Traitement transfrontalier",
         paragraphs: [
           `Les données peuvent être techniquement traitées ou conservées dans les pays ou régions suivants : ${L("dataStorageCountries")}.`,
+          `Le journal des consentements et l'attribution du code de dossier sont assurés par ${L("consentLogProvider")}, dans la région ${L("consentLogRegion")}. Le journal n'enregistre que le fait des trois confirmations, les versions des documents, l'heure UTC du serveur et le code de dossier — sans nom, coordonnées, symptômes, diagnostics, réponses au questionnaire ni documents médicaux. Ces enregistrements sont conservés un mois calendaire.`,
           `Garanties de transfert appliquées : ${L("transferSafeguards")}.`,
-          "Tant que ces informations ne sont pas complétées et les contrats des prestataires vérifiés, la collecte de données de santé en production doit rester désactivée.",
         ],
       },
       {
