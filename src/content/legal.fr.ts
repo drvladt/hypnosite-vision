@@ -18,7 +18,7 @@ export const legalFr: LegalContent = {
       "Informations sur la consultation, la confidentialité et le traitement des données personnelles avant de remplir le questionnaire.",
     intro: [
       "Le questionnaire permet au Dr Vlad d'examiner votre situation au préalable et de déterminer si une consultation pourrait être utile dans votre cas.",
-      "Vous pouvez indiquer vos coordonnées, décrire vos plaintes, votre état de santé, les examens et traitements antérieurs. Après l'envoi, vous pourrez si nécessaire joindre des documents médicaux.",
+      "Vous pouvez décrire vos plaintes, votre état de santé, les examens et traitements antérieurs. Après l'envoi, vous pourrez si nécessaire joindre des documents médicaux.",
     ],
     access: {
       title: "Confidentialité",
