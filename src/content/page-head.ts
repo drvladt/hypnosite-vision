@@ -1,6 +1,16 @@
-import { locales, pagePath, type Locale, type PageKey } from "./locales";
+import { pagePath, type Locale, type PageKey } from "./locales";
 import { siteContent } from "./site";
 import { legalContent } from "./legal";
+import {
+  absoluteUrl,
+  localeOpenGraphTags,
+  pageAlternateLinks,
+  pageStructuredData,
+  privateFlowRobots,
+  publicRobots,
+  socialImage,
+  socialImageAlt,
+} from "./seo";
 
 type HeadTexts = { metaTitle: string; metaDescription: string; robots?: string };
 
@@ -10,7 +20,7 @@ function textsFor(locale: Locale, page: PageKey): HeadTexts {
   switch (page) {
     // Consent flow and its legal documents live in the legal content layer.
     case "consultation":
-      return { ...legal.consultation, robots: "noindex, nofollow" };
+      return { ...legal.consultation, robots: privateFlowRobots };
     case "privacy":
       return legal.privacy;
     case "consent":
@@ -18,35 +28,48 @@ function textsFor(locale: Locale, page: PageKey): HeadTexts {
     case "terms":
       return legal.terms;
     case "intake":
-      return { ...content.intake, robots: "noindex, nofollow" };
+      return { ...content.intake, robots: privateFlowRobots };
     case "documents":
-      return { ...content.documents, robots: "noindex, nofollow" };
+      return { ...content.documents, robots: privateFlowRobots };
     case "thanks":
-      return { ...content.thanks, robots: "noindex, nofollow" };
+      return { ...content.thanks, robots: privateFlowRobots };
     default:
       return content.info[page];
   }
 }
 
 /** Head metadata for an inner page, with hreflang alternates for the same page. */
-export function pageHead(locale: Locale, page: PageKey) {
+export function pageHead(locale: Locale, page: PageKey, siteOrigin: string) {
   const { metaTitle, metaDescription, robots } = textsFor(locale, page);
+  const canonicalUrl = absoluteUrl(siteOrigin, pagePath(locale, page));
+  const imageUrl = socialImage(siteOrigin);
+  const robotsDirective = robots ?? publicRobots;
+
   return {
     meta: [
       { title: metaTitle },
       { name: "description", content: metaDescription },
+      { name: "robots", content: robotsDirective },
+      { name: "googlebot", content: robotsDirective },
       { property: "og:title", content: metaTitle },
       { property: "og:description", content: metaDescription },
       { property: "og:type", content: "website" },
-      { property: "og:locale", content: locale },
+      { property: "og:site_name", content: "Dr Vlad" },
+      { property: "og:url", content: canonicalUrl },
+      { property: "og:image", content: imageUrl },
+      { property: "og:image:alt", content: socialImageAlt(locale) },
+      ...localeOpenGraphTags(locale),
       { name: "twitter:card", content: "summary_large_image" },
-      // The request flow must stay out of search results and ad tracking.
-      ...(robots ? [{ name: "robots", content: robots }] : []),
+      { name: "twitter:title", content: metaTitle },
+      { name: "twitter:description", content: metaDescription },
+      { name: "twitter:image", content: imageUrl },
     ],
-    links: [
-      ...locales.map((item) => ({ rel: "alternate", hrefLang: item, href: pagePath(item, page) })),
-      { rel: "alternate", hrefLang: "x-default", href: pagePath("ru", page) },
-      { rel: "canonical", href: pagePath(locale, page) },
+    links: [...pageAlternateLinks(siteOrigin, page), { rel: "canonical", href: canonicalUrl }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: pageStructuredData(siteOrigin, locale, page, metaTitle, metaDescription),
+      },
     ],
   };
 }

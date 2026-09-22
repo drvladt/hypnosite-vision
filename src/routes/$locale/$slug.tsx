@@ -1,13 +1,19 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 
 import { SiteLayout } from "@/components/site-layout";
-import { DocumentsPageView, InfoPageView, IntakePageView, ThanksPageView } from "@/components/site-pages";
+import {
+  DocumentsPageView,
+  InfoPageView,
+  IntakePageView,
+  ThanksPageView,
+} from "@/components/site-pages";
 import { ConsentGatePageView, LegalDocView } from "@/components/legal-pages";
 import { pageHead } from "@/content/page-head";
 import { siteContent } from "@/content/site";
 import { legalContent, type LegalPageKey } from "@/content/legal";
 import { locales, pageKeyFromSlug, type Locale, type PageKey } from "@/content/locales";
 import type { InfoPageKey } from "@/content/site-types";
+import { getSiteOrigin } from "@/lib/site-origin.functions";
 
 const LEGAL_PAGES = ["privacy", "consent", "terms"] as const;
 const FLOW_PAGES = ["consultation", "intake", "documents", "thanks"] as const;
@@ -22,14 +28,14 @@ function resolve(localeParam: string, slug: string): Resolved | undefined {
 }
 
 export const Route = createFileRoute("/$locale/$slug")({
-  loader: ({ params }) => {
+  loader: async ({ params }) => {
     const resolved = resolve(params.locale, params.slug);
     if (!resolved) throw notFound();
-    return resolved;
+    return { ...resolved, siteOrigin: await getSiteOrigin() };
   },
-  head: ({ params }) => {
+  head: ({ params, loaderData }) => {
     const resolved = resolve(params.locale, params.slug);
-    return resolved ? pageHead(resolved.locale, resolved.page) : {};
+    return resolved ? pageHead(resolved.locale, resolved.page, loaderData.siteOrigin) : {};
   },
   component: SlugPage,
 });

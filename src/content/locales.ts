@@ -2,6 +2,12 @@ export const locales = ["ru", "en", "fr"] as const;
 
 export type Locale = (typeof locales)[number];
 
+/** Locale encoded in the first URL segment; English is the neutral root fallback. */
+export function localeFromPathname(pathname: string): Locale {
+  const segment = pathname.split("/")[1] ?? "";
+  return (locales as readonly string[]).includes(segment) ? (segment as Locale) : "en";
+}
+
 export const localeNames: Record<Locale, string> = {
   ru: "Русский",
   en: "English",

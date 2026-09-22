@@ -12,7 +12,9 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EnRouteImport } from './routes/en'
 import { Route as FrRouteImport } from './routes/fr'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as RuRouteImport } from './routes/ru'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as LocaleSlugRouteImport } from './routes/$locale/$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -30,9 +32,19 @@ const FrRoute = FrRouteImport.update({
   path: '/fr',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
+  id: '/robots.txt',
+  path: '/robots.txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RuRoute = RuRouteImport.update({
   id: '/ru',
   path: '/ru',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LocaleSlugRoute = LocaleSlugRouteImport.update({
@@ -45,14 +57,18 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/en': typeof EnRoute
   '/fr': typeof FrRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/ru': typeof RuRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$locale/$slug': typeof LocaleSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/en': typeof EnRoute
   '/fr': typeof FrRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/ru': typeof RuRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$locale/$slug': typeof LocaleSlugRoute
 }
 export interface FileRoutesById {
@@ -60,22 +76,48 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/en': typeof EnRoute
   '/fr': typeof FrRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/ru': typeof RuRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$locale/$slug': typeof LocaleSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/en' | '/fr' | '/ru' | '/$locale/$slug'
+  fullPaths:
+    | '/'
+    | '/en'
+    | '/fr'
+    | '/robots.txt'
+    | '/ru'
+    | '/sitemap.xml'
+    | '/$locale/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/en' | '/fr' | '/ru' | '/$locale/$slug'
-  id: '__root__' | '/' | '/en' | '/fr' | '/ru' | '/$locale/$slug'
+  to:
+    | '/'
+    | '/en'
+    | '/fr'
+    | '/robots.txt'
+    | '/ru'
+    | '/sitemap.xml'
+    | '/$locale/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/en'
+    | '/fr'
+    | '/robots.txt'
+    | '/ru'
+    | '/sitemap.xml'
+    | '/$locale/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   EnRoute: typeof EnRoute
   FrRoute: typeof FrRoute
+  RobotsDottxtRoute: typeof RobotsDottxtRoute
   RuRoute: typeof RuRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   LocaleSlugRoute: typeof LocaleSlugRoute
 }
 
@@ -102,11 +144,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FrRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/robots.txt': {
+      id: '/robots.txt'
+      path: '/robots.txt'
+      fullPath: '/robots.txt'
+      preLoaderRoute: typeof RobotsDottxtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/ru': {
       id: '/ru'
       path: '/ru'
       fullPath: '/ru'
       preLoaderRoute: typeof RuRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/$locale/$slug': {
@@ -123,7 +179,9 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   EnRoute: EnRoute,
   FrRoute: FrRoute,
+  RobotsDottxtRoute: RobotsDottxtRoute,
   RuRoute: RuRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   LocaleSlugRoute: LocaleSlugRoute,
 }
 export const routeTree = rootRouteImport

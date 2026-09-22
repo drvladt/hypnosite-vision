@@ -4,22 +4,21 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
-import { useRouterState } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { siteContent } from "../content/site";
-import { homePath, locales, pagePath, type Locale } from "../content/locales";
+import { homePath, localeFromPathname, pagePath } from "../content/locales";
 
 /** Localised 404: the language comes from the first segment of the URL. */
 function NotFoundComponent() {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
-  const segment = pathname.split("/")[1] ?? "";
-  const locale = (locales as readonly string[]).includes(segment) ? (segment as Locale) : "en";
+  const locale = localeFromPathname(pathname);
   const c = siteContent[locale].notFound;
 
   return (
@@ -102,7 +101,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "icon", href: "/favicon.png", type: "image/png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Nunito+Sans:wght@400;500;600;700&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Nunito+Sans:wght@400;500;600;700&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -112,8 +114,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+  const locale = localeFromPathname(pathname);
+
   return (
-    <html lang="ru">
+    <html lang={locale}>
       <head>
         <HeadContent />
       </head>

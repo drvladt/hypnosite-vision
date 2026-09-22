@@ -3,9 +3,11 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 
 import { detectPreferredLocale, homePath } from "@/content/locales";
 import { homeHead } from "@/content/head";
+import { getSiteOrigin } from "@/lib/site-origin.functions";
 
 export const Route = createFileRoute("/")({
-  head: () => homeHead("en"),
+  loader: async () => ({ siteOrigin: await getSiteOrigin() }),
+  head: ({ loaderData }) => homeHead("en", loaderData.siteOrigin),
   component: LocaleRedirect,
 });
 

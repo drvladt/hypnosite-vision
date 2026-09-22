@@ -22,3 +22,11 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+## Production environment
+
+- `VITE_CASE_API_URL` — deployed case-code API endpoint.
+- `SITE_URL` — final canonical site origin, for example `https://example.com`. Until it is set,
+  canonical URLs, Open Graph, `robots.txt`, and `sitemap.xml` use the origin of the incoming
+  request. Set this value when the final custom domain is connected so preview domains point to
+  the same canonical production site.
