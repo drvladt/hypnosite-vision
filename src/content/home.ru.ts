@@ -19,7 +19,7 @@ export const homeRu: HomeContent = {
     bookShort: "Записаться",
     items: [
       { label: "С чем я работаю", href: "#concerns" },
-      { label: "Мой подход", href: "#approach" },
+      { label: "Мой подход", href: "#bigPicture" },
       { label: "С кем я работаю", href: "#consultation" },
       { label: "Обо мне", href: "#about" },
       { label: "Исследование", href: "#research" },

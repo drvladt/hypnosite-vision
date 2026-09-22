@@ -19,7 +19,7 @@ export const homeFr: HomeContent = {
     bookShort: "Prendre rendez-vous",
     items: [
       { label: "Ce que je traite", href: "#concerns" },
-      { label: "Mon approche", href: "#approach" },
+      { label: "Mon approche", href: "#bigPicture" },
       { label: "Avec qui je travaille", href: "#consultation" },
       { label: "À propos", href: "#about" },
       { label: "Recherche", href: "#research" },

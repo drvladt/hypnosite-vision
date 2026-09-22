@@ -19,7 +19,7 @@ export const homeEn: HomeContent = {
     bookShort: "Book a consultation",
     items: [
       { label: "What I work with", href: "#concerns" },
-      { label: "My approach", href: "#approach" },
+      { label: "My approach", href: "#bigPicture" },
       { label: "Who I work with", href: "#consultation" },
       { label: "About me", href: "#about" },
       { label: "Research", href: "#research" },

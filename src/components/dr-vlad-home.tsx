@@ -206,7 +206,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
           </div>
         </section>
 
-        <section className="section-space">
+        <section id="bigPicture" className="section-space scroll-mt-24">
           <div className="mx-auto grid max-w-7xl gap-9 px-5 lg:grid-cols-2 lg:gap-12 lg:px-8">
             <div>
               <p className="eyebrow">{c.bigPicture.eyebrow}</p>
