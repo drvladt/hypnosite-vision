@@ -270,6 +270,8 @@ export const siteEn: SiteContent = {
       },
     ],
     caseLabel: "Reference code",
+    uploadPendingNote:
+      "Secure document upload is not connected yet: selected files are not sent or stored anywhere. You can skip this step for now.",
     optionalNote: "You can skip this step.",
     pickLabel: "Choose files",
     selectedLabel: "Files selected",

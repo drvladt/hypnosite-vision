@@ -275,6 +275,8 @@ export const siteFr: SiteContent = {
       },
     ],
     caseLabel: "Code de demande",
+    uploadPendingNote:
+      "Le téléversement sécurisé des documents n'est pas encore connecté : les fichiers sélectionnés ne sont ni envoyés ni conservés. Vous pouvez passer cette étape pour l'instant.",
     optionalNote: "Vous pouvez passer cette étape.",
     pickLabel: "Choisir des fichiers",
     selectedLabel: "Fichiers sélectionnés",

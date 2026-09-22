@@ -178,7 +178,7 @@ export function IntakePageView({ locale }: { locale: Locale }) {
               </p>
             </div>
           )}
-          <p className="mt-4 text-xs leading-relaxed text-muted-foreground">{page.demoNote}</p>
+          <p className="mt-4 text-xs leading-relaxed text-muted-foreground">{page.formNote}</p>
 
           <Button size="lg" onClick={continueToDocuments} className="mt-6 h-12 rounded-full px-6 text-sm shadow-none">
             {page.continueLabel}
@@ -264,7 +264,7 @@ export function DocumentsPageView({ locale }: { locale: Locale }) {
               {page.selectedLabel}: {files}
             </p>
           )}
-          <p className="mt-4 text-xs leading-relaxed text-muted-foreground">{c.intake.demoNote}</p>
+          <p className="mt-4 text-xs leading-relaxed text-muted-foreground">{page.uploadPendingNote}</p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button size="lg" onClick={finish} className="h-12 rounded-full px-6 text-sm shadow-none">
               {page.continueLabel}
