@@ -239,7 +239,7 @@ export const siteRu: SiteContent = {
     },
   },
   intake: {
-    eyebrow: "Шаг 1 из 3",
+    eyebrow: "ШАГ 2 ИЗ 3",
     title: "Преконсультативная анкета",
     lead: "Анкета помогает мне изучить вашу ситуацию до встречи и понять, подходит ли формат.",
     metaTitle: "Преконсультативная анкета — Dr. Vlad",
@@ -262,7 +262,7 @@ export const siteRu: SiteContent = {
     missingConsentAction: "Перейти к условиям",
   },
   documents: {
-    eyebrow: "Шаг 2 из 3",
+    eyebrow: "ШАГ 3 ИЗ 3",
     title: "Медицинские документы",
     lead: "Необязательный шаг: вы можете приложить выписки, результаты обследований и заключения.",
     metaTitle: "Медицинские документы — Dr. Vlad",
@@ -290,7 +290,7 @@ export const siteRu: SiteContent = {
     restoreAction: "Восстановить сессию",
   },
   thanks: {
-    eyebrow: "Шаг 3 из 3",
+    eyebrow: "ШАГ 3 ИЗ 3",
     title: "Обращение отправлено",
     lead: "Спасибо. Ваше обращение получено.",
     metaTitle: "Обращение отправлено — Dr. Vlad",

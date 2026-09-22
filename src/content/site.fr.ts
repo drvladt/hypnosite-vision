@@ -238,7 +238,7 @@ export const siteFr: SiteContent = {
     },
   },
   intake: {
-    eyebrow: "Étape 1 sur 3",
+    eyebrow: "ÉTAPE 2 SUR 3",
     title: "Questionnaire préalable",
     lead: "Le questionnaire me permet d'étudier votre situation avant la rencontre et de vérifier que le format convient.",
     metaTitle: "Questionnaire préalable — Dr. Vlad",
@@ -263,7 +263,7 @@ export const siteFr: SiteContent = {
     missingConsentAction: "Aller aux conditions",
   },
   documents: {
-    eyebrow: "Étape 2 sur 3",
+    eyebrow: "ÉTAPE 3 SUR 3",
     title: "Documents médicaux",
     lead: "Étape facultative : vous pouvez joindre comptes rendus, résultats d'examens et avis spécialisés.",
     metaTitle: "Documents médicaux — Dr. Vlad",
@@ -291,7 +291,7 @@ export const siteFr: SiteContent = {
     restoreAction: "Restaurer la session",
   },
   thanks: {
-    eyebrow: "Étape 3 sur 3",
+    eyebrow: "ÉTAPE 3 SUR 3",
     title: "Votre demande est envoyée",
     lead: "Merci. Votre demande a bien été reçue.",
     metaTitle: "Demande envoyée — Dr. Vlad",

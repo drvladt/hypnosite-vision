@@ -237,7 +237,7 @@ export const siteEn: SiteContent = {
     },
   },
   intake: {
-    eyebrow: "Step 1 of 3",
+    eyebrow: "STEP 2 OF 3",
     title: "Pre-consultation intake form",
     lead: "The form lets me study your situation before we meet and see whether the format fits.",
     metaTitle: "Pre-consultation intake form — Dr. Vlad",
@@ -261,7 +261,7 @@ export const siteEn: SiteContent = {
     missingConsentAction: "Go to the conditions",
   },
   documents: {
-    eyebrow: "Step 2 of 3",
+    eyebrow: "STEP 3 OF 3",
     title: "Medical documents",
     lead: "An optional step: you can attach discharge summaries, test results and specialist reports.",
     metaTitle: "Medical documents — Dr. Vlad",
@@ -289,7 +289,7 @@ export const siteEn: SiteContent = {
     restoreAction: "Restore session",
   },
   thanks: {
-    eyebrow: "Step 3 of 3",
+    eyebrow: "STEP 3 OF 3",
     title: "Your request has been sent",
     lead: "Thank you. Your request has been received.",
     metaTitle: "Request sent — Dr. Vlad",
