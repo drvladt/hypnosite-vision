@@ -1,4 +1,4 @@
-import { locales, pagePath, type Locale, type PageKey } from "./locales";
+import { homePath, locales, pagePath, socialLinks, type Locale, type PageKey } from "./locales";
 import { siteContent } from "./site";
 import { legalContent } from "./legal";
 
@@ -31,6 +31,41 @@ function textsFor(locale: Locale, page: PageKey): HeadTexts {
 /** Head metadata for an inner page, with hreflang alternates for the same page. */
 export function pageHead(locale: Locale, page: PageKey) {
   const { metaTitle, metaDescription, robots } = textsFor(locale, page);
+  const indexable = !robots;
+
+  // Structured data only on indexable pages — no point on noindex flow pages.
+  const scripts = indexable
+    ? [
+        {
+          type: "application/ld+json" as const,
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Dr. Vlad", item: homePath[locale] },
+              { "@type": "ListItem", position: 2, name: metaTitle, item: pagePath(locale, page) },
+            ],
+          }),
+        },
+        ...(page === "about"
+          ? [
+              {
+                type: "application/ld+json" as const,
+                children: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "Physician",
+                  name: "Dr. Vlad Tettegah",
+                  medicalSpecialty: ["Cardiovascular", "Psychiatric"],
+                  areaServed: "Worldwide",
+                  knowsLanguage: ["ru", "en", "fr"],
+                  sameAs: socialLinks.map((link) => link.url),
+                }),
+              },
+            ]
+          : []),
+      ]
+    : [];
+
   return {
     meta: [
       { title: metaTitle },
@@ -48,5 +83,6 @@ export function pageHead(locale: Locale, page: PageKey) {
       { rel: "alternate", hrefLang: "x-default", href: pagePath("ru", page) },
       { rel: "canonical", href: pagePath(locale, page) },
     ],
+    scripts,
   };
 }
