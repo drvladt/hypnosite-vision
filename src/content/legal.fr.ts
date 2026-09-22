@@ -62,7 +62,7 @@ export const legalFr: LegalContent = {
         {
           id: "health",
           textBefore:
-            "Je consens expressément et librement au traitement des données personnelles que je fournis, y compris les informations sur ma santé physique et psycho-émotionnelle, les résultats d'examens, les informations sur les traitements et les documents médicaux, aux fins de l'examen préalable de ma demande et de l'organisation d'une éventuelle consultation.",
+            "Je consens librement au traitement des données personnelles que je fournis, y compris les informations sur ma santé physique et psycho-émotionnelle, aux fins de l'examen préalable de ma demande et de l'organisation d'une éventuelle consultation.",
           extraLinkLabel: "Lire le texte complet du consentement",
           extraLinkPage: "consent",
         },
@@ -411,7 +411,7 @@ export const legalFr: LegalContent = {
         id: "confirmation",
         heading: "8. Confirmation",
         paragraphs: [
-          "En cochant la case « Je consens expressément et librement… » et en cliquant sur « Accepter et continuer vers le questionnaire », j'exprime un consentement explicite au traitement décrit, y compris de mes données de santé.",
+          "En cochant la case « Je consens librement… » et en cliquant sur « Accepter et continuer vers le questionnaire », j'exprime un consentement au traitement décrit, y compris de mes données de santé.",
         ],
       },
     ],
