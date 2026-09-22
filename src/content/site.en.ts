@@ -245,7 +245,7 @@ export const siteEn: SiteContent = {
     sections: [
       {
         paragraphs: [
-          "Take your time and write in your own words. If you don't have some of the details, leave the field empty.",
+          "Please be as detailed as possible and write in your own words. If you don't have some of the details or don't know them, leave the field empty.",
         ],
       },
     ],

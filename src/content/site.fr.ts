@@ -247,7 +247,7 @@ export const siteFr: SiteContent = {
     sections: [
       {
         paragraphs: [
-          "Prenez votre temps et écrivez avec vos propres mots. Si certaines informations vous manquent, laissez le champ vide.",
+          "Veuillez être aussi détaillé que possible et écrire avec vos propres mots. Si certaines informations vous manquent ou si vous ne les connaissez pas, laissez le champ vide.",
         ],
       },
     ],
