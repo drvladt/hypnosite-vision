@@ -14,7 +14,6 @@ import { legalContent, type LegalPageKey } from "@/content/legal";
 import { locales, pageKeyFromSlug, type Locale, type PageKey } from "@/content/locales";
 import { canonicalSiteOrigin } from "@/content/seo";
 import type { InfoPageKey } from "@/content/site-types";
-import { getSiteOrigin } from "@/lib/site-origin.functions";
 
 const LEGAL_PAGES = ["privacy", "consent", "terms"] as const;
 const FLOW_PAGES = ["consultation", "intake", "documents", "thanks"] as const;
@@ -29,16 +28,14 @@ function resolve(localeParam: string, slug: string): Resolved | undefined {
 }
 
 export const Route = createFileRoute("/$locale/$slug")({
-  loader: async ({ params }) => {
+  loader: ({ params }) => {
     const resolved = resolve(params.locale, params.slug);
     if (!resolved) throw notFound();
-    return { ...resolved, siteOrigin: await getSiteOrigin() };
+    return resolved;
   },
-  head: ({ params, loaderData }) => {
+  head: ({ params }) => {
     const resolved = resolve(params.locale, params.slug);
-    return resolved
-      ? pageHead(resolved.locale, resolved.page, loaderData?.siteOrigin ?? canonicalSiteOrigin)
-      : {};
+    return resolved ? pageHead(resolved.locale, resolved.page, canonicalSiteOrigin) : {};
   },
   component: SlugPage,
 });
