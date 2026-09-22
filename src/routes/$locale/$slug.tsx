@@ -28,16 +28,14 @@ function resolve(localeParam: string, slug: string): Resolved | undefined {
 }
 
 export const Route = createFileRoute("/$locale/$slug")({
-  loader: async ({ params }) => {
+  loader: ({ params }) => {
     const resolved = resolve(params.locale, params.slug);
     if (!resolved) throw notFound();
-    return { ...resolved, siteOrigin: await getSiteOrigin() };
+    return resolved;
   },
-  head: ({ params, loaderData }) => {
+  head: ({ params }) => {
     const resolved = resolve(params.locale, params.slug);
-    return resolved
-      ? pageHead(resolved.locale, resolved.page, loaderData?.siteOrigin ?? canonicalSiteOrigin)
-      : {};
+    return resolved ? pageHead(resolved.locale, resolved.page, canonicalSiteOrigin) : {};
   },
   component: SlugPage,
 });
