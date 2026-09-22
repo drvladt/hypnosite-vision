@@ -12,52 +12,39 @@ export const legalFr: LegalContent = {
   consultation: {
     step: "Étape 1 sur 3 · Avant le questionnaire",
     eyebrow: "Avant de commencer le questionnaire",
-    title: "Merci de prendre connaissance des conditions de traitement des données",
+    title: "Avant de remplir le questionnaire",
     metaTitle: "Avant de commencer le questionnaire — Dr Vlad",
     metaDescription:
       "Informations sur la consultation, la confidentialité et le traitement des données personnelles avant de remplir le questionnaire.",
     intro: [
-      "Pour que le Dr Vlad puisse étudier personnellement votre situation, le questionnaire comprend vos coordonnées, votre ressenti, les examens et traitements antérieurs, et peut contenir d'autres informations sur votre santé physique et psycho-émotionnelle.",
-      "Ces informations sont sensibles. Avant de continuer, il importe de comprendre pourquoi elles sont recueillies, qui y aura accès et quels droits vous conservez.",
+      "Le questionnaire permet au Dr Vlad d'examiner votre situation au préalable et de déterminer si une consultation pourrait être utile dans votre cas.",
+      "Vous pouvez indiquer vos coordonnées, décrire vos plaintes, votre état de santé, les examens et traitements antérieurs. Après l'envoi, vous pourrez si nécessaire joindre des documents médicaux.",
     ],
-    next: {
-      title: "Ce qui se passe ensuite",
-      items: [
-        "Vous confirmez avoir pris connaissance des conditions et acceptez le traitement nécessaire.",
-        "Un code de dossier technique est créé. Il ne contient ni nom, ni diagnostic, ni symptôme.",
-        "Vous accédez au questionnaire préalable et décrivez votre situation aussi librement que vous le souhaitez.",
-        "Après le questionnaire, vous pouvez, si vous le souhaitez, joindre des documents médicaux.",
-        "Le Dr Vlad étudie personnellement les informations et détermine si la demande relève de sa compétence et si ce format peut être utile.",
-      ],
-    },
     access: {
-      title: "Qui a accès",
-      text: "La partie médicale de la demande et les documents joints sont examinés par le Dr Vlad. Une assistante peut recevoir uniquement les informations de contact et d'organisation, et seulement après la décision du Dr Vlad de poursuivre. Elle n'a pas accès au contenu médical du questionnaire ni aux documents.",
-    },
-    important: {
-      title: "À comprendre",
-      bullets: [
-        "Le questionnaire et la consultation concernent uniquement des situations planifiées.",
-        "Le site ne fournit pas de soins d'urgence.",
-        "Remplir le questionnaire ne garantit pas la tenue d'une consultation.",
-        "Une consultation en ligne n'est pas une consultation de cardiologie classique, ne remplace pas votre médecin traitant et n'inclut ni diagnostic officiel, ni prescription, arrêt ou modification de traitement.",
-        "L'hypnothérapie n'est pas pratiquée lors de la première consultation.",
-      ],
-    },
-    emergency:
-      "En cas de douleur thoracique forte ou croissante, d'essoufflement marqué, de perte de conscience, de faiblesse soudaine, de troubles de la parole ou de toute dégradation rapide de votre état, ne remplissez pas ce questionnaire et contactez immédiatement les services d'urgence locaux.",
-    summary: {
-      title: "Comment vos données seront utilisées",
+      title: "Confidentialité",
       paragraphs: [
-        `Responsable du traitement : ${L("controllerLegalName")}, ${L("controllerCountry")}.`,
-        "Vos données servent uniquement à recevoir et pré-évaluer la demande, à déterminer si le format correspond à votre situation, à organiser une éventuelle consultation, à conserver de façon sécurisée les éléments transmis et à respecter les obligations légales applicables.",
-        `Google Forms, Google Workspace, Google Drive, Google Cloud et ${L("hostingProvider")} peuvent être utilisés pour le questionnaire et la conservation des éléments. Les lieux de traitement, les durées de conservation, les destinataires et vos droits sont décrits dans la Politique de confidentialité.`,
-        `Vous pouvez retirer votre consentement et adresser vos demandes à ${L("privacyEmail")}. Le retrait ne remet pas en cause la licéité des traitements effectués auparavant.`,
+        "Vos informations médicales et vos documents sont examinés personnellement par le Dr Vlad. Une assistante ne peut recevoir que les coordonnées et informations organisationnelles nécessaires pour la suite, et n'a pas accès à la partie médicale de votre demande.",
+        `Les services Google et ${L("hostingProvider")} peuvent être utilisés pour le fonctionnement du questionnaire et la conservation des éléments transmis. Pour en savoir plus sur le traitement, la conservation des données et vos droits, consultez la Politique de confidentialité.`,
       ],
       links: [
         { label: "Politique de confidentialité", page: "privacy" },
-        { label: "Consentement au traitement des données", page: "consent" },
-        { label: "Conditions d'utilisation et limites du format", page: "terms" },
+      ],
+    },
+    important: {
+      title: "Important",
+      paragraphs: [
+        "Le questionnaire est destiné uniquement aux demandes planifiées. Le remplir ne garantit pas la tenue d'une consultation.",
+        "Une consultation en ligne ne remplace pas un rendez-vous en présentiel ou le suivi par votre médecin traitant et ne vise pas à établir un diagnostic officiel, ni à prescrire, arrêter ou modifier un traitement. L'hypnothérapie n'est pas pratiquée lors de la première consultation.",
+      ],
+    },
+    emergency:
+      "En cas de douleur thoracique forte ou croissante, d'essoufflement marqué, de perte de conscience, de faiblesse soudaine, de troubles de la parole ou de toute dégradation rapide de votre état, ne remplissez pas ce questionnaire — contactez les services d'urgence locaux.",
+    summary: {
+      title: "Traitement des données",
+      paragraphs: [
+        `Responsable du traitement : ${L("controllerLegalName")}, ${L("controllerCountry")}.`,
+        "En continuant, vous confirmez avoir pris connaissance des conditions de traitement des données et acceptez le traitement des informations nécessaires à l'examen de votre demande.",
+        `Vous pouvez retirer votre consentement en écrivant à ${L("privacyEmail")}. Le retrait ne remet pas en cause la licéité des traitements effectués avant sa réception.`,
       ],
     },
     panel: {

@@ -47,11 +47,11 @@ export type ConsentFlowPage = {
   metaTitle: string;
   metaDescription: string;
   intro: string[];
-  next: { title: string; items: string[] };
-  access: { title: string; text: string };
-  important: { title: string; bullets: string[] };
+  next?: { title: string; items: string[] };
+  access: { title: string; paragraphs: string[]; links?: LegalAction[] };
+  important: { title: string; paragraphs: string[] };
   emergency: string;
-  summary: { title: string; paragraphs: string[]; links: LegalAction[] };
+  summary: { title: string; paragraphs: string[]; links?: LegalAction[] };
   panel: {
     title: string;
     note: string;

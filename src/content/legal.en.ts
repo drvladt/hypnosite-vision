@@ -12,52 +12,39 @@ export const legalEn: LegalContent = {
   consultation: {
     step: "Step 1 of 3 · Before the form",
     eyebrow: "Before you start the form",
-    title: "Please review how your data will be handled",
+    title: "Before you fill in the form",
     metaTitle: "Before you start the form — Dr Vlad",
     metaDescription:
       "How the consultation works, how your data is handled, and what you confirm before filling in the pre-consultation form.",
     intro: [
-      "So that Dr Vlad can review your situation personally, the form covers contact details, how you feel, previous investigations and treatment, and may include other information about your physical and emotional health.",
-      "This is sensitive information. Before you continue, it matters that you understand why it is collected, who will see it, and which rights remain yours.",
+      "The form helps Dr Vlad review your situation beforehand and understand whether a consultation could be helpful in your case.",
+      "You can include contact details, describe your complaints, health condition, previous investigations and treatment. After submitting, you may optionally attach medical documents.",
     ],
-    next: {
-      title: "What happens next",
-      items: [
-        "You confirm that you have read the terms and agree to the processing required.",
-        "A technical case code is created. The code contains no name, diagnosis, or symptoms.",
-        "You move on to the pre-consultation form and describe your situation in as much detail as you wish.",
-        "After the form you may optionally attach medical documents.",
-        "Dr Vlad reviews the information personally and decides whether the request falls within his scope and whether this format can help.",
-      ],
-    },
     access: {
-      title: "Who has access",
-      text: "The medical part of the request and any attached documents are reviewed by Dr Vlad. An assistant may receive only contact and scheduling details, and only after Dr Vlad has decided to continue. The assistant has no access to the medical content of the form or the documents.",
-    },
-    important: {
-      title: "Important to understand",
-      bullets: [
-        "The form and the consultation are intended for planned, non-urgent situations only.",
-        "This site does not provide emergency or urgent medical care.",
-        "Completing the form does not guarantee that a consultation will take place.",
-        "An online consultation is not a classic cardiology appointment, does not replace your treating doctor, and does not include a formal diagnosis or the prescription, withdrawal, or adjustment of treatment.",
-        "Hypnotherapy is not performed during the first consultation.",
-      ],
-    },
-    emergency:
-      "If you have severe or worsening chest pain, marked breathlessness, loss of consciousness, sudden weakness, speech difficulty, or any other rapid deterioration, do not fill in this form — contact your local emergency medical service immediately.",
-    summary: {
-      title: "How your data will be used",
+      title: "Confidentiality",
       paragraphs: [
-        `Data controller: ${L("controllerLegalName")}, ${L("controllerCountry")}.`,
-        "Your data is used only to receive and pre-assess the request, to establish whether this format suits your situation, to arrange a possible consultation, to store the material you provide securely, and to meet applicable legal obligations.",
-        `Google Forms, Google Workspace, Google Drive, Google Cloud and ${L("hostingProvider")} may be used to run the form and store the material. Processing locations, retention periods, recipients and your rights are described in the Privacy Policy.`,
-        `You may withdraw your consent and send requests to ${L("privacyEmail")}. Withdrawal does not affect the lawfulness of processing carried out beforehand.`,
+        "Your medical information and documents are reviewed personally by Dr Vlad. An assistant may only receive contact and organisational details needed for further communication, and has no access to the medical part of your request.",
+        `Google and ${L("hostingProvider")} services may be used to run the form and store the material you provide. You can read more about data processing, storage and your rights in the Privacy Policy.`,
       ],
       links: [
         { label: "Privacy Policy", page: "privacy" },
-        { label: "Consent to data processing", page: "consent" },
-        { label: "Terms of use and limits of the format", page: "terms" },
+      ],
+    },
+    important: {
+      title: "Important",
+      paragraphs: [
+        "The form is intended for planned requests only. Completing it does not guarantee that a consultation will take place.",
+        "An online consultation does not replace an in-person appointment or follow-up with your treating doctor and is not intended for making an official diagnosis, or prescribing, stopping or changing treatment. Hypnotherapy is not performed during the first consultation.",
+      ],
+    },
+    emergency:
+      "If you have severe or worsening chest pain, marked breathlessness, loss of consciousness, sudden weakness, speech difficulty or any other rapid deterioration, do not fill in this form — contact your local emergency medical service.",
+    summary: {
+      title: "Data processing",
+      paragraphs: [
+        `Data controller: ${L("controllerLegalName")}, ${L("controllerCountry")}.`,
+        "By continuing, you confirm that you have read the data processing terms and agree to the processing of information necessary to review your request.",
+        `You can withdraw your consent by writing to ${L("privacyEmail")}. Withdrawal does not affect the lawfulness of processing carried out before it was received.`,
       ],
     },
     panel: {
