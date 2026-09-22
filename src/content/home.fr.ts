@@ -82,7 +82,7 @@ export const homeFr: HomeContent = {
   consultation: {
     eyebrow: "CONSULTATION EN LIGNE",
     title: "Si votre situation demande une analyse individuelle attentive plutôt que des conseils généraux",
-    lead: "La première consultation permet de rassembler des informations dispersées en une vue d'ensemble et de comprendre la suite. Nous passons en revue vos symptômes, l'histoire de votre état, les examens déjà réalisés et l'influence possible de facteurs émotionnels. À l'issue de la rencontre, vous comprendrez mieux :",
+    lead: "La première consultation permet de rassembler des informations dispersées en une vue d'ensemble et de comprendre la suite. Nous passons en revue vos symptômes, l'histoire de votre maladie, les examens déjà réalisés et l'influence possible de facteurs émotionnels. À l'issue de la rencontre, vous comprendrez mieux :",
     outcomes: [
       "si des examens complémentaires sont nécessaires ;",
       "quels facteurs émotionnels peuvent entretenir votre mal-être ;",
@@ -93,13 +93,13 @@ export const homeFr: HomeContent = {
     suitableTitle: "À qui ce format convient",
     suitableFor: [
       "aux adultes à partir de 18 ans, dans une situation programmée et relativement stable ;",
-      "aux patients déjà explorés ou porteurs d'un diagnostic, mais qui n'ont pas obtenu l'amélioration espérée ;",
+      "aux personnes déjà explorées ou porteuses d'un diagnostic, mais qui n'ont pas obtenu l'amélioration espérée ;",
       "aux personnes qui constatent que le stress, l'anxiété ou la tension intérieure retentissent sur leur état physique ;",
       "aux personnes confrontées à des pensées obsédantes, des peurs, des limitations intérieures et des manifestations corporelles ou psychosomatiques ;",
       "à ceux qui veulent savoir si l'hypnothérapie clinique peut aider dans leur situation précise.",
     ],
     suitableNote:
-      "Vous n'avez pas à déterminer vous-même si le problème est médical, psychologique ou psychosomatique. Le but de la première consultation est d'examiner les informations disponibles et de définir la direction la plus pertinente.",
+      "Vous n'avez pas à déterminer vous-même si le problème est médical, psychologique ou psychosomatique. Le but de la première consultation est justement d'examiner les informations disponibles et de définir la direction la plus pertinente.",
   },
   about: {
     eyebrow: "À propos de moi",
@@ -188,7 +188,7 @@ export const homeFr: HomeContent = {
       ],
       [
         "Quels documents faut-il préparer ?",
-        "Si vous en disposez, préparez vos comptes rendus médicaux, les résultats d'examens et d'analyses de la dernière année, ainsi que la liste de vos traitements avec les posologies.",
+        "Si vous en disposez, il est nécessaire de préparer vos comptes rendus médicaux, les résultats d'examens et d'analyses de la dernière année, ainsi que la liste de vos traitements avec les posologies.",
       ],
       [
         "Combien coûte la suite du travail ?",
