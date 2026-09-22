@@ -91,234 +91,116 @@ export const legalEn: LegalContent = {
     metaDescription: "How personal data of Dr Vlad website visitors is processed and protected.",
     tocTitle: "Contents",
     lead: [
-      "Because the form may contain information about your physical and emotional health, such data is handled with strengthened confidentiality and security measures.",
+      "This Policy explains which personal data may be processed when you use the site and submit a request, why it is needed, who has access to it and what rights you have.",
     ],
     sections: [
       {
         id: "controller",
         heading: "1. Who is responsible for processing",
         paragraphs: [
-          `Data controller: ${L("controllerLegalName")}.`,
-          `Country: ${L("controllerCountry")}.`,
-          `For data questions, rights requests or consent withdrawal: ${L("privacyEmail")}.`,
+          `Data controller: ${L("controllerLegalName")}, ${L("controllerCountry")}.`,
+          `For questions about personal data, exercising your rights or withdrawing consent: ${L("privacyEmail")}.`,
           `For general scheduling questions: ${L("publicContactEmail")}.`,
-        ],
-      },
-      {
-        id: "scope",
-        heading: "2. Who this Policy applies to",
-        paragraphs: [
-          "The Policy applies to adult visitors who browse public pages, start a request, complete the form, attach documents, or get in touch about scheduling.",
-          `The site and the online format are not intended for people under 18. If a minor's data has been submitted without a proper basis, please report it to ${L("privacyEmail")}.`,
+          "The site and the online format are intended only for people over 18.",
         ],
       },
       {
         id: "data",
-        heading: "3. Which data may be processed",
+        heading: "2. Which data is processed",
+        paragraphs: ["Depending on how you use the site, the following may be processed:"],
+        bullets: [
+          "contact details: name, age or date of birth, country and city, email, phone or messenger, preferred language;",
+          "health information you choose to include in the form: complaints, history of your condition, diagnoses, investigation results, treatment, current medication, as well as information about sleep, stress and emotional state;",
+          "medical documents you decide to attach;",
+          "correspondence and scheduling information;",
+          "the minimum technical data needed for the site to work and stay secure: reference code, date and time of actions, form and file submission status, secure session data and security logs;",
+          "information confirming consent: date, time and version of the accepted documents.",
+        ],
         subsections: [
           {
-            heading: "3.1. Contact and identification data",
-            bullets: [
-              "first and last name;",
-              "age or date of birth where needed to assess the request;",
-              "country and city;",
-              "email, phone number or chosen messenger;",
-              "preferred language.",
-            ],
-          },
-          {
-            heading: "3.2. Health data",
-            bullets: [
-              "description of symptoms and how you feel;",
-              "history of your condition;",
-              "diagnoses already established;",
-              "investigation and laboratory results;",
-              "prescribed treatment and current medication;",
-              "information about anxiety, sleep, stress, emotional and behavioural factors;",
-              "goals and expectations for possible work together;",
-              "any other information you choose to include in the form.",
-            ],
-          },
-          {
-            heading: "3.3. Medical documents",
             paragraphs: [
-              "You may optionally upload reports, investigation and laboratory results and a medication list. Sharing documents is not a condition for submitting the form.",
-            ],
-          },
-          {
-            heading: "3.4. Technical data",
-            bullets: [
-              "technical case code;",
-              "interface language;",
-              "date and time of the request steps;",
-              "form submission and upload status;",
-              "file type, size and technical status;",
-              "secure session data and security logs;",
-              "cookie choices on public pages.",
-            ],
-            paragraphs: [
-              "The technical case code contains no name, email, diagnosis or symptoms and is not an access password.",
-            ],
-          },
-          {
-            heading: "3.5. Proof of consent",
-            bullets: [
-              "Policy version;",
-              "consent text version;",
-              "terms of use version;",
-              "document language;",
-              "date and time of confirmation;",
-              "state of the required checkboxes;",
-              "date of withdrawal, if received.",
-            ],
-          },
-          {
-            heading: "3.6. Correspondence",
-            paragraphs: [
-              "Messages about scheduling, rights requests and the history of replies to such requests may be processed.",
+              "The technical reference code contains no name, contact details, diagnosis, symptoms or medical documents.",
             ],
           },
         ],
       },
       {
         id: "purposes",
-        heading: "4. Purposes of processing",
+        heading: "3. Why the data is used",
+        paragraphs: ["Data is used only to:"],
         bullets: [
-          "receiving and registering the request;",
-          "personal review of the situation by Dr Vlad;",
-          "establishing whether the request falls within Dr Vlad's scope and whether the online format suits it;",
-          "arranging a possible consultation;",
-          "preliminary review of documents provided voluntarily;",
-          "contacting you about scheduling;",
-          "keeping the form and the upload step secure;",
-          "preventing misuse and technical faults;",
-          "meeting obligations under applicable law;",
-          "handling your requests for access, correction, deletion, restriction or withdrawal of consent.",
-        ],
-        paragraphs: [
-          "Form data and medical documents are never used for advertising profiling, building ad audiences, sale to third parties, or automated medical decisions.",
-        ],
-      },
-      {
-        id: "basis",
-        heading: "5. Legal bases",
-        paragraphs: [
-          "Where processing is based on consent, you give free, specific, informed and unambiguous consent. Health data is processed on the basis of separate explicit consent.",
-          "Technical data strictly necessary for security, the secure session and delivering the service you requested is processed only to the extent needed.",
-          "If applicable law requires another mandatory basis for storing or processing specific data, that information must be added to this Policy before such processing starts.",
-        ],
-      },
-      {
-        id: "access",
-        heading: "6. Who may have access",
-        paragraphs: [
-          "The medical content of the form and the documents are accessed by Dr Vlad, only to the extent needed to review the request.",
-          "An assistant may receive contact and scheduling details only after Dr Vlad has decided to continue, and has no access to the medical content of the form or the documents.",
-          `Infrastructure providers acting as data processors may be involved, including — once the configuration is finally confirmed — Google Forms, Google Workspace, Google Drive, Google Cloud, ${L("hostingProvider")}, an email service and the chosen video platform.`,
-          "Data may also be disclosed to a public authority where such disclosure is mandatory under applicable law. It is not shared with advertising platforms as health data or as an outcome of the request.",
-        ],
-      },
-      {
-        id: "google",
-        heading: "7. Google Forms, Workspace and medical documents",
-        paragraphs: [
-          "The pre-consultation form may be hosted in Google Forms. Responses and related documents are stored in a closed Google Workspace and Google Drive space with restricted access.",
-          "Documents are uploaded through a separate secure interface on the site, pass technical validation, and are not placed in a publicly shared Drive folder.",
-          "You never need to share a Google account password or open access to your personal Google Drive.",
-        ],
-      },
-      {
-        id: "transfers",
-        heading: "8. Cross-border processing",
-        paragraphs: [
-          `Data may technically be processed or stored in the following countries or regions: ${L("dataStorageCountries")}.`,
-          `The consent log and the issuing of the reference code run in ${L("consentLogProvider")}, located in the ${L("consentLogRegion")} region. The log records only the fact of the three confirmations, the document versions, the server UTC time and the reference code — no name, contacts, symptoms, diagnoses, form answers or medical documents. Each record is scheduled for automatic deletion after one calendar month; the provider's TTL mechanism performs the technical deletion after that time.`,
-          `Transfer safeguards applied: ${L("transferSafeguards")}.`,
-        ],
-      },
-      {
-        id: "retention",
-        heading: "9. Retention periods",
-        bullets: [
-          `unfinished requests: ${R("abandoned")};`,
-          `requests where no consultation took place: ${R("declined")};`,
-          `data and documents of a consultation that took place: ${R("consultation")};`,
-          `consent and withdrawal records: ${R("consentLog")};`,
-          "technical security logs: only the minimum confirmed period.",
-        ],
-        paragraphs: [
-          "After the period expires, data is deleted or irreversibly anonymised unless further retention is required by applicable law, to defend rights, or to resolve a dispute.",
-        ],
-      },
-      {
-        id: "security",
-        heading: "10. Security",
-        paragraphs: [
-          "Organisational and technical measures appropriate to the nature of the data are used: role-based access limits, secure connections, closed storage, logging of administrative actions, validation of uploaded files and data minimisation.",
-          "No method of transmission or storage can guarantee absolute security. If an incident occurs, the measures required by law and the internal response procedure apply.",
-        ],
-      },
-      {
-        id: "cookies",
-        heading: "11. Cookies, analytics and advertising",
-        paragraphs: [
-          "Necessary cookies may be used for the secure session, abuse prevention and remembering the chosen language.",
-          "Analytics and advertising technologies on public pages are off by default until you choose. On the form, documents, confirmation, recovery and related error pages, advertising pixels, session replay, heatmaps and screen recording are never used, whatever the cookie choice.",
-          "Medical information, the case code, screening outcomes and form answers are never sent to marketing analytics.",
-        ],
-      },
-      {
-        id: "automated",
-        heading: "12. Automated decisions",
-        paragraphs: [
-          "No fully automated decisions with legal or similarly significant effects are made on the basis of the form. Whether further contact is possible is decided by Dr Vlad after reviewing the available information personally.",
-        ],
-      },
-      {
-        id: "rights",
-        heading: "13. Your rights",
-        paragraphs: ["Depending on applicable law, you may have the right to:"],
-        bullets: [
-          "be informed about the processing;",
-          "request access to your data;",
-          "correct inaccurate data;",
-          "request deletion;",
-          "restrict processing;",
-          "receive your data in a portable format;",
-          "object to processing in cases provided by law;",
-          "withdraw consent;",
-          "lodge a complaint with the competent supervisory authority.",
+          "receive and preliminarily review the request;",
+          "let Dr Vlad assess whether a further consultation is possible and appropriate;",
+          "review voluntarily provided medical documents;",
+          "organise further communication;",
+          "keep the site working and secure;",
+          "meet applicable legal obligations and handle your requests about your data.",
         ],
         subsections: [
           {
             paragraphs: [
-              `To exercise your rights, write to ${L("privacyEmail")}. A reasonable identity check may be needed first so that data is not disclosed to the wrong person.`,
+              "Health information is not sold, not used for advertising profiling and not shared with advertising platforms. No fully automated medical decisions are made on the basis of the form.",
+              "Health information is processed on the basis of your separate explicit consent. Technical data is processed only to the extent needed for the service to work and stay secure, or in other cases provided by applicable law.",
             ],
           },
         ],
       },
       {
-        id: "withdrawal",
-        heading: "14. Withdrawing consent",
+        id: "access",
+        heading: "4. Who has access",
         paragraphs: [
-          `You may withdraw consent at any time by writing to ${L("privacyEmail")}. Withdrawal does not affect the lawfulness of processing carried out beforehand.`,
-          "After withdrawal, processing based on consent stops and the data is deleted or anonymised, except where further retention is required by law or needed to defend rights.",
-          "Withdrawing consent before the review is finished may make an online review impossible, because the request cannot be assessed without processing the information provided.",
+          "The medical part of the form and the attached documents are reviewed by Dr Vlad.",
+          "An assistant may receive contact and scheduling details after the decision to continue is made, but has no access to the medical content of the form or the documents.",
+          "Google Forms, Google Workspace, Google Drive, Google Cloud/Firebase, Lovable, an email service and a video platform may be used for the technical operation of the site and for storing information. These services may process data as technical providers.",
+          "Data may also be disclosed to public authorities where this is directly required by applicable law.",
         ],
       },
       {
-        id: "complaints",
-        heading: "15. Complaints",
+        id: "retention",
+        heading: "5. Storage and transfer of data",
         paragraphs: [
-          `Please first contact the controller at ${L("privacyEmail")}.`,
-          `If the matter is not resolved, you may contact the competent supervisory authority: ${L("supervisoryAuthority")}.`,
+          "Form answers and medical documents are stored in a closed workspace with restricted access. Uploaded documents are not placed in public folders.",
+          "Because cloud services are used, data may technically be processed or stored outside the Republic of Togo, including in the European Union and the United States. For international transfer, the data protection mechanisms provided by the providers and applicable law are applied.",
+          "The consent log is hosted in Google Cloud/Firebase in the europe-west1 region (Belgium) and contains no name, contacts or medical information.",
+          "As a rule, request data, medical documents and consent records are kept for up to one month, after which they are deleted or irreversibly anonymised, unless longer retention is required by law or to defend legitimate rights.",
+        ],
+      },
+      {
+        id: "security",
+        heading: "6. Security and cookies",
+        paragraphs: [
+          "To protect information, access restrictions, secure connections, closed storage, validation of uploaded files and other organisational and technical security measures are used.",
+          "Necessary cookies may be used for the secure session, site security and remembering the chosen language.",
+          "No advertising pixels, heatmaps, session replay or screen recording are used on the form and medical document upload pages. Medical information and form answers are not sent to marketing analytics systems.",
+        ],
+      },
+      {
+        id: "rights",
+        heading: "7. Your rights",
+        paragraphs: ["In accordance with applicable law, you may have the right to request:"],
+        bullets: [
+          "information about the processing and access to your data;",
+          "correction or deletion of your data;",
+          "restriction of processing;",
+          "data portability or objection to processing, where such a right applies;",
+          "withdrawal of previously given consent.",
+        ],
+        subsections: [
+          {
+            paragraphs: [
+              `You can send a request to ${L("privacyEmail")}. To protect your data, identity confirmation may be required before the request is fulfilled.`,
+              "Consent can be withdrawn at any time. Withdrawal does not affect the lawfulness of processing carried out before it was received. If the request cannot be reviewed further without processing the information provided, the review will be stopped after consent is withdrawn.",
+              `You also have the right to contact the competent data protection authority of the Republic of Togo — ${L("supervisoryAuthority")}.`,
+            ],
+          },
         ],
       },
       {
         id: "changes",
-        heading: "16. Changes to this Policy",
+        heading: "8. Changes to this Policy",
         paragraphs: [
-          "The Policy may be updated when processes, providers or applicable requirements change. The current version and effective date are always published on this page. If a change materially affects processing that requires consent, a new confirmation is requested before such processing continues.",
+          "The Policy may be updated when the operation of the site, the services used or applicable requirements change. The current version of the document and its effective date are published on this page.",
+          "If changes materially affect processing that requires consent, a new confirmation will be requested where necessary.",
         ],
       },
     ],
