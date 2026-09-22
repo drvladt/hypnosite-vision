@@ -51,7 +51,7 @@ export const siteRu: SiteContent = {
     },
     about: {
       eyebrow: "Обо мне",
-      title: "Dr. Vlad Tettegah",
+      title: "Обо мне",
       lead: "Врач-кардиолог и сертифицированный гипнотерапевт.",
       metaTitle: "Обо мне — Dr. Vlad Tettegah",
       metaDescription:
@@ -70,7 +70,7 @@ export const siteRu: SiteContent = {
     },
     hypnotherapy: {
       eyebrow: "Метод",
-      title: "Гипнотерапия",
+      title: "Что такое гипнотерапия",
       lead: "Недирективная гипнотерапия — рабочий метод, который применяется только там, где он действительно показан.",
       metaTitle: "Гипнотерапия — Dr. Vlad",
       metaDescription:

@@ -50,7 +50,7 @@ export const siteEn: SiteContent = {
     },
     about: {
       eyebrow: "About",
-      title: "Dr. Vlad Tettegah",
+      title: "About me",
       lead: "Cardiologist and certified hypnotherapist.",
       metaTitle: "About — Dr. Vlad Tettegah",
       metaDescription:
@@ -69,7 +69,7 @@ export const siteEn: SiteContent = {
     },
     hypnotherapy: {
       eyebrow: "Method",
-      title: "Hypnotherapy",
+      title: "What is hypnotherapy",
       lead: "Non-directive hypnotherapy is a clinical tool, used only where it is genuinely indicated.",
       metaTitle: "Hypnotherapy — Dr. Vlad",
       metaDescription:
