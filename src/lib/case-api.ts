@@ -12,20 +12,20 @@
  * - the Patient ID is never logged, stored in localStorage/sessionStorage, placed in the
  *   site URL, or sent to analytics / error reporting.
  *
- * The endpoint URL comes from VITE_CASE_API_URL. If it is missing, the flow fails closed:
- * no navigation to the form, no locally generated code.
+ * The browser calls the same-origin server route, which validates the exact payload and forwards
+ * it to the external endpoint. This avoids browser CORS failures when preview addresses change.
  */
 import { legalConfig } from "@/content/legal-config";
 import type { Locale } from "@/content/locales";
 
-export const caseApiEndpoint = (import.meta.env['VITE_CASE_API_URL'] as string | undefined)?.trim() ?? "";
-export const caseApiConfigured = caseApiEndpoint.length > 0;
+export const caseApiEndpoint = "/api/public/create-case";
+export const caseApiConfigured = true;
 
 export type ConsentValues = { policy: boolean; health: boolean; boundaries: boolean };
 
 export type CreateCaseResult = { patientId: string };
 
-/** Thrown when VITE_CASE_API_URL is not configured — the flow must stop. */
+/** Retained for the consent page's fail-closed error-state contract. */
 export class CaseApiNotConfiguredError extends Error {}
 
 const PATIENT_ID = /^DV\d{6,}$/;
