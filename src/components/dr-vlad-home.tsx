@@ -195,10 +195,10 @@ export function DrVladHome({ locale }: { locale: Locale }) {
           </div>
         </section>
 
-        <section id="concerns" className="section-space scroll-mt-24 bg-secondary/40">
+        <section className="section-space bg-secondary/40">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <div className="grid gap-8 lg:grid-cols-[.55fr_1.45fr] lg:gap-14">
-              <div><p className="eyebrow">{c.concerns.eyebrow}</p><h2 className="section-title mt-4">{c.concerns.title}</h2></div>
+              <div><p className="eyebrow">{c.concerns.eyebrow}</p><h2 id="concerns" className="section-title mt-4">{c.concerns.title}</h2></div>
               <div className="grid gap-4 md:grid-cols-2">
                 {c.concerns.items.map((text, index) => (
                   <article key={text} className="group relative overflow-hidden rounded-2xl border border-border/60 bg-card p-6 shadow-[0_10px_30px_-18px_color-mix(in_oklab,var(--primary)_25%,transparent)] transition-all duration-300 hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_18px_40px_-20px_color-mix(in_oklab,var(--primary)_32%,transparent)] md:p-7" data-reveal style={{ "--reveal-delay": `${index * 75}ms` } as React.CSSProperties}>
@@ -218,11 +218,11 @@ export function DrVladHome({ locale }: { locale: Locale }) {
           </div>
         </section>
 
-        <section id="bigPicture" className="section-space scroll-mt-24">
+        <section className="section-space">
           <div className="mx-auto grid max-w-7xl gap-9 px-5 lg:grid-cols-2 lg:gap-12 lg:px-8">
             <div>
               <p className="eyebrow">{c.bigPicture.eyebrow}</p>
-              <h2 className="section-title mt-4">{c.bigPicture.title}</h2>
+              <h2 id="bigPicture" className="section-title mt-4">{c.bigPicture.title}</h2>
               {c.bigPicture.paragraphs.map((text, index) => (
                 <p key={text} className={`${index === 0 ? "mt-5" : "mt-4"} max-w-xl leading-7 text-foreground/75`}>{text}</p>
               ))}
@@ -243,7 +243,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
           </div>
         </section>
 
-        <section id="consultation" className="section-space scroll-mt-20">
+        <section className="section-space">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <div className="max-w-4xl">
               <p className="eyebrow">{c.consultation.eyebrow}</p>
@@ -259,7 +259,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
               </ul>
             </div>
             <div className="mt-10 grid gap-7 border-t border-border pt-8 lg:grid-cols-[.55fr_1.45fr]">
-              <h3 className="font-display text-3xl">{c.consultation.suitableTitle}</h3>
+              <h3 id="suitable" className="font-display text-3xl">{c.consultation.suitableTitle}</h3>
               <div className="grid gap-4 md:grid-cols-2">
                 {c.consultation.suitableFor.map((item) => <div className="flex gap-3" key={item}><span className="mt-2 size-1.5 shrink-0 rounded-full bg-gold"/><p className="leading-7 text-foreground/75">{item}</p></div>)}
                 <p className="md:col-span-2 mt-2 border-t border-border pt-5 leading-7">{c.consultation.suitableNote}</p>
@@ -268,17 +268,17 @@ export function DrVladHome({ locale }: { locale: Locale }) {
           </div>
         </section>
 
-        <section id="about" className="scroll-mt-20 border-y border-border bg-secondary/35">
+        <section className="border-y border-border bg-secondary/35">
           <div className="mx-auto grid max-w-7xl items-start gap-8 px-5 py-14 lg:grid-cols-[.55fr_1.45fr] lg:gap-10 lg:px-8 lg:py-20">
             <div><p className="eyebrow">{c.about.eyebrow}</p><div className="mt-6 h-px w-16 bg-gold"/></div>
             <div>
-              <h2 className="section-title">{c.about.title}</h2>
+              <h2 id="about" className="section-title">{c.about.title}</h2>
               <div className="mt-5 space-y-4 leading-7 text-foreground/75">{c.about.paragraphs.map((text) => <p key={text}>{text}</p>)}</div>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <Button asChild variant="default" size="lg" className="font-semibold"><a href={pagePath(locale, "about")}>{c.about.moreAboutLabel}</a></Button>
                 <Button asChild variant="outline" size="lg" className="font-semibold"><a href={pagePath(locale, "consultation")}>{c.about.bookLabel}</a></Button>
               </div>
-              <div id="research" className="mt-7 scroll-mt-28 rounded-md bg-primary p-7 text-primary-foreground md:p-8"><p className="eyebrow text-gold-light">{c.about.research.eyebrow}</p><p className="mt-4 max-w-3xl leading-7 text-primary-foreground/78">{c.about.research.text}</p><a className="mt-5 inline-flex items-center gap-2 border-b border-gold/60 pb-1 text-sm font-semibold text-gold-light transition-colors hover:text-primary-foreground" href={pagePath(locale, "research")}>{c.about.research.linkLabel}<ArrowRight className="size-4" aria-hidden="true" /></a></div>
+              <div className="mt-7 rounded-md bg-primary p-7 text-primary-foreground md:p-8"><p id="research" className="eyebrow text-gold-light">{c.about.research.eyebrow}</p><p className="mt-4 max-w-3xl leading-7 text-primary-foreground/78">{c.about.research.text}</p><a className="mt-5 inline-flex items-center gap-2 border-b border-gold/60 pb-1 text-sm font-semibold text-gold-light transition-colors hover:text-primary-foreground" href={pagePath(locale, "research")}>{c.about.research.linkLabel}<ArrowRight className="size-4" aria-hidden="true" /></a></div>
             </div>
           </div>
         </section>
@@ -290,10 +290,10 @@ export function DrVladHome({ locale }: { locale: Locale }) {
           </div>
         </section>
 
-        <section id="steps" className="section-space scroll-mt-20 bg-secondary/35">
+        <section className="section-space bg-secondary/35">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <p className="eyebrow">{c.steps.eyebrow}</p>
-            <h2 className="section-title mt-4 max-w-4xl">{c.steps.title}</h2>
+            <h2 id="steps" className="section-title mt-4 max-w-4xl">{c.steps.title}</h2>
             <div className="mt-7 grid gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
               {c.steps.items.map(([title, text], index) => (
                 <article key={title} className="bg-background p-5 lg:p-6" data-reveal style={{ "--reveal-delay": `${index * 120}ms` } as React.CSSProperties}>
@@ -310,9 +310,9 @@ export function DrVladHome({ locale }: { locale: Locale }) {
           </div>
         </section>
 
-        <section id="faq" className="section-space scroll-mt-20">
+        <section className="section-space">
           <div className="mx-auto grid max-w-7xl gap-8 px-5 lg:grid-cols-[.55fr_1.45fr] lg:gap-10 lg:px-8">
-            <div><p className="eyebrow">{c.faq.eyebrow}</p><h2 className="section-title mt-4">{c.faq.title}</h2></div>
+            <div><p className="eyebrow">{c.faq.eyebrow}</p><h2 id="faq" className="section-title mt-4">{c.faq.title}</h2></div>
             <div>{c.faq.items.map(([question, answer]) => (
                <details key={question} className="group border-t border-border py-5 last:border-b">
                 <summary className="flex cursor-pointer list-none items-start justify-between gap-5 font-display text-xl marker:content-none"><span>{question}</span><ChevronDown className="mt-1 size-5 shrink-0 text-gold transition-transform duration-300 ease-out group-open:rotate-180" /></summary>
