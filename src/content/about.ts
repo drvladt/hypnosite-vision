@@ -29,11 +29,10 @@ export const aboutContent: Record<Locale, AboutContent> = {
   ru: {
     eyebrow: "Обо мне",
     title: "От классической медицины — к целостному пониманию человека",
-    lead: "Мой путь — от классической медицины к более глубокому пониманию взаимосвязи психики, тела и жизненного опыта человека.",
+    lead: "Я родился в 1993 году в городе Лида, в Республике Беларусь. Я вырос в семье врачей. Поэтому медицина вошла в мою жизнь задолго до того, как стала профессией.",
     sections: [
       {
         paragraphs: [
-          "Я родился в 1993 году в городе Лида, в Республике Беларусь. Я вырос в семье врачей. Поэтому медицина вошла в мою жизнь задолго до того, как стала профессией.",
           "С детства я видел медицину не только с внешней стороны, но и изнутри. Я слышал, как родители обсуждали различные диагнозы, сложные клинические ситуации и подходы к лечению. Благодаря этому я рано начал понимать, насколько глубоких знаний, внимательности и умения анализировать требует работа врача.",
           "Меня всегда интересовало устройство человеческого организма: как он функционирует, каким образом взаимодействуют его органы и системы и почему возникают те или иные нарушения. Мне нравились биология и естественные науки, а стремление понять живые процессы постепенно переросло в осознанный профессиональный интерес.",
           "Мне всегда хотелось заниматься делом, которое приносит реальную пользу и способно менять жизнь людей к лучшему. Поэтому после школы я без сомнений выбрал медицину.",
@@ -101,10 +100,9 @@ export const aboutContent: Record<Locale, AboutContent> = {
   en: {
     eyebrow: "About me",
     title: "From classical medicine to a holistic understanding of the person",
-    lead: "My path has led from classical medicine to a deeper understanding of the relationship between the mind, the body and a person's life experience.",
+    lead: "I was born in 1993 in Lida, Belarus, and grew up in a family of doctors. Medicine therefore entered my life long before it became my profession.",
     sections: [
       { paragraphs: [
-        "I was born in 1993 in Lida, Belarus, and grew up in a family of doctors. Medicine therefore entered my life long before it became my profession.",
         "From childhood, I saw medicine not only from the outside but from within. I heard my parents discuss diagnoses, complex clinical situations and approaches to treatment. This helped me understand early how much knowledge, attentiveness and analytical skill the work of a doctor requires.",
         "I was always interested in how the human body works, how its organs and systems interact, and why disorders arise. I enjoyed biology and the natural sciences, and the desire to understand living processes gradually became a conscious professional interest.",
         "I wanted to do work that brings tangible benefit and can change people's lives for the better. After school, I chose medicine without hesitation.",
