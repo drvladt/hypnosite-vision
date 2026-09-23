@@ -49,35 +49,38 @@ export function ApproachPageView({ locale }: { locale: Locale }) {
       <header className="mx-auto w-full max-w-4xl px-5 pt-12 md:px-8 md:pt-16">
         <p className="eyebrow">{c.eyebrow}</p>
         <h1 className="section-title mt-4">{c.title}</h1>
-        <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground md:text-xl md:leading-9">
-          {c.lead}
-        </p>
+        {c.lead.trim() && (
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground md:text-xl md:leading-9">
+            {c.lead}
+          </p>
+        )}
       </header>
 
-      <div className="mx-auto mt-12 w-full max-w-4xl px-5 md:mt-16 md:px-8">
-        <ProseSection section={foundation} number="\n" />
+      <div className="mx-auto mt-8 w-full max-w-4xl px-5 md:mt-10 md:px-8">
+        <ProseSection section={foundation} number={foundation.title ? "01" : undefined} />
       </div>
 
-      <section className="mt-12 border-y border-border bg-secondary/35 py-12 md:mt-16 md:py-16">
+      <section className="mt-8 border-y border-border bg-secondary/35 py-8 md:mt-10 md:py-12">
         <div className="mx-auto w-full max-w-4xl px-5 md:px-8">
-          <ProseSection section={broader} number="\n" />
+          <ProseSection section={broader} number={broader.title ? "02" : undefined} />
         </div>
       </section>
 
-      <div className="mx-auto mt-12 w-full max-w-4xl px-5 md:mt-16 md:px-8">
-        <ProseSection section={consultation} number="\n" />
-        <div className="mt-12 md:mt-16">
-          <ProseSection section={hypnotherapy} number="\n" />
+      <div className="mx-auto mt-8 w-full max-w-4xl px-5 md:mt-10 md:px-8">
+        <ProseSection section={consultation} number={consultation.title ? "03" : undefined} />
+        <div className="mt-8 md:mt-10">
+          <ProseSection section={hypnotherapy} number={hypnotherapy.title ? "04" : undefined} />
         </div>
       </div>
 
-      <section className="mt-12 bg-primary py-12 text-primary-foreground md:mt-16 md:py-16">
+      <section className="mt-8 bg-primary py-8 text-primary-foreground md:mt-10 md:py-12">
         <div className="mx-auto w-full max-w-4xl px-5 md:px-8">
           <div className="[&_blockquote]:text-gold-light [&_h2]:text-primary-foreground [&_p]:text-primary-foreground/80">
-            <ProseSection section={practice} number="\n" />
+            <ProseSection section={practice} number={practice.title ? "05" : undefined} />
           </div>
         </div>
       </section>
+
 
       <div className="mx-auto mt-14 w-full max-w-4xl px-5 md:px-8">
         <div className="flex flex-wrap gap-3 border-t border-border pt-10">
