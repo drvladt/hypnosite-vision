@@ -142,8 +142,8 @@ export const aboutContent: Record<Locale, AboutContent> = {
   },
   fr: {
     eyebrow: "À propos",
-    title: "De la cardiologie clinique à une compréhension globale de la personne",
-    lead: "Mon parcours m'a conduit de la cardiologie clinique vers une compréhension plus profonde des liens entre le psychisme, le corps et l'expérience de vie d'une personne.",
+    title: "De la médecine classique à une compréhension globale de la personne",
+    lead: "Mon parcours m'a conduit de la médecine classique vers une compréhension plus profonde des liens entre le psychisme, le corps et l'expérience de vie d'une personne.",
     sections: [
       { paragraphs: [
         "Je suis né en 1993 à Lida, en République de Biélorussie, et j'ai grandi dans une famille de médecins. La médecine est donc entrée dans ma vie bien avant de devenir ma profession.",
