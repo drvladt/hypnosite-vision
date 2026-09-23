@@ -6,7 +6,7 @@ import { approachContent, type ApproachSection } from "@/content/approach";
 import { contactEmail, pagePath, type Locale } from "@/content/locales";
 import { siteContent } from "@/content/site";
 
-function ProseSection({ section, number }: { section: ApproachSection; number?: string }) {
+function ProseSection({ section, number }: { section: ApproachSection; number?: string | undefined }) {
   const title = section.title?.trim();
   return (
     <section>
