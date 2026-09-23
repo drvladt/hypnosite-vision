@@ -130,7 +130,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
       ]},
       { title: "My work today", paragraphs: [
         "Today I work in Libya as part of an international medical mission at a specialist cardiac surgery centre. Clinical cardiology remains an important part of my professional life.",
-        "At the same time, I am developing a consultation practice in hypnotherapy and an integrative approach to health. I consult in person and online, working with emotional, psychosomatic and behavioural concerns, as well as conditions in which psychological processes may influence physical wellbeing and quality of life.",
+        "At the same time, I am developing a consultation practice in hypnotherapy and an integrative approach to health. I consult in person and online, working with emotional, psychosomatic and behavioural concerns, as well as conditions in which psychological processes influence physical wellbeing and quality of life.",
       ]},
       { title: "What I believe", paragraphs: [
         "I believe that a person is not a diagnosis or a collection of symptoms. Behind every complaint is a personal story, and outwardly similar manifestations may arise from very different causes, experiences and life circumstances.",
