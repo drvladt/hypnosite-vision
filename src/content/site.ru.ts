@@ -29,7 +29,6 @@ export const siteRu: SiteContent = {
       metaTitle: "Мой интегративный подход — Dr. Vlad",
       metaDescription:
         "Интегративный взгляд врача-кардиолога и гипнотерапевта: физическое состояние, психоэмоциональные факторы и их взаимосвязь.",
-      pending: true,
       sections: [
         {
           paragraphs: [

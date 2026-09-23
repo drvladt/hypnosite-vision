@@ -28,7 +28,6 @@ export const siteEn: SiteContent = {
       metaTitle: "My integrative approach — Dr. Vlad",
       metaDescription:
         "An integrative view from a cardiologist and hypnotherapist: physical health, psycho-emotional factors and their interaction.",
-      pending: true,
       sections: [
         {
           paragraphs: [
