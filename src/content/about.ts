@@ -138,7 +138,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
         "My professional path has passed through university lecture halls, cardiology departments, intensive care units, catheterisation laboratories and work in different countries. All of this has shaped the central principle of my practice:",
       ], emphasis: "Much in life can be changed, and much can be prevented, if we pause in time, listen to ourselves and take the first honest step towards the life we truly want to live." },
     ],
-    captions: { childhood: "Minsk, 1996", university: "At university", graduation: "Graduating from medical university", endovascular: "Work in the catheterisation laboratory", certificate: "Associated Hypnosis Coach certificate, 2025", togo: "Clinical practice in Togo", minsk: "Work at the RSPC Cardiology, Minsk", libya: "Consultation", nightShift: "One of the challenging shifts in the intensive care unit, Libya, 2025", team: "International medical team" },
+    captions: { childhood: "Minsk, 1996", university: "At university", graduation: "Graduating from medical university", endovascular: "Work in the catheterisation laboratory", certificate: "The beginning of my work in a new capacity, 2025", togo: "Work in West Africa, Togo", minsk: "Work at the RSPC Cardiology, Minsk", libya: "Consultation", nightShift: "One of the challenging shifts in the intensive care unit, Libya, 2025", team: "Our team of cardiologists and cardiac surgeons" },
   },
   fr: {
     eyebrow: "À propos",
