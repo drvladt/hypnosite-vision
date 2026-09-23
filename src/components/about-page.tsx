@@ -164,7 +164,7 @@ export function AboutPageView({ locale }: { locale: Locale }) {
           <div className="[&_blockquote]:text-gold-light [&_h2]:text-primary-foreground [&_p]:text-primary-foreground/80">
             <ProseSection section={today} number="05" />
           </div>
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3 [&_figcaption]:text-primary-foreground/65">
             <EditorialImage
               src={mhcc.url}
               alt={c.captions.libya}

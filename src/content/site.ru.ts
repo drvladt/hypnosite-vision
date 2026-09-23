@@ -29,6 +29,7 @@ export const siteRu: SiteContent = {
       metaTitle: "Мой интегративный подход — Dr. Vlad",
       metaDescription:
         "Интегративный взгляд врача-кардиолога и гипнотерапевта: физическое состояние, психоэмоциональные факторы и их взаимосвязь.",
+      pending: true,
       sections: [
         {
           paragraphs: [
@@ -55,7 +56,6 @@ export const siteRu: SiteContent = {
       metaTitle: "Обо мне — Dr. Vlad Tettegah",
       metaDescription:
         "Dr. Vlad Tettegah — врач-кардиолог и сертифицированный гипнотерапевт: образование, практика и научная работа.",
-      pending: true,
       sections: [
         {
           bullets: [

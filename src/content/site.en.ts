@@ -28,6 +28,7 @@ export const siteEn: SiteContent = {
       metaTitle: "My integrative approach — Dr. Vlad",
       metaDescription:
         "An integrative view from a cardiologist and hypnotherapist: physical health, psycho-emotional factors and their interaction.",
+      pending: true,
       sections: [
         {
           paragraphs: [
@@ -54,7 +55,6 @@ export const siteEn: SiteContent = {
       metaTitle: "About — Dr. Vlad Tettegah",
       metaDescription:
         "Dr. Vlad Tettegah, cardiologist and certified hypnotherapist: training, practice and research.",
-      pending: true,
       sections: [
         {
           bullets: [

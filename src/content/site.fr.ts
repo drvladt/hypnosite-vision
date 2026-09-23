@@ -28,6 +28,7 @@ export const siteFr: SiteContent = {
       metaTitle: "Mon approche intégrative — Dr. Vlad",
       metaDescription:
         "Le regard intégratif d'un cardiologue et hypnothérapeute : état physique, facteurs psycho-émotionnels et leurs liens.",
+      pending: true,
       sections: [
         {
           paragraphs: [
@@ -54,7 +55,6 @@ export const siteFr: SiteContent = {
       metaTitle: "À propos — Dr. Vlad Tettegah",
       metaDescription:
         "Dr. Vlad Tettegah, cardiologue et hypnothérapeute certifié : formation, pratique et recherche.",
-      pending: true,
       sections: [
         {
           bullets: [
