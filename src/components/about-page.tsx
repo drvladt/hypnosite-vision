@@ -125,7 +125,7 @@ export function AboutPageView({ locale }: { locale: Locale }) {
 
       <div className="mx-auto mt-12 w-full max-w-6xl px-5 md:mt-16 md:px-8">
         <ProseSection
-          section={{ title: countries.title, paragraphs: countries.paragraphs.slice(0, 2) }}
+          section={{ title: countries.title ?? "", paragraphs: countries.paragraphs.slice(0, 2) }}
           number="03"
         />
         <EditorialImage
@@ -137,7 +137,7 @@ export function AboutPageView({ locale }: { locale: Locale }) {
         />
         <div className="mt-10 md:pl-12">
           <ProseSection
-            section={{ paragraphs: countries.paragraphs.slice(2), emphasis: countries.emphasis }}
+            section={{ paragraphs: countries.paragraphs.slice(2), emphasis: countries.emphasis ?? "" }}
             number=""
           />
         </div>
@@ -159,7 +159,7 @@ export function AboutPageView({ locale }: { locale: Locale }) {
 
       <section className="mx-auto mt-12 w-full max-w-4xl px-5 md:mt-16 md:px-8">
         <ProseSection
-          section={{ title: hypnotherapy.title, paragraphs: hypnotherapy.paragraphs.slice(0, 3) }}
+          section={{ title: hypnotherapy.title ?? "", paragraphs: hypnotherapy.paragraphs.slice(0, 3) }}
           number="04"
         />
         <EditorialImage
