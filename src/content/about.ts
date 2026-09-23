@@ -141,10 +141,9 @@ export const aboutContent: Record<Locale, AboutContent> = {
   fr: {
     eyebrow: "À propos",
     title: "De la médecine classique à une compréhension globale de la personne",
-    lead: "Mon parcours m'a conduit de la médecine classique vers une compréhension plus profonde des liens entre le psychisme, le corps et l'expérience de vie d'une personne.",
+    lead: "Je suis né en 1993 à Lida, en République de Biélorussie, et j'ai grandi dans une famille de médecins. La médecine est donc entrée dans ma vie bien avant de devenir ma profession.",
     sections: [
       { paragraphs: [
-        "Je suis né en 1993 à Lida, en République de Biélorussie, et j'ai grandi dans une famille de médecins. La médecine est donc entrée dans ma vie bien avant de devenir ma profession.",
         "Dès l'enfance, j'ai vu la médecine non seulement de l'extérieur, mais aussi de l'intérieur. J'entendais mes parents parler de diagnostics, de situations cliniques complexes et d'approches thérapeutiques. J'ai ainsi compris très tôt combien le métier de médecin exige de connaissances, d'attention et de capacité d'analyse.",
         "Le fonctionnement du corps humain m'a toujours intéressé : la manière dont ses organes et ses systèmes interagissent, et les raisons pour lesquelles certains troubles apparaissent. J'aimais la biologie et les sciences naturelles, et mon désir de comprendre les processus du vivant est progressivement devenu un intérêt professionnel conscient.",
         "J'ai toujours voulu exercer une activité réellement utile, capable d'améliorer la vie des personnes. Après l'école, j'ai donc choisi la médecine sans hésitation.",
