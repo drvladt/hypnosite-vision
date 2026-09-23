@@ -172,7 +172,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
       ]},
       { title: "Mon travail aujourd'hui", paragraphs: [
         "Aujourd'hui, je travaille en Libye dans le cadre d'une mission médicale internationale, au sein d'un centre spécialisé de chirurgie cardiaque. La cardiologie clinique reste une part importante de ma vie professionnelle.",
-        "Parallèlement, je développe une pratique de consultation en hypnothérapie et en approche intégrative de la santé. Je consulte en présentiel et en ligne pour des problématiques émotionnelles, psychosomatiques et comportementales, ainsi que pour des états dans lesquels les processus psychologiques peuvent influencer le bien-être physique et la qualité de vie.",
+        "Parallèlement, je développe une pratique de consultation en hypnothérapie et en approche intégrative de la santé. Je consulte en présentiel et en ligne pour des problématiques émotionnelles, psychosomatiques et comportementales, ainsi que pour des états dans lesquels les processus psychologiques influencent le bien-être physique et la qualité de vie.",
       ]},
       { title: "Ce en quoi je crois", paragraphs: [
         "Je suis convaincu qu'une personne n'est ni un diagnostic ni un ensemble de symptômes. Derrière chaque plainte se trouve une histoire personnelle, et des manifestations apparemment similaires peuvent avoir des causes, des vécus et des circonstances de vie très différents.",
