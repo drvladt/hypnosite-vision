@@ -6,18 +6,19 @@ import { approachContent, type ApproachSection } from "@/content/approach";
 import { contactEmail, pagePath, type Locale } from "@/content/locales";
 import { siteContent } from "@/content/site";
 
-function ProseSection({ section, number }: { section: ApproachSection; number: string }) {
+function ProseSection({ section, number }: { section: ApproachSection; number?: string }) {
+  const title = section.title?.trim();
   return (
     <section>
-      {section.title && (
+      {title && (
         <div className="mb-7 grid gap-3 md:grid-cols-[3rem_1fr] md:items-start">
-          <span className="pt-2 text-xs font-bold text-gold">{number}</span>
+          {number ? <span className="pt-2 text-xs font-bold text-gold">{number}</span> : null}
           <h2 className="font-display text-3xl font-medium leading-tight text-primary md:text-4xl">
-            {section.title}
+            {title}
           </h2>
         </div>
       )}
-      <div className={section.title ? "md:pl-12" : ""}>
+      <div className={title ? "md:pl-12" : ""}>
         <div className="space-y-5">
           {section.paragraphs.map((paragraph) => (
             <p key={paragraph} className="text-base leading-8 text-foreground/85 md:text-lg md:leading-9">
@@ -34,6 +35,7 @@ function ProseSection({ section, number }: { section: ApproachSection; number: s
     </section>
   );
 }
+
 
 export function ApproachPageView({ locale }: { locale: Locale }) {
   const c = approachContent[locale];
