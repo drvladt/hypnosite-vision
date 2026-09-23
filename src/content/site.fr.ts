@@ -28,7 +28,6 @@ export const siteFr: SiteContent = {
       metaTitle: "Mon approche intégrative — Dr. Vlad",
       metaDescription:
         "Le regard intégratif d'un cardiologue et hypnothérapeute : état physique, facteurs psycho-émotionnels et leurs liens.",
-      pending: true,
       sections: [
         {
           paragraphs: [

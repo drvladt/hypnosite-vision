@@ -1,6 +1,7 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 
 import { SiteLayout } from "@/components/site-layout";
+import { AboutPageView } from "@/components/about-page";
 import {
   DocumentsPageView,
   InfoPageView,
@@ -73,6 +74,8 @@ function SlugPage() {
     <SiteLayout locale={locale} page={page} crumb={crumbFor(locale, page)}>
       {isLegalPage(page) ? (
         <LegalDocView locale={locale} page={page} />
+      ) : page === "about" ? (
+        <AboutPageView locale={locale} />
       ) : !isFlowPage(page) ? (
         <InfoPageView locale={locale} page={siteContent[locale].info[page as InfoPageKey]} />
       ) : page === "consultation" ? (
