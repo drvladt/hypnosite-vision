@@ -180,6 +180,6 @@ export const aboutContent: Record<Locale, AboutContent> = {
         "Mon parcours professionnel m'a conduit des amphithéâtres universitaires aux services de cardiologie, aux unités de soins intensifs, aux salles de cathétérisme et à l'exercice dans différents pays. Tout cela a façonné le principe central de ma pratique :",
       ], emphasis: "Beaucoup de choses peuvent être changées dans la vie, et beaucoup peuvent être évitées, si l'on sait s'arrêter à temps, s'écouter et faire le premier pas honnête vers la vie que l'on souhaite réellement vivre." },
     ],
-    captions: { childhood: "Minsk, 1996", university: "À l'université", graduation: "Diplôme de l'université de médecine", endovascular: "Travail en salle de cathétérisme", certificate: "Certificat Associated Hypnosis Coach, 2025", togo: "Pratique clinique au Togo", minsk: "Travail au centre de cardiologie, Minsk", libya: "Consultation", nightShift: "L'une des gardes difficiles en unité de soins intensifs, Libye, 2025", team: "Équipe médicale internationale" },
+    captions: { childhood: "Minsk, 1996", university: "À l'université", graduation: "Diplôme de l'université de médecine", endovascular: "Travail en salle de cathétérisme", certificate: "Le début de mon activité sous une nouvelle forme, 2025", togo: "Travail en Afrique de l'Ouest, Togo", minsk: "Travail au centre de cardiologie, Minsk", libya: "Consultation", nightShift: "L'une des gardes difficiles en unité de soins intensifs, Libye, 2025", team: "Notre équipe de cardiologues et de chirurgiens cardiaques" },
   },
 };
