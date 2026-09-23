@@ -236,6 +236,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
             <div><p className="eyebrow text-gold-light">{c.approach.eyebrow}</p><h2 className="mt-4 font-display text-4xl leading-tight md:text-5xl">{c.approach.title}</h2></div>
             <div className="space-y-6 text-base leading-8 text-primary-foreground/78">
               {c.approach.paragraphs.map((text) => <p key={text}>{text}</p>)}
+              <a className="inline-flex items-center gap-2 border-b border-gold/60 pb-1 text-sm font-semibold text-gold-light transition-colors hover:text-primary-foreground" href={pagePath(locale, "approach")}>{c.approach.moreApproachLabel}<ArrowRight className="size-4" aria-hidden="true" /></a>
               <div id="hypnotherapy" className="scroll-mt-28 border-t border-primary-foreground/20 pt-6">
                 {c.approach.hypnotherapy.map((text, index) => <p key={text} className={index === 0 ? undefined : "mt-4"}>{text}</p>)}
                 <a className="mt-6 inline-flex items-center gap-2 border-b border-gold/60 pb-1 text-sm font-semibold text-gold-light transition-colors hover:text-primary-foreground" href={pagePath(locale, "hypnotherapy")}>{c.approach.moreHypnotherapyLabel}<ArrowRight className="size-4" aria-hidden="true" /></a>
