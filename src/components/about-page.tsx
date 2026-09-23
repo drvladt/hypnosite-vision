@@ -4,6 +4,7 @@ import { MessageCircle } from "lucide-react";
 import childhood from "@/assets/about/childhood.jpg.asset.json";
 import endovascular from "@/assets/about/endovascular-work.png.asset.json";
 import graduation from "@/assets/about/graduation.jpg.asset.json";
+import hypnotherapyCertificate from "@/assets/about/hypnotherapy-certificate.png.asset.json";
 import mhcc from "@/assets/about/mhcc.jpg.asset.json";
 import mhccSecond from "@/assets/about/mhcc-2.jpg.asset.json";
 import nightShift from "@/assets/about/night-shift-libya.jpg.asset.json";
@@ -98,14 +99,14 @@ export function AboutPageView({ locale }: { locale: Locale }) {
         />
       </header>
 
-      <div className="mx-auto mt-16 w-full max-w-4xl px-5 md:mt-24 md:px-8">
+      <div className="mx-auto mt-12 w-full max-w-4xl px-5 md:mt-16 md:px-8">
         <ProseSection section={origins} number="01" />
       </div>
 
-      <section className="mt-20 border-y border-border bg-secondary/35 py-16 md:mt-28 md:py-24">
+      <section className="mt-12 border-y border-border bg-secondary/35 py-12 md:mt-16 md:py-16">
         <div className="mx-auto w-full max-w-6xl px-5 md:px-8">
           <ProseSection section={education} number="02" />
-          <div className="mt-12 grid gap-5 md:grid-cols-[1.25fr_.75fr] md:items-end">
+          <div className="mt-10 grid gap-5 md:grid-cols-[1.25fr_.75fr] md:items-end">
             <EditorialImage
               src={university.url}
               alt={c.captions.university}
@@ -119,39 +120,61 @@ export function AboutPageView({ locale }: { locale: Locale }) {
               imageClassName="aspect-[4/5] object-[center_42%]"
             />
           </div>
-          <EditorialImage
-            src={endovascular.url}
-            alt={c.captions.endovascular}
-            caption={c.captions.endovascular}
-            className="mt-12 md:ml-auto md:w-[72%]"
-            imageClassName="aspect-[16/10] object-[center_42%]"
-          />
         </div>
       </section>
 
-      <div className="mx-auto mt-20 w-full max-w-6xl px-5 md:mt-28 md:px-8">
-        <ProseSection section={countries} number="03" />
-        <div className="mt-12 grid gap-8 md:grid-cols-[.7fr_1.3fr] md:items-center">
-          <EditorialImage
-            src={togo.url}
-            alt={c.captions.togo}
-            caption={c.captions.togo}
-            imageClassName="aspect-[3/4] object-[center_42%]"
+      <div className="mx-auto mt-12 w-full max-w-6xl px-5 md:mt-16 md:px-8">
+        <ProseSection
+          section={{ title: countries.title, paragraphs: countries.paragraphs.slice(0, 2) }}
+          number="03"
+        />
+        <EditorialImage
+          src={togo.url}
+          alt={c.captions.togo}
+          caption={c.captions.togo}
+          className="mt-10 md:ml-12 md:w-[44%]"
+          imageClassName="aspect-[3/4] object-[center_42%]"
+        />
+        <div className="mt-10 md:pl-12">
+          <ProseSection
+            section={{ paragraphs: countries.paragraphs.slice(2), emphasis: countries.emphasis }}
+            number=""
           />
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-2 md:items-center">
           <EditorialImage
             src={rspcMinsk.url}
             alt={c.captions.minsk}
             caption={c.captions.minsk}
             imageClassName="aspect-[16/10]"
           />
+          <EditorialImage
+            src={endovascular.url}
+            alt={c.captions.endovascular}
+            caption={c.captions.endovascular}
+            imageClassName="aspect-[16/10] object-[center_42%]"
+          />
         </div>
       </div>
 
-      <section className="mx-auto mt-20 w-full max-w-4xl px-5 md:mt-28 md:px-8">
-        <ProseSection section={hypnotherapy} number="04" />
+      <section className="mx-auto mt-12 w-full max-w-4xl px-5 md:mt-16 md:px-8">
+        <ProseSection
+          section={{ title: hypnotherapy.title, paragraphs: hypnotherapy.paragraphs.slice(0, 3) }}
+          number="04"
+        />
+        <EditorialImage
+          src={hypnotherapyCertificate.url}
+          alt={c.captions.certificate}
+          caption={c.captions.certificate}
+          className="mt-10 md:ml-12"
+          imageClassName="aspect-[1.45/1] object-contain"
+        />
+        <div className="mt-10 md:pl-12">
+          <ProseSection section={{ paragraphs: hypnotherapy.paragraphs.slice(3) }} number="" />
+        </div>
       </section>
 
-      <section className="mt-20 bg-primary py-16 text-primary-foreground md:mt-28 md:py-24">
+      <section className="mt-12 bg-primary py-12 text-primary-foreground md:mt-16 md:py-16">
         <div className="mx-auto w-full max-w-6xl px-5 md:px-8">
           <div className="[&_blockquote]:text-gold-light [&_h2]:text-primary-foreground [&_p]:text-primary-foreground/80">
             <ProseSection section={today} number="05" />
@@ -185,7 +208,7 @@ export function AboutPageView({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <div className="mx-auto mt-20 w-full max-w-4xl px-5 md:mt-28 md:px-8">
+      <div className="mx-auto mt-12 w-full max-w-4xl px-5 md:mt-16 md:px-8">
         <ProseSection section={belief} number="06" />
         <div className="mt-14 flex flex-wrap gap-3 border-t border-border pt-10">
           <Button asChild size="lg" className="h-12 rounded-full px-6 text-sm shadow-none">
