@@ -28,8 +28,8 @@ export type AboutContent = {
 export const aboutContent: Record<Locale, AboutContent> = {
   ru: {
     eyebrow: "Обо мне",
-    title: "От клинической кардиологии — к целостному пониманию человека",
-    lead: "Мой путь — от клинической кардиологии к более глубокому пониманию взаимосвязи психики, тела и жизненного опыта человека.",
+    title: "От классической медицины — к целостному пониманию человека",
+    lead: "Мой путь — от классической медицины к более глубокому пониманию взаимосвязи психики, тела и жизненного опыта человека.",
     sections: [
       {
         paragraphs: [
@@ -100,8 +100,8 @@ export const aboutContent: Record<Locale, AboutContent> = {
   },
   en: {
     eyebrow: "About me",
-    title: "From clinical cardiology to understanding the whole person",
-    lead: "My path has led from clinical cardiology to a deeper understanding of the relationship between the mind, the body and a person's life experience.",
+    title: "From classical medicine to a holistic understanding of the person",
+    lead: "My path has led from classical medicine to a deeper understanding of the relationship between the mind, the body and a person's life experience.",
     sections: [
       { paragraphs: [
         "I was born in 1993 in Lida, Belarus, and grew up in a family of doctors. Medicine therefore entered my life long before it became my profession.",
@@ -118,11 +118,11 @@ export const aboutContent: Record<Locale, AboutContent> = {
         "After completing my residency, I went to work in the Republic of Togo, my father's homeland. Working in private clinical practice in West Africa became an important professional and personal chapter.",
         "I encountered a different healthcare system, different cultural contexts and entirely different life circumstances. This experience taught me flexibility, independence and the ability to see beyond a diagnosis to the individual person — with their history, fears, beliefs and available possibilities. At a certain point, I felt that this stage had given me what I needed.",
         "After returning to Belarus, I continued my professional work at the Republican Scientific and Practical Centre ‘Cardiology’ and the Minsk Emergency Hospital. I also trained in endovascular cardiology and worked as an interventional cardiologist at Minsk City Clinical Hospital No. 4.",
-        "During this time, I worked in cardiology and coronary care departments, intensive care units, catheterisation laboratories and emergency medicine. I witnessed acute conditions, difficult clinical decisions, serious diagnoses and situations in which modern medicine quite literally saves lives.",
+        "During this time, I worked in cardiology and coronary care departments, intensive care units, catheterisation laboratories and emergency medicine. I witnessed acute conditions, difficult clinical decisions, serious diagnoses and situations in which modern medicine quite literally saves lives or, on the contrary, throws up its hands.",
       ], emphasis: "Yet this experience gradually led me to a broader question: is addressing only the physical manifestations of illness always enough?" },
       { title: "Why I came to hypnotherapy", paragraphs: [
         "As my clinical experience grew, I saw ever more clearly that the human body cannot be considered separately from the mind and a person's life story.",
-        "People often seek help only when the body no longer allows the problem to be ignored: symptoms become persistent, everyday life changes for the worse, and investigations reveal lasting, sometimes irreversible changes. Yet years earlier there may have been initial signals — chronic stress, anxiety, inner tension, emotional exhaustion and habits that gradually affect health. Psychological factors do not explain every illness, but timely work with them, together with medical prevention, could in many cases alter what happens next.",
+        "People often seek help only when the body no longer allows the problem to be ignored: symptoms become persistent, everyday life changes for the worse, and investigations reveal lasting, sometimes irreversible changes. Yet years earlier there may have been initial signals — chronic stress, anxiety, inner tension, emotional exhaustion and habits that gradually affect health. Today I understand that psychological factors do not explain every illness, however, timely work with them combined with high-quality prevention could in many cases change the further course of events.",
         "It was the wish to understand these processes more deeply that led me to hypnotherapy.",
         "It began as a professional interest. This was followed by specialist education, numerous training programmes and further professional retraining in hypnotherapy. I gradually began applying this knowledge in my consultation practice, combining a physician's clinical reasoning with an understanding of psychological mechanisms and the possibilities of psychotherapeutic work.",
         "The deeper I went into this field, the more clearly I saw its potential. Hypnotherapy became for me not an alternative to medicine, but a serious therapeutic tool. It can help a person explore the internal causes of persistent reactions, change habitual emotional and behavioural patterns, reduce anxiety and restore a sense of inner stability.",
@@ -130,7 +130,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
       ]},
       { title: "My work today", paragraphs: [
         "Today I work in Libya as part of an international medical mission at a specialist cardiac surgery centre. Clinical cardiology remains an important part of my professional life.",
-        "At the same time, I am developing a consultation practice in hypnotherapy and an integrative approach to health. I consult in person and online, working with emotional, psychosomatic and behavioural concerns, as well as conditions in which psychological processes may influence physical wellbeing and quality of life.",
+        "At the same time, I am developing a consultation practice in hypnotherapy and an integrative approach to health. I consult in person and online, working with emotional, psychosomatic and behavioural concerns, as well as conditions in which psychological processes influence physical wellbeing and quality of life.",
       ]},
       { title: "What I believe", paragraphs: [
         "I believe that a person is not a diagnosis or a collection of symptoms. Behind every complaint is a personal story, and outwardly similar manifestations may arise from very different causes, experiences and life circumstances.",
@@ -138,12 +138,12 @@ export const aboutContent: Record<Locale, AboutContent> = {
         "My professional path has passed through university lecture halls, cardiology departments, intensive care units, catheterisation laboratories and work in different countries. All of this has shaped the central principle of my practice:",
       ], emphasis: "Much in life can be changed, and much can be prevented, if we pause in time, listen to ourselves and take the first honest step towards the life we truly want to live." },
     ],
-    captions: { childhood: "Minsk, 1996", university: "At university", graduation: "Graduating from medical university", endovascular: "Work in the catheterisation laboratory", certificate: "Associated Hypnosis Coach certificate, 2025", togo: "Clinical practice in Togo", minsk: "Work at the RSPC Cardiology, Minsk", libya: "Consultation", nightShift: "One of the challenging shifts in the intensive care unit, Libya, 2025", team: "International medical team" },
+    captions: { childhood: "Minsk, 1996", university: "At university", graduation: "Graduating from medical university", endovascular: "Work in the catheterisation laboratory", certificate: "The beginning of my work in a new capacity, 2025", togo: "Work in West Africa, Togo", minsk: "Work at the RSPC Cardiology, Minsk", libya: "Consultation", nightShift: "One of the challenging shifts in the intensive care unit, Libya, 2025", team: "Our team of cardiologists and cardiac surgeons" },
   },
   fr: {
     eyebrow: "À propos",
-    title: "De la cardiologie clinique à une compréhension globale de la personne",
-    lead: "Mon parcours m'a conduit de la cardiologie clinique vers une compréhension plus profonde des liens entre le psychisme, le corps et l'expérience de vie d'une personne.",
+    title: "De la médecine classique à une compréhension globale de la personne",
+    lead: "Mon parcours m'a conduit de la médecine classique vers une compréhension plus profonde des liens entre le psychisme, le corps et l'expérience de vie d'une personne.",
     sections: [
       { paragraphs: [
         "Je suis né en 1993 à Lida, en République de Biélorussie, et j'ai grandi dans une famille de médecins. La médecine est donc entrée dans ma vie bien avant de devenir ma profession.",
@@ -160,11 +160,11 @@ export const aboutContent: Record<Locale, AboutContent> = {
         "Après mon internat, je suis parti travailler en République togolaise, le pays d'origine de mon père. La pratique clinique privée en Afrique de l'Ouest a constitué une étape professionnelle et personnelle importante.",
         "J'y ai découvert un autre système de santé, d'autres réalités culturelles et des conditions de vie très différentes. Cette expérience m'a appris la souplesse, l'autonomie et la capacité de voir derrière le diagnostic une personne concrète — avec son histoire, ses peurs, ses convictions et les possibilités qui lui sont accessibles. À un moment donné, j'ai senti que cette étape m'avait apporté ce dont j'avais besoin.",
         "De retour en Biélorussie, j'ai poursuivi mon activité au Centre républicain scientifique et pratique de cardiologie ainsi qu'à l'Hôpital d'urgence de Minsk. Je me suis également formé en cardiologie endovasculaire et j'ai exercé comme cardiologue interventionnel au 4e hôpital clinique de Minsk.",
-        "J'ai travaillé dans des services de cardiologie et d'infarctologie, en soins intensifs, en salle de cathétérisme et en médecine d'urgence. J'ai été confronté à des états aigus, à des décisions cliniques difficiles, à des diagnostics graves et à des situations où la médecine moderne sauve littéralement des vies.",
+        "J'ai travaillé dans des services de cardiologie et d'infarctologie, en soins intensifs, en salle de cathétérisme et en médecine d'urgence. J'ai été confronté à des états aigus, à des décisions cliniques difficiles, à des diagnostics graves et à des situations où la médecine moderne sauve littéralement des vies ou, au contraire, se montre impuissante.",
       ], emphasis: "Mais cette expérience m'a progressivement conduit à une question plus large : suffit-il toujours d'agir uniquement sur les manifestations physiques de la maladie ?" },
       { title: "Pourquoi je me suis tourné vers l'hypnothérapie", paragraphs: [
         "Plus mon expérience clinique grandissait, plus une évidence s'imposait : le corps humain ne peut être considéré séparément du psychisme et de l'histoire de vie.",
-        "Très souvent, une personne ne demande de l'aide que lorsque son corps ne lui permet plus d'ignorer le problème : les symptômes deviennent constants, la vie quotidienne se dégrade et les examens révèlent des changements durables, parfois irréversibles. Pourtant, les premiers signaux ont pu persister pendant des années — stress chronique, anxiété, tension intérieure, épuisement émotionnel et habitudes qui influencent progressivement la santé. Les facteurs psychologiques n'expliquent pas toutes les maladies, mais les prendre en charge à temps, parallèlement à la prévention médicale, pourrait dans de nombreux cas modifier la suite des événements.",
+        "Très souvent, une personne ne demande de l'aide que lorsque son corps ne lui permet plus d'ignorer le problème : les symptômes deviennent constants, la vie quotidienne se dégrade et les examens révèlent des changements durables, parfois irréversibles. Pourtant, les premiers signaux ont pu persister pendant des années — stress chronique, anxiété, tension intérieure, épuisement émotionnel et habitudes qui influencent progressivement la santé. Aujourd'hui, je comprends que les facteurs psychologiques n'expliquent pas toutes les maladies, mais qu'un travail opportun sur ceux-ci, associé à une prévention de qualité, pourrait dans de nombreux cas changer le cours ultérieur des événements.",
         "C'est le désir de mieux comprendre ces processus qui m'a conduit à l'hypnothérapie.",
         "Ce fut d'abord un intérêt professionnel, puis une formation spécialisée, de nombreux entraînements et une reconversion complémentaire en hypnothérapie. J'ai progressivement intégré ces connaissances à ma pratique de consultation, en associant le raisonnement clinique du médecin à la compréhension des mécanismes psychologiques et des possibilités du travail psychothérapeutique.",
         "Plus j'approfondissais ce domaine, plus j'en percevais le potentiel. L'hypnothérapie est devenue pour moi non pas une alternative à la médecine, mais un outil thérapeutique sérieux. Elle peut aider à explorer les causes internes de réactions persistantes, à modifier des schémas émotionnels et comportementaux habituels, à réduire l'anxiété et à retrouver un sentiment de stabilité intérieure.",
@@ -172,7 +172,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
       ]},
       { title: "Mon travail aujourd'hui", paragraphs: [
         "Aujourd'hui, je travaille en Libye dans le cadre d'une mission médicale internationale, au sein d'un centre spécialisé de chirurgie cardiaque. La cardiologie clinique reste une part importante de ma vie professionnelle.",
-        "Parallèlement, je développe une pratique de consultation en hypnothérapie et en approche intégrative de la santé. Je consulte en présentiel et en ligne pour des problématiques émotionnelles, psychosomatiques et comportementales, ainsi que pour des états dans lesquels les processus psychologiques peuvent influencer le bien-être physique et la qualité de vie.",
+        "Parallèlement, je développe une pratique de consultation en hypnothérapie et en approche intégrative de la santé. Je consulte en présentiel et en ligne pour des problématiques émotionnelles, psychosomatiques et comportementales, ainsi que pour des états dans lesquels les processus psychologiques influencent le bien-être physique et la qualité de vie.",
       ]},
       { title: "Ce en quoi je crois", paragraphs: [
         "Je suis convaincu qu'une personne n'est ni un diagnostic ni un ensemble de symptômes. Derrière chaque plainte se trouve une histoire personnelle, et des manifestations apparemment similaires peuvent avoir des causes, des vécus et des circonstances de vie très différents.",
@@ -180,6 +180,6 @@ export const aboutContent: Record<Locale, AboutContent> = {
         "Mon parcours professionnel m'a conduit des amphithéâtres universitaires aux services de cardiologie, aux unités de soins intensifs, aux salles de cathétérisme et à l'exercice dans différents pays. Tout cela a façonné le principe central de ma pratique :",
       ], emphasis: "Beaucoup de choses peuvent être changées dans la vie, et beaucoup peuvent être évitées, si l'on sait s'arrêter à temps, s'écouter et faire le premier pas honnête vers la vie que l'on souhaite réellement vivre." },
     ],
-    captions: { childhood: "Minsk, 1996", university: "À l'université", graduation: "Diplôme de l'université de médecine", endovascular: "Travail en salle de cathétérisme", certificate: "Certificat Associated Hypnosis Coach, 2025", togo: "Pratique clinique au Togo", minsk: "Travail au centre de cardiologie, Minsk", libya: "Consultation", nightShift: "L'une des gardes difficiles en unité de soins intensifs, Libye, 2025", team: "Équipe médicale internationale" },
+    captions: { childhood: "Minsk, 1996", university: "À l'université", graduation: "Diplôme de l'université de médecine", endovascular: "Travail en salle de cathétérisme", certificate: "Le début de mon activité sous une nouvelle forme, 2025", togo: "Travail en Afrique de l'Ouest, Togo", minsk: "Travail au centre de cardiologie, Minsk", libya: "Consultation", nightShift: "L'une des gardes difficiles en unité de soins intensifs, Libye, 2025", team: "Notre équipe de cardiologues et de chirurgiens cardiaques" },
   },
 };
