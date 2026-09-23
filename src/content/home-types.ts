@@ -44,6 +44,7 @@ export type HomeContent = {
     eyebrow: string;
     title: string;
     paragraphs: string[];
+    moreApproachLabel: string;
     hypnotherapy: string[];
     moreHypnotherapyLabel: string;
   };

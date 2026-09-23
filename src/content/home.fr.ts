@@ -73,6 +73,7 @@ export const homeFr: HomeContent = {
       "L'organisme n'est pas un assemblage de parties indépendantes. L'état physique influence les émotions et le comportement, tandis que le stress, l'anxiété, le sommeil et les habitudes se reflètent dans le corps.",
       "C'est pourquoi je n'applique pas un protocole unique à tout le monde. Le travail commence par l'étude de votre situation individuelle et peut associer plusieurs axes complémentaires.",
     ],
+    moreApproachLabel: "En savoir plus sur mon approche intégrative",
     hypnotherapy: [
       "Lorsqu'elle est indiquée, l'hypnothérapie peut être utilisée comme méthode complémentaire face à l'anxiété, aux peurs, aux réactions corporelles et aux schémas émotionnels ou comportementaux persistants.",
       "Elle ne s'oppose en rien au traitement médicamenteux et n'est pas prescrite automatiquement à chaque personne.",

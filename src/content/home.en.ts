@@ -73,6 +73,7 @@ export const homeEn: HomeContent = {
       "The body is not a set of independent parts. Physical condition shapes emotions and behaviour, while stress, anxiety, sleep and habits are reflected in how the body feels.",
       "This is why I do not apply one universal protocol to everyone. Work begins with a careful look at your individual situation and may involve several interconnected directions.",
     ],
+    moreApproachLabel: "Learn more about my integrative approach",
     hypnotherapy: [
       "Where it is indicated, hypnotherapy can be used as a complementary method for anxiety, fears, bodily reactions and persistent emotional or behavioural patterns.",
       "It is never set in opposition to medical treatment and is not prescribed automatically to everyone.",
