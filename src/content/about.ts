@@ -20,6 +20,7 @@ export type AboutContent = {
     togo: string;
     minsk: string;
     libya: string;
+    nightShift: string;
     team: string;
   };
 };
