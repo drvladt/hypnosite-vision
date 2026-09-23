@@ -100,8 +100,8 @@ export const aboutContent: Record<Locale, AboutContent> = {
   },
   en: {
     eyebrow: "About me",
-    title: "From clinical cardiology to understanding the whole person",
-    lead: "My path has led from clinical cardiology to a deeper understanding of the relationship between the mind, the body and a person's life experience.",
+    title: "From classical medicine to a holistic understanding of the person",
+    lead: "My path has led from classical medicine to a deeper understanding of the relationship between the mind, the body and a person's life experience.",
     sections: [
       { paragraphs: [
         "I was born in 1993 in Lida, Belarus, and grew up in a family of doctors. Medicine therefore entered my life long before it became my profession.",
