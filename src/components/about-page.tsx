@@ -147,15 +147,7 @@ export function AboutPageView({ locale }: { locale: Locale }) {
         </div>
       </div>
 
-      <section className="mx-auto mt-20 grid w-full max-w-6xl gap-12 px-5 md:mt-28 md:grid-cols-[minmax(17rem,.68fr)_minmax(0,1.32fr)] md:px-8">
-        <div className="md:sticky md:top-28 md:self-start">
-          <EditorialImage
-            src={mhccSecond.url}
-            alt={c.captions.libya}
-            caption={c.captions.libya}
-            imageClassName="aspect-[4/5] object-[center_40%]"
-          />
-        </div>
+      <section className="mx-auto mt-20 w-full max-w-4xl px-5 md:mt-28 md:px-8">
         <ProseSection section={hypnotherapy} number="04" />
       </section>
 
@@ -164,7 +156,7 @@ export function AboutPageView({ locale }: { locale: Locale }) {
           <div className="[&_blockquote]:text-gold-light [&_h2]:text-primary-foreground [&_p]:text-primary-foreground/80">
             <ProseSection section={today} number="05" />
           </div>
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3 [&_figcaption]:text-primary-foreground/65">
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 [&_figcaption]:text-primary-foreground/65">
             <EditorialImage
               src={mhcc.url}
               alt={c.captions.libya}
@@ -178,10 +170,15 @@ export function AboutPageView({ locale }: { locale: Locale }) {
               imageClassName="aspect-[4/3] object-[center_35%]"
             />
             <EditorialImage
+              src={mhccSecond.url}
+              alt={c.captions.libya}
+              caption={c.captions.libya}
+              imageClassName="aspect-[4/3] object-[center_40%]"
+            />
+            <EditorialImage
               src={workAtMhcc.url}
               alt={c.captions.team}
               caption={c.captions.team}
-              className="sm:col-span-2 md:col-span-1"
               imageClassName="aspect-[4/3] object-[center_38%]"
             />
           </div>
