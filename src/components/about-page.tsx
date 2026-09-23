@@ -188,8 +188,8 @@ export function AboutPageView({ locale }: { locale: Locale }) {
             />
             <EditorialImage
               src={nightShift.url}
-              alt={c.captions.libya}
-              caption={c.captions.libya}
+              alt={c.captions.nightShift}
+              caption={c.captions.nightShift}
               imageClassName="aspect-[4/3] object-[center_35%]"
             />
             <EditorialImage

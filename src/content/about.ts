@@ -20,6 +20,7 @@ export type AboutContent = {
     togo: string;
     minsk: string;
     libya: string;
+    nightShift: string;
     team: string;
   };
 };
@@ -93,6 +94,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
       togo: "Работа в западной африке, Того",
       minsk: "Работа в РНПЦ «Кардиология», Минск",
       libya: "Консультативный прием",
+      nightShift: "Одно из непростых дежурств в палатах интенсивной терапии, Ливия,2025г",
       team: "Наша команда кардиологов и кардиохирургов",
     },
   },
@@ -136,7 +138,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
         "My professional path has passed through university lecture halls, cardiology departments, intensive care units, catheterisation laboratories and work in different countries. All of this has shaped the central principle of my practice:",
       ], emphasis: "Much in life can be changed, and much can be prevented, if we pause in time, listen to ourselves and take the first honest step towards the life we truly want to live." },
     ],
-    captions: { childhood: "Minsk, 1996", university: "At university", graduation: "Graduating from medical university", endovascular: "Work in the catheterisation laboratory", certificate: "Associated Hypnosis Coach certificate, 2025", togo: "Clinical practice in Togo", minsk: "Work at the RSPC Cardiology, Minsk", libya: "Consultation", team: "International medical team" },
+    captions: { childhood: "Minsk, 1996", university: "At university", graduation: "Graduating from medical university", endovascular: "Work in the catheterisation laboratory", certificate: "Associated Hypnosis Coach certificate, 2025", togo: "Clinical practice in Togo", minsk: "Work at the RSPC Cardiology, Minsk", libya: "Consultation", nightShift: "One of the challenging shifts in the intensive care unit, Libya, 2025", team: "International medical team" },
   },
   fr: {
     eyebrow: "À propos",
@@ -178,6 +180,6 @@ export const aboutContent: Record<Locale, AboutContent> = {
         "Mon parcours professionnel m'a conduit des amphithéâtres universitaires aux services de cardiologie, aux unités de soins intensifs, aux salles de cathétérisme et à l'exercice dans différents pays. Tout cela a façonné le principe central de ma pratique :",
       ], emphasis: "Beaucoup de choses peuvent être changées dans la vie, et beaucoup peuvent être évitées, si l'on sait s'arrêter à temps, s'écouter et faire le premier pas honnête vers la vie que l'on souhaite réellement vivre." },
     ],
-    captions: { childhood: "Minsk, 1996", university: "À l'université", graduation: "Diplôme de l'université de médecine", endovascular: "Travail en salle de cathétérisme", certificate: "Certificat Associated Hypnosis Coach, 2025", togo: "Pratique clinique au Togo", minsk: "Travail au centre de cardiologie, Minsk", libya: "Consultation", team: "Équipe médicale internationale" },
+    captions: { childhood: "Minsk, 1996", university: "À l'université", graduation: "Diplôme de l'université de médecine", endovascular: "Travail en salle de cathétérisme", certificate: "Certificat Associated Hypnosis Coach, 2025", togo: "Pratique clinique au Togo", minsk: "Travail au centre de cardiologie, Minsk", libya: "Consultation", nightShift: "L'une des gardes difficiles en unité de soins intensifs, Libye, 2025", team: "Équipe médicale internationale" },
   },
 };
