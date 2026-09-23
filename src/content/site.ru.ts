@@ -56,7 +56,6 @@ export const siteRu: SiteContent = {
       metaTitle: "Обо мне — Dr. Vlad Tettegah",
       metaDescription:
         "Dr. Vlad Tettegah — врач-кардиолог и сертифицированный гипнотерапевт: образование, практика и научная работа.",
-      pending: true,
       sections: [
         {
           bullets: [

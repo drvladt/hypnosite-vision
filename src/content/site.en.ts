@@ -55,7 +55,6 @@ export const siteEn: SiteContent = {
       metaTitle: "About — Dr. Vlad Tettegah",
       metaDescription:
         "Dr. Vlad Tettegah, cardiologist and certified hypnotherapist: training, practice and research.",
-      pending: true,
       sections: [
         {
           bullets: [
