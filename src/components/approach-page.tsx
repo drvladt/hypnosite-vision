@@ -53,26 +53,26 @@ export function ApproachPageView({ locale }: { locale: Locale }) {
       </header>
 
       <div className="mx-auto mt-12 w-full max-w-4xl px-5 md:mt-16 md:px-8">
-        <ProseSection section={foundation} number="01" />
+        <ProseSection section={foundation} number="\n" />
       </div>
 
       <section className="mt-12 border-y border-border bg-secondary/35 py-12 md:mt-16 md:py-16">
         <div className="mx-auto w-full max-w-4xl px-5 md:px-8">
-          <ProseSection section={broader} number="02" />
+          <ProseSection section={broader} number="\n" />
         </div>
       </section>
 
       <div className="mx-auto mt-12 w-full max-w-4xl px-5 md:mt-16 md:px-8">
-        <ProseSection section={consultation} number="03" />
+        <ProseSection section={consultation} number="\n" />
         <div className="mt-12 md:mt-16">
-          <ProseSection section={hypnotherapy} number="04" />
+          <ProseSection section={hypnotherapy} number="\n" />
         </div>
       </div>
 
       <section className="mt-12 bg-primary py-12 text-primary-foreground md:mt-16 md:py-16">
         <div className="mx-auto w-full max-w-4xl px-5 md:px-8">
           <div className="[&_blockquote]:text-gold-light [&_h2]:text-primary-foreground [&_p]:text-primary-foreground/80">
-            <ProseSection section={practice} number="05" />
+            <ProseSection section={practice} number="\n" />
           </div>
         </div>
       </section>
