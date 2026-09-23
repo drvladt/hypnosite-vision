@@ -202,7 +202,7 @@ export function AboutPageView({ locale }: { locale: Locale }) {
               src={workAtMhcc.url}
               alt={c.captions.team}
               caption={c.captions.team}
-              imageClassName="aspect-[4/3] object-[center_38%]"
+              imageClassName="aspect-[4/3] object-contain"
             />
           </div>
         </div>
