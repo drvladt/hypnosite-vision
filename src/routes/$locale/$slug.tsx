@@ -3,6 +3,7 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import { AboutPageView } from "@/components/about-page";
 import { ApproachPageView } from "@/components/approach-page";
+import { HypnotherapyPageView } from "@/components/hypnotherapy-page";
 import {
   DocumentsPageView,
   InfoPageView,
@@ -78,7 +79,9 @@ function SlugPage() {
       ) : page === "about" ? (
         <AboutPageView locale={locale} />
     ) : page === "approach" ? (
-      <ApproachPageView locale={locale} />
+        <ApproachPageView locale={locale} />
+    ) : page === "hypnotherapy" ? (
+        <HypnotherapyPageView locale={locale} />
     ) : !isFlowPage(page) ? (
         <InfoPageView locale={locale} page={siteContent[locale].info[page as InfoPageKey]} />
       ) : page === "consultation" ? (

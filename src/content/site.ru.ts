@@ -73,7 +73,7 @@ export const siteRu: SiteContent = {
       metaTitle: "Гипнотерапия — Dr. Vlad",
       metaDescription:
         "Недирективная гипнотерапия в работе врача: когда метод показан, чего ожидать и чем он не является.",
-      pending: true,
+      pending: false,
       sections: [
         {
           paragraphs: [
