@@ -57,7 +57,7 @@ export function ResearchPageView({ locale }: { locale: Locale }) {
         <p className="eyebrow">{c.eyebrow}</p>
         <h1 className="section-title mt-4">{c.title}</h1>
         {c.lead.trim() && (
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground md:text-xl md:leading-9">
+          <p className="mt-6 max-w-3xl border-l-2 border-gold/40 pl-5 text-lg font-medium leading-8 text-primary md:text-xl md:leading-9">
             {c.lead}
           </p>
         )}
