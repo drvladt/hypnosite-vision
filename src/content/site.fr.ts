@@ -72,7 +72,7 @@ export const siteFr: SiteContent = {
       metaTitle: "Hypnothérapie — Dr. Vlad",
       metaDescription:
         "L'hypnothérapie non directive dans la pratique médicale : indications, déroulement et limites.",
-      pending: true,
+      pending: false,
       sections: [
         {
           paragraphs: [

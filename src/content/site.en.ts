@@ -72,7 +72,7 @@ export const siteEn: SiteContent = {
       metaTitle: "Hypnotherapy — Dr. Vlad",
       metaDescription:
         "Non-directive hypnotherapy in medical practice: when it is indicated, what to expect and what it is not.",
-      pending: true,
+      pending: false,
       sections: [
         {
           paragraphs: [
