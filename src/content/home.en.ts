@@ -48,9 +48,9 @@ export const homeEn: HomeContent = {
     items: [
       "Your tests show nothing serious, but the chest pain, palpitations, or skipped beats keep coming back.",
       "Your heart rate, chest discomfort, or blood pressure clearly reacts to stress, conflict, strong emotions, exhaustion, or poor sleep.",
-      "You follow the treatment you were prescribed, but you still don't feel stable — or the improvement falls short of what you hoped for.",
+      "You follow your prescribed treatment, but you still don’t feel well — or the improvement isn’t what you expected.",
       "Since your diagnosis, you live with a constant fear of complications, a heart attack, getting worse, or sudden death.",
-      "It feels like every specialist looks at separate symptoms and numbers — and no one helps you see the whole picture, or how your body and mind might be connected.",
+      "It feels like every doctor looks at separate symptoms and numbers — and no one helps you see the whole picture, or how your body and mind might be connected.",
       "Fear for your heart makes it hard to exercise, travel, fly, stay alone, or be far from medical help.",
     ],
     summary:
