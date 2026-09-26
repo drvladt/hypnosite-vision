@@ -60,7 +60,7 @@ export const homeEn: HomeContent = {
     eyebrow: "A new direction in modern medicine",
     title: "Why treating the symptom alone is not enough",
     paragraphs: [
-      "Medicine is gradually shifting from treating single symptoms toward care that looks at the whole person.",
+      "Modern medicine increasingly recognizes that symptoms should not always be viewed in isolation. Physical health, emotional well-being, lifestyle, and life circumstances can all influence how a person feels.",
       "Medication can be necessary and life-saving. But even the right treatment doesn't always address every factor that shapes a condition — and how a person feels.",
     ],
     quote:
