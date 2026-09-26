@@ -64,7 +64,7 @@ export const homeEn: HomeContent = {
       "Medication can be necessary and life-saving. But even the right treatment doesn't always address every factor that shapes a condition — and how a person feels.",
     ],
     quote:
-      "\u201cA symptom is the visible tip of the iceberg. Beneath it, there is usually a mix of connected physical and psychological factors. So my task is not to treat one sign, but to understand the whole picture.\u201d",
+      "\u201cA symptom is often just the tip of the iceberg. What lies beneath may involve the body, the mind, lifestyle, and life circumstances — all influencing one another. My goal is not simply to treat a symptom, but to understand what may be behind it.\u201d",
   },
   approach: {
     eyebrow: "Dr. Vlad's integrative approach",
