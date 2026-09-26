@@ -36,71 +36,71 @@ export const homeEn: HomeContent = {
     eyebrow: "Integrative medicine · Hypnotherapy",
     title:
       "Still feeling chest pain, palpitations, or blood pressure swings — even though your tests are normal and you follow your doctor's advice?",
-    lead: "Dr. Vlad works according to the principles of integrative medicine. The goal is not to quiet one symptom, but to understand which medical, emotional and behavioural factors started the problem or keep it going.",
+    lead: "Dr. Vlad takes an integrative approach. Instead of just silencing one symptom, he works to understand the medical, emotional, and behavioural factors that started the problem or keep it going.",
     portraitAlt: "Dr. Vlad — cardiologist and hypnotherapist",
     portraitCaption:
-      "Work with health anxiety, intrusive thoughts, fears and body reactions — a doctor's view combined with non-directive hypnotherapy, when it is truly indicated.",
+      "Help with health anxiety, intrusive thoughts, fears, and body responses — combining a doctor's perspective with non-directive hypnotherapy, when it is genuinely appropriate.",
     badges: ["Cardiologist", "In medicine since 2019", "International practice", "Certified in hypnotherapy"],
   },
   concerns: {
     eyebrow: "Why people come",
     title: "You may recognise yourself here",
     items: [
-      "Your tests show nothing serious, but chest pain or discomfort, palpitations and skipped beats continue or keep coming back.",
-      "Your heart rate, chest discomfort or blood pressure clearly change with stress, conflict, strong emotions, exhaustion or lack of sleep.",
-      "You take the treatment you were prescribed, but you still do not feel stable, or you feel much less improvement than you hoped for.",
-      "Since your diagnosis you live with constant fear of complications, a heart attack, an arrhythmia, getting worse or sudden death.",
-      "It feels as if each specialist looks at separate symptoms and numbers, and nobody helps you see the whole picture and how your body and your mind may be connected.",
-      "Fear for your heart makes it hard to exercise, travel, fly, stay alone or be far from medical help.",
+      "Your tests show nothing serious, but the chest pain, palpitations, or skipped beats keep coming back.",
+      "Your heart rate, chest discomfort, or blood pressure clearly reacts to stress, conflict, strong emotions, exhaustion, or poor sleep.",
+      "You follow the treatment you were prescribed, but you still don't feel stable — or the improvement falls short of what you hoped for.",
+      "Since your diagnosis, you live with a constant fear of complications, a heart attack, getting worse, or sudden death.",
+      "It feels like every specialist looks at separate symptoms and numbers — and no one helps you see the whole picture, or how your body and mind might be connected.",
+      "Fear for your heart makes it hard to exercise, travel, fly, stay alone, or be far from medical help.",
     ],
     summary:
-      "If even one of these situations sounds familiar, more than your physical condition shapes how you feel. In the first consultation we look at whether there are other factors that can and should be addressed.",
+      "If even one of these sounds familiar, there is likely more to how you feel than your physical condition alone. In the first consultation, we look at whether other factors are at play — and whether they can be addressed.",
   },
   bigPicture: {
     eyebrow: "A new direction in modern medicine",
-    title: "Why the symptom alone is not enough",
+    title: "Why treating the symptom alone is not enough",
     paragraphs: [
-      "Medicine is slowly moving away from treating single symptoms and towards care that looks at the whole person.",
-      "Medication can be necessary and can save a life. But even the right treatment does not always cover every factor that shapes a condition and the way a person feels.",
+      "Medicine is gradually shifting from treating single symptoms toward care that looks at the whole person.",
+      "Medication can be necessary and life-saving. But even the right treatment doesn't always address every factor that shapes a condition — and how a person feels.",
     ],
     quote:
-      "\u201cA symptom is the visible tip of the iceberg. Below it there is usually a mix of connected physical and psychological factors. So my task is not to treat one sign, but to understand the whole picture.\u201d",
+      "\u201cA symptom is the visible tip of the iceberg. Beneath it, there is usually a mix of connected physical and psychological factors. So my task is not to treat one sign, but to understand the whole picture.\u201d",
   },
   approach: {
-    eyebrow: "Dr. Vlad’s integrative approach",
-    title: "Not separating body from mind, but seeing the whole person",
+    eyebrow: "Dr. Vlad's integrative approach",
+    title: "Not separating body from mind — but seeing the whole person",
     paragraphs: [
-      "The body is not a set of separate parts. Physical health shapes emotions and behaviour, and stress, anxiety, sleep and daily habits show up in how the body feels.",
-      "This is why I do not use one universal protocol for everyone. The work starts with a careful look at your own situation and may follow several connected directions.",
+      "The body is not a collection of separate parts. Physical health shapes emotions and behaviour — just as stress, anxiety, sleep, and daily habits show up in how the body feels.",
+      "This is why I don't use a one-size-fits-all protocol. The work starts with a careful look at your situation and may move in several connected directions.",
     ],
     moreApproachLabel: "Learn more about my integrative approach",
     hypnotherapy: [
-      "When it is indicated, hypnotherapy can be used as an additional method for anxiety, fears, body reactions and long-standing emotional or behavioural patterns.",
-      "It never stands against medical treatment and is not prescribed to everyone automatically.",
+      "When it's appropriate, hypnotherapy can complement your care — for anxiety, fears, body reactions, and long-standing emotional or behavioural patterns.",
+      "It never replaces medical treatment, and it is never prescribed automatically.",
     ],
     moreHypnotherapyLabel: "Learn more about how hypnotherapy works here",
   },
   consultation: {
     eyebrow: "ONLINE CONSULTATION",
-    title: "If your situation needs a careful personal review instead of general advice",
-    lead: "The first consultation brings scattered information together into one picture and makes the next step clear. We go through your symptoms, the history of your illness, the tests you already have and the possible role of emotional factors. Afterwards you will understand more clearly:",
+    title: "When your situation calls for a careful, personal review — not generic advice",
+    lead: "The first consultation brings your scattered information together into one clear picture. We go through your symptoms, your medical history, the tests you already have, and the possible role of emotional factors. Afterward, you will have a clearer understanding of:",
     outcomes: [
       "whether you need further examination;",
-      "which emotional factors may keep you feeling unwell;",
+      "which emotional factors may be keeping you unwell;",
       "whether there are reasons for psychological work;",
-      "whether hypnotherapy could be useful for you;",
+      "whether hypnotherapy could help you;",
       "which next step makes sense.",
     ],
     suitableTitle: "Who this format is suitable for",
     suitableFor: [
-      "adults aged 18 and over in a planned and relatively stable situation;",
-      "people who have already had tests or a diagnosis, but did not get the improvement they hoped for;",
-      "people who notice that stress, anxiety or inner tension affects their physical state;",
-      "people living with intrusive thoughts, fears, inner limits and physical or psychosomatic symptoms;",
+      "adults aged 18 and over in a planned, relatively stable situation;",
+      "people who have already had tests or a diagnosis, but didn't get the improvement they hoped for;",
+      "people who notice that stress, anxiety, or inner tension affects their physical state;",
+      "people living with intrusive thoughts, fears, inner limits, and physical or psychosomatic symptoms;",
       "people who want to know whether clinical hypnotherapy could help in their case.",
     ],
     suitableNote:
-      "You do not have to decide yourself whether the problem is medical, psychological or psychosomatic. That is exactly what the first consultation is for: to review what we know and find a sensible direction.",
+      "You don't have to decide on your own whether the problem is medical, psychological, or psychosomatic. That is exactly what the first consultation is for — to review what we know and find a sensible direction.",
   },
   about: {
     eyebrow: "About me",
@@ -109,13 +109,13 @@ export const homeEn: HomeContent = {
       "I have worked in medicine since 2019. My experience includes medical centres in Belarus, among them the Republican Scientific and Practical Centre of Cardiology and the Minsk City Emergency Hospital.",
       "Today I work with a humanitarian medical mission at the specialised cardiac surgery centre MHCC in Libya.",
       "I completed professional training in clinical hypnosis and I am an Associate Member of the American Society of Clinical Hypnosis (ASCH).",
-      "My work is based on evidence-based and integrative medicine, together with a holistic view of the mind and subconscious processes. I do not look at the body separately from the mind, and I do not use the same template for every patient.",
+      "My work is grounded in evidence-based and integrative medicine, with a holistic view of the mind and subconscious processes. I don't look at the body separately from the mind, and I don't use the same template for every patient.",
     ],
     logoAlt: "Dr. Vlad emblem — integrative and holistic medicine",
     bannerAlt: "Dr. Vlad — bridging science, mind and body",
     research: {
       eyebrow: "Research",
-      text: "One part of my professional and academic work looks at how hypnotherapy can be integrated into the full care of people with arterial hypertension. The project has now reached an important practical stage: we have started inviting participants to help evaluate this approach in clinical practice.",
+      text: "Part of my academic work explores how hypnotherapy can be integrated into the care of people with high blood pressure. The project has reached an important stage: we are now inviting participants to help evaluate this approach in clinical practice.",
       linkLabel: "Learn more about the project here",
     },
     moreAboutLabel: "More about me",
@@ -137,23 +137,23 @@ export const homeEn: HomeContent = {
     items: [
       [
         "You complete the pre-consultation questionnaire",
-        "In the questionnaire you describe what troubles you, when the symptoms started, which tests and treatment you have already had, and what you would like to achieve.",
+        "In the questionnaire, you describe what troubles you, when the symptoms started, which tests and treatments you've already had, and what you'd like to achieve.",
       ],
       [
         "I review your information personally",
-        "If your request fits my area of competence and a consultation can help you, my assistant will contact you and arrange a convenient date and time.",
+        "If your request fits my area of expertise and a consultation can help, my assistant will contact you to arrange a convenient date and time.",
       ],
       [
         "You share your medical documents",
-        "If you have them, you can send recent medical reports, test results and a list of your current medication in advance. This way the consultation starts as a better prepared and more specific conversation.",
+        "If you have them, you can send recent medical reports, test results, and a list of your current medication in advance. This way the consultation starts as a better-prepared, more specific conversation.",
       ],
       [
         "What happens in the consultation",
-        "The consultation takes place online and lasts up to 60 minutes. The whole meeting is devoted to a detailed review of your situation, to possible links between physical symptoms, psychological factors and habitual behaviour, and to the plan for what comes next.",
+        "The consultation takes place online and lasts up to 60 minutes. The entire meeting is devoted to a detailed review of your situation — the possible links between physical symptoms, psychological factors, and habitual behaviour — and to the plan for what comes next.",
       ],
     ],
     closing:
-      "No hypnotherapy is done during the first consultation. Even if hypnotherapy is not indicated for you, or working with me does not fit your situation, you will leave with a clearer view of the possible next steps and of which specialist to see.",
+      "No hypnotherapy is done during the first consultation. Even if hypnotherapy isn't right for you, or working with me doesn't fit your situation, you'll leave with a clearer view of the next steps and which specialist to see.",
   },
   faq: {
     eyebrow: "Answers",
@@ -165,27 +165,27 @@ export const homeEn: HomeContent = {
       ],
       [
         "Can I come if I already have a heart diagnosis?",
-        "Yes. A diagnosis does not rule out the influence of anxiety, stress, poor sleep, lifestyle and other factors on how you feel. Integrative work is done in addition to the cardiology follow-up and treatment you need.",
+        "Yes. A diagnosis doesn't rule out the influence of anxiety, stress, poor sleep, lifestyle, and other factors on how you feel. Integrative work is done in addition to the cardiology follow-up and treatment you need.",
       ],
       [
         "Does an integrative approach mean giving up medication?",
-        "No. Dr. Vlad does not suggest stopping prescribed medication on your own, or replacing necessary medical treatment with hypnotherapy or psychological methods. The aim is to combine the evidence-based treatment you need with complementary psychotherapeutic methods in one well-founded plan.",
+        "No. Dr. Vlad will never suggest stopping prescribed medication on your own, or replacing necessary medical treatment with hypnotherapy or psychological methods. The aim is to combine the evidence-based treatment you need with complementary psychological methods in one well-founded plan.",
       ],
       [
         "Is hypnotherapy suitable for everyone?",
-        "No. The decision is made individually, after reviewing your symptoms, medical history, goals and possible contraindications. If hypnotherapy is not suitable, Dr. Vlad will explain which other steps or forms of help are worth considering.",
+        "No. The decision is made individually, after reviewing your symptoms, medical history, goals, and possible contraindications. If hypnotherapy isn't suitable, Dr. Vlad will explain which other steps or forms of help are worth considering.",
       ],
       [
         "Is hypnotherapy done during the first consultation?",
-        "No. The first consultation is for a detailed review of your situation and for deciding the next steps. If hypnotherapy could help, Dr. Vlad will explain separately which goals it would work on and how further sessions could be organised.",
+        "No. The first consultation is for a detailed review of your situation and for deciding the next steps. If hypnotherapy could help, Dr. Vlad will explain separately which goals it would work on and how further sessions could be arranged.",
       ],
       [
         "Will I lose control during hypnotherapy?",
-        "No. Non-directive clinical hypnosis does not mean losing control of yourself or giving control to someone else. It is a state of focused attention in which you know what is happening, hear the practitioner, can still make decisions and can end the session at any moment. Depending on the goal, attention may be directed to body sensations, images, memories or emotional reactions.",
+        "No. Non-directive clinical hypnosis doesn't mean losing control of yourself or giving it to someone else. It's a state of focused attention where you know what's happening, hear the practitioner, can still make decisions, and can end the session at any moment. Depending on the goal, attention may be directed to body sensations, images, memories, or emotional reactions.",
       ],
       [
-        "What if my situation does not match your specialisation?",
-        "Dr. Vlad will tell you so and, as far as the available information allows, will suggest a further route: more tests, in-person medical care, or another specialist in the relevant field.",
+        "What if my situation doesn't match your specialisation?",
+        "Dr. Vlad will tell you so and, as far as the available information allows, will suggest a next step: further tests, in-person medical care, or another specialist in the relevant field.",
       ],
       [
         "Which documents should I prepare?",
@@ -193,13 +193,13 @@ export const homeEn: HomeContent = {
       ],
       [
         "How much does further work cost?",
-        "The first consultation is free. If further individual work is indicated, Dr. Vlad will explain the recommended format, the likely duration and the cost. The decision to continue is always yours.",
+        "The first consultation is free. If further individual work is indicated, Dr. Vlad will explain the recommended format, the likely duration, and the cost. The decision to continue is always yours.",
       ],
     ],
   },
   finalCta: {
     eyebrow: "The first consultation is free",
-    title: "Would you like to understand the cause and how to feel better?",
+    title: "Ready to understand the cause — and how to feel better?",
   },
   footer: {
     role: "Cardiologist · Hypnotherapist",
