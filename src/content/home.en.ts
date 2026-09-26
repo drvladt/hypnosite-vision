@@ -35,7 +35,7 @@ export const homeEn: HomeContent = {
   hero: {
     eyebrow: "Integrative medicine · Hypnotherapy",
     title:
-      "Do chest pain, palpitations, skipped beats or blood pressure swings still bother you, even though your tests are done and you follow your doctors' advice?",
+      "Still feeling chest pain, palpitations, or blood pressure swings — even though your tests are normal and you follow your doctor's advice?",
     lead: "Dr. Vlad works according to the principles of integrative medicine. The goal is not to quiet one symptom, but to understand which medical, emotional and behavioural factors started the problem or keep it going.",
     portraitAlt: "Dr. Vlad — cardiologist and hypnotherapist",
     portraitCaption:
