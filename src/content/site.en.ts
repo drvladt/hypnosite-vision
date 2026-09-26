@@ -89,12 +89,10 @@ export const siteEn: SiteContent = {
       metaTitle: "Research work — Dr. Vlad",
       metaDescription:
         "Research into integrating hypnotherapeutic methods into the comprehensive treatment of arterial hypertension.",
-      pending: true,
       sections: [
         {
           paragraphs: [
             "One direction of my research work is exploring how hypnotherapeutic methods can be integrated into the comprehensive treatment of patients with arterial hypertension. Participant recruitment opened in August 2026.",
-            "The study is registered in the ISRCTN international registry under number ISRCTN21345687.",
           ],
         },
       ],
