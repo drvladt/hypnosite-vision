@@ -5,6 +5,7 @@ import { AboutPageView } from "@/components/about-page";
 import { ApproachPageView } from "@/components/approach-page";
 import { HypnotherapyPageView } from "@/components/hypnotherapy-page";
 import { ResearchPageView } from "@/components/research-page";
+import { ContactPageView } from "@/components/contact-page";
 import {
   DocumentsPageView,
   InfoPageView,
