@@ -40,7 +40,7 @@ export const homeEn: HomeContent = {
     portraitAlt: "Dr. Vlad — cardiologist and hypnotherapist",
     portraitCaption:
       "Work with health anxiety, intrusive thoughts, fears and body reactions — a doctor's view combined with non-directive hypnotherapy, when it is truly indicated.",
-    badges: ["Cardiologist", "In medicine since 2019", "International practice", "Trained in hypnotherapy"],
+    badges: ["Cardiologist", "In medicine since 2019", "International practice", "Certified in hypnotherapy"],
   },
   concerns: {
     eyebrow: "Why people come",
