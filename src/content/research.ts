@@ -4,6 +4,7 @@ export type ResearchSection = {
   title?: string;
   paragraphs?: string[];
   emphasis?: string;
+  callout?: string;
 };
 
 export type ResearchContent = {
@@ -37,7 +38,7 @@ export const researchContent: Record<Locale, ResearchContent> = {
           "Для изучения этого вопроса проводится исследовательская работа «Интеграция эриксоновской недирективной гипнотерапии в комплексное ведение артериальной гипертензии I–II степени». Регистрационный номер: ISRCTN21345687. Работа проводится в сотрудничестве с Американским обществом клинического гипноза (ASCH).",
           "Набор участников начался в августе 2026 года. Набор и участие в исследовании возможны независимо от того, где человек находится на момент включения в исследование. Необходимо соответствовать клиническим критериям, а также иметь возможность пройти предусмотренные протоколом обследования и последующее наблюдение.",
         ],
-        emphasis:
+        callout:
           "В дальнейшем на сайте появится форма для предварительного обращения по вопросам участия. Пока она недоступна, возможность участия и его условия можно обсудить с врачом во время консультации.",
       },
     ],
@@ -65,7 +66,7 @@ export const researchContent: Record<Locale, ResearchContent> = {
           "To study this question, a research work is being conducted: “Integration of Ericksonian non-directive hypnotherapy into the comprehensive management of grade I–II arterial hypertension.” Registration number: ISRCTN21345687. The work is carried out in collaboration with the American Society of Clinical Hypnosis (ASCH).",
           "Participant recruitment began in August 2026. Recruitment and participation in the study are possible regardless of where the person is located at the time of inclusion in the study. It is necessary to meet the clinical criteria and to be able to undergo the examinations and subsequent follow-up provided for by the protocol.",
         ],
-        emphasis:
+        callout:
           "In the future, a form for preliminary enquiries about participation will appear on the website. Until it is available, the possibility of participation and its conditions can be discussed with the doctor during a consultation.",
       },
     ],
@@ -93,7 +94,7 @@ export const researchContent: Record<Locale, ResearchContent> = {
           "Pour étudier cette question, un travail de recherche est mené : « Intégration de l'hypnothérapie non-directive ericksonienne dans la prise en charge globale de l'hypertension artérielle de grades I–II ». Numéro d'enregistrement : ISRCTN21345687. Le travail est mené en collaboration avec l'American Society of Clinical Hypnosis (ASCH).",
           "Le recrutement des participants a débuté en août 2026. Le recrutement et la participation à l'étude sont possibles quel que soit le lieu de résidence de la personne au moment de son inclusion dans l'étude. Il est nécessaire de répondre aux critères cliniques et de pouvoir passer les examens prévus par le protocole ainsi que le suivi ultérieur.",
         ],
-        emphasis:
+        callout:
           "À l'avenir, un formulaire de demande préliminaire concernant la participation sera disponible sur le site. En attendant, la possibilité de participer et ses conditions peuvent être discutées avec le médecin lors d'une consultation.",
       },
     ],

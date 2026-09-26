@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Info } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { researchContent, type ResearchSection } from "@/content/research";
@@ -30,6 +30,14 @@ function ProseSection({ section, number }: { section: ResearchSection; number?: 
           <blockquote className="mt-8 border-l-2 border-gold pl-6 font-display text-xl leading-relaxed text-primary md:text-2xl">
             {section.emphasis}
           </blockquote>
+        )}
+        {section.callout && (
+          <div className="mt-8 flex gap-4 rounded-lg border border-gold/30 bg-gold/10 p-5 md:p-6">
+            <Info aria-hidden="true" className="mt-0.5 shrink-0 text-gold" size={22} />
+            <p className="text-base font-semibold leading-8 text-primary md:text-lg md:leading-9">
+              {section.callout}
+            </p>
+          </div>
         )}
       </div>
     </section>
