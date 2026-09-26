@@ -20,7 +20,7 @@ function ProseSection({ section, number }: { section: HypnotherapySection; numbe
       )}
       <div className={title ? "md:pl-12" : ""}>
         <div className="space-y-5">
-          {section.paragraphs.map((paragraph) => (
+          {(section.paragraphs ?? []).map((paragraph) => (
             <p key={paragraph} className="text-base leading-8 text-foreground/85 md:text-lg md:leading-9">
               {paragraph}
             </p>
