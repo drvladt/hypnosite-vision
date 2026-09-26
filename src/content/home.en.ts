@@ -54,7 +54,7 @@ export const homeEn: HomeContent = {
       "Fear for your heart makes it hard to exercise, travel, fly, stay alone, or be far from medical help.",
     ],
     summary:
-      "If even one of these sounds familiar, there is likely more to how you feel than your physical condition alone. In the first consultation, we look at whether other factors are at play — and whether they can be addressed.",
+      "If any of this sounds familiar, your symptoms may be influenced by more than one factor. During the first consultation, we look at the bigger picture — what may be contributing to your symptoms, what keeps them going, and what can realistically be changed.",
   },
   bigPicture: {
     eyebrow: "A new direction in modern medicine",
