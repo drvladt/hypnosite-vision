@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Info } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { researchContent, type ResearchSection } from "@/content/research";
