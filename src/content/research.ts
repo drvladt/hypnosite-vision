@@ -4,6 +4,7 @@ export type ResearchSection = {
   title?: string;
   paragraphs?: string[];
   emphasis?: string;
+  callout?: string;
 };
 
 export type ResearchContent = {
