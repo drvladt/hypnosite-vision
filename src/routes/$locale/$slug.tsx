@@ -86,6 +86,8 @@ function SlugPage() {
         <HypnotherapyPageView locale={locale} />
     ) : page === "research" ? (
         <ResearchPageView locale={locale} />
+    ) : page === "contact" ? (
+        <ContactPageView locale={locale} />
     ) : !isFlowPage(page) ? (
         <InfoPageView locale={locale} page={siteContent[locale].info[page as InfoPageKey]} />
       ) : page === "consultation" ? (
