@@ -2,7 +2,7 @@ import type { Locale } from "./locales";
 
 export type HypnotherapySection = {
   title?: string;
-  paragraphs: string[];
+  paragraphs?: string[];
   emphasis?: string;
 };
 
