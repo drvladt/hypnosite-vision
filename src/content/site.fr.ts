@@ -123,6 +123,7 @@ export const siteFr: SiteContent = {
           paragraphs: [
             "La voie principale passe par la page consultation : elle présente les conditions et les confirmations qui ouvrent le questionnaire.",
             "Ce site n'est pas destiné aux urgences ni aux questions médicales urgentes.",
+            "Pour les questions organisationnelles ou autres sujets, vous pouvez écrire à support@drvladt.com ou via les réseaux sociaux.",
           ],
         },
       ],
