@@ -70,8 +70,8 @@ export const homeEn: HomeContent = {
     eyebrow: "Dr. Vlad's integrative approach",
     title: "Not separating body from mind — but seeing the whole person",
     paragraphs: [
-      "The body is not a collection of separate parts. Physical health shapes emotions and behaviour — just as stress, anxiety, sleep, and daily habits show up in how the body feels.",
-      "This is why I don't use a one-size-fits-all protocol. The work starts with a careful look at your situation and may move in several connected directions.",
+      "The mind and body are closely connected. Stress can affect sleep, anxiety can make the heart race, and emotional strain can leave us physically exhausted. At the same time, physical symptoms can affect our mood, confidence, and the way we live our daily lives.",
+      "That is why I don’t use a one-size-fits-all approach. The work begins with a careful understanding of your individual situation and, depending on what we find, may involve several interconnected areas.",
     ],
     moreApproachLabel: "Learn more about my integrative approach",
     hypnotherapy: [
