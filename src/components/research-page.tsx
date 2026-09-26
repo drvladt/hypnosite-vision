@@ -31,6 +31,14 @@ function ProseSection({ section, number }: { section: ResearchSection; number?: 
             {section.emphasis}
           </blockquote>
         )}
+        {section.callout && (
+          <div className="mt-8 flex gap-4 rounded-lg border border-gold/30 bg-gold/10 p-5 md:p-6">
+            <Info aria-hidden="true" className="mt-0.5 shrink-0 text-gold" size={22} />
+            <p className="text-base font-semibold leading-8 text-primary md:text-lg md:leading-9">
+              {section.callout}
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );
