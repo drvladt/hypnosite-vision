@@ -89,12 +89,10 @@ export const siteFr: SiteContent = {
       metaTitle: "Travail de recherche — Dr. Vlad",
       metaDescription:
         "Recherche sur l'intégration des méthodes hypnothérapeutiques dans la prise en charge de l'hypertension artérielle.",
-      pending: true,
       sections: [
         {
           paragraphs: [
             "L'un des axes de mon travail de recherche porte sur l'intégration des méthodes hypnothérapeutiques dans la prise en charge globale des patients souffrant d'hypertension artérielle. Le recrutement des participants a débuté en août 2026.",
-            "L'étude est enregistrée au registre international ISRCTN sous le numéro ISRCTN21345687.",
           ],
         },
       ],

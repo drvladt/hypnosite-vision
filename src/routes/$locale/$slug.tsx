@@ -83,6 +83,8 @@ function SlugPage() {
         <ApproachPageView locale={locale} />
     ) : page === "hypnotherapy" ? (
         <HypnotherapyPageView locale={locale} />
+    ) : page === "research" ? (
+        <ResearchPageView locale={locale} />
     ) : !isFlowPage(page) ? (
         <InfoPageView locale={locale} page={siteContent[locale].info[page as InfoPageKey]} />
       ) : page === "consultation" ? (
