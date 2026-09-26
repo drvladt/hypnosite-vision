@@ -4,6 +4,7 @@ import { SiteLayout } from "@/components/site-layout";
 import { AboutPageView } from "@/components/about-page";
 import { ApproachPageView } from "@/components/approach-page";
 import { HypnotherapyPageView } from "@/components/hypnotherapy-page";
+import { ResearchPageView } from "@/components/research-page";
 import {
   DocumentsPageView,
   InfoPageView,
