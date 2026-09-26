@@ -5,6 +5,7 @@ import { AboutPageView } from "@/components/about-page";
 import { ApproachPageView } from "@/components/approach-page";
 import { HypnotherapyPageView } from "@/components/hypnotherapy-page";
 import { ResearchPageView } from "@/components/research-page";
+import { ContactPageView } from "@/components/contact-page";
 import {
   DocumentsPageView,
   InfoPageView,
@@ -85,6 +86,8 @@ function SlugPage() {
         <HypnotherapyPageView locale={locale} />
     ) : page === "research" ? (
         <ResearchPageView locale={locale} />
+    ) : page === "contact" ? (
+        <ContactPageView locale={locale} />
     ) : !isFlowPage(page) ? (
         <InfoPageView locale={locale} page={siteContent[locale].info[page as InfoPageKey]} />
       ) : page === "consultation" ? (

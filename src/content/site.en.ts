@@ -123,6 +123,7 @@ export const siteEn: SiteContent = {
           paragraphs: [
             "The main route is through the consultation page: it sets out the conditions and confirmations that open the intake form.",
             "This website is not intended for emergencies or urgent medical questions.",
+            "For organizational matters or other topics, you can write to support@drvladt.com or reach out through social networks.",
           ],
         },
       ],
