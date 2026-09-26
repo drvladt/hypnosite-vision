@@ -76,32 +76,8 @@ export function ContactPageView({ locale }: { locale: Locale }) {
       <PageHeader page={page} />
       <Sections page={page} />
 
-      {/* Primary path — consultation CTA */}
-      <div className="mt-12 rounded-3xl border border-primary/12 bg-card p-6 shadow-[0_10px_30px_-24px_color-mix(in_oklab,var(--primary)_40%,transparent)] md:p-8">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div className="min-w-0">
-            <h2 className="font-display text-lg font-medium text-primary md:text-xl">
-              {c.common.ctaPrimary}
-            </h2>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              {c.consultation.lead || c.info.contact.lead}
-            </p>
-          </div>
-          <Button
-            asChild
-            size="lg"
-            className="h-12 shrink-0 rounded-full px-6 text-sm shadow-none"
-          >
-            <Link to={pagePath(locale, "consultation")}>
-              {c.common.ctaPrimary}
-              <ArrowRight aria-hidden="true" />
-            </Link>
-          </Button>
-        </div>
-      </div>
-
       {/* Email block */}
-      <div className="mt-6 grid gap-6 md:grid-cols-2">
+      <div className="mt-12 grid gap-6 md:grid-cols-2">
         <div className="rounded-3xl border border-primary/12 bg-secondary/30 p-6 md:p-8">
           <div className="flex items-center gap-3">
             <span className="flex size-11 items-center justify-center rounded-full bg-primary/10 text-primary">
@@ -152,16 +128,23 @@ export function ContactPageView({ locale }: { locale: Locale }) {
         </div>
       </div>
 
-      {/* Secondary actions */}
-      <div className="mt-8 flex flex-wrap gap-3">
-        <Button
-          asChild
-          size="lg"
-          variant="outline"
-          className="h-12 rounded-full px-6 text-sm shadow-none"
-        >
-          <a href={`mailto:${contactEmail}`}>{c.common.writeLabel}</a>
-        </Button>
+      {/* Primary path — consultation CTA */}
+      <div className="mt-6 rounded-3xl border border-primary/12 bg-card p-6 shadow-[0_10px_30px_-24px_color-mix(in_oklab,var(--primary)_40%,transparent)] md:p-8">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <h2 className="font-display text-lg font-medium text-primary md:text-xl">
+            {c.common.ctaPrimary}
+          </h2>
+          <Button
+            asChild
+            size="lg"
+            className="h-12 shrink-0 rounded-full px-6 text-sm shadow-none"
+          >
+            <Link to={pagePath(locale, "consultation")}>
+              {c.common.ctaPrimary}
+              <ArrowRight aria-hidden="true" />
+            </Link>
+          </Button>
+        </div>
       </div>
     </div>
   );
