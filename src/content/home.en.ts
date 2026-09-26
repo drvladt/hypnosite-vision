@@ -75,8 +75,8 @@ export const homeEn: HomeContent = {
     ],
     moreApproachLabel: "Learn more about my integrative approach",
     hypnotherapy: [
-      "When it's appropriate, hypnotherapy can complement your care — for anxiety, fears, body reactions, and long-standing emotional or behavioural patterns.",
-      "It never replaces medical treatment, and it is never prescribed automatically.",
+      "When appropriate, hypnotherapy can be used alongside medical care to work with anxiety, fears, stress-related physical responses, and long-standing emotional or behavioural patterns.",
+      "It does not replace medical treatment and is only considered when it is relevant to the individual situation.",
     ],
     moreHypnotherapyLabel: "Learn more about how hypnotherapy works here",
   },
