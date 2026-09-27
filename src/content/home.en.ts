@@ -50,8 +50,8 @@ export const homeEn: HomeContent = {
       "Your heart rate, chest discomfort, or blood pressure clearly reacts to stress, conflict, strong emotions, exhaustion, or poor sleep.",
       "You follow your prescribed treatment, but you still don’t feel well — or the improvement isn’t what you expected.",
       "Since your diagnosis, you live with a constant fear of complications, a heart attack, getting worse, or sudden death.",
-      "It feels like every doctor looks at separate symptoms and numbers — and no one helps you see the whole picture, or how your body and mind might be connected.",
       "Fear for your heart makes it hard to exercise, travel, fly, stay alone, or be far from medical help.",
+
     ],
     summary:
       "If any of this sounds familiar, your symptoms may be influenced by more than one factor. During the first consultation, we look at the bigger picture — what may be contributing to your symptoms, what keeps them going, and what can realistically be changed.",
