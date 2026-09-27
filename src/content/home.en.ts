@@ -164,7 +164,7 @@ export const homeEn: HomeContent = {
         "No. You can complete the questionnaire with the information you already have. After reading it and speaking with you, the doctor may recommend further tests if they are clinically needed.",
       ],
       [
-        "Can I come if I already have a heart diagnosis?",
+        "Can I come if I already have a cardiac diagnosis?",
         "Yes. A diagnosis doesn't rule out the influence of anxiety, stress, poor sleep, lifestyle, and other factors on how you feel. Integrative work is done in addition to the cardiology follow-up and treatment you need.",
       ],
       [
