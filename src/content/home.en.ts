@@ -177,7 +177,7 @@ export const homeEn: HomeContent = {
       ],
       [
         "Is hypnotherapy done during the first consultation?",
-        "No. The first consultation is for a detailed review of your situation and for deciding the next steps. If hypnotherapy could help, Dr. Vlad will explain separately which goals it would work on and how further sessions could be arranged.",
+        "No. The first consultation is focused on understanding your situation and deciding what to do next. If hypnotherapy may be appropriate, Dr. Vlad will explain how it could be used in your case and discuss the next steps with you.",
       ],
       [
         "Will I lose control during hypnotherapy?",
