@@ -173,7 +173,7 @@ export const homeEn: HomeContent = {
       ],
       [
         "Is hypnotherapy suitable for everyone?",
-        "No. The decision is made individually, after reviewing your symptoms, medical history, goals, and possible contraindications. If hypnotherapy isn't suitable, Dr. Vlad will explain which other steps or forms of help are worth considering.",
+        "No. The decision is made individually, after reviewing your symptoms, medical history, goals, and possible contraindications. If hypnotherapy isn't suitable, Dr. Vlad will explain which other steps or forms of help are suitable for you.",
       ],
       [
         "Is hypnotherapy done during the first consultation?",
