@@ -82,8 +82,8 @@ export const homeEn: HomeContent = {
   },
   consultation: {
     eyebrow: "ONLINE CONSULTATION",
-    title: "When your situation calls for a careful, personal review — not generic advice",
-    lead: "The first consultation brings your scattered information together into one clear picture. We go through your symptoms, your medical history, the tests you already have, and the possible role of emotional factors. Afterward, you will have a clearer understanding of:",
+    title: "When you need more than a standard approach",
+    lead: "The first consultation is about understanding your situation as a whole. We discuss your symptoms, medical history, previous tests and treatment, as well as other factors that may be affecting how you feel.\n\nBy the end of the consultation, you will have a clearer understanding of:",
     outcomes: [
       "whether you need further examination;",
       "which emotional factors may be keeping you unwell;",
