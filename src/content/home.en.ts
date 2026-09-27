@@ -181,7 +181,7 @@ export const homeEn: HomeContent = {
       ],
       [
         "Will I lose control during hypnotherapy?",
-        "No. Non-directive clinical hypnosis doesn't mean losing control of yourself or giving it to someone else. It's a state of focused attention where you know what's happening, hear the practitioner, can still make decisions, and can end the session at any moment. Depending on the goal, attention may be directed to body sensations, images, memories, or emotional reactions.",
+        "No. During hypnosis, you remain aware of what is happening and stay in control. You can hear and respond to the practitioner, make your own decisions, and stop the session at any time.\u00a0Depending on the purpose of the session, your attention may be focused on physical sensations, thoughts, images, memories, or emotions.",
       ],
       [
         "What if my situation doesn't match your specialisation?",
