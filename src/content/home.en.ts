@@ -123,7 +123,7 @@ export const homeEn: HomeContent = {
   },
   reviews: {
     eyebrow: "Results and reviews",
-    title: "Stories from people who have completed individual work",
+    title: "Stories from people I’ve worked with",
     emptyLabel: "Video stories will appear here once participants have given permission to publish them.",
     previousLabel: "Previous review",
     nextLabel: "Next review",
