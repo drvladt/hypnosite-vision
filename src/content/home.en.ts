@@ -115,7 +115,7 @@ export const homeEn: HomeContent = {
     bannerAlt: "Dr. Vlad — bridging science, mind and body",
     research: {
       eyebrow: "Research",
-      text: "Part of my academic work explores how hypnotherapy can be integrated into the care of people with high blood pressure. The project has reached an important stage: we are now inviting participants to help evaluate this approach in clinical practice.",
+      text: "I am currently conducting a clinical research project on the use of hypnotherapy alongside standard care for people with high blood pressure. The study is now recruiting participants to evaluate this approach in clinical practice.",
       linkLabel: "Learn more about the project here",
     },
     moreAboutLabel: "More about me",
