@@ -104,7 +104,7 @@ export const homeEn: HomeContent = {
   },
   about: {
     eyebrow: "About me",
-    title: "Dr. Vlad Tettegah — cardiologist and hypnotherapist",
+    title: "Dr. Vlad\u00a0 — cardiologist and certified hypnotherapist",
     paragraphs: [
       "I have worked in medicine since 2019. My experience includes medical centres in Belarus, among them the Republican Scientific and Practical Centre of Cardiology and the Minsk City Emergency Hospital.",
       "Today I work with a humanitarian medical mission at the specialised cardiac surgery centre MHCC in Libya.",
