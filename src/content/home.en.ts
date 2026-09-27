@@ -137,7 +137,7 @@ export const homeEn: HomeContent = {
     items: [
       [
         "You complete the pre-consultation questionnaire",
-        "In the questionnaire, you describe what troubles you, when the symptoms started, which tests and treatments you've already had, and what you'd like to achieve.",
+        "In the questionnaire, you tell me what is bothering you, when it started, what tests or treatments you’ve already had, and what you hope to achieve.",
       ],
       [
         "I review your information personally",
@@ -149,11 +149,11 @@ export const homeEn: HomeContent = {
       ],
       [
         "What happens in the consultation",
-        "The consultation takes place online and lasts up to 60 minutes. The entire meeting is devoted to a detailed review of your situation — the possible links between physical symptoms, psychological factors, and habitual behaviour — and to the plan for what comes next.",
+        "The consultation takes place online and lasts up to 60 minutes. We take the time to understand your situation, explore what may be contributing to your symptoms, and decide on the most appropriate next steps.",
       ],
     ],
     closing:
-      "No hypnotherapy is done during the first consultation. Even if hypnotherapy isn't right for you, or working with me doesn't fit your situation, you'll leave with a clearer view of the next steps and which specialist to see.",
+      "Hypnotherapy is not part of the first consultation. If it is not the right approach for your situation, the consultation can still help clarify what to do next and whether another specialist may be more appropriate.",
   },
   faq: {
     eyebrow: "Answers",
