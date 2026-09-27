@@ -91,7 +91,7 @@ export const homeEn: HomeContent = {
       "whether hypnotherapy could help you;",
       "which next step makes sense.",
     ],
-    suitableTitle: "Who this format is suitable for",
+    suitableTitle: "For who this format is suitable",
     suitableFor: [
       "adults aged 18 and over in a planned, relatively stable situation;",
       "people who have already had tests or a diagnosis, but didn't get the improvement they hoped for;",
@@ -100,7 +100,7 @@ export const homeEn: HomeContent = {
       "people who want to know whether clinical hypnotherapy could help in their case.",
     ],
     suitableNote:
-      "You don't have to decide on your own whether the problem is medical, psychological, or psychosomatic. That is exactly what the first consultation is for — to review what we know and find a sensible direction.",
+      "You don’t have to figure out on your own whether your symptoms are physical, psychological, or somewhere in between. The first consultation is a chance to look at the whole picture, understand what may be going on, and decide what to do next.",
   },
   about: {
     eyebrow: "About me",
