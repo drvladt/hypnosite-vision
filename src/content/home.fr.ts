@@ -50,8 +50,8 @@ export const homeFr: HomeContent = {
       "Votre rythme cardiaque, votre gêne thoracique ou vos chiffres de tension changent nettement en cas de stress, de conflit, de tension émotionnelle, de surmenage ou de manque de sommeil.",
       "Le traitement est en place et vous le suivez, mais l'amélioration durable n'arrive pas : votre état reste instable ou s'est amélioré bien moins que vous ne l'espériez.",
       "Depuis l'annonce du diagnostic, vous vivez avec la peur constante des complications, de l'infarctus, d'un trouble du rythme, d'une aggravation ou d'une mort subite.",
-      "Vous avez l'impression que chaque spécialiste examine des symptômes et des chiffres isolés, sans que personne ne vous aide à reconstituer l'ensemble ni à comprendre le lien possible entre votre état physique et psychologique.",
       "La peur pour votre cœur rend difficile le sport, les voyages, l'avion, le fait de rester seul ou de vous éloigner d'une aide médicale.",
+
     ],
     summary:
       "Si vous vous reconnaissez dans au moins une de ces situations, votre état ne dépend pas uniquement du physique. Lors de la première consultation, nous examinons s'il existe d'autres facteurs sur lesquels il est possible et utile d'agir.",
