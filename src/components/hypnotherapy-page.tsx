@@ -8,7 +8,7 @@ import { siteContent } from "@/content/site";
 
 function ItalicLines({ lines, className }: { lines: string[]; className?: string }) {
   return (
-    <div className={className ?? "mt-8 space-y-3"}>
+    <div className={className ?? "mt-6 space-y-3"}>
       {lines.map((line, index) => (
         <p
           key={index}
@@ -26,7 +26,7 @@ function ProseSection({ section, number }: { section: HypnotherapySection; numbe
   return (
     <section>
       {title && (
-        <div className="mb-7 grid gap-3 md:grid-cols-[3rem_1fr] md:items-start">
+        <div className="mb-5 grid gap-3 md:grid-cols-[3rem_1fr] md:items-start">
           {number ? <span className="pt-2 text-xs font-bold text-gold">{number}</span> : null}
           <h2 className="font-display text-3xl font-medium leading-tight text-primary md:text-4xl">
             {title}
@@ -35,9 +35,9 @@ function ProseSection({ section, number }: { section: HypnotherapySection; numbe
       )}
       <div className={title ? "md:pl-12" : ""}>
         {section.openingItalics?.length ? (
-          <ItalicLines lines={section.openingItalics} className="mb-7 space-y-3" />
+          <ItalicLines lines={section.openingItalics} className="mb-5 space-y-3" />
         ) : null}
-        <div className="space-y-5">
+        <div className="space-y-4">
           {(section.paragraphs ?? []).map((paragraph, index) => (
             <p key={index} className="text-base leading-8 text-foreground/85 md:text-lg md:leading-9">
               {paragraph}
@@ -46,7 +46,7 @@ function ProseSection({ section, number }: { section: HypnotherapySection; numbe
         </div>
         {section.italicLines?.length ? <ItalicLines lines={section.italicLines} /> : null}
         {section.emphasis && (
-          <blockquote className="mt-8 border-l-2 border-gold pl-6 font-display text-xl leading-relaxed text-primary md:text-2xl">
+          <blockquote className="mt-6 border-l-2 border-gold pl-6 font-display text-xl leading-relaxed text-primary md:text-2xl">
             {section.emphasis}
           </blockquote>
         )}
@@ -92,13 +92,13 @@ export function HypnotherapyPageView({ locale }: { locale: Locale }) {
 
       <div className="mx-auto mt-8 w-full max-w-4xl px-5 md:mt-10 md:px-8">
         {middle.map(({ section, number }, index) => (
-          <div key={index} className={index > 0 ? "mt-10 md:mt-14" : undefined}>
+          <div key={index} className={index > 0 ? "mt-8 md:mt-10" : undefined}>
             <ProseSection section={section} number={number} />
           </div>
         ))}
       </div>
 
-      <section className="mt-10 bg-primary py-10 text-primary-foreground md:mt-14 md:py-14">
+      <section className="mt-8 bg-primary py-10 text-primary-foreground md:mt-10 md:py-14">
         <div className="mx-auto w-full max-w-4xl px-5 md:px-8">
           <div className="[&_blockquote]:text-gold-light [&_h2]:text-primary-foreground [&_p]:text-primary-foreground/80">
             <ProseSection section={last.section} number={last.number} />

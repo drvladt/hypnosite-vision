@@ -63,11 +63,8 @@ export const hypnotherapyContent: Record<Locale, HypnotherapyContent> = {
     eyebrow: "Method",
     title: "What is hypnotherapy?",
     lead:
-      "When people hear the word “hypnosis”, they often imagine a swinging pendulum, sleep, or someone losing control.",
+      "When people hear the word “hypnosis”, they often imagine a swinging pendulum, sleep, or someone losing control. In reality, hypnotherapy is very different.",
     sections: [
-      {
-        paragraphs: ["In reality, hypnotherapy is very different."],
-      },
       {
         title: "You remain aware and in control",
         paragraphs: [
@@ -135,11 +132,7 @@ export const hypnotherapyContent: Record<Locale, HypnotherapyContent> = {
           "What comes up during hypnosis — an image, feeling, memory, or association — should not automatically be treated as an exact record of what happened in the past.",
           "The goal is not to prove exactly what happened years ago.",
           "What matters more is understanding what the experience means to you today:",
-        ],
-        italicLines: [
-          "What did I learn from it?",
-          "What did I start believing about myself?",
-          "Does that belief still influence the way I react today?",
+          "What did I learn from it? What did I start believing about myself? Does that belief still influence the way I react today?",
         ],
         emphasis:
           "We cannot change what happened in the past. But we can change the way we relate to it today.",
