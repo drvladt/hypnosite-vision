@@ -2,7 +2,12 @@ import type { Locale } from "./locales";
 
 export type HypnotherapySection = {
   title?: string;
+  /** Italic lines rendered before the paragraphs (e.g. a continuation of the previous section's lead-in). */
+  openingItalics?: string[];
   paragraphs?: string[];
+  /** Italic lines rendered after the paragraphs (inner thoughts, beliefs, questions). */
+  italicLines?: string[];
+  /** Gold-bordered pull quote at the end of the section. */
   emphasis?: string;
 };
 
@@ -56,41 +61,103 @@ export const hypnotherapyContent: Record<Locale, HypnotherapyContent> = {
   },
   en: {
     eyebrow: "Method",
-    title: "What is hypnotherapy",
+    title: "What is hypnotherapy?",
     lead:
-      "When people hear the word “hypnosis”, many picture a swinging pendulum, sleep and a person who suddenly loses control. This image owes more to stage performance than to modern medicine.",
+      "When people hear the word “hypnosis”, they often imagine a swinging pendulum, sleep, or someone losing control.",
     sections: [
       {
+        paragraphs: ["In reality, hypnotherapy is very different."],
+      },
+      {
+        title: "You remain aware and in control",
         paragraphs: [
-          "In clinical practice, predominantly non-directive, or Ericksonian, hypnosis is used. The choice of technique depends on the situation and the goal of therapy. During such work, the therapist does not give ready-made answers. They ask questions, use imagery and help the person better understand their own feelings, reactions and habitual ways of thinking. The person remains conscious and hears the therapist. They can share what arises during the session without having to follow a set script. If they wish, the person can open their eyes and stop the session at any moment.",
-          "The process can largely be compared to a meditative state. With the therapist's support, the person directs attention inward and concentrates on thoughts, sensations and images. The therapist does not control them from outside: they help hold attention, ask questions and accompany the person in exploring their own reactions. This state of concentration or focus on particular feelings is sometimes called — in non-medical sources — a trance.",
+          "Hypnotherapy is not about putting you to sleep or taking control of your mind.",
+          "During a session, you remain aware of what is happening. You hear me, you can speak, make your own decisions, open your eyes, and stop the session at any time.",
+          "In my work, I mainly use a non-directive, Ericksonian approach. This means I do not tell you what to think or give you ready-made answers. Instead, I use questions, imagery, and focused attention to help you explore your own thoughts, emotions, physical sensations, and reactions.",
         ],
         emphasis:
-          "This state of concentration or focus on particular feelings is sometimes called — in non-medical sources — a trance.",
+          "You remain aware of what is happening and in control throughout the session.",
       },
       {
+        title: "What does hypnosis feel like?",
         paragraphs: [
-          "A simple example… Imagine a child called to the blackboard once again. After solving a problem incorrectly, the teacher responds sharply and classmates laugh. In that moment, the child feels shame and fear for the first time.",
-          "Years pass, and the person may no longer even remember the event. Now it is an adult preparing for an important presentation. They know they can manage, but even before the presentation they feel ungrounded anxiety and fear; that morning they are even nauseous and sick. There is no blackboard, no laughing class in the present situation. Yet there is a familiar fear of making a mistake in front of others — and a bodily reaction in the form of vomiting caused precisely by that fear.",
+          "Think of a moment when you were completely absorbed in a book, a film, music, or your own thoughts. You were still awake and aware, but your attention was focused so deeply that everything around you seemed less important for a while.",
+          "Hypnosis can feel somewhat similar.",
+          "Your attention becomes more focused, making it easier to notice thoughts, emotions, memories, images, or physical sensations that may normally pass unnoticed.",
+          "I do not control what happens in your mind. My role is to guide your attention, ask questions, and help you explore what comes up.",
+          "This focused state is often called a hypnotic state or trance.",
         ],
       },
       {
+        title: "Why can past experiences still affect us today?",
         paragraphs: [
-          "During a hypnotherapy session, the person can — with the therapist's support — mentally return to that school day and turn once again to the feelings they experienced then. Now the person can look at what happened from an adult's perspective and see that a mistake does not make them incapable, and another's laughter does not define their worth. During the session, this old conclusion can lose its former power. Before the presentation, the person may still feel nervous, but no longer necessarily feels like that child standing at the blackboard again.",
-          "Such processes occur in many moments of our lives and give rise to various psychosomatic manifestations. Regressive techniques make it possible to find the root of these processes and change the attitudes and conclusions adopted at those moments. At the same time, the images that arise during the session cannot be taken as an exact record of the past. For therapy, what matters more is understanding the significance the person gives to their experience today: what conclusion they drew about themselves and whether that conclusion still helps them now.",
+          "Imagine a child standing at the blackboard.",
+          "He makes a mistake. The teacher responds harshly. Some classmates laugh. He feels embarrassed and afraid of making another mistake.",
+          "Years pass. He may barely remember that day.",
+          "Now imagine him as an adult preparing for an important presentation. He knows the material. He is well prepared. But as the presentation gets closer, something changes.",
+          "His heart starts racing. His stomach feels unsettled. He becomes increasingly anxious and one thought keeps coming back:",
+        ],
+      },
+      {
+        openingItalics: ["“What if I make a mistake and everyone judges me?”"],
+        paragraphs: [
+          "There is no classroom anymore. No teacher. No classmates.",
+          "But something about the situation feels familiar.",
+          "The circumstances have changed, yet a similar emotional and physical reaction may still appear.",
+          "This does not mean that every reaction we have today comes from one childhood event. Usually, our patterns develop through many experiences over time. But some experiences can influence what we expect, what we fear, and what we come to believe about ourselves.",
+        ],
+      },
+      {
+        title: "Working with earlier experiences",
+        paragraphs: [
+          "This is where hypnotherapy may sometimes help.",
+          "When appropriate, we can explore earlier experiences that seem connected with a reaction that is still causing difficulties today.",
+          "The goal is not simply to find an old memory. What matters is understanding how that experience may still affect you today.",
+          "Perhaps, somewhere along the way, a person learned:",
+        ],
+      },
+      {
+        openingItalics: [
+          "“If I make a mistake, I will be humiliated.”",
+          "“I am not good enough.”",
+          "“I must always get things right.”",
+          "“If I disappoint people, they may reject me.”",
+        ],
+        paragraphs: [
+          "Years later, you may logically know that these beliefs are not necessarily true. And yet your emotions — and sometimes your body — may still react as if they were.",
+          "Hypnotherapy gives us a way to explore that difference between what you know and how you still react.",
+        ],
+      },
+      {
+        title: "The goal is not to recover a perfect memory",
+        paragraphs: [
+          "Memory is not a video recording.",
+          "What comes up during hypnosis — an image, feeling, memory, or association — should not automatically be treated as an exact record of what happened in the past.",
+          "The goal is not to prove exactly what happened years ago.",
+          "What matters more is understanding what the experience means to you today:",
+        ],
+        italicLines: [
+          "What did I learn from it?",
+          "What did I start believing about myself?",
+          "Does that belief still influence the way I react today?",
         ],
         emphasis:
-          "For therapy, what matters more is understanding the significance the person gives to their experience today: what conclusion they drew about themselves and whether that conclusion still helps them now.",
+          "We cannot change what happened in the past. But we can change the way we relate to it today.",
       },
       {
+        title: "More freedom in the present",
         paragraphs: [
-          "Past events cannot be changed. But the thought “I must always be flawless” can be learned to be noticed, tested and gradually no longer taken as the only truth about oneself. When the relationship to oneself and to one's experiences changes, the possibility arises to react differently in the present as well.",
-          "Hypnotherapy can help a person not only make sense of the reactions that hinder them today, but also see how many decisions they have grown accustomed to making out of fear and self-doubt. Behind the habit of postponing an important step, staying silent about one's needs, or turning away from the new and unfamiliar, there sometimes lies an old fear of making a mistake, of being rejected, or of failing to meet expectations. When a person begins to understand where this fear comes from and relates to past experience in a new way, it becomes easier to act differently. They may dare to take important steps and realise what they have long wanted but kept putting off. Such steps gradually change not a single reaction, but life itself — a life in which the person gains more freedom to choose.",
+          "These patterns do not always look like obvious fears.",
+          "Maybe you keep postponing something you really want to do.",
+          "Maybe you stay silent when you want to say what you need.",
+          "Maybe you avoid opportunities because you are afraid of failing.",
+          "Or perhaps you put enormous pressure on yourself to do everything perfectly.",
+          "You may even understand why you do it — and still find yourself repeating the same pattern.",
+          "Hypnotherapy can help explore the emotions, beliefs, and automatic reactions behind these patterns.",
+          "The goal is not to erase your past or change who you are. It is to understand why certain situations still affect you the way they do — and to create more freedom in how you respond to them today.",
         ],
-      },
-      {
         emphasis:
-          "This is one of the goals of hypnotherapy — to help a person better understand their reactions and gain more freedom in their own decisions.",
+          "One of the goals of hypnotherapy is simple: to understand what drives your reactions, so that old patterns do not have to keep making your decisions for you.",
       },
     ],
   },
