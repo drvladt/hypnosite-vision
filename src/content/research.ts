@@ -101,27 +101,46 @@ export const researchContent: Record<Locale, ResearchContent> = {
     eyebrow: "Recherche",
     title: "Travail de recherche",
     lead:
-      "Étude de l'intégration des méthodes hypnothérapeutiques dans la prise en charge globale des patients souffrant d'hypertension artérielle.",
+      "Étudier comment l'hypnothérapie peut être intégrée à la prise en charge des personnes souffrant d'hypertension artérielle.",
     sections: [
       {
+        epigraph: "Il faut moins stresser.",
         paragraphs: [
-          "« Il faut moins se stresser » — ce conseil, une personne dont la tension artérielle augmente l'entend souvent. Mais il est de peu d'aide pour celui qui vit dans une tension constante, s'inquiète pour ses proches, réagit vivement aux conflits ou, même au calme, se prépare mentalement à de nouveaux problèmes. Il est impossible de simplement décider de ne plus ressentir de stress. L'essentiel est de comprendre ce qui maintient cet état et comment modifier progressivement la réaction habituelle à celui-ci.",
+          "Les personnes qui ont une tension artérielle élevée entendent souvent ce conseil. Mais il n'est pas toujours facile à appliquer.",
+          "Certaines personnes vivent sous tension pendant des années. Elles s'inquiètent beaucoup, réagissent fortement aux conflits ou ont constamment l'impression qu'un nouveau problème va arriver. Même dans les moments calmes, leur esprit reste en alerte.",
+          "On ne peut pas simplement décider de ne plus ressentir de stress.",
+          "La question est plutôt de comprendre ce qui entretient cet état et comment apprendre à y réagir autrement.",
         ],
       },
       {
+        title: "Pourquoi étudier cette question ?",
         paragraphs: [
-          "Le traitement moderne de l'hypertension artérielle nécessite une approche globale. Il comprend des modifications du mode de vie et, lorsque c'est nécessaire, un traitement médicamenteux. Parallèlement, chez certaines personnes, l'anxiété, le stress prolongé et l'habitude d'être constamment en tension peuvent influencer les chiffres de la tension et en compliquer le contrôle. Les premières observations cliniques permettent de supposer que le travail sur le stress de fond constant, l'anxiété, la colère refoulée ou l'irritabilité au moyen de l'hypnothérapie pourrait améliorer le contrôle de la tension artérielle.",
+          "La prise en charge de l'hypertension repose notamment sur des changements du mode de vie et, lorsque cela est nécessaire, sur un traitement médicamenteux.",
+          "Mais chez certaines personnes, le stress prolongé, l'anxiété et la tension intérieure peuvent aussi influencer la pression artérielle et rendre son contrôle plus difficile.",
+          "Cela soulève une question importante : travailler sur le stress chronique, l'anxiété, la colère ou certaines réactions émotionnelles peut-il aider à améliorer le contrôle de la pression artérielle ?",
+          "L'hypnothérapie pourrait être l'un des outils permettant de travailler sur ces facteurs. Son effet doit cependant être évalué de manière rigoureuse.",
         ],
         emphasis:
-          "L'ampleur et la durabilité de cet effet restent à évaluer par des méthodes scientifiques, dans le cadre de la médecine fondée sur les preuves.",
+          "L'importance et la durée d'un éventuel effet doivent être étudiées selon les méthodes de la médecine fondée sur les preuves.",
+        outro: "Mon travail de recherche porte sur cette question.",
+        study: {
+          label: "À propos de l'étude",
+          title:
+            "Intégration de l'hypnothérapie non directive ericksonienne dans la prise en charge globale de l'hypertension artérielle de grades I–II",
+          registrationLabel: "Numéro d'enregistrement",
+          registration: "ISRCTN21345687",
+          partner:
+            "Ce travail est mené en collaboration avec l'American Society of Clinical Hypnosis (ASCH).",
+        },
       },
       {
+        title: "Participation",
         paragraphs: [
-          "Pour étudier cette question, un travail de recherche est mené : « Intégration de l'hypnothérapie non-directive ericksonienne dans la prise en charge globale de l'hypertension artérielle de grades I–II ». Numéro d'enregistrement : ISRCTN21345687. Le travail est mené en collaboration avec l'American Society of Clinical Hypnosis (ASCH).",
-          "Le recrutement des participants a débuté en août 2026. Le recrutement et la participation à l'étude sont possibles quel que soit le lieu de résidence de la personne au moment de son inclusion dans l'étude. Il est nécessaire de répondre aux critères cliniques et de pouvoir passer les examens prévus par le protocole ainsi que le suivi ultérieur.",
+          "Le recrutement des participants a débuté en août 2026.",
+          "Il n'est pas nécessaire de vivre dans un pays ou une région spécifique pour participer. Il faut cependant répondre aux critères cliniques de l'étude et pouvoir effectuer les examens et le suivi prévus par le protocole.",
         ],
         callout:
-          "À l'avenir, un formulaire de demande concernant la participation sera disponible sur le site. En attendant, la possibilité de participer et ses conditions peuvent être discutées avec le médecin lors d'une consultation.",
+          "Un formulaire de demande de participation sera prochainement disponible sur le site. En attendant, la possibilité de participer ainsi que les conditions de l'étude peuvent être discutées lors d'une consultation.",
       },
     ],
   },
