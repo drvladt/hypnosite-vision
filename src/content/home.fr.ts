@@ -36,10 +36,10 @@ export const homeFr: HomeContent = {
     eyebrow: "Médecine intégrative · Hypnothérapie",
     title:
       "On vous dit que tout va bien, mais vous continuez à ressentir les symptômes ?",
-    lead: "Le Dr. Vlad travaille selon les principes de la médecine intégrative. L'objectif n'est pas de faire taire un symptôme isolé, mais de comprendre quels facteurs médicaux, émotionnels et comportementaux ont pu créer le problème ou continuent de l'entretenir.",
+    lead: "Le Dr. Vlad travaille selon les principes de la médecine intégrative. L'objectif n'est pas de traiter un symptôme isolé, mais de comprendre quels facteurs médicaux, émotionnels et comportementaux ont pu créer le problème ou continuent de l'entretenir.",
     portraitAlt: "Dr. Vlad — cardiologue et hypnothérapeute",
     portraitCaption:
-      "Travail sur l'anxiété liée à la santé, les pensées obsédantes, les peurs et les réactions corporelles — en associant le regard du médecin aux méthodes d'hypnothérapie non directive lorsqu'elles sont réellement indiquées.",
+      "J’accompagne les personnes confrontées à l’anxiété liée à la santé, aux pensées intrusives, aux peurs et aux réactions physiques. Lorsque cela peut être utile, j’intègre l’hypnothérapie non directive à mon approche personalisée.",
     badges: ["Cardiologue", "En médecine depuis 2019", "Pratique internationale", "Spécialisation en hypnothérapie"],
   },
   concerns: {
