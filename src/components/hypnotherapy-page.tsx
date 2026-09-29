@@ -6,6 +6,21 @@ import { hypnotherapyContent, type HypnotherapySection } from "@/content/hypnoth
 import { contactEmail, pagePath, type Locale } from "@/content/locales";
 import { siteContent } from "@/content/site";
 
+function ItalicLines({ lines, className }: { lines: string[]; className?: string }) {
+  return (
+    <div className={className ?? "mt-8 space-y-3"}>
+      {lines.map((line, index) => (
+        <p
+          key={index}
+          className="font-display text-xl italic leading-relaxed text-primary md:text-2xl"
+        >
+          {line}
+        </p>
+      ))}
+    </div>
+  );
+}
+
 function ProseSection({ section, number }: { section: HypnotherapySection; number?: string | undefined }) {
   const title = section.title?.trim();
   return (
@@ -19,13 +34,17 @@ function ProseSection({ section, number }: { section: HypnotherapySection; numbe
         </div>
       )}
       <div className={title ? "md:pl-12" : ""}>
+        {section.openingItalics?.length ? (
+          <ItalicLines lines={section.openingItalics} className="mb-7 space-y-3" />
+        ) : null}
         <div className="space-y-5">
-          {(section.paragraphs ?? []).map((paragraph) => (
-            <p key={paragraph} className="text-base leading-8 text-foreground/85 md:text-lg md:leading-9">
+          {(section.paragraphs ?? []).map((paragraph, index) => (
+            <p key={index} className="text-base leading-8 text-foreground/85 md:text-lg md:leading-9">
               {paragraph}
             </p>
           ))}
         </div>
+        {section.italicLines?.length ? <ItalicLines lines={section.italicLines} /> : null}
         {section.emphasis && (
           <blockquote className="mt-8 border-l-2 border-gold pl-6 font-display text-xl leading-relaxed text-primary md:text-2xl">
             {section.emphasis}
@@ -36,12 +55,24 @@ function ProseSection({ section, number }: { section: HypnotherapySection; numbe
   );
 }
 
+function numberSections(sections: HypnotherapySection[]) {
+  let count = 0;
+  return sections.map((section) => {
+    const titled = Boolean(section.title?.trim());
+    if (titled) count += 1;
+    return { section, number: titled ? String(count).padStart(2, "0") : undefined };
+  });
+}
+
 export function HypnotherapyPageView({ locale }: { locale: Locale }) {
   const c = hypnotherapyContent[locale];
   const common = siteContent[locale].common;
-  const [intro, example, session, change, goal] = c.sections;
+  const [intro, ...body] = c.sections;
+  const numbered = numberSections(body);
+  const last = numbered[numbered.length - 1];
+  const middle = numbered.slice(0, -1);
 
-  if (!intro || !example || !session || !change || !goal) return null;
+  if (!intro || !last) return null;
 
   return (
     <article className="pb-20 md:pb-28">
@@ -55,24 +86,22 @@ export function HypnotherapyPageView({ locale }: { locale: Locale }) {
 
       <section className="mt-8 border-y border-border bg-secondary/35 py-8 md:mt-10 md:py-12">
         <div className="mx-auto w-full max-w-4xl px-5 md:px-8">
-          <ProseSection section={intro} number={intro.title ? "01" : undefined} />
+          <ProseSection section={intro} />
         </div>
       </section>
 
       <div className="mx-auto mt-8 w-full max-w-4xl px-5 md:mt-10 md:px-8">
-        <ProseSection section={example} number={example.title ? "02" : undefined} />
-        <div className="mt-8 md:mt-10">
-          <ProseSection section={session} number={session.title ? "03" : undefined} />
-        </div>
-        <div className="mt-8 md:mt-10">
-          <ProseSection section={change} number={change.title ? "04" : undefined} />
-        </div>
+        {middle.map(({ section, number }, index) => (
+          <div key={index} className={index > 0 ? "mt-10 md:mt-14" : undefined}>
+            <ProseSection section={section} number={number} />
+          </div>
+        ))}
       </div>
 
-      <section className="mt-8 bg-primary py-8 text-primary-foreground md:mt-10 md:py-12">
+      <section className="mt-10 bg-primary py-10 text-primary-foreground md:mt-14 md:py-14">
         <div className="mx-auto w-full max-w-4xl px-5 md:px-8">
           <div className="[&_blockquote]:text-gold-light [&_h2]:text-primary-foreground [&_p]:text-primary-foreground/80">
-            <ProseSection section={goal} number={goal.title ? "05" : undefined} />
+            <ProseSection section={last.section} number={last.number} />
           </div>
         </div>
       </section>
