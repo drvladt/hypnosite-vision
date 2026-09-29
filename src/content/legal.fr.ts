@@ -23,8 +23,8 @@ export const legalFr: LegalContent = {
     access: {
       title: "Confidentialité",
       paragraphs: [
-        "Vos informations médicales et vos documents sont examinés personnellement par le Dr Vlad. Une assistante ne peut recevoir que les coordonnées et informations organisationnelles nécessaires pour la suite, et n'a pas accès à la partie médicale de votre demande.",
-        `Les services Google et ${L("hostingProvider")} peuvent être utilisés pour le fonctionnement du questionnaire et la conservation des éléments transmis. Pour en savoir plus sur le traitement, la conservation des données et vos droits, consultez la Politique de confidentialité.`,
+        "Vos informations médicales et vos documents sont examinés personnellement par le Dr Vlad. L'assistant du Dr. ne peut recevoir que les coordonnées et informations organisationnelles nécessaires pour la suite, et n'a pas accès à la partie médicale de votre demande.",
+        "Les services Google peuvent être utilisés pour le fonctionnement du questionnaire et la conservation des éléments transmis. Pour en savoir plus sur le traitement, la conservation des données et vos droits, consultez la Politique de confidentialité.",
       ],
       links: [
         { label: "Politique de confidentialité", page: "privacy" },
