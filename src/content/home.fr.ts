@@ -47,10 +47,10 @@ export const homeFr: HomeContent = {
     title: "Vous vous reconnaîtrez peut-être ici",
     items: [
       "Vos examens n'ont révélé aucune anomalie grave, mais la douleur ou la gêne thoracique, les palpitations et la sensation d'extrasystoles persistent ou reviennent régulièrement.",
-      "Votre rythme cardiaque, votre gêne thoracique ou vos chiffres de tension changent nettement en cas de stress, de conflit, de tension émotionnelle, de surmenage ou de manque de sommeil.",
-      "Le traitement est en place et vous le suivez, mais l'amélioration durable n'arrive pas : votre état reste instable ou s'est amélioré bien moins que vous ne l'espériez.",
-      "Depuis l'annonce du diagnostic, vous vivez avec la peur constante des complications, de l'infarctus, d'un trouble du rythme, d'une aggravation ou d'une mort subite.",
-      "La peur pour votre cœur rend difficile le sport, les voyages, l'avion, le fait de rester seul ou de vous éloigner d'une aide médicale.",
+      "Votre rythme cardiaque, votre gêne thoracique ou vos chiffres de tension changent nettement en cas de stress, de conflit banal, de tension émotionnelle, de surmenage ou de manque de sommeil.",
+      "Vous suivez votre traitement, mais les symptômes persistent ou l’amélioration n’est pas celle que vous espériez.",
+      "Depuis votre diagnostic, vous vivez avec la peur que votre état s’aggrave ou qu’une complication survienne.",
+      "La peur pour votre cœur vous limite au quotidien : faire du sport, voyager, prendre l’avion, rester seul ou vous éloigner d’une aide médicale devient difficile.",
 
     ],
     summary:
