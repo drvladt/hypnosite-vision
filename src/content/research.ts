@@ -5,6 +5,15 @@ export type ResearchSection = {
   paragraphs?: string[];
   emphasis?: string;
   callout?: string;
+  epigraph?: string;
+  outro?: string;
+  study?: {
+    label: string;
+    title: string;
+    registrationLabel: string;
+    registration: string;
+    partner: string;
+  };
 };
 
 export type ResearchContent = {
@@ -47,27 +56,46 @@ export const researchContent: Record<Locale, ResearchContent> = {
     eyebrow: "Research",
     title: "Research work",
     lead:
-      "Exploring how hypnotherapeutic methods can be integrated into the comprehensive treatment of patients with arterial hypertension.",
+      "Exploring how hypnotherapy can be integrated into the treatment of people with high blood pressure.",
     sections: [
       {
+        epigraph: "You need to stress less.",
         paragraphs: [
-          "“You need to stress less” — this is advice a person with high blood pressure often hears. But it is of little help to someone who lives in constant tension, worries about loved ones, reacts sharply to conflicts, or even in a calm moment mentally prepares for new problems. It is impossible to simply decide to no longer experience stress. What matters more is to understand what sustains this state and how to gradually change one's habitual reaction to it.",
+          "People with high blood pressure often hear this advice. But it is not always easy to follow.",
+          "Some people live with stress for years. They worry about their family, react strongly to conflicts, or constantly expect something to go wrong. Even when everything seems calm, their mind may still be preparing for the next problem.",
+          "You cannot simply decide to stop feeling stressed.",
+          "A more important question is why this state continues and whether we can change the way we respond to stress.",
         ],
       },
       {
+        title: "Why study this?",
         paragraphs: [
-          "Modern treatment of arterial hypertension requires a comprehensive approach. It includes lifestyle changes and, when necessary, drug therapy. At the same time, in some people anxiety, prolonged stress and the habit of constantly being in tension can affect blood pressure readings and make it harder to control. Initial clinical observations suggest that working with background chronic stress, anxiety, suppressed anger or irritability through hypnotherapy may improve blood pressure control.",
+          "Modern treatment of high blood pressure includes lifestyle changes and, when needed, medication.",
+          "But blood pressure can also be influenced by stress and emotional state. For some people, anxiety and long periods of tension may make blood pressure more difficult to control.",
+          "This raises an important question. Could working with chronic stress, anxiety, anger, or other emotional reactions help improve blood pressure control?",
+          "Hypnotherapy may be one way to work with these factors. But its role needs to be studied properly.",
         ],
         emphasis:
-          "How pronounced and lasting this effect is remains to be assessed by scientific methods within the framework of evidence-based medicine.",
+          "How significant and lasting this effect may be is a question for scientific research and evidence-based medicine.",
+        outro: "My current research focuses on this question.",
+        study: {
+          label: "The study",
+          title:
+            "Integration of Ericksonian Non-Directive Hypnotherapy into the Comprehensive Management of Grade I–II Arterial Hypertension",
+          registrationLabel: "Registration number",
+          registration: "ISRCTN21345687",
+          partner:
+            "The research is carried out in collaboration with the American Society of Clinical Hypnosis (ASCH).",
+        },
       },
       {
+        title: "Participation",
         paragraphs: [
-          "To study this question, a research work is being conducted: “Integration of Ericksonian non-directive hypnotherapy into the comprehensive management of grade I–II arterial hypertension.” Registration number: ISRCTN21345687. The work is carried out in collaboration with the American Society of Clinical Hypnosis (ASCH).",
-          "Participant recruitment began in August 2026. Recruitment and participation in the study are possible regardless of where the person is located at the time of inclusion in the study. It is necessary to meet the clinical criteria and to be able to undergo the examinations and subsequent follow-up provided for by the protocol.",
+          "Participant recruitment began in August 2026.",
+          "You don't need to live in a specific country or location to take part. However, you must meet the clinical criteria for the study. You must also be able to complete the required medical examinations and follow-up.",
         ],
         callout:
-          "In the future, a form for enquiries about participation will appear on the website. Until it is available, the possibility of participation and its conditions can be discussed with the doctor during a consultation.",
+          "A participation enquiry form will be added to the website in the future. Until then, you can discuss possible participation and the study requirements with me during a consultation.",
       },
     ],
   },

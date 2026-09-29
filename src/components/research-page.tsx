@@ -19,6 +19,11 @@ function ProseSection({ section, number }: { section: ResearchSection; number?: 
         </div>
       )}
       <div className={title ? "md:pl-12" : ""}>
+        {section.epigraph && (
+          <p className="mb-7 font-display text-2xl italic leading-snug text-primary md:text-3xl">
+            “{section.epigraph}”
+          </p>
+        )}
         <div className="space-y-5">
           {(section.paragraphs ?? []).map((paragraph) => (
             <p key={paragraph} className="text-base leading-8 text-foreground/85 md:text-lg md:leading-9">
@@ -30,6 +35,24 @@ function ProseSection({ section, number }: { section: ResearchSection; number?: 
           <blockquote className="mt-8 border-l-2 border-gold pl-6 font-display text-xl leading-relaxed text-primary md:text-2xl">
             {section.emphasis}
           </blockquote>
+        )}
+        {section.outro && (
+          <p className="mt-6 text-base leading-8 text-foreground/85 md:text-lg md:leading-9">{section.outro}</p>
+        )}
+        {section.study && (
+          <div className="mt-8 rounded-lg border border-gold/30 bg-gold/5 p-6 md:p-7">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">{section.study.label}</p>
+            <p className="mt-3 font-display text-xl font-medium leading-snug text-primary md:text-2xl">
+              {section.study.title}
+            </p>
+            <div className="mt-4 space-y-1.5 text-base leading-7 text-foreground/85 md:text-lg md:leading-8">
+              <p>
+                <span className="font-semibold text-primary">{section.study.registrationLabel}:</span>{" "}
+                {section.study.registration}
+              </p>
+              <p>{section.study.partner}</p>
+            </div>
+          </div>
         )}
         {section.callout && (
           <div className="mt-8 flex gap-4 rounded-lg border border-gold/30 bg-gold/10 p-5 md:p-6">
