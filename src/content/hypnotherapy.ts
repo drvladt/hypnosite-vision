@@ -7,6 +7,10 @@ export type HypnotherapySection = {
   paragraphs?: string[];
   /** Italic lines rendered after the paragraphs (inner thoughts, beliefs, questions). */
   italicLines?: string[];
+  /** Highlighted question lines rendered after the paragraphs (gold left border, indented). */
+  highlightLines?: string[];
+  /** Paragraphs rendered after the highlighted lines. */
+  paragraphsAfter?: string[];
   /** Gold-bordered pull quote at the end of the section. */
   emphasis?: string;
 };
@@ -247,11 +251,15 @@ export const hypnotherapyContent: Record<Locale, HypnotherapyContent> = {
         title: "Plus de liberté dans le présent",
         paragraphs: [
           "Ces schémas ne prennent pas toujours la forme d'une peur évidente.",
+        ],
+        highlightLines: [
           "Peut-être repoussez-vous sans cesse quelque chose qui compte vraiment pour vous.",
           "Peut-être restez-vous silencieux alors que vous aimeriez dire ce dont vous avez besoin.",
           "Peut-être évitez-vous certaines opportunités par peur d'échouer.",
           "Ou peut-être vous imposez-vous une pression constante pour tout faire parfaitement.",
           "Vous pouvez même comprendre pourquoi vous agissez ainsi et continuer malgré tout à répéter le même schéma.",
+        ],
+        paragraphsAfter: [
           "L'hypnothérapie peut aider à explorer les émotions, les croyances et les réactions automatiques qui se trouvent derrière ces comportements.",
           "Le but n'est pas d'effacer votre passé ni de changer qui vous êtes.",
           "Il s'agit de mieux comprendre pourquoi certaines situations vous affectent encore aujourd'hui et de créer davantage de liberté dans votre façon d'y réagir.",
