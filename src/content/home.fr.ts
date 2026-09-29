@@ -82,7 +82,7 @@ export const homeFr: HomeContent = {
   },
   consultation: {
     eyebrow: "CONSULTATION EN LIGNE",
-    title: "Si votre situation demande une analyse individuelle attentive plutôt que des conseils généraux",
+    title: "Si votre situation demande un debrief individuel et attentif plutôt que des conseils généraux",
     lead: "La première consultation permet de rassembler des informations dispersées en une vue d'ensemble et de comprendre la suite. Nous passons en revue vos symptômes, l'histoire de votre maladie, les examens déjà réalisés et l'influence possible de facteurs émotionnels. À l'issue de la rencontre, vous comprendrez mieux :",
     outcomes: [
       "si des examens complémentaires sont nécessaires ;",
