@@ -58,27 +58,27 @@ export const homeFr: HomeContent = {
   },
   bigPicture: {
     eyebrow: "UNE REORIENTATION DE LA MÉDECINE MODERNE",
-    title: "Pourquoi le symptôme seul ne suffit pas",
+    title: "Voir au-delà des symptômes",
     paragraphs: [
-      "La médecine s'éloigne peu à peu du traitement isolé des symptômes pour aller vers un modèle de soin plus global, centré sur la personne.",
-      "Le traitement médicamenteux peut être nécessaire et vital. Mais même bien choisi, il ne prend pas toujours en compte tous les facteurs qui influencent l'évolution de la maladie et le ressenti général.",
+      "La médecine ne consiste pas seulement à traiter un symptôme. Pour bien comprendre une situation, il faut aussi regarder la personne dans son ensemble.",
+      "Les médicaments peuvent être nécessaires, parfois même indispensables. Mais ils n'agissent pas toujours sur tous les facteurs qui peuvent influencer votre état et la façon dont vous vous sentez.",
     ],
     quote:
-      "«\u00a0Le symptôme est la partie visible de l'iceberg. En dessous se trouve souvent une combinaison de facteurs physiques et psychologiques liés entre eux. Ma tâche n'est donc pas de traiter une seule manifestation, mais de comprendre l'ensemble.\u00a0»",
+      "«\u00a0Le symptôme est souvent la partie visible de l’iceberg. En dessous, plusieurs facteurs peuvent entrer en jeu. Mon objectif n’est pas seulement de traiter un symptôme, mais de comprendre ce qui peut se passer derrière.\u00a0»",
   },
   approach: {
-    eyebrow: "L'approche intégrative du Dr. Vlad",
-    title: "Ne pas séparer le corps et le psychisme, mais voir la personne entière",
+    eyebrow: "Mon approche intégrative",
+    title: "Le corps et l’esprit sont liés",
     paragraphs: [
-      "L'organisme n'est pas un assemblage de parties indépendantes. L'état physique influence les émotions et le comportement, tandis que le stress, l'anxiété, le sommeil et les habitudes se reflètent dans le corps.",
-      "C'est pourquoi je n'applique pas un protocole unique à tout le monde. Le travail commence par l'étude de votre situation individuelle et peut associer plusieurs axes complémentaires.",
+      "Notre état physique peut influencer nos émotions, notre énergie et notre façon de vivre. À l’inverse, le stress, l’anxiété, le sommeil et nos habitudes peuvent aussi avoir un impact sur notre santé physique.",
+      "C’est pourquoi je cherche d’abord à comprendre votre situation dans son ensemble. Vos symptômes, vos antécédents médicaux, votre mode de vie et les autres facteurs qui peuvent jouer un rôle sont pris en compte.",
     ],
     moreApproachLabel: "En savoir plus sur mon approche intégrative",
     hypnotherapy: [
-      "Lorsqu'elle est indiquée, l'hypnothérapie peut être utilisée comme méthode complémentaire face à l'anxiété, aux peurs, aux réactions corporelles et aux schémas émotionnels ou comportementaux persistants.",
-      "Elle ne s'oppose en rien au traitement médicamenteux et n'est pas prescrite automatiquement à chaque personne.",
+      "Lorsque cela peut être utile, l’hypnothérapie peut compléter la prise en charge médicale. Elle peut notamment aider à travailler sur l’anxiété, les peurs, et certaines réactions physiques.",
+      "Elle ne remplace pas le traitement médical. Elle fait simplement partie des outils qui peuvent être envisagés lorsque la situation le demande.",
     ],
-    moreHypnotherapyLabel: "Découvrez comment fonctionne l'hypnothérapie ici",
+    moreHypnotherapyLabel: "Découvrir comment fonctionne l’hypnothérapie",
   },
   consultation: {
     eyebrow: "CONSULTATION EN LIGNE",
