@@ -58,41 +58,49 @@ export const approachContent: Record<Locale, ApproachContent> = {
   en: {
     eyebrow: "Approach",
     title: "My integrative approach",
-    lead: "I look at the whole situation: physical health, psycho-emotional factors and how they interact.",
+    lead: "I look at the whole picture — your physical health, emotional well-being, lifestyle, and how they may influence one another.",
     sections: [
       {
-        title: "An evidence-based foundation",
+        title: "Medicine comes first",
         paragraphs: [
-          "In my professional work I rely on evidence-based medicine and current clinical guidelines. Accurate diagnosis and treatments with proven efficacy remain the foundation of my practice. But years of clinical work have taught me to look more broadly: even with the same diagnosis, people may feel differently, respond to treatment differently, and recover differently.",
+          "My work is grounded in evidence-based medicine and current clinical guidelines. Accurate diagnosis and treatments with proven effectiveness remain the foundation of my medical practice.",
+          "But a diagnosis does not always tell the whole story. Two people with the same condition may experience it very differently. One may feel well and live normally, while another continues to struggle with symptoms, anxiety, fatigue, or uncertainty despite following treatment.",
         ],
       },
       {
-        title: "Beyond the diagnosis",
+        title: "More than test results",
         paragraphs: [
-          "Health is shaped not only by changes in organs and test results. Sleep, nutrition, habits, chronic stress, emotional experiences and the way a person views life all matter. Sometimes a person becomes so accustomed to living in tension that they stop noticing it. They keep working, caring for loved ones, handling everyday tasks — and only when energy runs low or health deteriorates do they realise how much effort it takes.",
+          "How you feel is influenced by more than what appears in your test results. Sleep, nutrition, daily habits, stress, and emotional well-being can all play a role.",
+          "Sometimes we live under stress for so long that it starts to feel normal. You keep working, taking care of others, solving problems, and getting through the day. You may not notice how much tension you are carrying until sleep gets worse, energy disappears, or physical symptoms become harder to ignore.",
+        ],
+        emphasis: "Sometimes we live with stress for so long that we stop noticing how much it affects us.",
+      },
+      {
+        title: "Looking at the whole picture",
+        paragraphs: [
+          "During the consultation, I will need to understand not only your symptoms, but also what is happening around them.",
+          "When did they start? What makes them better or worse? What happens when they appear? Do they make you anxious or change the way you live? How are you sleeping? What is happening in your life at the moment?",
+          "These questions do not replace medical examination. They help us understand the bigger picture and identify factors that might otherwise be missed.",
+        ],
+      },
+      {
+        title: "Where hypnotherapy may fit",
+        paragraphs: [
+          "My work in medicine gradually led me to explore psychology and hypnotherapy. It gave me another way to work with emotional responses, stress, fears, and patterns that may sometimes contribute to how symptoms are experienced or maintained.",
+          "This can be particularly relevant when symptoms become worse during periods of stress, keep returning, or continue despite normal medical tests.",
+          "In these situations, hearing “everything looks normal” may not be enough. The symptoms are still real. The goal is to understand what may be contributing to them and what can be done about it.",
+          "Hypnotherapy does not replace medical care and is not automatically part of treatment. It is one of the tools that may be considered when appropriate.",
+        ],
+      },
+      {
+        title: "What this means for you",
+        paragraphs: [
+          "An integrative approach does not mean choosing between medicine and psychology. It means using the right tools for the right situation.",
+          "Medication and other medical treatments remain important when they are needed. At the same time, we can look at sleep, lifestyle, stress, emotional responses, and other factors that may be affecting how you feel.",
+          "The goal is to understand what matters in your particular situation and focus on changes that are realistic, relevant, and useful for you.",
         ],
         emphasis:
-          "Sometimes a person becomes so accustomed to living in tension that they stop noticing it.",
-      },
-      {
-        title: "During the consultation",
-        paragraphs: [
-          "That is why, during a consultation, it matters to me to understand not only what bothers a person, but how they live with their condition. What is happening in their life? What do they fear when symptoms appear? What helps them feel better, and what, on the contrary, increases anxiety or tension? The answers to these questions do not replace examination, but they help see a more complete picture and choose an approach that accounts for the various factors affecting health.",
-        ],
-      },
-      {
-        title: "From psychology to hypnotherapy",
-        paragraphs: [
-          "My interest in psychology and psychotherapy gradually led me to hypnotherapy. Studying it and applying it in practice, I saw that working with emotional responses can be a useful part of care. This is especially relevant when symptoms intensify against a background of stress, recur, or their course is difficult to explain by test results alone. In such situations, a person needs not simply to hear that “everything is fine”, but to understand what is happening and find ways to manage their condition better.",
-        ],
-      },
-      {
-        title: "What this means in practice",
-        paragraphs: [
-          "For me, an integrative approach means care in which necessary medication and other medical methods are combined with attention to lifestyle and psychological state. I strive to work with the person to identify which factors affect their particular wellbeing and to choose steps that make sense in their situation.",
-        ],
-        emphasis:
-          "It matters to me to see not only the illness but the person who wants to live their life calmly again, without constantly monitoring how they feel.",
+          "I want to see more than a diagnosis. I want to understand the person behind it — and help them get back to living their life without constantly worrying about how they feel.",
       },
     ],
   },
