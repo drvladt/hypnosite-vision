@@ -182,11 +182,11 @@ export const homeFr: HomeContent = {
       ],
       [
         "L'hypnothérapie est-elle pratiquée pendant la première consultation ?",
-        "Non. La première consultation sert à analyser en détail votre situation et à définir les étapes suivantes. Si l'hypnothérapie peut être utile, le Dr. Vlad expliquera séparément quels objectifs elle viserait et comment le travail pourrait être organisé.",
+        "Non. La première consultation sert à analyser en détail votre situation et à définir les étapes suivantes. Si l'hypnothérapie peut être utile, Dr. Vlad expliquera séparément quels objectifs elle viserait et comment le travail pourrait être organisé.",
       ],
       [
         "Vais-je perdre le contrôle pendant l'hypnothérapie ?",
-        "Non. L'hypnose clinique non directive n'implique aucune perte de contrôle de soi ni transfert de contrôle à une autre personne. Il s'agit d'un état d'attention focalisée dans lequel la personne reste consciente de ce qui se passe, entend le praticien, conserve sa capacité de décision et peut interrompre la séance à tout moment. Selon l'objectif, l'attention peut être orientée vers les sensations corporelles, les images, les souvenirs ou les réactions émotionnelles.",
+        "Non. L'hypnose clinique non directive n'implique aucune perte de contrôle de soi ni transfert de contrôle à une autre personne. Il s'agit d'un état d'attention focalisée dans lequel la personne reste consciente de ce qui se passe, entend le praticien, conserve sa capacité de décision et peut interrompre la séance à tout moment. Selon l'objectif, l'attention peut être orientée vers les sensations corporelles, les souvenirs ou les réactions émotionnelles.",
       ],
       [
         "Et si ma situation ne relève pas de votre spécialité ?",
@@ -198,7 +198,7 @@ export const homeFr: HomeContent = {
       ],
       [
         "Combien coûte la suite du travail ?",
-        "La première consultation est gratuite. Si un travail individuel ultérieur est indiqué, le Dr. Vlad en expliquera le format recommandé, la durée prévisible et le coût. La décision de continuer vous appartient.",
+        "La première consultation est gratuite. Si un travail individuel ultérieur est indiqué, le Dr. Vlad expliquera le format recommandé, la durée prévisible et le coût. La décision de continuer vous appartient.",
       ],
     ],
   },
