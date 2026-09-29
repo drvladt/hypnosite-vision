@@ -35,7 +35,7 @@ export const homeFr: HomeContent = {
   hero: {
     eyebrow: "Médecine intégrative · Hypnothérapie",
     title:
-      "Douleurs thoraciques, palpitations, ou tension instable… malgré des examens rassurants ?",
+      "On vous dit que tout va bien, mais vous continuez à ressentir les symptômes ?",
     lead: "Le Dr. Vlad travaille selon les principes de la médecine intégrative. L'objectif n'est pas de faire taire un symptôme isolé, mais de comprendre quels facteurs médicaux, émotionnels et comportementaux ont pu créer le problème ou continuent de l'entretenir.",
     portraitAlt: "Dr. Vlad — cardiologue et hypnothérapeute",
     portraitCaption:
