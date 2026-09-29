@@ -115,15 +115,15 @@ export const siteFr: SiteContent = {
     contact: {
       eyebrow: "Contact",
       title: "Me contacter",
-      lead: "Écrivez-moi si vous souhaitez faire analyser votre situation ou si vous avez des questions sur le format.",
+      lead: "Vous pouvez me contacter si vous souhaitez discuter de votre situation ou si vous avez des questions sur le déroulement d’une consultation.",
       metaTitle: "Contact — Dr. Vlad",
       metaDescription: "Comment joindre Dr. Vlad : e-mail et messageries.",
       sections: [
         {
           paragraphs: [
-            "La voie principale passe par la page consultation : elle présente les conditions et les confirmations qui ouvrent le questionnaire.",
-            "Ce site n'est pas destiné aux urgences ni aux questions médicales urgentes.",
-            "Pour les questions organisationnelles ou autres sujets, vous pouvez écrire à support@drvladt.com ou via les réseaux sociaux.",
+            "Pour commencer, rendez-vous sur la page Consultation. Vous y trouverez les informations importantes, les conditions à connaître et l’accès au questionnaire.",
+            "Ce site n’est pas destiné aux urgences ni aux situations nécessitant une prise en charge médicale immédiate.",
+            "Pour toute question pratique ou organisationnelle, vous pouvez écrire à support@drvladt.com ou me contacter via les réseaux sociaux.",
           ],
         },
       ],
