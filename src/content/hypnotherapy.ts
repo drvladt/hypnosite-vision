@@ -250,14 +250,14 @@ export const hypnotherapyContent: Record<Locale, HypnotherapyContent> = {
       {
         title: "Plus de liberté dans le présent",
         paragraphs: [
-          "Ces schémas ne prennent pas toujours la forme d'une peur évidente.",
+          "Ces schémas ne prennent pas toujours la forme d'une peur évidente. Mais ce qui est sur, ils agissent discrètement sur votre vie et votre façon d'agir.",
         ],
         highlightLines: [
           "Peut-être repoussez-vous sans cesse quelque chose qui compte vraiment pour vous.",
           "Peut-être restez-vous silencieux alors que vous aimeriez dire ce dont vous avez besoin.",
           "Peut-être évitez-vous certaines opportunités par peur d'échouer.",
           "Ou peut-être vous imposez-vous une pression constante pour tout faire parfaitement.",
-          "Vous pouvez même comprendre pourquoi vous agissez ainsi et continuer malgré tout à répéter le même schéma.",
+          "Vous pouvez même comprendre pourquoi vous agissez ainsi et continuer malgré tout à répéter le même comportement et façon d'agir.",
         ],
         paragraphsAfter: [
           "L'hypnothérapie peut aider à explorer les émotions, les croyances et les réactions automatiques qui se trouvent derrière ces comportements.",
@@ -265,7 +265,7 @@ export const hypnotherapyContent: Record<Locale, HypnotherapyContent> = {
           "Il s'agit de mieux comprendre pourquoi certaines situations vous affectent encore aujourd'hui et de créer davantage de liberté dans votre façon d'y réagir.",
         ],
         emphasis:
-          "L'un des objectifs de l'hypnothérapie est simple : mieux comprendre ce qui guide vos réactions afin que d'anciens schémas ne continuent pas à décider à votre place.",
+          "L’un des objectifs de l’hypnothérapie est de mieux comprendre ce qui vous influence encore aujourd’hui, pour que ce qui appartient au passé ne continue pas à décider de votre présent.",
       },
     ],
   },
