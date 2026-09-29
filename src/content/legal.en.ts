@@ -24,7 +24,7 @@ export const legalEn: LegalContent = {
       title: "Confidentiality",
       paragraphs: [
         "Your medical information and documents are reviewed personally by Dr Vlad. An assistant may only receive contact and organisational details needed for further communication, and has no access to the medical part of your request.",
-        `Google and ${L("hostingProvider")} services may be used to run the form and store the material you provide. You can read more about data processing, storage and your rights in the Privacy Policy.`,
+        "Google services may be used to run the form and store the material you provide. You can read more about data processing, storage and your rights in the Privacy Policy.",
       ],
       links: [
         { label: "Privacy Policy", page: "privacy" },
