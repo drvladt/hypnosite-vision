@@ -56,9 +56,9 @@ function ProseSection({ section, number }: { section: AboutSection; number: stri
         </div>
       )}
       <div className={section.title ? "md:pl-12" : ""}>
-        <div className="space-y-5">
+        <div className="space-y-4">
           {section.paragraphs.map((paragraph) => (
-            <p key={paragraph} className="text-base leading-8 text-foreground/85 md:text-lg md:leading-9">
+            <p key={paragraph} className="text-base leading-7 text-foreground/85 md:text-lg md:leading-8">
               {paragraph}
             </p>
           ))}
