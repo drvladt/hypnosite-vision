@@ -98,7 +98,7 @@ export function HypnotherapyPageView({ locale }: { locale: Locale }) {
         ))}
       </div>
 
-      <section className="mt-10 bg-primary py-10 text-primary-foreground md:mt-14 md:py-14">
+      <section className="mt-8 bg-primary py-10 text-primary-foreground md:mt-10 md:py-14">
         <div className="mx-auto w-full max-w-4xl px-5 md:px-8">
           <div className="[&_blockquote]:text-gold-light [&_h2]:text-primary-foreground [&_p]:text-primary-foreground/80">
             <ProseSection section={last.section} number={last.number} />
