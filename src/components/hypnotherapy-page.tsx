@@ -12,7 +12,7 @@ function ItalicLines({ lines, className }: { lines: string[]; className?: string
       {lines.map((line, index) => (
         <p
           key={index}
-          className="font-display text-xl italic leading-relaxed text-primary md:text-2xl"
+          className="font-display text-xl italic leading-relaxed text-foreground/85 md:text-2xl"
         >
           {line}
         </p>
