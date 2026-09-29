@@ -107,10 +107,10 @@ export const approachContent: Record<Locale, ApproachContent> = {
   fr: {
     eyebrow: "Approche",
     title: "Mon approche intégrative",
-    lead: "Je regarde votre situation dans son ensemble : votre santé physique, votre état émotionnel, votre mode de vie et la façon dont ces différents éléments peuvent s'influencer.",
+    lead: "Je regarde votre situation dans son ensemble : votre santé physique, votre état émotionnel, votre mode de vie et la façon dont ces différents éléments peuvent interagir entre eux.",
     sections: [
       {
-        title: "La médecine avant tout",
+        title: "La médecine classique avant tout",
         paragraphs: [
           "Mon approche repose sur la médecine fondée sur les preuves et les recommandations cliniques actuelles. Un diagnostic précis et des traitements dont l'efficacité est démontrée restent la base de ma pratique.",
           "Mais un diagnostic ne raconte pas toujours toute l'histoire. Deux personnes atteintes de la même maladie peuvent la vivre très différemment. L'une peut se sentir bien, tandis que l'autre continue à avoir des symptômes, de la fatigue, de l'anxiété ou des inquiétudes malgré son traitement.",
@@ -119,7 +119,7 @@ export const approachContent: Record<Locale, ApproachContent> = {
       {
         title: "Au-delà des résultats médicaux",
         paragraphs: [
-          "Votre état ne dépend pas uniquement de ce que montrent les examens. Le sommeil, l'alimentation, les habitudes, le stress et l'état émotionnel peuvent aussi jouer un rôle.",
+          "Votre état ne dépend pas uniquement de ce que montrent les examens et analyses. Le sommeil, l'alimentation, les habitudes, le stress et l'état émotionnel y jouent un rôle important.",
           "Parfois, nous vivons sous stress depuis si longtemps que nous finissons par ne plus le remarquer. Nous continuons à travailler, à nous occuper de nos proches et à gérer le quotidien. Puis le sommeil se dégrade, l'énergie diminue ou certains symptômes deviennent plus difficiles à ignorer.",
         ],
         emphasis:
@@ -140,14 +140,14 @@ export const approachContent: Record<Locale, ApproachContent> = {
           "Elle m'a donné un outil supplémentaire pour travailler sur le stress, les peurs, les réactions émotionnelles et certains schémas qui peuvent parfois influencer la façon dont les symptômes sont ressentis ou entretenus.",
           "Cette approche peut être particulièrement intéressante lorsque les symptômes s'aggravent pendant les périodes de stress, reviennent régulièrement ou persistent malgré des examens médicaux rassurants.",
           "Dans ces situations, entendre que « tout va bien » ne suffit pas toujours. Les symptômes sont toujours là. L'objectif est de comprendre ce qui peut y contribuer et ce qu'il est possible de faire.",
-          "L'hypnothérapie ne remplace pas la prise en charge médicale. Elle peut être envisagée comme un outil complémentaire lorsque la situation s'y prête.",
+          "L'hypnothérapie ne remplace pas la prise en charge médicale. Elle peut être envisagée comme un outil complémentaire lorsque la situation y est favorable.",
         ],
       },
       {
         title: "Ce que cela signifie pour vous",
         paragraphs: [
           "Une approche intégrative ne signifie pas choisir entre médecine et psychologie. Il s'agit d'utiliser les bons outils au bon moment.",
-          "Les médicaments et les autres traitements médicaux restent importants lorsqu'ils sont nécessaires. Mais nous pouvons aussi nous intéresser au sommeil, au mode de vie, au stress, aux réactions émotionnelles et aux autres facteurs qui peuvent influencer votre état.",
+          "Les médicaments et les autres traitements médicaux restent importants lorsqu'ils sont nécessaires. Mais il est important de prendre en compte le sommeil, le mode de vie, le stress, les réactions émotionnelles et autres facteurs qui peuvent influencer votre état.",
           "L'objectif est de comprendre ce qui compte dans votre situation et de travailler sur ce qui peut réellement être utile pour vous.",
         ],
         emphasis:
