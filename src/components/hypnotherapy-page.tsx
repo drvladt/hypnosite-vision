@@ -26,7 +26,7 @@ function ProseSection({ section, number }: { section: HypnotherapySection; numbe
   return (
     <section>
       {title && (
-        <div className="mb-7 grid gap-3 md:grid-cols-[3rem_1fr] md:items-start">
+        <div className="mb-5 grid gap-3 md:grid-cols-[3rem_1fr] md:items-start">
           {number ? <span className="pt-2 text-xs font-bold text-gold">{number}</span> : null}
           <h2 className="font-display text-3xl font-medium leading-tight text-primary md:text-4xl">
             {title}
