@@ -107,41 +107,51 @@ export const approachContent: Record<Locale, ApproachContent> = {
   fr: {
     eyebrow: "Approche",
     title: "Mon approche intégrative",
-    lead: "Je considère la situation dans son ensemble : l'état physique, les facteurs psycho-émotionnels et leurs interactions.",
+    lead: "Je regarde votre situation dans son ensemble : votre santé physique, votre état émotionnel, votre mode de vie et la façon dont ces différents éléments peuvent s'influencer.",
     sections: [
       {
-        title: "Un fondement scientifique",
+        title: "La médecine avant tout",
         paragraphs: [
-          "Dans ma pratique professionnelle, je m'appuie sur la médecine fondée sur les preuves et les recommandations cliniques actuelles. Un diagnostic précis et des traitements dont l'efficacité est démontrée restent la base de mon travail. Mais les années de pratique médicale m'ont appris à regarder plus largement : face à un même diagnostic, les ressentis, les réponses au traitement et la récupération peuvent différer d'une personne à l'autre.",
+          "Mon approche repose sur la médecine fondée sur les preuves et les recommandations cliniques actuelles. Un diagnostic précis et des traitements dont l'efficacité est démontrée restent la base de ma pratique.",
+          "Mais un diagnostic ne raconte pas toujours toute l'histoire. Deux personnes atteintes de la même maladie peuvent la vivre très différemment. L'une peut se sentir bien, tandis que l'autre continue à avoir des symptômes, de la fatigue, de l'anxiété ou des inquiétudes malgré son traitement.",
         ],
       },
       {
-        title: "Au-delà du diagnostic",
+        title: "Au-delà des résultats médicaux",
         paragraphs: [
-          "L'état de santé ne dépend pas seulement des changements dans les organes et des résultats d'analyses. Le sommeil, l'alimentation, les habitudes, le stress chronique, les émotions et la façon dont on regarde la vie comptent aussi. Parfois, on s'habitue tellement à vivre sous tension qu'on finit par ne plus la remarquer. On continue de travailler, de s'occuper des proches, de gérer le quotidien — et ce n'est qu'à bout de forces ou lorsque la santé décline qu'on réalise l'énergie que cela demande.",
+          "Votre état ne dépend pas uniquement de ce que montrent les examens. Le sommeil, l'alimentation, les habitudes, le stress et l'état émotionnel peuvent aussi jouer un rôle.",
+          "Parfois, nous vivons sous stress depuis si longtemps que nous finissons par ne plus le remarquer. Nous continuons à travailler, à nous occuper de nos proches et à gérer le quotidien. Puis le sommeil se dégrade, l'énergie diminue ou certains symptômes deviennent plus difficiles à ignorer.",
         ],
         emphasis:
-          "Parfois, on s'habitue tellement à vivre sous tension qu'on finit par ne plus la remarquer.",
+          "Parfois, nous vivons avec le stress depuis si longtemps que nous ne remarquons même plus à quel point il nous affecte.",
       },
       {
-        title: "Pendant la consultation",
+        title: "Comprendre votre situation",
         paragraphs: [
-          "C'est pourquoi, lors d'une consultation, il m'importe de comprendre non seulement ce qui inquiète la personne, mais aussi comment elle vit avec son état. Que se passe-t-il dans sa vie ? De quoi a-t-elle peur quand les symptômes apparaissent ? Qu'est-ce qui l'aide à se sentir mieux, et qu'est-ce qui, au contraire, augmente l'anxiété ou la tension ? Les réponses à ces questions ne remplacent pas l'examen clinique, mais elles aident à brosser un tableau plus complet et à choisir une approche tenant compte des différents facteurs qui influencent la santé.",
+          "Pendant la consultation, je cherche à comprendre non seulement vos symptômes, mais aussi ce qui se passe autour d'eux.",
+          "Quand ont-ils commencé ? Qu'est-ce qui les améliore ou les aggrave ? Que ressentez-vous lorsqu'ils apparaissent ? Vous rendent-ils anxieux ? Ont-ils changé certaines de vos habitudes ? Comment dormez-vous ? Que se passe-t-il dans votre vie en ce moment ?",
+          "Ces questions ne remplacent jamais l'évaluation médicale. Elles permettent simplement de mieux comprendre votre situation et d'identifier des facteurs qui pourraient autrement passer inaperçus.",
         ],
       },
       {
-        title: "De la psychologie à l'hypnothérapie",
+        title: "La place de l'hypnothérapie",
         paragraphs: [
-          "Mon intérêt pour la psychologie et la psychothérapie m'a progressivement conduit à l'hypnothérapie. En l'étudiant et en la pratiquant, j'ai constaté que le travail sur les réactions émotionnelles peut être une part utile de l'accompagnement. C'est particulièrement pertinent lorsque les symptômes s'intensifient sous l'effet du stress, qu'ils réapparaissent ou que leur évolution est difficile à expliquer par les seuls résultats d'examens. Dans ces situations, il ne suffit pas d'entendre que « tout va bien » : il faut comprendre ce qui se passe et trouver des moyens de mieux gérer son état.",
+          "Mon parcours en médecine m'a progressivement amené à m'intéresser à la psychologie, puis à l'hypnothérapie.",
+          "Elle m'a donné un outil supplémentaire pour travailler sur le stress, les peurs, les réactions émotionnelles et certains schémas qui peuvent parfois influencer la façon dont les symptômes sont ressentis ou entretenus.",
+          "Cette approche peut être particulièrement intéressante lorsque les symptômes s'aggravent pendant les périodes de stress, reviennent régulièrement ou persistent malgré des examens médicaux rassurants.",
+          "Dans ces situations, entendre que « tout va bien » ne suffit pas toujours. Les symptômes sont toujours là. L'objectif est de comprendre ce qui peut y contribuer et ce qu'il est possible de faire.",
+          "L'hypnothérapie ne remplace pas la prise en charge médicale. Elle peut être envisagée comme un outil complémentaire lorsque la situation s'y prête.",
         ],
       },
       {
-        title: "Ce que cela signifie en pratique",
+        title: "Ce que cela signifie pour vous",
         paragraphs: [
-          "Pour moi, l'approche intégrative, c'est une aide dans laquelle les médicaments nécessaires et les autres méthodes médicales se combinent à l'attention portée au mode de vie et à l'état psychologique. Je cherche à comprendre, avec la personne, quels facteurs influencent son bien-être particulier, et à choisir des étapes qui ont du sens dans sa situation.",
+          "Une approche intégrative ne signifie pas choisir entre médecine et psychologie. Il s'agit d'utiliser les bons outils au bon moment.",
+          "Les médicaments et les autres traitements médicaux restent importants lorsqu'ils sont nécessaires. Mais nous pouvons aussi nous intéresser au sommeil, au mode de vie, au stress, aux réactions émotionnelles et aux autres facteurs qui peuvent influencer votre état.",
+          "L'objectif est de comprendre ce qui compte dans votre situation et de travailler sur ce qui peut réellement être utile pour vous.",
         ],
         emphasis:
-          "Il m'importe de voir non seulement la maladie, mais aussi la personne qui souhaite vivre à nouveau sa vie sereinement, sans guetter en permanence son état.",
+          "Je veux voir plus qu'un diagnostic. Je veux comprendre la personne qui se trouve derrière et l'aider à retrouver une vie où elle n'a pas à s'inquiéter constamment de ce qu'elle ressent.",
       },
     ],
   },
