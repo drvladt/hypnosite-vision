@@ -44,6 +44,25 @@ function ProseSection({ section, number }: { section: HypnotherapySection; numbe
             </p>
           ))}
         </div>
+        {section.highlightLines?.length ? (
+          <div className="my-6 space-y-4 border-l-2 border-gold/50 pl-5 md:pl-6">
+            {section.highlightLines.map((line, index) => (
+              <p
+                key={index}
+                className="font-display text-xl italic leading-relaxed text-foreground/85 md:text-2xl"
+              >
+                {line}
+              </p>
+            ))}
+          </div>
+        ) : null}
+        <div className="space-y-4">
+          {(section.paragraphsAfter ?? []).map((paragraph, index) => (
+            <p key={index} className="text-base leading-8 text-foreground/85 md:text-lg md:leading-9">
+              {paragraph}
+            </p>
+          ))}
+        </div>
         {section.italicLines?.length ? <ItalicLines lines={section.italicLines} /> : null}
         {section.emphasis && (
           <blockquote className="mt-6 border-l-2 border-gold pl-6 font-display text-xl leading-relaxed text-primary md:text-2xl">
