@@ -120,8 +120,6 @@ export const researchContent: Record<Locale, ResearchContent> = {
           "Cela soulève une question importante : travailler sur le stress chronique, l'anxiété, la colère ou certaines réactions émotionnelles peut-il aider à améliorer le contrôle de la pression artérielle ?",
           "L'hypnothérapie pourrait être l'un des outils permettant de travailler sur ces facteurs. Son effet doit cependant être évalué de manière rigoureuse et scientifique.",
         ],
-        emphasis:
-          "L'importance et la durée d'un éventuel effet doivent être étudiées selon les méthodes de la médecine fondée sur les preuves.",
         outro: "Mon travail de recherche porte sur cette question.",
         study: {
           label: "À propos de l'étude",
