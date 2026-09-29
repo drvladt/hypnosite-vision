@@ -54,6 +54,7 @@ export type HomeContent = {
     lead: string;
     outcomes: string[];
     suitableTitle: string;
+    suitableIntro?: string[];
     suitableFor: string[];
     suitableNote: string;
   };

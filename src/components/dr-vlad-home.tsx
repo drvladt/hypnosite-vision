@@ -261,7 +261,14 @@ export function DrVladHome({ locale }: { locale: Locale }) {
               </ul>
             </div>
             <div className="mt-10 grid gap-7 border-t border-border pt-8 lg:grid-cols-[.55fr_1.45fr]">
-              <h3 id="suitable" className="font-display text-3xl">{c.consultation.suitableTitle}</h3>
+              <div>
+                <h3 id="suitable" className="font-display text-3xl">{c.consultation.suitableTitle}</h3>
+                {c.consultation.suitableIntro && (
+                  <div className="mt-4 space-y-3 leading-7 text-foreground/75">
+                    {c.consultation.suitableIntro.map((text) => <p key={text}>{text}</p>)}
+                  </div>
+                )}
+              </div>
               <div className="grid gap-4 md:grid-cols-2">
                 {c.consultation.suitableFor.map((item) => <div className="flex gap-3" key={item}><span className="mt-2 size-1.5 shrink-0 rounded-full bg-gold"/><p className="leading-7 text-foreground/75">{item}</p></div>)}
                 <p className="md:col-span-2 mt-2 border-t border-border pt-5 leading-7">{c.consultation.suitableNote}</p>
