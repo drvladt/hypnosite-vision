@@ -57,7 +57,7 @@ export const homeFr: HomeContent = {
       "Si vous vous reconnaissez dans l’une de ces situations, il peut être utile de regarder au-delà des symptômes. Lors de la première consultation, nous cherchons à comprendre ce qui peut influencer votre état et sur quoi il est possible d’agir.",
   },
   bigPicture: {
-    eyebrow: "Une nouvelle orientation de la médecine moderne",
+    eyebrow: "UNE REORIENTATION DE LA MÉDECINE MODERNE",
     title: "Pourquoi le symptôme seul ne suffit pas",
     paragraphs: [
       "La médecine s'éloigne peu à peu du traitement isolé des symptômes pour aller vers un modèle de soin plus global, centré sur la personne.",
