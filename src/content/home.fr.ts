@@ -40,7 +40,7 @@ export const homeFr: HomeContent = {
     portraitAlt: "Dr. Vlad — cardiologue et hypnothérapeute",
     portraitCaption:
       "J’accompagne les personnes confrontées à l’anxiété liée à la santé, aux pensées intrusives, aux peurs et aux réactions physiques. Lorsque cela peut être utile, j’intègre l’hypnothérapie non directive à mon approche personalisée.",
-    badges: ["Cardiologue", "En médecine depuis 2019", "Pratique internationale", "Spécialisation en hypnothérapie"],
+    badges: ["Cardiologue", "Pratique medicale depuis 2019", "Pratique internationale", "Spécialisation en hypnothérapie"],
   },
   concerns: {
     eyebrow: "Motifs de consultation",
