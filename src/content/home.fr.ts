@@ -109,7 +109,7 @@ export const homeFr: HomeContent = {
     eyebrow: "À propos de moi",
     title: "Dr. Vlad Tettegah — cardiologue et hypnothérapeute",
     paragraphs: [
-      "J'exerce la médecine depuis 2019. J'ai travaillé dans plusieurs établissements médicaux au Bélarus, notamment au Centre républicain de cardiologie et à l'Hôpital des urgences de Minsk.",
+      "J'exerce dans la médecine depuis 2019. J'ai travaillé dans plusieurs établissements médicaux au Bélarus, notamment au Centre républicain de cardiologie et à l'Hôpital centrale des urgences de Minsk.",
       "Je travaille actuellement au MHCC, un centre spécialisé en cardiologie et chirurgie cardiaque en Libye, dans le cadre d'une mission médicale.",
       "Je suis également formé en hypnose clinique et Associate Member de l'American Society of Clinical Hypnosis (ASCH).",
       "Ma pratique repose avant tout sur la médecine fondée sur les preuves et les recommandations médicales actuelles. Mais je cherche aussi à comprendre la personne dans son ensemble.",
@@ -146,7 +146,7 @@ export const homeFr: HomeContent = {
       ],
       [
         "J'étudie personnellement vos informations",
-        "Si votre demande relève de mon domaine de compétence et qu'une consultation peut vous être utile, mon assistant vous contactera pour convenir d'une date et d'une heure.",
+        "Si votre demande relève de mon domaine de compétence et qu'une consultation peut vous être utile, mon assistant vous contactera pour convenir d'une date et d'une heure pour la consultation.",
       ],
       [
         "Vous transmettez vos documents médicaux",
@@ -154,11 +154,11 @@ export const homeFr: HomeContent = {
       ],
       [
         "Ce qui se passe pendant la consultation",
-        "La consultation a lieu en ligne et dure jusqu'à 60 minutes. La rencontre est entièrement consacrée à l'analyse détaillée de votre situation, à l'identification des liens possibles entre manifestations corporelles, facteurs psychologiques et schémas de comportement habituels, puis à la définition de la stratégie à suivre.",
+        "La consultation se déroule en ligne et dure environ 60 minutes.\n\nNous prenons le temps de comprendre votre situation, vos symptômes et les facteurs qui peuvent les influencer. Nous définissons ensuite ensemble les prochaines étapes a suivre.",
       ],
     ],
     closing:
-      "Aucune séance d'hypnothérapie n'est réalisée lors de la première consultation. Même si l'hypnothérapie n'est pas indiquée pour vous, ou si un travail avec moi ne correspond pas à votre situation, vous repartirez avec une vision plus claire des démarches possibles et du spécialiste à consulter.",
+      "Aucune séance d'hypnothérapie n'est réalisée lors de la première consultation. Même si l'hypnothérapie n'est pas indiquée pour vous, ou si le suivi avec moi ne correspond pas à votre situation, vous repartirez avec une vision plus claire des démarches possibles et du spécialiste à consulter.",
   },
   faq: {
     eyebrow: "Réponses",
