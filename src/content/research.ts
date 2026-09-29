@@ -75,8 +75,6 @@ export const researchContent: Record<Locale, ResearchContent> = {
           "This raises an important question. Could working with chronic stress, anxiety, anger, or other emotional reactions help improve blood pressure control?",
           "Hypnotherapy may be one way to work with these factors. But its role needs to be studied properly.",
         ],
-        emphasis:
-          "How significant and lasting this effect may be is a question for scientific research and evidence-based medicine.",
         outro: "My current research focuses on this question.",
         study: {
           label: "The study",
