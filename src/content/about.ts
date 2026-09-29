@@ -103,7 +103,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
     lead: "I was born in 1993 in Lida, Belarus, and grew up in a family of doctors. Medicine therefore entered my life long before it became my profession.",
     sections: [
       { paragraphs: [
-        "I often heard my parents discussing difficult cases, diagnoses, and treatment decisions. It showed me that being a doctor is not only about knowing medicine — it is also about thinking carefully, noticing details, and making responsible decisions.",
+        "From childhood, I saw medicine not only from the outside but from within. I often heard my parents discussing difficult cases, diagnoses, and treatment decisions. It showed me that being a doctor is not only about knowing medicine — it is also about thinking carefully, noticing details, and making responsible decisions.",
         "I was naturally curious about how the human body works. I wanted to understand why we get sick, how different organs work together, and what happens when something goes wrong. Biology and natural sciences were always the subjects that interested me most.",
         "Over time, that curiosity became something more. I knew I wanted a profession where my knowledge could have a real impact on someone’s life.",
         "So when it was time to choose my path after school, medicine felt like a natural choice.",
