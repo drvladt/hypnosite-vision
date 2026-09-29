@@ -130,11 +130,11 @@ export const aboutContent: Record<Locale, AboutContent> = {
         "This is how my present approach took shape: not to divide a person into separate organs and symptoms, but to understand how everything is connected.",
       ]},
       { title: "My work today", paragraphs: [
-        "Today I work in Libya as part of an international medical mission at a specialist cardiac surgery centre. Clinical cardiology remains an important part of my professional life.",
+        "Today I work in Libya as part of an international medical mission at a specialized cardiac surgery centre. Clinical cardiology remains an important part of my professional life.",
         "At the same time, I am developing a consultation practice in hypnotherapy and an integrative approach to health. I consult in person and online, working with emotional, psychosomatic and behavioural concerns, as well as conditions in which psychological processes influence physical wellbeing and quality of life.",
       ]},
       { title: "What I believe", paragraphs: [
-        "I believe that a person is not a diagnosis or a collection of symptoms. Behind every complaint is a personal story, and outwardly similar manifestations may arise from very different causes, experiences and life circumstances.",
+        "I believe that a person is more than a diagnosis or a list of symptoms. Every person has their own story. Similar symptoms can have different causes and can be influenced by different experiences and life circumstances.",
         "My task is therefore not to impose a ready-made explanation or promise a universal solution. It is important to listen carefully, understand the individual situation, rule out dangerous medical causes and find together a direction that can genuinely help.",
         "My professional path has passed through university lecture halls, cardiology departments, intensive care units, catheterisation laboratories and work in different countries. All of this has shaped the central principle of my practice:",
       ], emphasis: "Much in life can be changed, and much can be prevented, if we pause in time, listen to ourselves and take the first honest step towards the life we truly want to live." },
