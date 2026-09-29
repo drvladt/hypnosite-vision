@@ -103,9 +103,10 @@ export const aboutContent: Record<Locale, AboutContent> = {
     lead: "I was born in 1993 in Lida, Belarus, and grew up in a family of doctors. Medicine therefore entered my life long before it became my profession.",
     sections: [
       { paragraphs: [
-        "From childhood, I saw medicine not only from the outside but from within. I heard my parents discuss diagnoses, complex clinical situations and approaches to treatment. This helped me understand early how much knowledge, attentiveness and analytical skill the work of a doctor requires.",
-        "I was always interested in how the human body works, how its organs and systems interact, and why disorders arise. I enjoyed biology and the natural sciences, and the desire to understand living processes gradually became a conscious professional interest.",
-        "I wanted to do work that brings tangible benefit and can change people's lives for the better. After school, I chose medicine without hesitation.",
+        "I often heard my parents discussing difficult cases, diagnoses, and treatment decisions. It showed me that being a doctor is not only about knowing medicine — it is also about thinking carefully, noticing details, and making responsible decisions.",
+        "I was naturally curious about how the human body works. I wanted to understand why we get sick, how different organs work together, and what happens when something goes wrong. Biology and natural sciences were always the subjects that interested me most.",
+        "Over time, that curiosity became something more. I knew I wanted a profession where my knowledge could have a real impact on someone’s life.",
+        "So when it was time to choose my path after school, medicine felt like a natural choice.",
       ]},
       { title: "Professional formation", paragraphs: [
         "I graduated with honours in General Medicine from the Belarusian State Medical University in Minsk. Even as a student, simply memorising symptoms, diagnoses and treatment protocols was not enough for me. I wanted to understand how different processes are connected, why the same disease develops differently in different people, and what roles physiological, psychological, social and behavioural factors play.",
