@@ -118,7 +118,7 @@ export const researchContent: Record<Locale, ResearchContent> = {
           "La prise en charge de l'hypertension repose notamment sur des changements du mode de vie et, lorsque cela est nécessaire, sur un traitement médicamenteux.",
           "Mais chez certaines personnes, le stress prolongé, l'anxiété et la tension intérieure peuvent aussi influencer la pression artérielle et rendre son contrôle plus difficile.",
           "Cela soulève une question importante : travailler sur le stress chronique, l'anxiété, la colère ou certaines réactions émotionnelles peut-il aider à améliorer le contrôle de la pression artérielle ?",
-          "L'hypnothérapie pourrait être l'un des outils permettant de travailler sur ces facteurs. Son effet doit cependant être évalué de manière rigoureuse.",
+          "L'hypnothérapie pourrait être l'un des outils permettant de travailler sur ces facteurs. Son effet doit cependant être évalué de manière rigoureuse et scientifique.",
         ],
         emphasis:
           "L'importance et la durée d'un éventuel effet doivent être étudiées selon les méthodes de la médecine fondée sur les preuves.",
