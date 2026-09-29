@@ -158,7 +158,7 @@ export const hypnotherapyContent: Record<Locale, HypnotherapyContent> = {
     eyebrow: "Méthode",
     title: "Qu'est-ce que l'hypnothérapie ?",
     lead:
-      "Quand on entend le mot « hypnose », on imagine souvent un pendule, le sommeil ou une personne qui perd le contrôle. En réalité, l'hypnothérapie est très différente.",
+      "Quand on entend le mot « hypnose », on imagine souvent un pendule, un état de trance ou une personne qui perd le contrôle. En réalité, l'hypnothérapie moderne est très différente.",
     sections: [
       {
         title: "Vous restez conscient et gardez le contrôle",
@@ -166,7 +166,7 @@ export const hypnotherapyContent: Record<Locale, HypnotherapyContent> = {
           "L'hypnothérapie ne consiste pas à vous endormir ni à prendre le contrôle de votre esprit.",
           "Pendant une séance, vous restez conscient de ce qui se passe. Vous m'entendez, vous pouvez parler, faire vos propres choix, ouvrir les yeux et arrêter la séance à tout moment.",
           "Dans ma pratique, j'utilise principalement une approche non directive et ericksonienne.",
-          "Je ne vous dis pas quoi penser et je ne vous donne pas de réponses toutes faites. J'utilise plutôt des questions, des images et la focalisation de l'attention pour vous aider à explorer vos pensées, vos émotions, vos sensations physiques et vos réactions.",
+          "Je ne vous dis pas quoi penser et je ne vous donne pas de réponses toutes faites. J'utilise plutôt des questions, et la focalisation de l'attention pour vous aider à explorer vos pensées, vos émotions, vos sensations physiques et vos réactions.",
         ],
         emphasis:
           "Vous restez conscient de ce qui se passe et gardez le contrôle tout au long de la séance.",
@@ -178,20 +178,20 @@ export const hypnotherapyContent: Record<Locale, HypnotherapyContent> = {
           "Vous étiez toujours éveillé et conscient. Mais votre attention était tellement concentrée que ce qui se passait autour de vous semblait moins important pendant un moment.",
           "L'hypnose peut ressembler à cela.",
           "Votre attention devient plus focalisée. Il peut alors être plus facile de remarquer certaines pensées, émotions, images, souvenirs ou sensations physiques qui passent habituellement inaperçus.",
-          "Je ne contrôle pas ce qui se passe dans votre esprit. Mon rôle est de guider votre attention, de poser des questions et de vous accompagner dans ce qui apparaît pendant la séance.",
+          "Je ne contrôle pas ce qui se passe dans votre esprit. Mon rôle est de guider votre attention, et de vous accompagner dans ce qui apparaît pendant la séance.",
           "Cet état d'attention particulièrement focalisée est souvent appelé état hypnotique ou transe.",
         ],
       },
       {
         title: "Pourquoi certaines expériences du passé peuvent-elles encore nous influencer ?",
         paragraphs: [
-          "Imaginez un enfant devant le tableau.",
+          "Imaginez un enfant devant le tableau a l'ecole.",
           "Il fait une erreur. Le professeur réagit sèchement. Quelques camarades rient. L'enfant se sent honteux et commence à avoir peur de se tromper à nouveau.",
-          "Les années passent. Il se souvient peut-être à peine de cette journée.",
-          "Maintenant, imaginez cette même personne à l'âge adulte. Elle doit faire une présentation importante.",
+          "Les années passent... A un moment, il se souvient peut-être à peine de cette journée.",
+          "Maintenant, imaginez cette même personne à l'âge adulte. Elle doit faire une présentation importante ou participer a une conference.",
           "Elle connaît son sujet. Elle est bien préparée.",
-          "Pourtant, à mesure que la présentation approche, l'anxiété augmente. Son cœur s'accélère. Son ventre se noue. Elle peut même avoir des nausées.",
-          "Une pensée revient :",
+          "Pourtant, à mesure que la la conference approche, l'anxiété augmente. Son cœur s'accélère. Son ventre se noue. Elle peut même avoir des nausées ou vomissements.",
+          "Dans la tète, une pensée revient a tout moment :",
         ],
         italicLines: ["« Et si je me trompe et que tout le monde me juge ? »"],
       },
@@ -199,7 +199,7 @@ export const hypnotherapyContent: Record<Locale, HypnotherapyContent> = {
         paragraphs: [
           "Il n'y a plus de tableau. Plus de professeur. Plus de camarades qui rient.",
           "Mais quelque chose dans cette situation lui semble familier.",
-          "Les circonstances ont changé. Pourtant, une réaction émotionnelle et physique similaire peut encore apparaître.",
+          "Les circonstances ont changé. Pourtant, une réaction émotionnelle et physique similaire continue d'apparaître.",
           "Cela ne signifie pas que toutes nos réactions actuelles viennent d'un seul événement de l'enfance.",
           "Nos réactions se construisent généralement à travers de nombreuses expériences. Mais certaines d'entre elles peuvent influencer ce que nous attendons, ce que nous craignons et ce que nous finissons par croire sur nous-mêmes.",
         ],
@@ -233,7 +233,7 @@ export const hypnotherapyContent: Record<Locale, HypnotherapyContent> = {
           "La mémoire n'est pas un enregistrement vidéo.",
           "Une image, une émotion, un souvenir ou une association qui apparaît pendant l'hypnose ne doit pas être considéré automatiquement comme une reproduction exacte du passé.",
           "Le but n'est pas de prouver exactement ce qui s'est passé il y a plusieurs années.",
-          "La question importante est plutôt de comprendre ce que cette expérience représente pour vous aujourd'hui.",
+          "Il est plutôt important de comprendre ce que cette expérience représente pour vous aujourd'hui.",
         ],
         italicLines: [
           "Qu'est-ce que j'en ai appris ?",
