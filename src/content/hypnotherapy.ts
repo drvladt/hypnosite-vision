@@ -5,6 +5,8 @@ export type HypnotherapySection = {
   /** Italic lines rendered before the paragraphs (e.g. a continuation of the previous section's lead-in). */
   openingItalics?: string[];
   paragraphs?: string[];
+  /** Italic lines rendered after the paragraphs (inner thoughts, beliefs, questions). */
+  italicLines?: string[];
   /** Highlighted question lines rendered after the paragraphs (gold left border, indented). */
   highlightLines?: string[];
   /** Paragraphs rendered after the highlighted lines. */
