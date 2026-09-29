@@ -156,41 +156,108 @@ export const hypnotherapyContent: Record<Locale, HypnotherapyContent> = {
   },
   fr: {
     eyebrow: "Méthode",
-    title: "Qu'est-ce que l'hypnothérapie",
+    title: "Qu'est-ce que l'hypnothérapie ?",
     lead:
-      "Quand on entend le mot « hypnose », beaucoup s'imaginent un pendule devant les yeux, le sommeil et une personne qui perd soudain le contrôle de soi. Cette image tient davantage du spectacle de scène que de la médecine moderne.",
+      "Quand on entend le mot « hypnose », on imagine souvent un pendule, le sommeil ou une personne qui perd le contrôle. En réalité, l'hypnothérapie est très différente.",
     sections: [
       {
+        title: "Vous restez conscient et gardez le contrôle",
         paragraphs: [
-          "En pratique clinique, on utilise principalement l'hypnose non directive, ou ericksonienne. Le choix de la technique dépend de la situation et de l'objectif de la thérapie. Lors de ce travail, le thérapeute ne donne pas de réponses toutes faites. Il pose des questions, utilise des images et aide la personne à mieux comprendre ses propres sentiments, ses réactions et ses manières habituelles de penser. La personne reste consciente et entend le thérapeute. Elle peut partager ce qui surgit pendant la séance, sans avoir à suivre un scénario défini. Si elle le souhaite, la personne peut ouvrir les yeux et interrompre la séance à tout moment.",
-          "Le processus ressemble par bien des aspects à un état méditatif. Avec l'aide du thérapeute, la personne dirige son attention vers l'intérieur et se concentre sur ses pensées, ses sensations et ses images. Le thérapeute ne la dirige pas de l'extérieur : il aide à maintenir l'attention, pose des questions et accompagne la personne dans l'exploration de ses propres réactions. Cet état de concentration ou de focalisation sur certains sentiments est parfois appelé — dans les sources non médicales — une transe.",
+          "L'hypnothérapie ne consiste pas à vous endormir ni à prendre le contrôle de votre esprit.",
+          "Pendant une séance, vous restez conscient de ce qui se passe. Vous m'entendez, vous pouvez parler, faire vos propres choix, ouvrir les yeux et arrêter la séance à tout moment.",
+          "Dans ma pratique, j'utilise principalement une approche non directive et ericksonienne.",
+          "Je ne vous dis pas quoi penser et je ne vous donne pas de réponses toutes faites. J'utilise plutôt des questions, des images et la focalisation de l'attention pour vous aider à explorer vos pensées, vos émotions, vos sensations physiques et vos réactions.",
         ],
         emphasis:
-          "Cet état de concentration ou de focalisation sur certains sentiments est parfois appelé — dans les sources non médicales — une transe.",
+          "Vous restez conscient de ce qui se passe et gardez le contrôle tout au long de la séance.",
+      },
+      {
+        title: "Que ressent-on pendant l'hypnose ?",
+        paragraphs: [
+          "Pensez à un moment où vous étiez complètement absorbé par un livre, un film, de la musique ou simplement par vos pensées.",
+          "Vous étiez toujours éveillé et conscient. Mais votre attention était tellement concentrée que ce qui se passait autour de vous semblait moins important pendant un moment.",
+          "L'hypnose peut ressembler à cela.",
+          "Votre attention devient plus focalisée. Il peut alors être plus facile de remarquer certaines pensées, émotions, images, souvenirs ou sensations physiques qui passent habituellement inaperçus.",
+          "Je ne contrôle pas ce qui se passe dans votre esprit. Mon rôle est de guider votre attention, de poser des questions et de vous accompagner dans ce qui apparaît pendant la séance.",
+          "Cet état d'attention particulièrement focalisée est souvent appelé état hypnotique ou transe.",
+        ],
+      },
+      {
+        title: "Pourquoi certaines expériences du passé peuvent-elles encore nous influencer ?",
+        paragraphs: [
+          "Imaginez un enfant devant le tableau.",
+          "Il fait une erreur. Le professeur réagit sèchement. Quelques camarades rient. L'enfant se sent honteux et commence à avoir peur de se tromper à nouveau.",
+          "Les années passent. Il se souvient peut-être à peine de cette journée.",
+          "Maintenant, imaginez cette même personne à l'âge adulte. Elle doit faire une présentation importante.",
+          "Elle connaît son sujet. Elle est bien préparée.",
+          "Pourtant, à mesure que la présentation approche, l'anxiété augmente. Son cœur s'accélère. Son ventre se noue. Elle peut même avoir des nausées.",
+          "Une pensée revient :",
+        ],
+        italicLines: ["« Et si je me trompe et que tout le monde me juge ? »"],
       },
       {
         paragraphs: [
-          "Un exemple simple… Imaginons un enfant une fois de plus appelé au tableau. Après avoir mal résolu un exercice, le professeur répond sèchement et les camarades rient. À ce moment, l'enfant ressent pour la première fois la honte et la peur.",
-          "Les années passent, et la personne peut ne même plus se souvenir de l'événement. C'est désormais un adulte qui se prépare à une présentation importante. Il sait qu'il peut y arriver, mais avant même la présentation, il éprouve une anxiété injustifiée, de la peur ; le matin de la présentation, il a même la nausée et vomit. Dans la situation présente, il n'y a ni tableau, ni classe rieuse. Pourtant, il y a la peur familière de se tromper sous les yeux des autres — et une réaction corporelle sous forme de vomissements causée précisément par cette peur.",
+          "Il n'y a plus de tableau. Plus de professeur. Plus de camarades qui rient.",
+          "Mais quelque chose dans cette situation lui semble familier.",
+          "Les circonstances ont changé. Pourtant, une réaction émotionnelle et physique similaire peut encore apparaître.",
+          "Cela ne signifie pas que toutes nos réactions actuelles viennent d'un seul événement de l'enfance.",
+          "Nos réactions se construisent généralement à travers de nombreuses expériences. Mais certaines d'entre elles peuvent influencer ce que nous attendons, ce que nous craignons et ce que nous finissons par croire sur nous-mêmes.",
+        ],
+      },
+      {
+        title: "Travailler avec des expériences passées",
+        paragraphs: [
+          "C'est là que l'hypnothérapie peut parfois être utile.",
+          "Lorsque cela est pertinent, nous pouvons explorer certaines expériences passées qui semblent liées à une réaction encore présente aujourd'hui.",
+          "Le but n'est pas simplement de retrouver un ancien souvenir.",
+          "Ce qui compte, c'est de comprendre comment cette expérience peut encore vous influencer aujourd'hui.",
+          "Avec le temps, une personne peut par exemple avoir appris :",
+        ],
+        italicLines: [
+          "« Si je fais une erreur, je serai humilié. »",
+          "« Je ne suis pas assez bien. »",
+          "« Je dois toujours réussir. »",
+          "« Si je déçois les autres, ils vont me rejeter. »",
         ],
       },
       {
         paragraphs: [
-          "Lors d'une séance d'hypnothérapie, la personne peut, avec l'aide du thérapeute, revenir mentalement à cette journée d'école et se tourner à nouveau vers les sentiments qu'elle a alors éprouvés. Désormais, la personne peut regarder ce qui s'est passé avec le regard d'un adulte et voir que l'erreur ne la rend pas incapable, et que le rire des autres ne définit pas sa valeur. Pendant la séance, cette ancienne conclusion peut perdre sa force d'autrefois. Avant la présentation, la personne peut encore ressentir de l'appréhension, mais sans se sentir nécessairement comme cet enfant qui se tient à nouveau au tableau.",
-          "De tels processus se produisent à de nombreux moments de nos vies et donnent lieu à diverses manifestations psychosomatiques. Les techniques régressives permettent de trouver la racine de ces processus et de modifier les attitudes et les conclusions adoptées en ces moments. Toutefois, les images qui surgissent pendant la séance ne peuvent être considérées comme un enregistrement exact du passé. Pour la thérapie, ce qui importe davantage, c'est de comprendre la signification que la personne donne aujourd'hui à son expérience : quelle conclusion elle a tirée sur elle-même et si cette conclusion l'aide encore maintenant.",
+          "À l'âge adulte, vous pouvez parfaitement comprendre que ces idées ne sont pas forcément vraies.",
+          "Et pourtant, vos émotions, et parfois votre corps, peuvent encore réagir comme si elles l'étaient.",
+          "L'hypnothérapie permet d'explorer cet écart entre ce que vous savez et la façon dont vous réagissez encore.",
+        ],
+      },
+      {
+        title: "Il ne s'agit pas de retrouver un souvenir parfait",
+        paragraphs: [
+          "La mémoire n'est pas un enregistrement vidéo.",
+          "Une image, une émotion, un souvenir ou une association qui apparaît pendant l'hypnose ne doit pas être considéré automatiquement comme une reproduction exacte du passé.",
+          "Le but n'est pas de prouver exactement ce qui s'est passé il y a plusieurs années.",
+          "La question importante est plutôt de comprendre ce que cette expérience représente pour vous aujourd'hui.",
+        ],
+        italicLines: [
+          "Qu'est-ce que j'en ai appris ?",
+          "Qu'ai-je commencé à croire sur moi-même ?",
+          "Est-ce que cette croyance influence encore mes réactions aujourd'hui ?",
         ],
         emphasis:
-          "Pour la thérapie, ce qui importe davantage, c'est de comprendre la signification que la personne donne aujourd'hui à son expérience : quelle conclusion elle a tirée sur elle-même et si cette conclusion l'aide encore maintenant.",
+          "Nous ne pouvons pas changer le passé. Mais nous pouvons changer la façon dont une ancienne expérience continue à influencer le présent.",
       },
       {
+        title: "Plus de liberté dans le présent",
         paragraphs: [
-          "Les événements passés ne peuvent être modifiés. Mais la pensée « je dois toujours être irréprochable » peut s'apprendre à être remarquée, vérifiée et cesser progressivement d'être prise pour la seule vérité sur soi. Quand le rapport à soi-même et à ses propres vécus change, la possibilité apparaît de réagir autrement dans le présent également.",
-          "L'hypnothérapie peut aider une personne non seulement à comprendre les réactions qui la gênent aujourd'hui, mais aussi à voir combien de décisions elle a pris l'habitude de prendre par peur et par manque de confiance en soi. Derrière l'habitude de repousser une étape importante, de se taire sur ses besoins, ou de refuser le nouveau et l'inconnu, se cache parfois une ancienne peur de se tromper, d'essuyer un refus, ou de ne pas répondre aux attentes. Quand la personne commence à comprendre d'où vient cette peur et aborde son expérience passée d'une manière nouvelle, il lui devient plus facile d'agir autrement. Elle peut se risquer à des étapes importantes et réaliser ce qu'elle souhaitait depuis longtemps mais qu'elle repoussait sans cesse. Ces étapes modifient peu à peu non pas une réaction isolée, mais la vie elle-même — une vie dans laquelle la personne gagne davantage de liberté de choix.",
+          "Ces schémas ne prennent pas toujours la forme d'une peur évidente.",
+          "Peut-être repoussez-vous sans cesse quelque chose qui compte vraiment pour vous.",
+          "Peut-être restez-vous silencieux alors que vous aimeriez dire ce dont vous avez besoin.",
+          "Peut-être évitez-vous certaines opportunités par peur d'échouer.",
+          "Ou peut-être vous imposez-vous une pression constante pour tout faire parfaitement.",
+          "Vous pouvez même comprendre pourquoi vous agissez ainsi et continuer malgré tout à répéter le même schéma.",
+          "L'hypnothérapie peut aider à explorer les émotions, les croyances et les réactions automatiques qui se trouvent derrière ces comportements.",
+          "Le but n'est pas d'effacer votre passé ni de changer qui vous êtes.",
+          "Il s'agit de mieux comprendre pourquoi certaines situations vous affectent encore aujourd'hui et de créer davantage de liberté dans votre façon d'y réagir.",
         ],
-      },
-      {
         emphasis:
-          "C'est l'un des objectifs de l'hypnothérapie — aider la personne à mieux comprendre ses réactions et à gagner davantage de liberté dans ses propres décisions.",
+          "L'un des objectifs de l'hypnothérapie est simple : mieux comprendre ce qui guide vos réactions afin que d'anciens schémas ne continuent pas à décider à votre place.",
       },
     ],
   },
