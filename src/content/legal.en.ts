@@ -17,7 +17,7 @@ export const legalEn: LegalContent = {
     metaDescription:
       "How the consultation works, how your data is handled, and what you confirm before filling in the pre-consultation form.",
     intro: [
-      "The form helps Dr Vlad review your situation beforehand and understand whether a consultation could be helpful in your case.",
+      "The form helps Dr Vlad review your situation and understand whether a consultation could be helpful in your case.",
       "You can describe your complaints, health condition, previous investigations and treatment. After submitting, you may optionally attach medical documents.",
     ],
     access: {
