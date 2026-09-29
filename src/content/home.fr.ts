@@ -54,7 +54,7 @@ export const homeFr: HomeContent = {
 
     ],
     summary:
-      "Si vous vous reconnaissez dans au moins une de ces situations, votre état ne dépend pas uniquement du physique. Lors de la première consultation, nous examinons s'il existe d'autres facteurs sur lesquels il est possible et utile d'agir.",
+      "Si vous vous reconnaissez dans l’une de ces situations, il peut être utile de regarder au-delà des symptômes. Lors de la première consultation, nous cherchons à comprendre ce qui peut influencer votre état et sur quoi il est possible d’agir.",
   },
   bigPicture: {
     eyebrow: "Une nouvelle orientation de la médecine moderne",
