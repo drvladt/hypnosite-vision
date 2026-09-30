@@ -235,12 +235,12 @@ export function DrVladHome({ locale }: { locale: Locale }) {
         <section id="approach" className="scroll-mt-24 border-y border-border bg-primary text-primary-foreground">
           <div className="mx-auto grid max-w-7xl gap-9 px-5 py-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-12 lg:px-8 lg:py-14">
             <div><p className="eyebrow text-gold-light">{c.approach.eyebrow}</p><h2 className="mt-4 font-display text-4xl leading-tight md:text-5xl">{c.approach.title}</h2></div>
-            <div className="space-y-6 text-base leading-8 text-primary-foreground/78">
+            <div className="space-y-5 text-base leading-8 text-primary-foreground/78">
               {c.approach.paragraphs.map((text) => <p key={text}>{text}</p>)}
               <a className="inline-flex items-center gap-2 border-b border-gold/60 pb-1 text-sm font-semibold text-gold-light transition-colors hover:text-primary-foreground" href={pagePath(locale, "approach")}>{c.approach.moreApproachLabel}<ArrowRight className="size-4" aria-hidden="true" /></a>
-              <div id="hypnotherapy" className="scroll-mt-28 border-t border-primary-foreground/20 pt-6">
-                {c.approach.hypnotherapy.map((text, index) => <p key={text} className={index === 0 ? undefined : "mt-4"}>{text}</p>)}
-                <a className="mt-6 inline-flex items-center gap-2 border-b border-gold/60 pb-1 text-sm font-semibold text-gold-light transition-colors hover:text-primary-foreground" href={pagePath(locale, "hypnotherapy")}>{c.approach.moreHypnotherapyLabel}<ArrowRight className="size-4" aria-hidden="true" /></a>
+              <div id="hypnotherapy" className="scroll-mt-28 border-t border-primary-foreground/20 pt-5">
+                {c.approach.hypnotherapy.map((text, index) => <p key={text} className={index === 0 ? undefined : "mt-3.5"}>{text}</p>)}
+                <a className="mt-5 inline-flex items-center gap-2 border-b border-gold/60 pb-1 text-sm font-semibold text-gold-light transition-colors hover:text-primary-foreground" href={pagePath(locale, "hypnotherapy")}>{c.approach.moreHypnotherapyLabel}<ArrowRight className="size-4" aria-hidden="true" /></a>
               </div>
             </div>
           </div>
