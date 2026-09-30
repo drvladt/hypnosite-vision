@@ -69,8 +69,9 @@ export type HomeContent = {
     bookLabel: string;
   };
   reviews: {
-    eyebrow: string;
+    eyebrow?: string;
     title: string;
+    caption?: string;
     emptyLabel: string;
     previousLabel: string;
     nextLabel: string;
