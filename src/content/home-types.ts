@@ -77,7 +77,7 @@ export type HomeContent = {
     nextLabel: string;
     playLabel: string;
     concernLabel: string;
-    items: { name: string; concern: string; videoUrl: string; posterUrl?: string }[];
+    items: { name: string; concern: string; videoUrl: string; posterUrl?: string; youtubeId?: string }[];
   };
   steps: {
     eyebrow: string;
