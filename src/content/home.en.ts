@@ -54,7 +54,7 @@ export const homeEn: HomeContent = {
 
     ],
     summary:
-      "If any of this sounds familiar, your symptoms may be influenced by more than one factor. During the first consultation, we look at the\u00a0 picture wider — what may be contributing to your symptoms, what keeps them going, and what can realistically be changed.",
+      "If any of this sounds familiar, your symptoms may be influenced by more than one factor. During the first consultation, we look at the picture wider — what may be contributing to your symptoms, what keeps them going, and what can realistically be changed.",
   },
   bigPicture: {
     eyebrow: "A new direction in modern medicine",
