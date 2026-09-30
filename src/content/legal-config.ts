@@ -58,8 +58,12 @@ export const legalConfig = {
   supervisoryAuthority:
     "Instance de Protection des Données à Caractère Personnel (IPDCP), Agoè 2 Lions, Lomé, République Togolaise — contact@ipdcp.tg, +228 22 25 13 34, +228 70 36 33 33, ipdcp.tg" as
       string | null,
-  googleFormUrl:
-    "https://docs.google.com/forms/d/e/1FAIpQLSd2DJROKIpPEHXbz9oz35_AuxNnSRpms-4WP-zZNepPFeFu_w/viewform",
+  /** Intake questionnaire — one Google Form per language. */
+  googleFormUrl: localized({
+    ru: "https://docs.google.com/forms/d/e/1FAIpQLSd2DJROKIpPEHXbz9oz35_AuxNnSRpms-4WP-zZNepPFeFu_w/viewform",
+    en: "https://docs.google.com/forms/d/e/1FAIpQLSe9Ak1bWL4WjxhN43oOh-Qn8N-T0fk67txLmH4W0PQcYV8OQg/viewform",
+    fr: "https://docs.google.com/forms/d/e/1FAIpQLSdOdk_hMpSBA4pCOCNqPOiWq81mxe3tswJY_2ZczV75zFnnKQ/viewform",
+  }),
   /**
    * Confirmed via prefilled link from Dr Vlad: the Patient ID field id.
    * Field semantics: name "Patient ID", visible label «Код обращения», value = case_id format DV000001.

@@ -64,8 +64,8 @@ export async function createCase(locale: Locale, consents: ConsentValues): Promi
 }
 
 /** Official Google Forms pre-filled parameter — the only place the Patient ID may travel. */
-export function intakeFormUrl(patientId: string | null): string {
-  const base = legalConfig.googleFormUrl;
+export function intakeFormUrl(patientId: string | null, locale: Locale): string {
+  const base = legalConfig.googleFormUrl[locale];
   const entry = legalConfig.googleFormPatientIdEntry;
   if (!patientId || !entry) return base;
   return `${base}?usp=pp_url&${entry}=${encodeURIComponent(patientId)}`;
