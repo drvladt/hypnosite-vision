@@ -36,7 +36,7 @@ export const homeEn: HomeContent = {
     eyebrow: "Integrative medicine · Hypnotherapy",
     title:
       "Still feeling chest pain, palpitations, or blood pressure swings — even though your tests are normal and you follow your doctor's advice?",
-    lead: "Dr. Vlad takes an integrative approach. Instead of just silencing one symptom, he works to understand the medical, emotional, and behavioural factors that started the problem or keep it going.",
+    lead: "Dr. Vlad takes an integrative approach. Instead of just silencing one symptom, he works to understand the medical, emotional, and behavioural factors that started the problem or keep it going.\nThe first online consultation is a chance to make sense of what you’re experiencing and see what to do next.",
     portraitAlt: "Dr. Vlad — cardiologist and hypnotherapist",
     portraitCaption:
       "Help with health anxiety, intrusive thoughts, fears, and body responses — combining a doctor's perspective with non-directive hypnotherapy, when it is genuinely appropriate.",
