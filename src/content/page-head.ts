@@ -55,7 +55,7 @@ export function pageHead(locale: Locale, page: PageKey, siteOrigin: string) {
       { property: "og:title", content: metaTitle },
       { property: "og:description", content: metaDescription },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Dr Vlad" },
+      { property: "og:site_name", content: "Dr Vlad" },
       { property: "og:url", content: canonicalUrl },
       { property: "og:image", content: imageUrl },
       { property: "og:image:alt", content: socialImageAlt(locale) },
