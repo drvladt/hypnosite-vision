@@ -129,7 +129,9 @@ export const homeRu: HomeContent = {
     nextLabel: "Следующий отзыв",
     playLabel: "Воспроизвести видеоотзыв",
     concernLabel: "Обратился/обратилась с:",
-    items: [],
+    items: [
+      { name: "", concern: "", videoUrl: "", youtubeId: "EMXvArXvaPY" },
+    ],
   },
   steps: {
     eyebrow: "Как всё проходит",
