@@ -233,7 +233,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
         </section>
 
         <section id="approach" className="scroll-mt-24 border-y border-border bg-primary text-primary-foreground">
-          <div className="mx-auto grid max-w-7xl gap-9 px-5 py-14 lg:grid-cols-[.8fr_1.2fr] lg:gap-12 lg:px-8 lg:py-20">
+          <div className="mx-auto grid max-w-7xl gap-9 px-5 py-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-12 lg:px-8 lg:py-14">
             <div><p className="eyebrow text-gold-light">{c.approach.eyebrow}</p><h2 className="mt-4 font-display text-4xl leading-tight md:text-5xl">{c.approach.title}</h2></div>
             <div className="space-y-6 text-base leading-8 text-primary-foreground/78">
               {c.approach.paragraphs.map((text) => <p key={text}>{text}</p>)}
@@ -279,7 +279,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
         </section>
 
         <section className="border-y border-border bg-secondary/35">
-          <div className="mx-auto grid max-w-7xl items-start gap-8 px-5 py-14 lg:grid-cols-[.55fr_1.45fr] lg:gap-10 lg:px-8 lg:py-20">
+          <div className="mx-auto grid max-w-7xl items-start gap-8 px-5 py-10 lg:grid-cols-[.55fr_1.45fr] lg:gap-10 lg:px-8 lg:py-14">
             <div><p id="about" className="eyebrow">{c.about.eyebrow}</p><div className="mt-6 h-px w-16 bg-gold"/></div>
             <div>
               <h2 className="section-title">{c.about.title}</h2>
@@ -295,7 +295,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
 
         <section aria-labelledby="reviews-title" className="border-b border-border py-10 lg:py-14">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
-            <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between"><h2 id="reviews-title" className="section-title max-w-3xl">{c.reviews.title}</h2>{c.reviews.items.length > 0 && <div className="flex gap-2"><Button variant="outline" size="icon" onClick={() => scrollReviews(-1)} aria-label={c.reviews.previousLabel}><ArrowLeft /></Button><Button variant="outline" size="icon" onClick={() => scrollReviews(1)} aria-label={c.reviews.nextLabel}><ArrowRight /></Button></div>}</div>
+            <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between"><h2 id="reviews-title" className="section-title max-w-3xl">{c.reviews.title}</h2>{c.reviews.items.length > 1 && <div className="flex gap-2"><Button variant="outline" size="icon" onClick={() => scrollReviews(-1)} aria-label={c.reviews.previousLabel}><ArrowLeft /></Button><Button variant="outline" size="icon" onClick={() => scrollReviews(1)} aria-label={c.reviews.nextLabel}><ArrowRight /></Button></div>}</div>
             {c.reviews.items.length > 0 ? <div ref={reviewsRef} className="mt-6 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4">{c.reviews.items.map((review) => <article key={`${review.name}-${review.videoUrl}`} className="relative aspect-[9/14] w-[78vw] max-w-80 shrink-0 snap-start overflow-hidden rounded-md bg-primary text-primary-foreground">{review.youtubeId ? <YouTubeFacade videoId={review.youtubeId} playLabel={`${c.reviews.playLabel}: ${review.name}`} title={review.name} /> : <>{review.posterUrl && <img src={review.posterUrl} alt="" className="absolute inset-0 size-full object-cover opacity-55"/>}<video className="absolute inset-0 size-full object-cover" src={review.videoUrl} poster={review.posterUrl} controls preload="metadata" aria-label={`${c.reviews.playLabel}: ${review.name}`} /></>}{review.name && <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary via-primary/80 to-transparent px-6 pb-6 pt-24">{!review.youtubeId && <Play className="mb-5 size-7 text-gold-light" aria-hidden="true"/>}<h3 className="font-display text-2xl">{review.name}</h3>{review.concern && <p className="mt-2 text-sm leading-6 text-primary-foreground/70"><span className="font-semibold text-gold-light">{c.reviews.concernLabel}</span> {review.concern}</p>}</div>}</article>)}</div> : <div className="mt-6 grid min-h-32 place-items-center rounded-md border border-dashed border-border bg-secondary/25 px-6 py-8 text-center"><div><Play className="mx-auto size-7 text-gold" aria-hidden="true"/><p className="mx-auto mt-4 max-w-lg text-sm leading-6 text-muted-foreground">{c.reviews.emptyLabel}</p></div></div>}
             {c.reviews.caption && <p className="mt-6 max-w-2xl border-l-2 border-gold/70 py-1 pl-5 text-[15px] leading-7 text-foreground/75">{c.reviews.caption}</p>}
           </div>
@@ -338,7 +338,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
         </section>
 
         <section className="border-t border-border bg-primary text-primary-foreground">
-          <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-7 px-5 py-12 md:flex-row md:items-end lg:px-8 lg:py-14">
+          <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-7 px-5 py-10 md:flex-row md:items-end lg:px-8 lg:py-12">
             <div><p className="eyebrow text-gold-light">{c.finalCta.eyebrow}</p><h2 className="mt-4 max-w-3xl font-display text-4xl leading-tight md:text-5xl">{c.finalCta.title}</h2></div>
             <Button asChild size="lg" className="h-13 shrink-0 rounded-full bg-gold px-7 text-background hover:bg-gold-light hover:text-background"><a href={`mailto:${contactEmail}`}>{c.cta.write} <ArrowRight /></a></Button>
           </div>
