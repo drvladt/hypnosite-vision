@@ -160,7 +160,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
       </header>
 
       <main id="top">
-        <section className="relative border-b border-border py-10 md:py-14 lg:py-16">
+        <section className="relative border-b border-border py-10 md:py-12 lg:py-14">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <div className="mb-8 grid items-end gap-7 lg:grid-cols-[1.2fr_.8fr] lg:gap-12">
               <div>
