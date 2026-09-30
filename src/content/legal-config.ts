@@ -16,8 +16,8 @@ function isLocalizedLegalValue(value: unknown): value is LocalizedLegalValue {
  * While anything required is null, production collection of health data stays off.
  */
 export const legalConfig = {
-  /** Confirmed: "Dr. Vlad Holistic medicine and consulting" (RCCM TG/LFW/RCCM/26-B-00129, Director: Dr. Vlad Tettegah). */
-  controllerLegalName: "Dr. Vlad Holistic medicine and consulting LPP" as string | null,
+  /** Confirmed: "Dr. Vlad Holistic medicine and consulting" (RCCM TG/LFW/RCCM/26-B-00129, Director: Dr. Vlad Tettegah). */
+  controllerLegalName: "Dr. Vlad Holistic medicine and consulting LPP" as string | null,
   /** Confirmed: République Togolaise. Clients accepted worldwide. */
   controllerCountry: localized({
     ru: "Республика Того",

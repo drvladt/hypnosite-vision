@@ -12,10 +12,10 @@ export const siteEn: SiteContent = {
     emergencyShort:
       "In acute situations — severe chest pain, difficulty breathing, fainting, any threat to life — contact emergency medical services, not this website.",
     backHome: "Back to home",
-    writeLabel: "Write to Dr. Vlad",
+    writeLabel: "Write to Dr. Vlad",
   },
   notFound: {
-    metaTitle: "Page not found — Dr. Vlad",
+    metaTitle: "Page not found — Dr. Vlad",
     title: "This page doesn't exist",
     text: "The address may have changed, or the link contains a typo. You can return home or read about the consultation.",
     action: "Back to home",
@@ -25,7 +25,7 @@ export const siteEn: SiteContent = {
       eyebrow: "Approach",
       title: "My integrative approach",
       lead: "I look at the whole situation: physical health, psycho-emotional factors and how they interact.",
-      metaTitle: "My integrative approach — Dr. Vlad",
+      metaTitle: "My integrative approach — Dr. Vlad",
       metaDescription:
         "An integrative view from a cardiologist and hypnotherapist: physical health, psycho-emotional factors and their interaction.",
       sections: [
@@ -51,9 +51,9 @@ export const siteEn: SiteContent = {
       eyebrow: "About",
       title: "About me",
       lead: "Cardiologist and certified hypnotherapist.",
-      metaTitle: "About — Dr. Vlad Tettegah",
+      metaTitle: "About — Dr. Vlad Tettegah",
       metaDescription:
-        "Dr. Vlad Tettegah, cardiologist and certified hypnotherapist: training, practice and research.",
+        "Dr. Vlad Tettegah, cardiologist and certified hypnotherapist: training, practice and research.",
       sections: [
         {
           bullets: [
@@ -69,7 +69,7 @@ export const siteEn: SiteContent = {
       eyebrow: "Method",
       title: "What is hypnotherapy",
       lead: "Non-directive hypnotherapy is a clinical tool, used only where it is genuinely indicated.",
-      metaTitle: "Hypnotherapy — Dr. Vlad",
+      metaTitle: "Hypnotherapy — Dr. Vlad",
       metaDescription:
         "Non-directive hypnotherapy in medical practice: when it is indicated, what to expect and what it is not.",
       pending: false,
@@ -86,7 +86,7 @@ export const siteEn: SiteContent = {
       eyebrow: "Research",
       title: "Research work",
       lead: "Exploring how hypnotherapeutic methods can be integrated into the comprehensive treatment of arterial hypertension.",
-      metaTitle: "Research work — Dr. Vlad",
+      metaTitle: "Research work — Dr. Vlad",
       metaDescription:
         "Research into integrating hypnotherapeutic methods into the comprehensive treatment of arterial hypertension.",
       sections: [
@@ -101,7 +101,7 @@ export const siteEn: SiteContent = {
       eyebrow: "Stories",
       title: "Stories and results",
       lead: "This section exists and will be filled with real stories — only once participants have given their consent.",
-      metaTitle: "Stories and results — Dr. Vlad",
+      metaTitle: "Stories and results — Dr. Vlad",
       metaDescription:
         "Real patient stories and results will be published here once consent is given.",
       sections: [
@@ -116,8 +116,8 @@ export const siteEn: SiteContent = {
       eyebrow: "Contact",
       title: "Get in touch",
       lead: "Write to me if you would like your situation reviewed or have questions about the format.",
-      metaTitle: "Contact — Dr. Vlad",
-      metaDescription: "How to reach Dr. Vlad: email and messengers.",
+      metaTitle: "Contact — Dr. Vlad",
+      metaDescription: "How to reach Dr. Vlad: email and messengers.",
       sections: [
         {
           paragraphs: [
@@ -132,13 +132,13 @@ export const siteEn: SiteContent = {
       eyebrow: "Document",
       title: "Privacy policy",
       lead: "Who processes the data you provide, for which purposes and for how long.",
-      metaTitle: "Privacy policy — Dr. Vlad",
+      metaTitle: "Privacy policy — Dr. Vlad",
       metaDescription: "Privacy policy: purposes of processing, retention periods and your rights.",
       sections: [
         {
           heading: "Who processes the data",
           paragraphs: [
-            "The data is processed personally by Dr. Vlad Tettegah, as a practising physician, in order to review your request.",
+            "The data is processed personally by Dr. Vlad Tettegah, as a practising physician, in order to review your request.",
           ],
         },
         {
@@ -160,7 +160,7 @@ export const siteEn: SiteContent = {
       eyebrow: "Document",
       title: "Terms of use",
       lead: "Rules for using this website and the boundaries of the consultation format.",
-      metaTitle: "Terms of use — Dr. Vlad",
+      metaTitle: "Terms of use — Dr. Vlad",
       metaDescription: "Terms of use and the boundaries of the online consultation format.",
       sections: [
         {
@@ -182,7 +182,7 @@ export const siteEn: SiteContent = {
     eyebrow: "Consultation",
     title: "How the consultation works",
     lead: "An initial integrative online consultation with an individual review of your situation.",
-    metaTitle: "How the consultation works — Dr. Vlad",
+    metaTitle: "How the consultation works — Dr. Vlad",
     metaDescription:
       "Conditions of the initial integrative online consultation, the steps involved and how your data is processed.",
     sections: [
@@ -235,7 +235,7 @@ export const siteEn: SiteContent = {
     eyebrow: "STEP 2 OF 3",
     title: "Pre-consultation intake form",
     lead: "The form lets me study your situation before we meet and see whether the format fits.",
-    metaTitle: "Pre-consultation intake form — Dr. Vlad",
+    metaTitle: "Pre-consultation intake form — Dr. Vlad",
     metaDescription: "The pre-consultation intake form, opened after the conditions are confirmed.",
     sections: [
       {
@@ -259,7 +259,7 @@ export const siteEn: SiteContent = {
     eyebrow: "STEP 3 OF 3",
     title: "Medical documents",
     lead: "An optional step: you can attach discharge summaries, test results and specialist reports.",
-    metaTitle: "Medical documents — Dr. Vlad",
+    metaTitle: "Medical documents — Dr. Vlad",
     metaDescription: "Optional upload of medical documents for your request.",
     sections: [
       {
@@ -287,8 +287,8 @@ export const siteEn: SiteContent = {
     eyebrow: "STEP 3 OF 3",
     title: "Your request has been sent",
     lead: "Thank you. Your request has been received.",
-    metaTitle: "Request sent — Dr. Vlad",
-    metaDescription: "Confirmation that your request to Dr. Vlad is complete.",
+    metaTitle: "Request sent — Dr. Vlad",
+    metaDescription: "Confirmation that your request to Dr. Vlad is complete.",
     sections: [
       {
         paragraphs: [

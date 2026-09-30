@@ -12,10 +12,10 @@ export const siteFr: SiteContent = {
     emergencyShort:
       "En cas de situation aiguë — douleur thoracique intense, difficulté à respirer, perte de conscience, danger vital — contactez les secours médicaux, pas ce site.",
     backHome: "Retour à l'accueil",
-    writeLabel: "Écrire à Dr. Vlad",
+    writeLabel: "Écrire à Dr. Vlad",
   },
   notFound: {
-    metaTitle: "Page introuvable — Dr. Vlad",
+    metaTitle: "Page introuvable — Dr. Vlad",
     title: "Cette page n'existe pas",
     text: "L'adresse a peut-être changé, ou le lien contient une erreur. Vous pouvez revenir à l'accueil ou consulter la page sur la consultation.",
     action: "Retour à l'accueil",
@@ -25,7 +25,7 @@ export const siteFr: SiteContent = {
       eyebrow: "Approche",
       title: "Mon approche intégrative",
       lead: "Je considère la situation dans son ensemble : l'état physique, les facteurs psycho-émotionnels et leurs interactions.",
-      metaTitle: "Mon approche intégrative — Dr. Vlad",
+      metaTitle: "Mon approche intégrative — Dr. Vlad",
       metaDescription:
         "Le regard intégratif d'un cardiologue et hypnothérapeute : état physique, facteurs psycho-émotionnels et leurs liens.",
       sections: [
@@ -51,9 +51,9 @@ export const siteFr: SiteContent = {
       eyebrow: "À propos",
       title: "À propos de moi",
       lead: "Cardiologue et hypnothérapeute certifié.",
-      metaTitle: "À propos — Dr. Vlad Tettegah",
+      metaTitle: "À propos — Dr. Vlad Tettegah",
       metaDescription:
-        "Dr. Vlad Tettegah, cardiologue et hypnothérapeute certifié : formation, pratique et recherche.",
+        "Dr. Vlad Tettegah, cardiologue et hypnothérapeute certifié : formation, pratique et recherche.",
       sections: [
         {
           bullets: [
@@ -69,7 +69,7 @@ export const siteFr: SiteContent = {
       eyebrow: "Méthode",
       title: "Qu'est-ce que l'hypnothérapie",
       lead: "L'hypnothérapie non directive est un outil clinique, utilisé uniquement lorsqu'elle est réellement indiquée.",
-      metaTitle: "Hypnothérapie — Dr. Vlad",
+      metaTitle: "Hypnothérapie — Dr. Vlad",
       metaDescription:
         "L'hypnothérapie non directive dans la pratique médicale : indications, déroulement et limites.",
       pending: false,
@@ -86,7 +86,7 @@ export const siteFr: SiteContent = {
       eyebrow: "Recherche",
       title: "Travail de recherche",
       lead: "Étude de l'intégration des méthodes hypnothérapeutiques dans la prise en charge globale de l'hypertension artérielle.",
-      metaTitle: "Travail de recherche — Dr. Vlad",
+      metaTitle: "Travail de recherche — Dr. Vlad",
       metaDescription:
         "Recherche sur l'intégration des méthodes hypnothérapeutiques dans la prise en charge de l'hypertension artérielle.",
       sections: [
@@ -101,7 +101,7 @@ export const siteFr: SiteContent = {
       eyebrow: "Témoignages",
       title: "Histoires et résultats",
       lead: "Cette section existe et sera enrichie de véritables histoires — uniquement avec l'accord des participants.",
-      metaTitle: "Histoires et résultats — Dr. Vlad",
+      metaTitle: "Histoires et résultats — Dr. Vlad",
       metaDescription:
         "Les histoires et résultats réels des patients seront publiés ici après leur consentement.",
       sections: [
@@ -116,8 +116,8 @@ export const siteFr: SiteContent = {
       eyebrow: "Contact",
       title: "Me contacter",
       lead: "Vous pouvez me contacter si vous souhaitez discuter de votre situation ou si vous avez des questions sur le déroulement d’une consultation.",
-      metaTitle: "Contact — Dr. Vlad",
-      metaDescription: "Comment joindre Dr. Vlad : e-mail et messageries.",
+      metaTitle: "Contact — Dr. Vlad",
+      metaDescription: "Comment joindre Dr. Vlad : e-mail et messageries.",
       sections: [
         {
           paragraphs: [
@@ -132,14 +132,14 @@ export const siteFr: SiteContent = {
       eyebrow: "Document",
       title: "Politique de confidentialité",
       lead: "Qui traite les données que vous fournissez, à quelles fins et pendant combien de temps.",
-      metaTitle: "Politique de confidentialité — Dr. Vlad",
+      metaTitle: "Politique de confidentialité — Dr. Vlad",
       metaDescription:
         "Politique de confidentialité : finalités du traitement, durées de conservation et vos droits.",
       sections: [
         {
           heading: "Qui traite les données",
           paragraphs: [
-            "Les données sont traitées personnellement par Dr. Vlad Tettegah, médecin en exercice, afin d'examiner votre demande.",
+            "Les données sont traitées personnellement par Dr. Vlad Tettegah, médecin en exercice, afin d'examiner votre demande.",
           ],
         },
         {
@@ -161,7 +161,7 @@ export const siteFr: SiteContent = {
       eyebrow: "Document",
       title: "Conditions d'utilisation",
       lead: "Règles d'utilisation du site et limites du format de consultation.",
-      metaTitle: "Conditions d'utilisation — Dr. Vlad",
+      metaTitle: "Conditions d'utilisation — Dr. Vlad",
       metaDescription: "Conditions d'utilisation du site et limites de la consultation en ligne.",
       sections: [
         {
@@ -183,7 +183,7 @@ export const siteFr: SiteContent = {
     eyebrow: "Consultation",
     title: "Comment se déroule la consultation",
     lead: "Une première consultation intégrative en ligne, avec une analyse individuelle de votre situation.",
-    metaTitle: "Comment se déroule la consultation — Dr. Vlad",
+    metaTitle: "Comment se déroule la consultation — Dr. Vlad",
     metaDescription:
       "Conditions de la première consultation intégrative en ligne, étapes de la demande et traitement des données.",
     sections: [
@@ -236,7 +236,7 @@ export const siteFr: SiteContent = {
     eyebrow: "ÉTAPE 2 SUR 3",
     title: "Questionnaire préalable",
     lead: "Le questionnaire me permet d'étudier votre situation avant la rencontre et de vérifier que le format convient.",
-    metaTitle: "Questionnaire préalable — Dr. Vlad",
+    metaTitle: "Questionnaire préalable — Dr. Vlad",
     metaDescription:
       "Questionnaire préalable à la consultation, accessible après confirmation des conditions.",
     sections: [
@@ -261,7 +261,7 @@ export const siteFr: SiteContent = {
     eyebrow: "ÉTAPE 3 SUR 3",
     title: "Documents médicaux",
     lead: "Étape facultative : vous pouvez joindre comptes rendus, résultats d'examens et avis spécialisés.",
-    metaTitle: "Documents médicaux — Dr. Vlad",
+    metaTitle: "Documents médicaux — Dr. Vlad",
     metaDescription: "Dépôt facultatif de documents médicaux pour votre demande.",
     sections: [
       {
@@ -289,8 +289,8 @@ export const siteFr: SiteContent = {
     eyebrow: "ÉTAPE 3 SUR 3",
     title: "Votre demande est envoyée",
     lead: "Merci. Votre demande a bien été reçue.",
-    metaTitle: "Demande envoyée — Dr. Vlad",
-    metaDescription: "Confirmation de l'envoi de votre demande à Dr. Vlad.",
+    metaTitle: "Demande envoyée — Dr. Vlad",
+    metaDescription: "Confirmation de l'envoi de votre demande à Dr. Vlad.",
     sections: [
       {
         paragraphs: [

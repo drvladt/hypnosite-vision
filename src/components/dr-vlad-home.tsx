@@ -130,7 +130,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
         <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 lg:px-8">
           <a href="#top" className="flex items-center gap-3" aria-label={c.nav.toTop}>
             <img src={logoAsset.url} alt="" className="size-11 rounded-full object-cover" />
-            <span className="font-display text-lg font-medium">Dr. Vlad</span>
+            <span className="font-display text-lg font-medium">Dr. Vlad</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm lg:flex" aria-label={c.nav.label}>
             {c.nav.items.map((item) => (
@@ -227,7 +227,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
                 <p key={text} className={`${index === 0 ? "mt-5" : "mt-4"} max-w-xl leading-7 text-foreground/75`}>{text}</p>
               ))}
             </div>
-            <blockquote className="self-end border-l-2 border-gold py-2 pl-7 font-display text-2xl leading-relaxed md:text-3xl">{c.bigPicture.quote}<footer className="mt-7 flex items-center gap-3"><span className="h-px w-5 bg-gold/55" aria-hidden="true" /><span className="font-display text-base font-semibold text-gold">Dr. Vlad</span></footer></blockquote>
+            <blockquote className="self-end border-l-2 border-gold py-2 pl-7 font-display text-2xl leading-relaxed md:text-3xl">{c.bigPicture.quote}<footer className="mt-7 flex items-center gap-3"><span className="h-px w-5 bg-gold/55" aria-hidden="true" /><span className="font-display text-base font-semibold text-gold">Dr. Vlad</span></footer></blockquote>
           </div>
         </section>
 
@@ -346,7 +346,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
 
       <footer className="bg-background py-9">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 px-5 md:flex-row lg:px-8">
-            <div className="flex items-center gap-3"><img src={logoAsset.url} alt="" className="size-12 rounded-full"/><div><p className="font-display text-xl">Dr. Vlad Tettegah</p><p className="text-xs text-muted-foreground">{c.footer.role}</p></div></div>
+            <div className="flex items-center gap-3"><img src={logoAsset.url} alt="" className="size-12 rounded-full"/><div><p className="font-display text-xl">Dr. Vlad Tettegah</p><p className="text-xs text-muted-foreground">{c.footer.role}</p></div></div>
             <div className="md:text-right">
               <div className="flex items-center gap-1.5 md:justify-end">
                 {socialLinks.map((social) => (

@@ -78,7 +78,7 @@ export function SiteLayout({
         <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 lg:px-8">
           <Link to={homePath[locale]} className="flex items-center gap-3" aria-label={home.nav.toTop}>
             <img src={logoAsset.url} alt="" className="size-11 rounded-full object-cover" />
-            <span className="font-display text-lg font-medium">Dr. Vlad</span>
+            <span className="font-display text-lg font-medium">Dr. Vlad</span>
           </Link>
           <nav className="hidden items-center gap-6 text-sm lg:flex" aria-label={c.common.navLabel}>
             {NAV_PAGES.map((item) => (
@@ -144,7 +144,7 @@ export function SiteLayout({
             <div className="max-w-xs">
               <div className="flex items-center gap-3">
                 <img src={logoAsset.url} alt="" className="size-10 rounded-full object-cover" />
-                <span className="font-display text-base font-medium">Dr. Vlad Tettegah</span>
+                <span className="font-display text-base font-medium">Dr. Vlad Tettegah</span>
               </div>
               <p className="mt-3 text-sm text-muted-foreground">{home.footer.role}</p>
               <div className="mt-4 flex items-center gap-2">
