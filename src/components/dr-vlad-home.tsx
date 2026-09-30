@@ -167,7 +167,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
                 <h1 className="mt-5 max-w-4xl font-display text-[clamp(2.15rem,5vw,4.65rem)] font-medium leading-[1.08]">{c.hero.title}</h1>
               </div>
               <div className="border-l border-gold/40 pl-6">
-                <p className="leading-7 text-foreground/75">{c.hero.lead}</p>
+                <p className="whitespace-pre-line leading-7 text-foreground/75">{c.hero.lead}</p>
                 <div className="mt-7"><ConsultationButton label={c.cta.primary} locale={locale} /></div>
               </div>
             </div>
