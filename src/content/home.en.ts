@@ -2,17 +2,17 @@ import type { HomeContent } from "./home-types";
 
 export const homeEn: HomeContent = {
   meta: {
-    title: "Dr. Vlad — cardiologist and hypnotherapist · integrative consultation",
+    title: "Dr. Vlad — cardiologist and hypnotherapist · integrative consultation",
     description:
-      "An integrative review of heart symptoms, anxiety and psychosomatic complaints with Dr. Vlad, cardiologist and hypnotherapist. First consultation online, up to 60 minutes.",
-    ogTitle: "Dr. Vlad — integrative consultation online",
+      "An integrative review of heart symptoms, anxiety and psychosomatic complaints with Dr. Vlad, cardiologist and hypnotherapist. First consultation online, up to 60 minutes.",
+    ogTitle: "Dr. Vlad — integrative consultation online",
     ogDescription:
       "Chest discomfort, palpitations or blood pressure swings that continue even when your tests are normal? Let us look at your situation as a whole.",
   },
   nav: {
     label: "Main navigation",
     mobileLabel: "Mobile navigation",
-    toTop: "Dr. Vlad — back to top",
+    toTop: "Dr. Vlad — back to top",
     openMenu: "Open menu",
     closeMenu: "Close menu",
     languageLabel: "Site language",
@@ -30,14 +30,14 @@ export const homeEn: HomeContent = {
   cta: {
     primary: "Review my case",
     note: "Free consultation · Online · Up to 60 minutes · Confidential",
-    write: "Write to Dr. Vlad",
+    write: "Write to Dr. Vlad",
   },
   hero: {
     eyebrow: "Integrative medicine · Hypnotherapy",
     title:
       "Still feeling chest pain, palpitations, or changes in your blood pressure — even though your tests are normal and you follow your doctor's advice?",
-    lead: "Dr. Vlad takes an integrative approach. Instead of just silencing one symptom, he works to understand the medical, emotional, and behavioural factors that started the problem or keep it going.\nThe first online consultation is a chance to make sense of what you’re experiencing and see what to do next.",
-    portraitAlt: "Dr. Vlad — cardiologist and hypnotherapist",
+    lead: "Dr. Vlad takes an integrative approach. Instead of just silencing one symptom, he works to understand the medical, emotional, and behavioural factors that started the problem or keep it going.\nThe first online consultation is a chance to make sense of what you’re experiencing and see what to do next.",
+    portraitAlt: "Dr. Vlad — cardiologist and hypnotherapist",
     portraitCaption:
       "Help with health anxiety, intrusive thoughts, fears, and body responses — combining a doctor's perspective with non-directive hypnotherapy, when it is genuinely appropriate.",
     badges: ["Cardiologist", "In medicine since 2019", "International practice", "Certified in hypnotherapy"],
@@ -67,7 +67,7 @@ export const homeEn: HomeContent = {
       "\u201cA symptom is often just the tip of the iceberg. What lies beneath may involve the body, the mind, lifestyle, and life circumstances — all influencing one another. My goal is not simply to treat a symptom, but to understand what may be behind it.\u201d",
   },
   approach: {
-    eyebrow: "Dr. Vlad's integrative approach",
+    eyebrow: "Dr. Vlad's integrative approach",
     title: "Not separating body from mind — but seeing the whole person",
     paragraphs: [
       "The mind and body are closely connected. Stress can affect sleep, anxiety can make the heart race, and emotional strain can leave us physically exhausted. At the same time, physical symptoms can affect our mood, confidence, and the way we live our daily lives.",
@@ -104,15 +104,15 @@ export const homeEn: HomeContent = {
   },
   about: {
     eyebrow: "About me",
-    title: "Dr. Vlad\u00a0 — cardiologist and certified hypnotherapist",
+    title: "Dr. Vlad\u00a0 — cardiologist and certified hypnotherapist",
     paragraphs: [
       "I have worked in medicine since 2019. My experience includes medical centres in Belarus, among them the Republican Scientific and Practical Centre of Cardiology and the Minsk City Emergency Hospital.",
       "Today I work with a humanitarian medical mission at the specialised cardiac surgery centre MHCC in Libya.",
       "I completed professional training in clinical hypnosis and I am an Associate Member of the American Society of Clinical Hypnosis (ASCH).",
       "My work is grounded in evidence-based and integrative medicine, with a holistic view of the mind and subconscious processes. I don't look at the body separately from the mind, and I don't use the same template for every patient.",
     ],
-    logoAlt: "Dr. Vlad emblem — integrative and holistic medicine",
-    bannerAlt: "Dr. Vlad — bridging science, mind and body",
+    logoAlt: "Dr. Vlad emblem — integrative and holistic medicine",
+    bannerAlt: "Dr. Vlad — bridging science, mind and body",
     research: {
       eyebrow: "Research",
       text: "I am currently conducting a clinical research project on the use of hypnotherapy alongside standard care for people with high blood pressure. The study is now recruiting participants to evaluate this approach in clinical practice.",
@@ -169,15 +169,15 @@ export const homeEn: HomeContent = {
       ],
       [
         "Does an integrative approach mean giving up medication?",
-        "No. Dr. Vlad will never suggest stopping prescribed medication on your own, or replacing necessary medical treatment with hypnotherapy or psychological methods. The aim is to combine the evidence-based treatment you need with complementary psychological methods in one well-founded plan.",
+        "No. Dr. Vlad will never suggest stopping prescribed medication on your own, or replacing necessary medical treatment with hypnotherapy or psychological methods. The aim is to combine the evidence-based treatment you need with complementary psychological methods in one well-founded plan.",
       ],
       [
         "Is hypnotherapy suitable for everyone?",
-        "No. The decision is made individually, after reviewing your symptoms, medical history, goals, and possible contraindications. If hypnotherapy isn't suitable, Dr. Vlad will explain which other steps or forms of help are suitable for you.",
+        "No. The decision is made individually, after reviewing your symptoms, medical history, goals, and possible contraindications. If hypnotherapy isn't suitable, Dr. Vlad will explain which other steps or forms of help are suitable for you.",
       ],
       [
         "Is hypnotherapy done during the first consultation?",
-        "No. The first consultation is focused on understanding your situation and deciding what to do next. If hypnotherapy may be appropriate, Dr. Vlad will explain how it could be used in your case and discuss the next steps with you.",
+        "No. The first consultation is focused on understanding your situation and deciding what to do next. If hypnotherapy may be appropriate, Dr. Vlad will explain how it could be used in your case and discuss the next steps with you.",
       ],
       [
         "Will I lose control during hypnotherapy?",
@@ -185,7 +185,7 @@ export const homeEn: HomeContent = {
       ],
       [
         "What if my situation doesn't match your specialisation?",
-        "Dr. Vlad will tell you so and, as far as the available information allows, will suggest a next step: further tests, in-person medical care, or another specialist in the relevant field.",
+        "Dr. Vlad will tell you so and, as far as the available information allows, will suggest a next step: further tests, in-person medical care, or another specialist in the relevant field.",
       ],
       [
         "Which documents should I prepare?",
@@ -193,7 +193,7 @@ export const homeEn: HomeContent = {
       ],
       [
         "How much does further work cost?",
-        "The first consultation is free. If further individual work is indicated, Dr. Vlad will explain the recommended format, the likely duration, and the cost. The decision to continue is always yours.",
+        "The first consultation is free. If further individual work is indicated, Dr. Vlad will explain the recommended format, the likely duration, and the cost. The decision to continue is always yours.",
       ],
     ],
   },

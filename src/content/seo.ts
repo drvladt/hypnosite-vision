@@ -33,9 +33,9 @@ const jobTitles: Record<Locale, string> = {
 };
 
 const portraitAlt: Record<Locale, string> = {
-  ru: "Dr. Vlad Tettegah — врач-кардиолог и гипнотерапевт",
-  en: "Dr. Vlad Tettegah — cardiologist and hypnotherapist",
-  fr: "Dr. Vlad Tettegah — cardiologue et hypnothérapeute",
+  ru: "Dr. Vlad Tettegah — врач-кардиолог и гипнотерапевт",
+  en: "Dr. Vlad Tettegah — cardiologist and hypnotherapist",
+  fr: "Dr. Vlad Tettegah — cardiologue et hypnothérapeute",
 };
 
 export function absoluteUrl(siteOrigin: string, path: string): string {
@@ -98,8 +98,8 @@ function entityGraph(siteOrigin: string, locale: Locale) {
       {
         "@type": "Person",
         "@id": personId,
-        name: "Dr. Vlad Tettegah",
-        alternateName: "Dr Vlad",
+        name: "Dr. Vlad Tettegah",
+        alternateName: "Dr Vlad",
         jobTitle: jobTitles[locale],
         image: socialImage(siteOrigin),
         url: absoluteUrl(siteOrigin, pagePath(locale, "about")),
@@ -119,14 +119,14 @@ function entityGraph(siteOrigin: string, locale: Locale) {
       {
         "@type": "Organization",
         "@id": organizationId,
-        name: "Dr. Vlad Holistic medicine and consulting",
+        name: "Dr. Vlad Holistic medicine and consulting",
         url: absoluteUrl(siteOrigin, homePath[locale]),
         founder: { "@id": personId },
       },
       {
         "@type": "WebSite",
         "@id": websiteId,
-        name: "Dr Vlad",
+        name: "Dr Vlad",
         url: absoluteUrl(siteOrigin, homePath[locale]),
         inLanguage: locales,
         publisher: { "@id": organizationId },
@@ -151,7 +151,7 @@ export function homeStructuredData(siteOrigin: string, locale: Locale) {
         "@type": "WebPage",
         "@id": `${pageUrl}#webpage`,
         url: pageUrl,
-        name: "Dr Vlad",
+        name: "Dr Vlad",
         inLanguage: locale,
         isPartOf: { "@id": graph.websiteId },
         about: { "@id": graph.personId },
@@ -200,7 +200,7 @@ export function pageStructuredData(
           {
             "@type": "ListItem",
             position: 1,
-            name: "Dr Vlad",
+            name: "Dr Vlad",
             item: absoluteUrl(siteOrigin, homePath[locale]),
           },
           {

@@ -13,17 +13,17 @@ export const legalFr: LegalContent = {
     step: "ÉTAPE 1 SUR 3 · Avant le questionnaire",
     eyebrow: "Avant de commencer le questionnaire",
     title: "Avant de remplir le questionnaire",
-    metaTitle: "Avant de commencer le questionnaire — Dr Vlad",
+    metaTitle: "Avant de commencer le questionnaire — Dr Vlad",
     metaDescription:
       "Informations sur la consultation, la confidentialité et le traitement des données personnelles avant de remplir le questionnaire.",
     intro: [
-      "Le questionnaire permet au Dr Vlad d'examiner votre situation au préalable et de déterminer si une consultation pourrait être utile dans votre cas.",
+      "Le questionnaire permet au Dr Vlad d'examiner votre situation au préalable et de déterminer si une consultation pourrait être utile dans votre cas.",
       "Vous pouvez décrire vos plaintes, votre état de santé, les examens et traitements antérieurs. Après l'envoi, vous pourrez si nécessaire joindre des documents médicaux.",
     ],
     access: {
       title: "Confidentialité",
       paragraphs: [
-        "Vos informations médicales et vos documents sont examinés personnellement par le Dr Vlad. L'assistant du Dr. ne peut recevoir que les coordonnées et informations organisationnelles nécessaires pour la suite, et n'a pas accès à la partie médicale de votre demande.",
+        "Vos informations médicales et vos documents sont examinés personnellement par le Dr Vlad. L'assistant du Dr. ne peut recevoir que les coordonnées et informations organisationnelles nécessaires pour la suite, et n'a pas accès à la partie médicale de votre demande.",
         "Les services Google peuvent être utilisés pour le fonctionnement du questionnaire et la conservation des éléments transmis. Pour en savoir plus sur le traitement, la conservation des données et vos droits, consultez la Politique de confidentialité.",
       ],
       links: [
@@ -88,9 +88,9 @@ export const legalFr: LegalContent = {
     eyebrow: "Document juridique",
     title: "Politique de confidentialité",
     versionLine: "",
-    metaTitle: "Politique de confidentialité — Dr Vlad",
+    metaTitle: "Politique de confidentialité — Dr Vlad",
     metaDescription:
-      "Traitement et protection des données personnelles des visiteurs du site du Dr Vlad.",
+      "Traitement et protection des données personnelles des visiteurs du site du Dr Vlad.",
     tocTitle: "Sommaire",
     lead: [
       "La présente Politique explique quelles données personnelles peuvent être traitées lors de l'utilisation du site et de l'envoi d'une demande, pourquoi elles sont nécessaires, qui y a accès et quels droits vous disposez.",
@@ -132,7 +132,7 @@ export const legalFr: LegalContent = {
         paragraphs: ["Les données sont utilisées uniquement pour :"],
         bullets: [
           "recevoir et examiner préalablement la demande ;",
-          "permettre au Dr Vlad d'évaluer la possibilité et la pertinence d'une consultation ;",
+          "permettre au Dr Vlad d'évaluer la possibilité et la pertinence d'une consultation ;",
           "prendre connaissance des documents médicaux fournis volontairement ;",
           "organiser la suite des échanges ;",
           "assurer le fonctionnement et la sécurité du site ;",
@@ -151,7 +151,7 @@ export const legalFr: LegalContent = {
         id: "access",
         heading: "4. Qui a accès aux données",
         paragraphs: [
-          "La partie médicale du questionnaire et les documents joints sont examinés par le Dr Vlad.",
+          "La partie médicale du questionnaire et les documents joints sont examinés par le Dr Vlad.",
           "Une assistante peut recevoir les données de contact et d'organisation après la décision de poursuivre les échanges, mais n'a pas accès au contenu médical du questionnaire ni aux documents.",
           "Google Forms, Google Workspace, Google Drive, Google Cloud/Firebase, Lovable, un service de messagerie et une plateforme de visioconférence peuvent être utilisés pour le fonctionnement technique du site et le stockage des informations. Ces services peuvent traiter les données en qualité de prestataires techniques.",
         ],
@@ -213,7 +213,7 @@ export const legalFr: LegalContent = {
     eyebrow: "Document juridique",
     title: "Consentement au traitement des données personnelles, y compris les données de santé",
     versionLine: "",
-    metaTitle: "Consentement au traitement des données — Dr Vlad",
+    metaTitle: "Consentement au traitement des données — Dr Vlad",
     metaDescription:
       "Texte complet du consentement au traitement des données personnelles, y compris les données de santé, avant le questionnaire préalable.",
     robots: "noindex, follow",
@@ -235,7 +235,7 @@ export const legalFr: LegalContent = {
         heading: "2. Finalités",
         bullets: [
           "recevoir et enregistrer la demande ;",
-          "permettre au Dr Vlad d'étudier personnellement les informations ;",
+          "permettre au Dr Vlad d'étudier personnellement les informations ;",
           "déterminer si la demande relève de sa compétence et si le format en ligne planifié convient ;",
           "organiser une éventuelle consultation ;",
           "examiner les documents transmis volontairement ;",
@@ -256,7 +256,7 @@ export const legalFr: LegalContent = {
         id: "access",
         heading: "4. Qui a accès",
         paragraphs: [
-          "Le contenu médical du questionnaire et les documents sont examinés par le Dr Vlad. Une assistante peut recevoir les informations de contact et d'organisation après sa décision, sans accès au contenu médical.",
+          "Le contenu médical du questionnaire et les documents sont examinés par le Dr Vlad. Une assistante peut recevoir les informations de contact et d'organisation après sa décision, sans accès au contenu médical.",
           `La mise en œuvre technique peut impliquer Google Forms, Google Workspace, Google Drive, Google Cloud, ${L("hostingProvider")}, un service de messagerie et la plateforme de visioconférence retenue, dans la seule mesure nécessaire.`,
         ],
       },
@@ -302,7 +302,7 @@ export const legalFr: LegalContent = {
     eyebrow: "Document juridique",
     title: "Conditions d'utilisation et limites du format en ligne",
     versionLine: "",
-    metaTitle: "Conditions d'utilisation — Dr Vlad",
+    metaTitle: "Conditions d'utilisation — Dr Vlad",
     metaDescription:
       "Objet du site, nature de la première consultation intégrative et limites du format en ligne.",
     tocTitle: "Sommaire",
@@ -312,7 +312,7 @@ export const legalFr: LegalContent = {
         id: "purpose",
         heading: "1. Objet du site",
         paragraphs: [
-          "Le site du Dr Vlad fournit des informations générales sur l'approche intégrative, le parcours professionnel du Dr Vlad, le format possible d'une consultation en ligne et la procédure de demande préalable.",
+          "Le site du Dr Vlad fournit des informations générales sur l'approche intégrative, le parcours professionnel du Dr Vlad, le format possible d'une consultation en ligne et la procédure de demande préalable.",
           "Les contenus publics ne constituent pas un avis médical individuel et ne remplacent pas une prise en charge présentielle ni le suivi par votre médecin traitant.",
         ],
       },
@@ -328,8 +328,8 @@ export const legalFr: LegalContent = {
         id: "intake",
         heading: "3. Questionnaire préalable",
         paragraphs: [
-          "Le questionnaire permet de comprendre la situation à l'avance et de déterminer si la demande relève de la compétence du Dr Vlad. Le remplir ne garantit ni consultation, ni programme, ni résultat particulier.",
-          "Le Dr Vlad peut indiquer que le format en ligne ne correspond pas à la situation et, si possible, orienter vers un autre type de prise en charge. Cela ne constitue pas un diagnostic ni la garantie d'un parcours précis.",
+          "Le questionnaire permet de comprendre la situation à l'avance et de déterminer si la demande relève de la compétence du Dr Vlad. Le remplir ne garantit ni consultation, ni programme, ni résultat particulier.",
+          "Le Dr Vlad peut indiquer que le format en ligne ne correspond pas à la situation et, si possible, orienter vers un autre type de prise en charge. Cela ne constitue pas un diagnostic ni la garantie d'un parcours précis.",
         ],
       },
       {

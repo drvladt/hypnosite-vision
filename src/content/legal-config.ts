@@ -16,8 +16,8 @@ function isLocalizedLegalValue(value: unknown): value is LocalizedLegalValue {
  * While anything required is null, production collection of health data stays off.
  */
 export const legalConfig = {
-  /** Confirmed: "Dr. Vlad Holistic medicine and consulting" (RCCM TG/LFW/RCCM/26-B-00129, Director: Dr. Vlad Tettegah). */
-  controllerLegalName: "Dr. Vlad Holistic medicine and consulting LPP" as string | null,
+  /** Confirmed: "Dr. Vlad Holistic medicine and consulting" (RCCM TG/LFW/RCCM/26-B-00129, Director: Dr. Vlad Tettegah). */
+  controllerLegalName: "Dr. Vlad Holistic medicine and consulting LPP" as string | null,
   /** Confirmed: République Togolaise. Clients accepted worldwide. */
   controllerCountry: localized({
     ru: "Республика Того",
@@ -28,7 +28,7 @@ export const legalConfig = {
   /** Privacy-requests and significant data-protection questions: director@drvladt.com. Organizational/scheduling contact: support@drvladt.com. */
   privacyEmail: "director@drvladt.com" as string | null,
   publicContactEmail: contactEmail as string | null,
-  /** Confirmed by Dr Vlad: 25.09.2026. */
+  /** Confirmed by Dr Vlad: 25.09.2026. */
   effectiveDate: "25.09.2026" as string | null,
   privacyVersion: "1.0",
   consentVersion: "1.0",
@@ -65,7 +65,7 @@ export const legalConfig = {
     fr: "https://docs.google.com/forms/d/e/1FAIpQLSdOdk_hMpSBA4pCOCNqPOiWq81mxe3tswJY_2ZczV75zFnnKQ/viewform",
   }),
   /**
-   * Confirmed via prefilled link from Dr Vlad: the Patient ID field id.
+   * Confirmed via prefilled link from Dr Vlad: the Patient ID field id.
    * Field semantics: name "Patient ID", visible label «Код обращения», value = case_id format DV000001.
    */
   googleFormPatientIdEntry: "entry.319514281" as string | null,
@@ -73,7 +73,7 @@ export const legalConfig = {
   caseIdFormat: "DV000001" as string,
 };
 
-/** Retention periods, confirmed by Dr Vlad: one month for every case category. */
+/** Retention periods, confirmed by Dr Vlad: one month for every case category. */
 export const retention: Record<
   "abandoned" | "declined" | "consultation" | "consentLog",
   Record<Locale, string>

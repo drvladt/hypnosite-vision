@@ -13,17 +13,17 @@ export const legalEn: LegalContent = {
     step: "STEP 1 OF 3 · Before the form",
     eyebrow: "Before you start the form",
     title: "Before you fill in the form",
-    metaTitle: "Before you start the form — Dr Vlad",
+    metaTitle: "Before you start the form — Dr Vlad",
     metaDescription:
       "How the consultation works, how your data is handled, and what you confirm before filling in the pre-consultation form.",
     intro: [
-      "The form helps Dr Vlad review your situation and understand whether a consultation could be helpful in your case.",
+      "The form helps Dr Vlad review your situation and understand whether a consultation could be helpful in your case.",
       "You can describe your complaints, health condition, previous investigations and treatment. After submitting, you may optionally attach medical documents.",
     ],
     access: {
       title: "Confidentiality",
       paragraphs: [
-        "Your medical information and documents are reviewed personally by Dr Vlad. An assistant may only receive contact and organisational details needed for further communication, and has no access to the medical part of your request.",
+        "Your medical information and documents are reviewed personally by Dr Vlad. An assistant may only receive contact and organisational details needed for further communication, and has no access to the medical part of your request.",
         "Google services may be used to run the form and store the material you provide. You can read more about data processing, storage and your rights in the Privacy Policy.",
       ],
       links: [
@@ -87,8 +87,8 @@ export const legalEn: LegalContent = {
     eyebrow: "Legal document",
     title: "Privacy Policy",
     versionLine: "",
-    metaTitle: "Privacy Policy — Dr Vlad",
-    metaDescription: "How personal data of Dr Vlad website visitors is processed and protected.",
+    metaTitle: "Privacy Policy — Dr Vlad",
+    metaDescription: "How personal data of Dr Vlad website visitors is processed and protected.",
     tocTitle: "Contents",
     lead: [
       "This Policy explains which personal data may be processed when you use the site and submit a request, why it is needed, who has access to it and what rights you have.",
@@ -130,7 +130,7 @@ export const legalEn: LegalContent = {
         paragraphs: ["Data is used only to:"],
         bullets: [
           "receive and preliminarily review the request;",
-          "let Dr Vlad assess whether a further consultation is possible and appropriate;",
+          "let Dr Vlad assess whether a further consultation is possible and appropriate;",
           "review voluntarily provided medical documents;",
           "organise further communication;",
           "keep the site working and secure;",
@@ -149,7 +149,7 @@ export const legalEn: LegalContent = {
         id: "access",
         heading: "4. Who has access",
         paragraphs: [
-          "The medical part of the form and the attached documents are reviewed by Dr Vlad.",
+          "The medical part of the form and the attached documents are reviewed by Dr Vlad.",
           "An assistant may receive contact and scheduling details after the decision to continue is made, but has no access to the medical content of the form or the documents.",
           "Google Forms, Google Workspace, Google Drive, Google Cloud/Firebase, Lovable, an email service and a video platform may be used for the technical operation of the site and for storing information. These services may process data as technical providers.",
         ],
@@ -208,7 +208,7 @@ export const legalEn: LegalContent = {
     eyebrow: "Legal document",
     title: "Consent to the processing of personal data, including health data",
     versionLine: "",
-    metaTitle: "Consent to data processing — Dr Vlad",
+    metaTitle: "Consent to data processing — Dr Vlad",
     metaDescription:
       "Full text of the consent to processing of personal data, including health data, before the pre-consultation form.",
     robots: "noindex, follow",
@@ -230,8 +230,8 @@ export const legalEn: LegalContent = {
         heading: "2. Purposes",
         bullets: [
           "to receive and register the request;",
-          "to let Dr Vlad review the information personally;",
-          "to establish whether the request falls within Dr Vlad's scope and whether the planned online format suits it;",
+          "to let Dr Vlad review the information personally;",
+          "to establish whether the request falls within Dr Vlad's scope and whether the planned online format suits it;",
           "to arrange a possible consultation;",
           "to review documents provided voluntarily;",
           "to contact me about scheduling;",
@@ -251,7 +251,7 @@ export const legalEn: LegalContent = {
         id: "access",
         heading: "4. Who has access",
         paragraphs: [
-          "The medical content of the form and the documents are reviewed by Dr Vlad. An assistant may receive contact and scheduling details after Dr Vlad has decided to continue, but has no access to the medical content of the form or the documents.",
+          "The medical content of the form and the documents are reviewed by Dr Vlad. An assistant may receive contact and scheduling details after Dr Vlad has decided to continue, but has no access to the medical content of the form or the documents.",
           `Technical delivery may involve Google Forms, Google Workspace, Google Drive, Google Cloud, ${L("hostingProvider")}, an email service and the chosen video platform — only to the extent needed for the relevant function.`,
         ],
       },
@@ -297,7 +297,7 @@ export const legalEn: LegalContent = {
     eyebrow: "Legal document",
     title: "Terms of use and limits of the online format",
     versionLine: "",
-    metaTitle: "Terms of use — Dr Vlad",
+    metaTitle: "Terms of use — Dr Vlad",
     metaDescription:
       "What this site is for, what the first integrative consultation is, and where the online format ends.",
     tocTitle: "Contents",
@@ -307,7 +307,7 @@ export const legalEn: LegalContent = {
         id: "purpose",
         heading: "1. What this site is for",
         paragraphs: [
-          "The Dr Vlad website provides general information about the integrative approach, Dr Vlad's professional background, the possible online consultation format and how to submit a preliminary request.",
+          "The Dr Vlad website provides general information about the integrative approach, Dr Vlad's professional background, the possible online consultation format and how to submit a preliminary request.",
           "Public material on the site is not individual medical advice and does not replace in-person care or follow-up with your treating doctor.",
         ],
       },
@@ -323,8 +323,8 @@ export const legalEn: LegalContent = {
         id: "intake",
         heading: "3. The pre-consultation form",
         paragraphs: [
-          "The form is needed to understand the situation in advance and to establish whether the request falls within Dr Vlad's scope. Completing it does not guarantee a consultation, a programme, or a particular outcome.",
-          "Dr Vlad may conclude that the online format does not suit the situation and, where possible, point towards a more appropriate kind of care. That is not a diagnosis or a guarantee of a specific pathway.",
+          "The form is needed to understand the situation in advance and to establish whether the request falls within Dr Vlad's scope. Completing it does not guarantee a consultation, a programme, or a particular outcome.",
+          "Dr Vlad may conclude that the online format does not suit the situation and, where possible, point towards a more appropriate kind of care. That is not a diagnosis or a guarantee of a specific pathway.",
         ],
       },
       {

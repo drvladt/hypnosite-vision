@@ -25,7 +25,7 @@ export function homeHead(locale: Locale, siteOrigin: string) {
       { property: "og:title", content: meta.ogTitle },
       { property: "og:description", content: meta.ogDescription },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Dr Vlad" },
+      { property: "og:site_name", content: "Dr Vlad" },
       { property: "og:url", content: canonicalUrl },
       { property: "og:image", content: imageUrl },
       { property: "og:image:alt", content: socialImageAlt(locale) },

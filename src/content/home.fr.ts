@@ -2,17 +2,17 @@ import type { HomeContent } from "./home-types";
 
 export const homeFr: HomeContent = {
   meta: {
-    title: "Dr. Vlad — cardiologue et hypnothérapeute · consultation intégrative",
+    title: "Dr. Vlad — cardiologue et hypnothérapeute · consultation intégrative",
     description:
-      "Analyse intégrative des symptômes cardiaques, de l'anxiété et des troubles psychosomatiques avec le Dr. Vlad, cardiologue et hypnothérapeute. Première consultation en ligne, jusqu'à 60 minutes.",
-    ogTitle: "Dr. Vlad — consultation intégrative en ligne",
+      "Analyse intégrative des symptômes cardiaques, de l'anxiété et des troubles psychosomatiques avec le Dr. Vlad, cardiologue et hypnothérapeute. Première consultation en ligne, jusqu'à 60 minutes.",
+    ogTitle: "Dr. Vlad — consultation intégrative en ligne",
     ogDescription:
       "Douleurs thoraciques, palpitations ou variations de tension malgré des examens rassurants ? Une analyse intégrative et individuelle de votre situation.",
   },
   nav: {
     label: "Navigation principale",
     mobileLabel: "Navigation mobile",
-    toTop: "Dr. Vlad — revenir en haut",
+    toTop: "Dr. Vlad — revenir en haut",
     openMenu: "Ouvrir le menu",
     closeMenu: "Fermer le menu",
     languageLabel: "Langue du site",
@@ -30,14 +30,14 @@ export const homeFr: HomeContent = {
   cta: {
     primary: "Analyser mon cas",
     note: "Consultation gratuite · En ligne · Jusqu'à 60 minutes · Confidentiel",
-    write: "Écrire au Dr. Vlad",
+    write: "Écrire au Dr. Vlad",
   },
   hero: {
     eyebrow: "Médecine intégrative · Hypnothérapie",
     title:
       "On vous dit que tout va bien, mais vous continuez à ressentir les symptômes ?",
-    lead: "Le Dr. Vlad travaille selon les principes de la médecine intégrative. L'objectif n'est pas de traiter un symptôme isolé, mais de comprendre quels facteurs médicaux, émotionnels et comportementaux ont pu créer le problème ou continuent de l'entretenir.",
-    portraitAlt: "Dr. Vlad — cardiologue et hypnothérapeute",
+    lead: "Le Dr. Vlad travaille selon les principes de la médecine intégrative. L'objectif n'est pas de traiter un symptôme isolé, mais de comprendre quels facteurs médicaux, émotionnels et comportementaux ont pu créer le problème ou continuent de l'entretenir.",
+    portraitAlt: "Dr. Vlad — cardiologue et hypnothérapeute",
     portraitCaption:
       "J’accompagne les personnes confrontées à l’anxiété liée à la santé, aux pensées intrusives, aux peurs et aux réactions physiques. Lorsque cela peut être utile, j’intègre l’hypnothérapie non directive à mon approche personalisée.",
     badges: ["Cardiologue", "Pratique medicale depuis 2019", "Pratique internationale", "Spécialisation en hypnothérapie"],
@@ -107,7 +107,7 @@ export const homeFr: HomeContent = {
   },
   about: {
     eyebrow: "À propos de moi",
-    title: "Dr. Vlad Tettegah — cardiologue et hypnothérapeute",
+    title: "Dr. Vlad Tettegah — cardiologue et hypnothérapeute",
     paragraphs: [
       "J'exerce dans la médecine depuis 2019. J'ai travaillé dans plusieurs établissements médicaux au Bélarus, notamment au Centre républicain de cardiologie et à l'Hôpital centrale des urgences de Minsk.",
       "Je travaille actuellement au MHCC, un centre spécialisé en cardiologie et chirurgie cardiaque en Libye, dans le cadre d'une mission médicale.",
@@ -116,8 +116,8 @@ export const homeFr: HomeContent = {
       "Je prends en compte la santé physique, mais aussi le mode de vie, le stress, les émotions et d'autres facteurs qui peuvent influencer la façon dont une personne se sent.",
       "C'est pourquoi mon approche n'est pas la même pour tout le monde. Elle dépend de la situation, des besoins et des objectifs de chaque personne.",
     ],
-    logoAlt: "Emblème du Dr. Vlad — médecine intégrative et holistique",
-    bannerAlt: "Dr. Vlad — science, psychisme et corps reliés",
+    logoAlt: "Emblème du Dr. Vlad — médecine intégrative et holistique",
+    bannerAlt: "Dr. Vlad — science, psychisme et corps reliés",
     research: {
       eyebrow: "Recherche",
       text: "L'un des axes de mon travail professionnel et scientifique explore l'intégration des méthodes d'hypnothérapie dans la prise en charge globale des personnes souffrant d'hypertension artérielle. Le projet est désormais entré dans une étape pratique importante : nous invitons les premiers participants afin d'évaluer cette approche en situation clinique.",
@@ -174,15 +174,15 @@ export const homeFr: HomeContent = {
       ],
       [
         "L'approche intégrative signifie-t-elle renoncer aux médicaments ?",
-        "Non. Le Dr. Vlad ne propose pas d'arrêter de vous-même un traitement prescrit ni de remplacer un traitement médical nécessaire par l'hypnothérapie ou des méthodes psychologiques. L'objectif de l'approche intégrative est de réunir les traitements fondés sur les preuves et les méthodes psychothérapeutiques complémentaires dans un plan unique et justifié.",
+        "Non. Le Dr. Vlad ne propose pas d'arrêter de vous-même un traitement prescrit ni de remplacer un traitement médical nécessaire par l'hypnothérapie ou des méthodes psychologiques. L'objectif de l'approche intégrative est de réunir les traitements fondés sur les preuves et les méthodes psychothérapeutiques complémentaires dans un plan unique et justifié.",
       ],
       [
         "L'hypnothérapie convient-elle à tout le monde ?",
-        "Non. La décision est prise individuellement après l'étude des symptômes, des antécédents, des objectifs et des limites éventuelles. Si l'hypnothérapie ne convient pas, le Dr. Vlad expliquera quelles autres démarches ou formes d'aide envisager.",
+        "Non. La décision est prise individuellement après l'étude des symptômes, des antécédents, des objectifs et des limites éventuelles. Si l'hypnothérapie ne convient pas, le Dr. Vlad expliquera quelles autres démarches ou formes d'aide envisager.",
       ],
       [
         "L'hypnothérapie est-elle pratiquée pendant la première consultation ?",
-        "Non. La première consultation sert à analyser en détail votre situation et à définir les étapes suivantes. Si l'hypnothérapie peut être utile, Dr. Vlad expliquera séparément quels objectifs elle viserait et comment le travail pourrait être organisé.",
+        "Non. La première consultation sert à analyser en détail votre situation et à définir les étapes suivantes. Si l'hypnothérapie peut être utile, Dr. Vlad expliquera séparément quels objectifs elle viserait et comment le travail pourrait être organisé.",
       ],
       [
         "Vais-je perdre le contrôle pendant l'hypnothérapie ?",
@@ -190,7 +190,7 @@ export const homeFr: HomeContent = {
       ],
       [
         "Et si ma situation ne relève pas de votre spécialité ?",
-        "Le Dr. Vlad vous le dira et, dans la mesure où les informations disponibles le permettent, vous orientera : examens complémentaires, prise en charge médicale en présentiel ou autre spécialiste du domaine concerné.",
+        "Le Dr. Vlad vous le dira et, dans la mesure où les informations disponibles le permettent, vous orientera : examens complémentaires, prise en charge médicale en présentiel ou autre spécialiste du domaine concerné.",
       ],
       [
         "Quels documents faut-il préparer ?",
@@ -198,7 +198,7 @@ export const homeFr: HomeContent = {
       ],
       [
         "Combien coûte la suite du travail ?",
-        "La première consultation est gratuite. Si un travail individuel ultérieur est indiqué, le Dr. Vlad expliquera le format recommandé, la durée prévisible et le coût. La décision de continuer vous appartient.",
+        "La première consultation est gratuite. Si un travail individuel ultérieur est indiqué, le Dr. Vlad expliquera le format recommandé, la durée prévisible et le coût. La décision de continuer vous appartient.",
       ],
     ],
   },
