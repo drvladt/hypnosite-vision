@@ -127,8 +127,8 @@ export const homeFr: HomeContent = {
     bookLabel: "Prendre rendez-vous",
   },
   reviews: {
-    eyebrow: "Résultats et témoignages",
-    title: "Les parcours de personnes ayant suivi un travail individuel",
+    title: "La consultation vue de l’intérieur",
+    caption: "Olga témoigne sur la consultation avec Dr\u00a0Vlad : les attentes, le déroulement et les impressions après celle-ci.",
     emptyLabel: "Les témoignages vidéo seront publiés ici après accord des participants.",
     previousLabel: "Témoignage précédent",
     nextLabel: "Témoignage suivant",

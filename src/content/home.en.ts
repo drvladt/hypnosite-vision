@@ -122,8 +122,8 @@ export const homeEn: HomeContent = {
     bookLabel: "Book a consultation",
   },
   reviews: {
-    eyebrow: "Results and reviews",
-    title: "Stories from people I’ve worked with",
+    title: "A Look Inside the Consultation",
+    caption: "Olga talks about her consultation with Dr\u00a0Vlad — what she expected, how the consultation went, and how she felt after it.",
     emptyLabel: "Video stories will appear here once participants have given permission to publish them.",
     previousLabel: "Previous review",
     nextLabel: "Next review",
