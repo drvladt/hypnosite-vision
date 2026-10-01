@@ -270,7 +270,7 @@ export function RestoreByCode({
           {t.action}
         </Button>
       </form>
-      {error === "invalid" && <p className="mt-3 text-xs text-destructive">{t.invalid}</p>}
+      {error === "invalid" && <p role="alert" className="mt-3 text-sm font-medium text-destructive">{t.invalid}</p>}
       {error === "completed" && <CompletedNotice locale={locale} />}
     </div>
   );
