@@ -100,17 +100,11 @@ export const siteEn: SiteContent = {
     stories: {
       eyebrow: "Stories",
       title: "Stories and results",
-      lead: "This section exists and will be filled with real stories — only once participants have given their consent.",
-      metaTitle: "Stories and results — Dr. Vlad",
+      lead: "Here you will find real stories and feedback from individuals undergoing or having completed therapy with me.",
+      metaTitle: "Stories and results — Dr. Vlad",
       metaDescription:
-        "Real patient stories and results will be published here once consent is given.",
-      sections: [
-        {
-          paragraphs: [
-            "There will be no invented testimonials here. Video stories and descriptions will appear as participants give written consent to publication.",
-          ],
-        },
-      ],
+        "Real stories and feedback from individuals undergoing or having completed therapy with Dr. Vlad.",
+      sections: [],
     },
     contact: {
       eyebrow: "Contact",

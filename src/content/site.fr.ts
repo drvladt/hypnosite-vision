@@ -100,17 +100,11 @@ export const siteFr: SiteContent = {
     stories: {
       eyebrow: "Témoignages",
       title: "Histoires et résultats",
-      lead: "Cette section existe et sera enrichie de véritables histoires — uniquement avec l'accord des participants.",
-      metaTitle: "Histoires et résultats — Dr. Vlad",
+      lead: "Vous trouverez ici les témoignages et histoires vécues de personnes qui mènent ou ont mené un travail approfondi sur leur état de santé.",
+      metaTitle: "Histoires et résultats — Dr. Vlad",
       metaDescription:
-        "Les histoires et résultats réels des patients seront publiés ici après leur consentement.",
-      sections: [
-        {
-          paragraphs: [
-            "Aucun témoignage inventé ne figurera ici. Les vidéos et les descriptions apparaîtront à mesure que les participants donneront leur accord écrit à la publication.",
-          ],
-        },
-      ],
+        "Témoignages et histoires vécues de personnes qui mènent ou ont mené un travail approfondi sur leur état de santé.",
+      sections: [],
     },
     contact: {
       eyebrow: "Contact",
