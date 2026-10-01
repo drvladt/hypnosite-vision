@@ -20,19 +20,19 @@ const CASE_LABEL: Record<Locale, string> = {
 };
 const ISSUED_TEXT: Record<Locale, { hint: string; copy: string; copied: string; go: string }> = {
   ru: {
-    hint: "Сохраните этот код: он закреплён за вашим обращением и понадобится при заполнении анкеты и отправке документов.",
+    hint: "Сохраните этот код: он может понадобиться в дальнейшем при изменении анкеты либо её дополнении.",
     copy: "Скопировать",
     copied: "Скопировано",
     go: "Перейти к анкете",
   },
   en: {
-    hint: "Please keep this code: it is linked to your request and you will need it for the questionnaire and your documents.",
+    hint: "Please keep this code: you may need it later to update or supplement your questionnaire.",
     copy: "Copy",
     copied: "Copied",
     go: "Continue to the questionnaire",
   },
   fr: {
-    hint: "Conservez ce code : il est associé à votre demande et vous sera utile pour le questionnaire et l'envoi des documents.",
+    hint: "Conservez ce code : il pourra vous être utile par la suite pour modifier ou compléter votre questionnaire.",
     copy: "Copier",
     copied: "Copié",
     go: "Accéder au questionnaire",
