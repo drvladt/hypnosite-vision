@@ -1,10 +1,11 @@
 import { Link } from "@tanstack/react-router";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Play } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { hypnotherapyContent, type HypnotherapySection } from "@/content/hypnotherapy";
 import { contactEmail, pagePath, type Locale } from "@/content/locales";
 import { siteContent } from "@/content/site";
+import { YouTubeFacade } from "@/components/youtube-facade";
 
 function ItalicLines({ lines, className }: { lines: string[]; className?: string }) {
   return (
