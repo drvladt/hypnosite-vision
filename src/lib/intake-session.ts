@@ -90,6 +90,7 @@ export function markIntakeDone() {
 const completed = new Set<string>();
 
 export function isCaseCompleted(caseCode: string) {
+  readIntakeSession();
   return completed.has(caseCode.trim().toUpperCase());
 }
 
