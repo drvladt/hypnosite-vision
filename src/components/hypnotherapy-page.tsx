@@ -57,8 +57,33 @@ function ProseSection({ section, number }: { section: HypnotherapySection; numbe
             ))}
           </div>
         ) : null}
+        {section.video ? (
+          <figure className="my-8">
+            <figcaption className="text-xs uppercase tracking-wide text-muted-foreground">
+              {section.video.caption}
+            </figcaption>
+            {section.video.youtubeId ? (
+              <div className="relative mt-3 aspect-video w-full overflow-hidden rounded-md bg-primary text-primary-foreground">
+                <YouTubeFacade
+                  videoId={section.video.youtubeId}
+                  playLabel={section.video.caption}
+                  title={section.video.caption}
+                />
+              </div>
+            ) : (
+              <div className="mt-3 grid min-h-44 place-items-center rounded-md border border-dashed border-border bg-secondary/25 px-6 py-8 text-center">
+                <div>
+                  <Play className="mx-auto size-7 text-gold" aria-hidden="true" />
+                  <p className="mx-auto mt-3 max-w-lg text-sm leading-6 text-muted-foreground">
+                    {section.video.emptyLabel}
+                  </p>
+                </div>
+              </div>
+            )}
+          </figure>
+        ) : null}
         <div className="space-y-4">
-          {(section.paragraphsAfter ?? []).map((paragraph, index) => (
+          {(section.paragraphsAfterVideo ?? []).map((paragraph, index) => (
             <p key={index} className="text-base leading-8 text-foreground/85 md:text-lg md:leading-9">
               {paragraph}
             </p>
