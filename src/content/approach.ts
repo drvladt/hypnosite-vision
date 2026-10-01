@@ -97,7 +97,7 @@ export const approachContent: Record<Locale, ApproachContent> = {
           "Hypnotherapy does not replace medical care and is not automatically part of treatment. It is one of the tools that may be considered when appropriate.",
         ],
         video: {
-          caption: "What changed after working on emotional well-being — in their own words",
+          caption: "WHAT CHANGED AFTER WORKING ON EMOTIONAL WELL-BEING — A PERSONAL HISTORY",
           emptyLabel: "The video testimonial will appear here soon.",
         },
       },
