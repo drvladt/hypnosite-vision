@@ -35,16 +35,38 @@ export function markIntakeDone() {
   if (current) current = { ...current, intakeDone: true };
 }
 
-/** Recovery for a lost upload session: the visitor re-enters the code the server gave them. */
-export function restoreIntakeSession(caseCode: string, consentVersion: string): IntakeSession | null {
-  if (!isCaseCode(caseCode)) return null;
+/** Codes whose request reached the thank-you page in this tab; they can no longer be reopened. */
+const completed = new Set<string>();
+
+export function isCaseCompleted(caseCode: string) {
+  return completed.has(caseCode.trim().toUpperCase());
+}
+
+/** Closes the request: the code is locked and the active session is cleared. */
+export function completeIntakeSession() {
+  if (current?.caseCode) completed.add(current.caseCode.toUpperCase());
+  current = null;
+}
+
+/**
+ * Recovery by the code the server gave the visitor.
+ * Returns "invalid" for a malformed code and "completed" for an already submitted request.
+ */
+export function restoreIntakeSession(
+  caseCode: string,
+  consentVersion: string,
+  intakeDone = true,
+): IntakeSession | "invalid" | "completed" {
+  if (!isCaseCode(caseCode)) return "invalid";
+  const normalized = caseCode.trim().toUpperCase();
+  if (completed.has(normalized)) return "completed";
   current = {
-    caseCode: caseCode.trim().toUpperCase(),
+    caseCode: normalized,
     consentVersion,
     policy: true,
     health: true,
     boundaries: true,
-    intakeDone: true,
+    intakeDone,
   };
   return current;
 }

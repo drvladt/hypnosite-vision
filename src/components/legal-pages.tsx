@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "@tanstack/react-router";
-import { AlertTriangle, ArrowRight, ExternalLink, ShieldCheck } from "lucide-react";
+import { AlertTriangle, ArrowRight, Check, Copy, ExternalLink, ShieldCheck } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { legalContent, type LegalPageKey } from "@/content/legal";
@@ -18,6 +18,52 @@ const CASE_LABEL: Record<Locale, string> = {
   en: "Reference code",
   fr: "Code de dossier",
 };
+const ISSUED_TEXT: Record<Locale, { hint: string; copy: string; copied: string; go: string }> = {
+  ru: {
+    hint: "Сохраните этот код: он закреплён за вашим обращением и понадобится при заполнении анкеты и отправке документов.",
+    copy: "Скопировать",
+    copied: "Скопировано",
+    go: "Перейти к анкете",
+  },
+  en: {
+    hint: "Please keep this code: it is linked to your request and you will need it for the questionnaire and your documents.",
+    copy: "Copy",
+    copied: "Copied",
+    go: "Continue to the questionnaire",
+  },
+  fr: {
+    hint: "Conservez ce code : il est associé à votre demande et vous sera utile pour le questionnaire et l'envoi des documents.",
+    copy: "Copier",
+    copied: "Copié",
+    go: "Accéder au questionnaire",
+  },
+};
+
+function CopyCodeButton({ code, locale }: { code: string; locale: Locale }) {
+  const [copied, setCopied] = useState(false);
+  const t = ISSUED_TEXT[locale];
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(code);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Clipboard unavailable: the code stays visible for manual copying.
+    }
+  };
+  return (
+    <Button
+      type="button"
+      variant="outline"
+      size="sm"
+      onClick={() => void copy()}
+      className="rounded-full shadow-none"
+    >
+      {copied ? <Check aria-hidden="true" /> : <Copy aria-hidden="true" />}
+      {copied ? t.copied : t.copy}
+    </Button>
+  );
+}
 /** Only the three boolean confirmations are kept here — never health data or a Patient ID. */
 const CONSENT_DRAFT_KEY = "consent-confirmations";
 
@@ -181,9 +227,6 @@ export function ConsentGatePageView({ locale }: { locale: Locale }) {
       }
       setCaseCode(result.patientId);
       setStatus("issued");
-      window.setTimeout(() => {
-        void navigate({ to: pagePath(locale, "intake") });
-      }, 1600);
     } catch (error) {
       // Fail closed: no navigation, no locally generated code, nothing logged.
       setStatus(error instanceof CaseApiNotConfiguredError ? "config-error" : "error");
@@ -341,22 +384,34 @@ export function ConsentGatePageView({ locale }: { locale: Locale }) {
               </p>
             )}
 
-            {status === "issued" && caseCode && (
+            {status === "issued" && caseCode ? (
               <div className="mt-5 rounded-2xl border border-gold/50 bg-gold/10 p-4">
                 <p className="text-xs uppercase tracking-widest text-muted-foreground">{CASE_LABEL[locale]}</p>
-                <p className="mt-1 font-display text-2xl text-gold">{caseCode}</p>
+                <div className="mt-1 flex flex-wrap items-center justify-between gap-3">
+                  <p className="font-display text-2xl text-gold">{caseCode}</p>
+                  <CopyCodeButton code={caseCode} locale={locale} />
+                </div>
+                <p className="mt-3 text-sm leading-relaxed text-foreground/90">{ISSUED_TEXT[locale].hint}</p>
+                <Button
+                  size="lg"
+                  onClick={() => void navigate({ to: pagePath(locale, "intake") })}
+                  className="mt-4 h-12 w-full rounded-full px-6 text-sm shadow-none"
+                >
+                  {ISSUED_TEXT[locale].go}
+                  <ArrowRight aria-hidden="true" />
+                </Button>
               </div>
-            )}
-
+            ) : (
             <Button
               size="lg"
-              disabled={!allChecked || status === "pending" || status === "issued"}
+              disabled={!allChecked || status === "pending"}
               onClick={() => void proceed()}
               className="mt-6 h-12 w-full rounded-full px-6 text-sm shadow-none"
             >
               {status === "pending" ? page.panel.loadingLabel : page.panel.button}
               {status !== "pending" && <ArrowRight aria-hidden="true" />}
             </Button>
+            )}
             <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
               {allChecked ? page.panel.buttonNote : page.panel.blockedNote}
             </p>

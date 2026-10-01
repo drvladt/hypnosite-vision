@@ -22,6 +22,7 @@ import {
   markIntakeDone,
   readIntakeSession,
   restoreIntakeSession,
+  completeIntakeSession,
   type IntakeSession,
 } from "@/lib/intake-session";
 
@@ -172,11 +173,114 @@ function ConsentRequired({ locale }: { locale: Locale }) {
   );
 }
 
+const RESTORE_TEXT: Record<
+  Locale,
+  { title: string; text: string; label: string; action: string; invalid: string; completed: string; newRequest: string }
+> = {
+  ru: {
+    title: "У меня уже есть код",
+    text: "Если вы уже получили код обращения, введите его, чтобы вернуться к анкете.",
+    label: "Код обращения",
+    action: "Открыть анкету",
+    invalid: "Проверьте код: он должен выглядеть как DV000123.",
+    completed:
+      "Это обращение уже отправлено и принято в работу. Изменить его или вернуться к нему нельзя. Чтобы отправить новые данные, оформите новое обращение.",
+    newRequest: "Оформить новое обращение",
+  },
+  en: {
+    title: "I already have a code",
+    text: "If you have already received a reference code, enter it to return to the questionnaire.",
+    label: "Reference code",
+    action: "Open the questionnaire",
+    invalid: "Please check the code: it should look like DV000123.",
+    completed:
+      "This request has already been submitted and is being processed. It can no longer be changed or reopened. To send new information, please start a new request.",
+    newRequest: "Start a new request",
+  },
+  fr: {
+    title: "J'ai déjà un code",
+    text: "Si vous avez déjà reçu un code de dossier, saisissez-le pour revenir au questionnaire.",
+    label: "Code de dossier",
+    action: "Ouvrir le questionnaire",
+    invalid: "Vérifiez le code : il doit ressembler à DV000123.",
+    completed:
+      "Cette demande a déjà été envoyée et est en cours de traitement. Elle ne peut plus être modifiée ni rouverte. Pour transmettre de nouvelles informations, veuillez faire une nouvelle demande.",
+    newRequest: "Faire une nouvelle demande",
+  },
+};
+
+function CompletedNotice({ locale }: { locale: Locale }) {
+  const t = RESTORE_TEXT[locale];
+  return (
+    <div className="mt-4 rounded-2xl border border-gold/50 bg-gold/10 p-4">
+      <p role="alert" className="text-sm leading-relaxed text-foreground/90">{t.completed}</p>
+      <Button asChild size="sm" className="mt-3 rounded-full shadow-none">
+        <Link to={pagePath(locale, "consultation")}>
+          {t.newRequest}
+          <ArrowRight aria-hidden="true" />
+        </Link>
+      </Button>
+    </div>
+  );
+}
+
+function RestoreByCode({
+  locale,
+  intakeDone,
+  onRestored,
+}: {
+  locale: Locale;
+  intakeDone: boolean;
+  onRestored: (session: IntakeSession) => void;
+}) {
+  const t = RESTORE_TEXT[locale];
+  const [code, setCode] = useState("");
+  const [error, setError] = useState<"invalid" | "completed" | null>(null);
+  const submit = () => {
+    const result = restoreIntakeSession(code, siteContent[locale].consultation.consent.version, intakeDone);
+    if (result === "invalid" || result === "completed") {
+      setError(result);
+      return;
+    }
+    setError(null);
+    onRestored(result);
+  };
+  return (
+    <div>
+      <h2 className="font-display text-xl font-medium text-primary">{t.title}</h2>
+      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t.text}</p>
+      <form
+        className="mt-5 flex flex-wrap items-end gap-3"
+        onSubmit={(event) => {
+          event.preventDefault();
+          submit();
+        }}
+      >
+        <label className="text-xs uppercase tracking-widest text-muted-foreground">
+          {t.label}
+          <input
+            value={code}
+            onChange={(event) => setCode(event.target.value)}
+            placeholder="DV000123"
+            autoComplete="off"
+            className="mt-2 block h-11 w-44 rounded-full border border-border bg-background px-4 text-sm normal-case tracking-normal text-foreground outline-none transition-colors focus:border-gold/60"
+          />
+        </label>
+        <Button type="submit" size="lg" className="h-11 rounded-full px-6 text-sm shadow-none">
+          {t.action}
+        </Button>
+      </form>
+      {error === "invalid" && <p className="mt-3 text-xs text-destructive">{t.invalid}</p>}
+      {error === "completed" && <CompletedNotice locale={locale} />}
+    </div>
+  );
+}
+
 export function IntakePageView({ locale }: { locale: Locale }) {
   const c = siteContent[locale];
   const page = c.intake;
   const navigate = useNavigate();
-  const [{ ready, session }] = useFlowSession();
+  const [{ ready, session }, setState] = useFlowSession();
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const continueToDocuments = () => {
@@ -190,7 +294,16 @@ export function IntakePageView({ locale }: { locale: Locale }) {
       <PageHeader page={page} />
       <Sections page={page} />
       {!ready ? null : !session ? (
-        <ConsentRequired locale={locale} />
+        <>
+          <ConsentRequired locale={locale} />
+          <FlowCard>
+            <RestoreByCode
+              locale={locale}
+              intakeDone={false}
+              onRestored={(restored) => setState({ ready: true, session: restored })}
+            />
+          </FlowCard>
+        </>
       ) : (
         <FlowCard>
           <CaseCode label={page.caseLabel} code={session.caseCode} />
@@ -299,13 +412,16 @@ export function DocumentsPageView({ locale }: { locale: Locale }) {
     finish();
   };
 
+  const [restoreCompleted, setRestoreCompleted] = useState(false);
   const restore = () => {
     const restored = restoreIntakeSession(code, c.consultation.consent.version);
-    if (!restored) {
-      setRestoreError(true);
+    if (restored === "invalid" || restored === "completed") {
+      setRestoreError(restored === "invalid");
+      setRestoreCompleted(restored === "completed");
       return;
     }
     setRestoreError(false);
+    setRestoreCompleted(false);
     setState({ ready: true, session: restored });
   };
 
@@ -340,6 +456,7 @@ export function DocumentsPageView({ locale }: { locale: Locale }) {
               {page.restoreLabel}: {page.restorePlaceholder}
             </p>
           )}
+          {restoreCompleted && <CompletedNotice locale={locale} />}
           <div className="mt-6">
             <Link
               to={pagePath(locale, "consultation")}
@@ -433,6 +550,10 @@ export function ThanksPageView({ locale }: { locale: Locale }) {
   const c = siteContent[locale];
   const page = c.thanks;
   const [{ ready, session }] = useFlowSession();
+  // Reaching this page closes the request: its code can no longer be reopened.
+  useEffect(() => {
+    completeIntakeSession();
+  }, []);
 
   return (
     <div className={`${WRAP} pb-16`}>
