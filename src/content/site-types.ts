@@ -49,6 +49,11 @@ export type IntakePage = InfoPage & {
 export type DocumentsPage = InfoPage & {
   caseLabel: string;
   uploadPendingNote: string;
+  uploadingLabel: string;
+  uploadErrorLabel: string;
+  tooManyLabel: string;
+  tooLargeLabel: string;
+  removeLabel: string;
   optionalNote: string;
   pickLabel: string;
   selectedLabel: string;

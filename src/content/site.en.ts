@@ -264,7 +264,12 @@ export const siteEn: SiteContent = {
     ],
     caseLabel: "Reference code",
     uploadPendingNote:
-      "Secure document upload is not connected yet: selected files are not sent or stored anywhere. You can skip this step for now.",
+      "Up to 20 files, each up to 50 MB: PDF, photos (JPG, PNG, HEIC), Word. Files are sent securely straight to the folder for your request; the website does not keep them.",
+    uploadingLabel: "Sending files…",
+    uploadErrorLabel: "Some files could not be sent. The remaining files are still listed — please try again.",
+    tooManyLabel: "You can attach up to 20 files.",
+    tooLargeLabel: "A file is larger than 50 MB — please reduce or split it.",
+    removeLabel: "Remove file",
     optionalNote: "You can skip this step.",
     pickLabel: "Choose files",
     selectedLabel: "Files selected",

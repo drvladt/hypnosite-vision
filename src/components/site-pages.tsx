@@ -7,7 +7,9 @@ import {
   FileText,
   Info,
   MessageCircle,
+  Loader2,
   Paperclip,
+  X,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -241,16 +243,61 @@ export function IntakePageView({ locale }: { locale: Locale }) {
   );
 }
 
+const MAX_FILES = 20;
+const MAX_FILE_BYTES = 50 * 1024 * 1024;
+const ACCEPT = ".pdf,.jpg,.jpeg,.png,.heic,.heif,.webp,.doc,.docx,.txt,.rtf";
+
 export function DocumentsPageView({ locale }: { locale: Locale }) {
   const c = siteContent[locale];
   const page = c.documents;
   const navigate = useNavigate();
   const [{ ready, session }, setState] = useFlowSession();
-  const [files, setFiles] = useState(0);
+  const [files, setFiles] = useState<File[]>([]);
+  const [uploading, setUploading] = useState(false);
+  const [uploadError, setUploadError] = useState<string | null>(null);
   const [code, setCode] = useState("");
   const [restoreError, setRestoreError] = useState(false);
 
   const finish = () => void navigate({ to: pagePath(locale, "thanks") });
+
+  const addFiles = (list: FileList | null) => {
+    setUploadError(null);
+    const picked = Array.from(list ?? []);
+    const next = [...files, ...picked.filter((f) => f.size <= MAX_FILE_BYTES)];
+    if (picked.some((f) => f.size > MAX_FILE_BYTES)) setUploadError(page.tooLargeLabel);
+    if (next.length > MAX_FILES) setUploadError(page.tooManyLabel);
+    setFiles(next.slice(0, MAX_FILES));
+  };
+
+  const submitFiles = async () => {
+    if (!session || files.length === 0) return finish();
+    setUploading(true);
+    setUploadError(null);
+    const remaining: File[] = [];
+    for (const file of files) {
+      try {
+        const res = await fetch("/api/public/upload-document", {
+          method: "PUT",
+          headers: {
+            "Content-Type": file.type || "application/octet-stream",
+            "x-case-code": session.caseCode ?? "",
+            "x-file-name": encodeURIComponent(file.name),
+          },
+          body: file,
+        });
+        if (!res.ok) remaining.push(file);
+      } catch {
+        remaining.push(file);
+      }
+    }
+    setUploading(false);
+    if (remaining.length) {
+      setFiles(remaining);
+      setUploadError(page.uploadErrorLabel);
+      return;
+    }
+    finish();
+  };
 
   const restore = () => {
     const restored = restoreIntakeSession(code, c.consultation.consent.version);
@@ -312,31 +359,64 @@ export function DocumentsPageView({ locale }: { locale: Locale }) {
             <input
               type="file"
               multiple
+              accept={ACCEPT}
+              disabled={uploading}
               className="hidden"
-              onChange={(event) => setFiles(event.target.files?.length ?? 0)}
+              onChange={(event) => {
+                addFiles(event.target.files);
+                event.target.value = "";
+              }}
             />
           </label>
-          {files > 0 && (
-            <p className="mt-3 flex items-center gap-2 text-sm text-primary">
-              <Check className="size-4" aria-hidden="true" />
-              {page.selectedLabel}: {files}
-            </p>
+          {files.length > 0 && (
+            <div className="mt-3">
+              <p className="flex items-center gap-2 text-sm text-primary">
+                <Check className="size-4" aria-hidden="true" />
+                {page.selectedLabel}: {files.length}
+              </p>
+              <ul className="mt-2 space-y-1">
+                {files.map((file, i) => (
+                  <li
+                    key={`${file.name}-${i}`}
+                    className="flex items-center justify-between gap-3 rounded-lg bg-secondary/30 px-3 py-1.5 text-xs text-foreground/85"
+                  >
+                    <span className="truncate">{file.name}</span>
+                    <button
+                      type="button"
+                      disabled={uploading}
+                      onClick={() => setFiles(files.filter((_, j) => j !== i))}
+                      aria-label={page.removeLabel}
+                      className="text-muted-foreground hover:text-foreground"
+                    >
+                      <X className="size-3.5" aria-hidden="true" />
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
           )}
+          {uploadError && <p className="mt-3 text-xs text-destructive">{uploadError}</p>}
           <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
             {page.uploadPendingNote}
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button
               size="lg"
-              onClick={finish}
+              onClick={() => void submitFiles()}
+              disabled={uploading}
               className="h-12 rounded-full px-6 text-sm shadow-none"
             >
-              {page.continueLabel}
-              <ArrowRight aria-hidden="true" />
+              {uploading ? page.uploadingLabel : page.continueLabel}
+              {uploading ? (
+                <Loader2 className="animate-spin" aria-hidden="true" />
+              ) : (
+                <ArrowRight aria-hidden="true" />
+              )}
             </Button>
             <Button
               size="lg"
               variant="outline"
+              disabled={uploading}
               onClick={finish}
               className="h-12 rounded-full px-6 text-sm shadow-none"
             >
