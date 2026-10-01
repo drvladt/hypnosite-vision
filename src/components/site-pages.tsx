@@ -357,7 +357,7 @@ export function IntakePageView({ locale }: { locale: Locale }) {
 }
 
 const MAX_FILES = 20;
-const MAX_FILE_BYTES = 50 * 1024 * 1024;
+const MAX_FILE_BYTES = 30 * 1024 * 1024;
 const ACCEPT = ".pdf,.jpg,.jpeg,.png,.heic,.heif,.webp,.doc,.docx,.txt,.rtf";
 
 export function DocumentsPageView({ locale }: { locale: Locale }) {

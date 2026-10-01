@@ -9,7 +9,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "deploy": "firebase deploy --only functions:createCase",
+    "deploy": "firebase deploy --only functions:createCase,functions:uploadDocument",
+    "public-access-upload": "gcloud run services update uploaddocument --project dr-vlad-website-production --region europe-west1 --no-invoker-iam-check",
     "public-access": "gcloud run services update createcase --project dr-vlad-website-production --region europe-west1 --no-invoker-iam-check"
   },
   "dependencies": {

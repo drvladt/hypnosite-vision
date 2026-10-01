@@ -266,11 +266,11 @@ export const siteFr: SiteContent = {
     ],
     caseLabel: "Code de demande",
     uploadPendingNote:
-      "Jusqu'à 20 fichiers de 50 Mo maximum chacun : PDF, photos (JPG, PNG, HEIC), Word. Les fichiers sont transmis de façon sécurisée directement dans le dossier de votre demande ; le site ne les conserve pas.",
+      "Jusqu'à 20 fichiers de 30 Mo maximum chacun : PDF, photos (JPG, PNG, HEIC), Word. Les fichiers sont transmis de façon sécurisée directement dans le dossier de votre demande ; le site ne les conserve pas.",
     uploadingLabel: "Envoi des fichiers…",
     uploadErrorLabel: "Certains fichiers n'ont pas pu être envoyés. Ceux qui restent sont toujours dans la liste — veuillez réessayer.",
     tooManyLabel: "Vous pouvez joindre 20 fichiers au maximum.",
-    tooLargeLabel: "Un fichier dépasse 50 Mo — veuillez le réduire ou le diviser.",
+    tooLargeLabel: "Un fichier dépasse 30 Mo — veuillez le réduire ou le diviser.",
     removeLabel: "Retirer le fichier",
     optionalNote: "Vous pouvez passer cette étape.",
     pickLabel: "Choisir des fichiers",
