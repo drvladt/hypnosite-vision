@@ -45,18 +45,6 @@ function ProseSection({ section, number }: { section: HypnotherapySection; numbe
             </p>
           ))}
         </div>
-        {section.highlightLines?.length ? (
-          <div className="my-6 space-y-4 border-l-2 border-gold/50 pl-5 md:pl-6">
-            {section.highlightLines.map((line, index) => (
-              <p
-                key={index}
-                className="font-display text-xl italic leading-relaxed text-foreground/85 md:text-2xl"
-              >
-                {line}
-              </p>
-            ))}
-          </div>
-        ) : null}
         {section.video ? (
           <figure className="my-8">
             <figcaption className="text-xs uppercase tracking-wide text-muted-foreground">
@@ -89,6 +77,18 @@ function ProseSection({ section, number }: { section: HypnotherapySection; numbe
             </p>
           ))}
         </div>
+        {section.highlightLines?.length ? (
+          <div className="my-6 space-y-4 border-l-2 border-gold/50 pl-5 md:pl-6">
+            {section.highlightLines.map((line, index) => (
+              <p
+                key={index}
+                className="font-display text-xl italic leading-relaxed text-foreground/85 md:text-2xl"
+              >
+                {line}
+              </p>
+            ))}
+          </div>
+        ) : null}
         {section.italicLines?.length ? <ItalicLines lines={section.italicLines} /> : null}
         {section.emphasis && (
           <blockquote className="mt-6 border-l-2 border-gold pl-6 font-display text-xl leading-relaxed text-primary md:text-2xl">
