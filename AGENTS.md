@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Patient documents upload one file per request to /api/public/upload-document, which streams them into the linked Google Drive (per-Patient-ID folder) and never stores them — keeps medical files out of this app.
+- Patient documents go site route /api/public/upload-document -> own Cloud Function uploadDocument -> Google Drive (no Lovable gateway), so uploads keep working independent of Lovable.
