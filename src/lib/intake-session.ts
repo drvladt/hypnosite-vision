@@ -21,6 +21,15 @@ export function isCaseCode(value: string) {
   return /^DV\d{6,}$/i.test(value.trim());
 }
 
+/** Accepts "DV000020", "dv 20", "DV-20", "20" etc. and returns "DV000020", or null. */
+export function normalizeCaseCode(value: string): string | null {
+  const m = value.trim().toUpperCase().replace(/[\s\-_.]/g, "").match(/^(?:DV)?(\d{1,9})$/);
+  if (!m) return null;
+  const n = Number(m[1]);
+  if (!n) return null;
+  return `DV${String(n).padStart(6, "0")}`;
+}
+
 export function readIntakeSession(): IntakeSession | null {
   return current;
 }
@@ -57,8 +66,8 @@ export function restoreIntakeSession(
   consentVersion: string,
   intakeDone = true,
 ): IntakeSession | "invalid" | "completed" {
-  if (!isCaseCode(caseCode)) return "invalid";
-  const normalized = caseCode.trim().toUpperCase();
+  const normalized = normalizeCaseCode(caseCode);
+  if (!normalized) return "invalid";
   if (completed.has(normalized)) return "completed";
   current = {
     caseCode: normalized,
