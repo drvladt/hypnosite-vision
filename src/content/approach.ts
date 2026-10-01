@@ -152,7 +152,7 @@ export const approachContent: Record<Locale, ApproachContent> = {
           "L'hypnothérapie ne remplace pas la prise en charge médicale. Elle peut être envisagée comme un outil complémentaire lorsque la situation y est favorable.",
         ],
         video: {
-          caption: "Ce qui a changé après un travail sur l’état émotionnel — raconté avec ses propres mots",
+          caption: "CE QUI A CHANGÉ APRÈS UN TRAVAIL SUR L’ÉTAT ÉMOTIONNEL — AVIS PERSONNEL D'UN PATIENT",
           emptyLabel: "Le témoignage vidéo paraîtra ici prochainement.",
         },
       },
