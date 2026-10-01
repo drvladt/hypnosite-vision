@@ -361,6 +361,7 @@ export function IntakePageView({ locale }: { locale: Locale }) {
             <ArrowRight aria-hidden="true" />
           </Button>
         </FlowCard>
+        </div>
       )}
     </div>
   );
