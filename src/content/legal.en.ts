@@ -43,7 +43,6 @@ export const legalEn: LegalContent = {
       title: "Data processing",
       paragraphs: [
         "By continuing, you confirm that you have read the data processing terms and agree to the processing of information necessary to review your request.",
-        `You can withdraw your consent by writing to ${L("privacyEmail")}. Withdrawal does not affect the lawfulness of processing carried out before it was received.`,
       ],
     },
     panel: {
