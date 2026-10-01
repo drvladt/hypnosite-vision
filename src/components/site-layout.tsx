@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ChevronRight, Menu, X } from "lucide-react";
 
-import logoAsset from "@/assets/logo.png";
+import logoAsset from "@/assets/logo.webp";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { SocialIcon } from "@/components/social-icon";
 import { Button } from "@/components/ui/button";

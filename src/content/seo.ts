@@ -1,4 +1,4 @@
-import portraitAsset from "@/assets/fotoMe.png";
+import portraitAsset from "@/assets/fotoMe.webp";
 
 import { homePath, locales, pagePath, socialLinks, type Locale, type PageKey } from "./locales";
 

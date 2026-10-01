@@ -52,8 +52,8 @@ function SocialIcon({ type, className }: { type: SocialType; className?: string 
   }
 }
 
-import portraitAsset from "@/assets/fotoMe.png";
-import logoAsset from "@/assets/logo.png";
+import portraitAsset from "@/assets/fotoMe.webp";
+import logoAsset from "@/assets/logo.webp";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { Button } from "@/components/ui/button";
 import { homeContent } from "@/content/home";
