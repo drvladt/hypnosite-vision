@@ -43,7 +43,7 @@ export const hypnotherapyContent: Record<Locale, HypnotherapyContent> = {
         ],
         video: {
           caption: "Отзыв человека, прошедшего сеанс гипнотерапии",
-          emptyLabel: "Видеоотзыв появится здесь в ближайшее время.",
+          youtubeId: "9-Xp2Kt8Y_k",
         },
         paragraphsAfterVideo: [
           "Сам процесс во многом можно сравнить с медитативным состоянием. Человек при поддержке специалиста направляет внимание внутрь себя и сосредоточивается на мыслях, ощущениях и образах. Специалист не управляет им извне: он помогает удерживать внимание, задаёт вопросы и сопровождает человека в исследовании собственных реакций. Состояние такой сосредоточенности или фокуса на определенных чувствах иногда называют в немедицинских источниках – трансом.",
@@ -91,7 +91,7 @@ export const hypnotherapyContent: Record<Locale, HypnotherapyContent> = {
         ],
         video: {
           caption: "HEAR FROM A REAL PERSON ABOUT HIS FIRST HYPNOTHERAPY SESSION",
-          emptyLabel: "The video testimonial will appear here soon.",
+          youtubeId: "gJYALjO4_LI",
         },
         paragraphsAfterVideo: [
           "In my work, I mainly use a non-directive, Ericksonian approach. This means I do not tell you what to think or give you ready-made answers. Instead, I use questions, imagery, and focused attention to help you explore your own thoughts, emotions, physical sensations, and reactions.",
@@ -192,7 +192,7 @@ export const hypnotherapyContent: Record<Locale, HypnotherapyContent> = {
         ],
         video: {
           caption: "LE TÉMOIGNAGE D'UNE PERSONNE APRES LA PREMIERE SÉANCE D'HYPNOTHÉRAPIE",
-          emptyLabel: "Le témoignage vidéo paraîtra ici prochainement.",
+          youtubeId: "sOK3pYIDZUU",
         },
         paragraphsAfterVideo: [
           "Dans ma pratique, j'utilise principalement une approche non directive et ericksonienne.",
