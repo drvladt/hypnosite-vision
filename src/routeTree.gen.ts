@@ -17,6 +17,7 @@ import { Route as RuRouteImport } from './routes/ru'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as LocaleSlugRouteImport } from './routes/$locale/$slug'
 import { Route as ApiPublicCreateCaseRouteImport } from './routes/api/public/create-case'
+import { Route as ApiPublicUploadDocumentRouteImport } from './routes/api/public/upload-document'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -58,6 +59,11 @@ const ApiPublicCreateCaseRoute = ApiPublicCreateCaseRouteImport.update({
   path: '/api/public/create-case',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicUploadDocumentRoute = ApiPublicUploadDocumentRouteImport.update({
+  id: '/api/public/upload-document',
+  path: '/api/public/upload-document',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -68,6 +74,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$locale/$slug': typeof LocaleSlugRoute
   '/api/public/create-case': typeof ApiPublicCreateCaseRoute
+  '/api/public/upload-document': typeof ApiPublicUploadDocumentRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -78,6 +85,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$locale/$slug': typeof LocaleSlugRoute
   '/api/public/create-case': typeof ApiPublicCreateCaseRoute
+  '/api/public/upload-document': typeof ApiPublicUploadDocumentRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -89,6 +97,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$locale/$slug': typeof LocaleSlugRoute
   '/api/public/create-case': typeof ApiPublicCreateCaseRoute
+  '/api/public/upload-document': typeof ApiPublicUploadDocumentRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -101,6 +110,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/$locale/$slug'
     | '/api/public/create-case'
+    | '/api/public/upload-document'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -111,6 +121,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/$locale/$slug'
     | '/api/public/create-case'
+    | '/api/public/upload-document'
   id:
     | '__root__'
     | '/'
@@ -121,6 +132,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/$locale/$slug'
     | '/api/public/create-case'
+    | '/api/public/upload-document'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -132,6 +144,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   LocaleSlugRoute: typeof LocaleSlugRoute
   ApiPublicCreateCaseRoute: typeof ApiPublicCreateCaseRoute
+  ApiPublicUploadDocumentRoute: typeof ApiPublicUploadDocumentRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -192,6 +205,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicCreateCaseRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/upload-document': {
+      id: '/api/public/upload-document'
+      path: '/api/public/upload-document'
+      fullPath: '/api/public/upload-document'
+      preLoaderRoute: typeof ApiPublicUploadDocumentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -204,6 +224,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   LocaleSlugRoute: LocaleSlugRoute,
   ApiPublicCreateCaseRoute: ApiPublicCreateCaseRoute,
+  ApiPublicUploadDocumentRoute: ApiPublicUploadDocumentRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
