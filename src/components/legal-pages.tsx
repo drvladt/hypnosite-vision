@@ -384,22 +384,34 @@ export function ConsentGatePageView({ locale }: { locale: Locale }) {
               </p>
             )}
 
-            {status === "issued" && caseCode && (
+            {status === "issued" && caseCode ? (
               <div className="mt-5 rounded-2xl border border-gold/50 bg-gold/10 p-4">
                 <p className="text-xs uppercase tracking-widest text-muted-foreground">{CASE_LABEL[locale]}</p>
-                <p className="mt-1 font-display text-2xl text-gold">{caseCode}</p>
+                <div className="mt-1 flex flex-wrap items-center justify-between gap-3">
+                  <p className="font-display text-2xl text-gold">{caseCode}</p>
+                  <CopyCodeButton code={caseCode} locale={locale} />
+                </div>
+                <p className="mt-3 text-sm leading-relaxed text-foreground/90">{ISSUED_TEXT[locale].hint}</p>
+                <Button
+                  size="lg"
+                  onClick={() => void navigate({ to: pagePath(locale, "intake") })}
+                  className="mt-4 h-12 w-full rounded-full px-6 text-sm shadow-none"
+                >
+                  {ISSUED_TEXT[locale].go}
+                  <ArrowRight aria-hidden="true" />
+                </Button>
               </div>
-            )}
-
+            ) : (
             <Button
               size="lg"
-              disabled={!allChecked || status === "pending" || status === "issued"}
+              disabled={!allChecked || status === "pending"}
               onClick={() => void proceed()}
               className="mt-6 h-12 w-full rounded-full px-6 text-sm shadow-none"
             >
               {status === "pending" ? page.panel.loadingLabel : page.panel.button}
               {status !== "pending" && <ArrowRight aria-hidden="true" />}
             </Button>
+            )}
             <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
               {allChecked ? page.panel.buttonNote : page.panel.blockedNote}
             </p>
