@@ -11,6 +11,14 @@ export type HypnotherapySection = {
   highlightLines?: string[];
   /** Paragraphs rendered after the highlighted lines. */
   paragraphsAfter?: string[];
+  /** Mid-section testimonial video block (caption in small type above the player). */
+  video?: {
+    caption: string;
+    youtubeId?: string;
+    emptyLabel?: string;
+  };
+  /** Paragraphs rendered after the video block. */
+  paragraphsAfterVideo?: string[];
   /** Gold-bordered pull quote at the end of the section. */
   emphasis?: string;
 };
@@ -32,6 +40,12 @@ export const hypnotherapyContent: Record<Locale, HypnotherapyContent> = {
       {
         paragraphs: [
           "В клинической практике применяют преимущественно недирективный, или эриксоновский, гипноз. Выбор техники зависит от ситуации и цели терапии. Во время такой работы специалист не даёт готовых ответов. Он задаёт вопросы, использует образы и помогает человеку лучше понять собственные чувства, реакции и привычные способы мыслить. Человек остаётся в сознании и слышит специалиста. Он может делиться тем, что возникает во время сеанса, без необходимости в обязательном порядке следовать заданному сценарию. Если захочет, человек в любой момент может открыть глаза и остановить сеанс.",
+        ],
+        video: {
+          caption: "Отзыв человека, прошедшего сеанс гипнотерапии",
+          emptyLabel: "Видеоотзыв появится здесь в ближайшее время.",
+        },
+        paragraphsAfterVideo: [
           "Сам процесс во многом можно сравнить с медитативным состоянием. Человек при поддержке специалиста направляет внимание внутрь себя и сосредоточивается на мыслях, ощущениях и образах. Специалист не управляет им извне: он помогает удерживать внимание, задаёт вопросы и сопровождает человека в исследовании собственных реакций. Состояние такой сосредоточенности или фокуса на определенных чувствах иногда называют в немедицинских источниках – трансом.",
         ],
         emphasis:
@@ -74,6 +88,12 @@ export const hypnotherapyContent: Record<Locale, HypnotherapyContent> = {
         paragraphs: [
           "Hypnotherapy is not about putting you to sleep or taking control of your mind.",
           "During a session, you remain aware of what is happening. You hear me, you can speak, make your own decisions, open your eyes, and stop the session at any time.",
+        ],
+        video: {
+          caption: "Hear from a real person about their first hypnotherapy session",
+          emptyLabel: "The video testimonial will appear here soon.",
+        },
+        paragraphsAfterVideo: [
           "In my work, I mainly use a non-directive, Ericksonian approach. This means I do not tell you what to think or give you ready-made answers. Instead, I use questions, imagery, and focused attention to help you explore your own thoughts, emotions, physical sensations, and reactions.",
         ],
         emphasis:
@@ -169,6 +189,12 @@ export const hypnotherapyContent: Record<Locale, HypnotherapyContent> = {
         paragraphs: [
           "L'hypnothérapie ne consiste pas à vous endormir ni à prendre le contrôle de votre esprit.",
           "Pendant une séance, vous restez conscient de ce qui se passe. Vous m'entendez, vous pouvez parler, faire vos propres choix, ouvrir les yeux et arrêter la séance à tout moment.",
+        ],
+        video: {
+          caption: "Le témoignage d'une personne ayant vécu une séance d'hypnothérapie",
+          emptyLabel: "Le témoignage vidéo paraîtra ici prochainement.",
+        },
+        paragraphsAfterVideo: [
           "Dans ma pratique, j'utilise principalement une approche non directive et ericksonienne.",
           "Je ne vous dis pas quoi penser et je ne vous donne pas de réponses toutes faites. J'utilise plutôt des questions, et la focalisation de l'attention pour vous aider à explorer vos pensées, vos émotions, vos sensations physiques et vos réactions.",
         ],
