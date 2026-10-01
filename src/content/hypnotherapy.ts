@@ -90,7 +90,7 @@ export const hypnotherapyContent: Record<Locale, HypnotherapyContent> = {
           "During a session, you remain aware of what is happening. You hear me, you can speak, make your own decisions, open your eyes, and stop the session at any time.",
         ],
         video: {
-          caption: "Hear from a real person about their first hypnotherapy session",
+          caption: "HEAR FROM A REAL PERSON ABOUT HIS FIRST HYPNOTHERAPY SESSION",
           emptyLabel: "The video testimonial will appear here soon.",
         },
         paragraphsAfterVideo: [
