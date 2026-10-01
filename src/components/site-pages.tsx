@@ -280,7 +280,7 @@ export function DocumentsPageView({ locale }: { locale: Locale }) {
           method: "PUT",
           headers: {
             "Content-Type": file.type || "application/octet-stream",
-            "x-case-code": session.caseCode,
+            "x-case-code": session.caseCode ?? "",
             "x-file-name": encodeURIComponent(file.name),
           },
           body: file,
