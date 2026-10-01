@@ -52,8 +52,8 @@ function SocialIcon({ type, className }: { type: SocialType; className?: string 
   }
 }
 
-import portraitAsset from "@/assets/fotoMe.png.asset.json";
-import logoAsset from "@/assets/logo.png.asset.json";
+import portraitAsset from "@/assets/fotoMe.png";
+import logoAsset from "@/assets/logo.png";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { Button } from "@/components/ui/button";
 import { homeContent } from "@/content/home";
@@ -131,7 +131,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
       <header data-home-header className="sticky top-0 z-50 border-b border-border/70 bg-background/92 backdrop-blur-md">
         <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 lg:px-8">
           <a href="#top" className="flex items-center gap-3" aria-label={c.nav.toTop}>
-            <img src={logoAsset.url} alt="" className="size-11 rounded-full object-cover" />
+            <img src={logoAsset} alt="" className="size-11 rounded-full object-cover" />
             <span className="font-display text-lg font-medium">Dr. Vlad</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm lg:flex" aria-label={c.nav.label}>
@@ -174,7 +174,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
               </div>
             </div>
             <div className="overflow-hidden rounded-lg bg-primary">
-              <img src={portraitAsset.url} alt={c.hero.portraitAlt} className="aspect-[4/3] w-full object-cover object-center md:aspect-[16/7]" />
+              <img src={portraitAsset} alt={c.hero.portraitAlt} className="aspect-[4/3] w-full object-cover object-center md:aspect-[16/7]" />
               <div className="flex items-start gap-4 border-t border-primary-foreground/15 px-6 py-6 text-primary-foreground md:px-8 md:py-7">
                 <span className="font-display text-3xl leading-[0.6] text-gold-light md:text-4xl" aria-hidden="true">“</span>
                 <p className="max-w-4xl text-base leading-7 text-primary-foreground/85">{c.hero.portraitCaption}</p>
@@ -354,7 +354,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
 
       <footer className="bg-background py-9">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 px-5 md:flex-row lg:px-8">
-            <div className="flex items-center gap-3"><img src={logoAsset.url} alt="" className="size-12 rounded-full"/><div><p className="font-display text-xl">Dr. Vlad Tettegah</p><p className="text-xs text-muted-foreground">{c.footer.role}</p></div></div>
+            <div className="flex items-center gap-3"><img src={logoAsset} alt="" className="size-12 rounded-full"/><div><p className="font-display text-xl">Dr. Vlad Tettegah</p><p className="text-xs text-muted-foreground">{c.footer.role}</p></div></div>
             <div className="md:text-right">
               <div className="flex items-center gap-1.5 md:justify-end">
                 {socialLinks.map((social) => (

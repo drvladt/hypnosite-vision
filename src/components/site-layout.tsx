@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ChevronRight, Menu, X } from "lucide-react";
 
-import logoAsset from "@/assets/logo.png.asset.json";
+import logoAsset from "@/assets/logo.png";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { SocialIcon } from "@/components/social-icon";
 import { Button } from "@/components/ui/button";
@@ -77,7 +77,7 @@ export function SiteLayout({
       <header className="sticky top-0 z-50 border-b border-border/70 bg-background/92 backdrop-blur-md">
         <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 lg:px-8">
           <Link to={homePath[locale]} className="flex items-center gap-3" aria-label={home.nav.toTop}>
-            <img src={logoAsset.url} alt="" className="size-11 rounded-full object-cover" />
+            <img src={logoAsset} alt="" className="size-11 rounded-full object-cover" />
             <span className="font-display text-lg font-medium">Dr. Vlad</span>
           </Link>
           <nav className="hidden items-center gap-6 text-sm lg:flex" aria-label={c.common.navLabel}>
@@ -143,7 +143,7 @@ export function SiteLayout({
           <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
             <div className="max-w-xs">
               <div className="flex items-center gap-3">
-                <img src={logoAsset.url} alt="" className="size-10 rounded-full object-cover" />
+                <img src={logoAsset} alt="" className="size-10 rounded-full object-cover" />
                 <span className="font-display text-base font-medium">Dr. Vlad Tettegah</span>
               </div>
               <p className="mt-3 text-sm text-muted-foreground">{home.footer.role}</p>

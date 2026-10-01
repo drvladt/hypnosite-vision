@@ -1,17 +1,17 @@
 import { Link } from "@tanstack/react-router";
 import { MessageCircle } from "lucide-react";
 
-import childhood from "@/assets/about/childhood.jpg.asset.json";
-import endovascular from "@/assets/about/endovascular-work.png.asset.json";
-import graduation from "@/assets/about/graduation.jpg.asset.json";
-import hypnotherapyCertificate from "@/assets/about/hypnotherapy-certificate.png.asset.json";
-import mhcc from "@/assets/about/mhcc.jpg.asset.json";
-import mhccSecond from "@/assets/about/mhcc-2.jpg.asset.json";
-import nightShift from "@/assets/about/night-shift-libya.jpg.asset.json";
-import rspcMinsk from "@/assets/about/rspc-minsk.jpg.asset.json";
-import togo from "@/assets/about/togo-2022.jpg.asset.json";
-import university from "@/assets/about/university.jpg.asset.json";
-import workAtMhcc from "@/assets/about/work-at-mhcc.jpg.asset.json";
+import childhood from "@/assets/about/childhood.jpg";
+import endovascular from "@/assets/about/endovascular-work.png";
+import graduation from "@/assets/about/graduation.jpg";
+import hypnotherapyCertificate from "@/assets/about/hypnotherapy-certificate.png";
+import mhcc from "@/assets/about/mhcc.jpg";
+import mhccSecond from "@/assets/about/mhcc-2.jpg";
+import nightShift from "@/assets/about/night-shift-libya.jpg";
+import rspcMinsk from "@/assets/about/rspc-minsk.jpg";
+import togo from "@/assets/about/togo-2022.jpg";
+import university from "@/assets/about/university.jpg";
+import workAtMhcc from "@/assets/about/work-at-mhcc.jpg";
 import { Button } from "@/components/ui/button";
 import { aboutContent, type AboutSection } from "@/content/about";
 import { contactEmail, pagePath, type Locale } from "@/content/locales";
@@ -91,7 +91,7 @@ export function AboutPageView({ locale }: { locale: Locale }) {
           </p>
         </div>
         <EditorialImage
-          src={childhood.url}
+          src={childhood}
           alt={c.captions.childhood}
           caption={c.captions.childhood}
           className="mx-auto w-full max-w-sm md:mx-0"
@@ -108,13 +108,13 @@ export function AboutPageView({ locale }: { locale: Locale }) {
           <ProseSection section={education} number="02" />
           <div className="mt-10 grid gap-5 md:grid-cols-[1.25fr_.75fr] md:items-end">
             <EditorialImage
-              src={university.url}
+              src={university}
               alt={c.captions.university}
               caption={c.captions.university}
               imageClassName="aspect-[16/10]"
             />
             <EditorialImage
-              src={graduation.url}
+              src={graduation}
               alt={c.captions.graduation}
               caption={c.captions.graduation}
               imageClassName="aspect-[4/5] object-[center_42%]"
@@ -129,7 +129,7 @@ export function AboutPageView({ locale }: { locale: Locale }) {
           number="03"
         />
         <EditorialImage
-          src={togo.url}
+          src={togo}
           alt={c.captions.togo}
           caption={c.captions.togo}
           className="mt-10 md:ml-12 md:w-[44%]"
@@ -143,13 +143,13 @@ export function AboutPageView({ locale }: { locale: Locale }) {
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2 md:items-center">
           <EditorialImage
-            src={rspcMinsk.url}
+            src={rspcMinsk}
             alt={c.captions.minsk}
             caption={c.captions.minsk}
             imageClassName="aspect-[16/10]"
           />
           <EditorialImage
-            src={endovascular.url}
+            src={endovascular}
             alt={c.captions.endovascular}
             caption={c.captions.endovascular}
             imageClassName="aspect-[16/10] object-[center_42%]"
@@ -163,7 +163,7 @@ export function AboutPageView({ locale }: { locale: Locale }) {
           number="04"
         />
         <EditorialImage
-          src={hypnotherapyCertificate.url}
+          src={hypnotherapyCertificate}
           alt={c.captions.certificate}
           caption={c.captions.certificate}
           className="mt-10 md:ml-12"
@@ -181,25 +181,25 @@ export function AboutPageView({ locale }: { locale: Locale }) {
           </div>
           <div className="mt-12 grid gap-4 sm:grid-cols-2 [&_figcaption]:text-primary-foreground/65">
             <EditorialImage
-              src={mhcc.url}
+              src={mhcc}
               alt={c.captions.libya}
               caption={c.captions.libya}
               imageClassName="aspect-[4/3]"
             />
             <EditorialImage
-              src={nightShift.url}
+              src={nightShift}
               alt={c.captions.nightShift}
               caption={c.captions.nightShift}
               imageClassName="aspect-[4/3] object-[center_35%]"
             />
             <EditorialImage
-              src={mhccSecond.url}
+              src={mhccSecond}
               alt={c.captions.libya}
               caption={c.captions.libya}
               imageClassName="aspect-[4/3] object-[center_40%]"
             />
             <EditorialImage
-              src={workAtMhcc.url}
+              src={workAtMhcc}
               alt={c.captions.team}
               caption={c.captions.team}
               imageClassName="aspect-[4/3] object-contain"
