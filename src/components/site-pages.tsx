@@ -22,6 +22,7 @@ import {
   markIntakeDone,
   readIntakeSession,
   restoreIntakeSession,
+  completeIntakeSession,
   type IntakeSession,
 } from "@/lib/intake-session";
 
@@ -455,6 +456,7 @@ export function DocumentsPageView({ locale }: { locale: Locale }) {
               {page.restoreLabel}: {page.restorePlaceholder}
             </p>
           )}
+          {restoreCompleted && <CompletedNotice locale={locale} />}
           <div className="mt-6">
             <Link
               to={pagePath(locale, "consultation")}
@@ -548,6 +550,10 @@ export function ThanksPageView({ locale }: { locale: Locale }) {
   const c = siteContent[locale];
   const page = c.thanks;
   const [{ ready, session }] = useFlowSession();
+  // Reaching this page closes the request: its code can no longer be reopened.
+  useEffect(() => {
+    completeIntakeSession();
+  }, []);
 
   return (
     <div className={`${WRAP} pb-16`}>
