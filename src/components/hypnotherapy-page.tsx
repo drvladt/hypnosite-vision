@@ -1,10 +1,11 @@
 import { Link } from "@tanstack/react-router";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Play } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { hypnotherapyContent, type HypnotherapySection } from "@/content/hypnotherapy";
 import { contactEmail, pagePath, type Locale } from "@/content/locales";
 import { siteContent } from "@/content/site";
+import { YouTubeFacade } from "@/components/youtube-facade";
 
 function ItalicLines({ lines, className }: { lines: string[]; className?: string }) {
   return (
@@ -44,6 +45,38 @@ function ProseSection({ section, number }: { section: HypnotherapySection; numbe
             </p>
           ))}
         </div>
+        {section.video ? (
+          <figure className="my-8">
+            <figcaption className="text-xs uppercase tracking-wide text-muted-foreground">
+              {section.video.caption}
+            </figcaption>
+            {section.video.youtubeId ? (
+              <div className="relative mt-3 aspect-video w-full overflow-hidden rounded-md bg-primary text-primary-foreground">
+                <YouTubeFacade
+                  videoId={section.video.youtubeId}
+                  playLabel={section.video.caption}
+                  title={section.video.caption}
+                />
+              </div>
+            ) : (
+              <div className="mt-3 grid min-h-44 place-items-center rounded-md border border-dashed border-border bg-secondary/25 px-6 py-8 text-center">
+                <div>
+                  <Play className="mx-auto size-7 text-gold" aria-hidden="true" />
+                  <p className="mx-auto mt-3 max-w-lg text-sm leading-6 text-muted-foreground">
+                    {section.video.emptyLabel}
+                  </p>
+                </div>
+              </div>
+            )}
+          </figure>
+        ) : null}
+        <div className="space-y-4">
+          {(section.paragraphsAfterVideo ?? []).map((paragraph, index) => (
+            <p key={index} className="text-base leading-8 text-foreground/85 md:text-lg md:leading-9">
+              {paragraph}
+            </p>
+          ))}
+        </div>
         {section.highlightLines?.length ? (
           <div className="my-6 space-y-4 border-l-2 border-gold/50 pl-5 md:pl-6">
             {section.highlightLines.map((line, index) => (
@@ -56,13 +89,6 @@ function ProseSection({ section, number }: { section: HypnotherapySection; numbe
             ))}
           </div>
         ) : null}
-        <div className="space-y-4">
-          {(section.paragraphsAfter ?? []).map((paragraph, index) => (
-            <p key={index} className="text-base leading-8 text-foreground/85 md:text-lg md:leading-9">
-              {paragraph}
-            </p>
-          ))}
-        </div>
         {section.italicLines?.length ? <ItalicLines lines={section.italicLines} /> : null}
         {section.emphasis && (
           <blockquote className="mt-6 border-l-2 border-gold pl-6 font-display text-xl leading-relaxed text-primary md:text-2xl">
