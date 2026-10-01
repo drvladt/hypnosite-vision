@@ -280,7 +280,6 @@ export const siteRu: SiteContent = {
     errorText:
       "Сессия загрузки истекла или была открыта в другом браузере. Введите код обращения, чтобы продолжить.",
     restoreLabel: "Код обращения",
-    restorePlaceholder: "DV000001",
     restoreAction: "Восстановить сессию",
   },
   thanks: {

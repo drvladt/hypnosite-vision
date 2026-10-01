@@ -182,7 +182,7 @@ const RESTORE_TEXT: Record<
     text: "Если вы уже получили код обращения, введите его, чтобы вернуться к анкете.",
     label: "Код обращения",
     action: "Открыть анкету",
-    invalid: "Проверьте код: он должен выглядеть как DV000123.",
+    invalid: "Проверьте код: он введён неверно.",
     completed:
       "Это обращение уже отправлено и принято в работу. Изменить его или вернуться к нему нельзя. Чтобы отправить новые данные, оформите новое обращение.",
     newRequest: "Оформить новое обращение",
@@ -192,7 +192,7 @@ const RESTORE_TEXT: Record<
     text: "If you have already received a reference code, enter it to return to the questionnaire.",
     label: "Reference code",
     action: "Open the questionnaire",
-    invalid: "Please check the code: it should look like DV000123.",
+    invalid: "Please check the code: it doesn't look right.",
     completed:
       "This request has already been submitted and is being processed. It can no longer be changed or reopened. To send new information, please start a new request.",
     newRequest: "Start a new request",
@@ -202,7 +202,7 @@ const RESTORE_TEXT: Record<
     text: "Si vous avez déjà reçu un code de dossier, saisissez-le pour revenir au questionnaire.",
     label: "Code de dossier",
     action: "Ouvrir le questionnaire",
-    invalid: "Vérifiez le code : il doit ressembler à DV000123.",
+    invalid: "Vérifiez le code : il semble incorrect.",
     completed:
       "Cette demande a déjà été envoyée et est en cours de traitement. Elle ne peut plus être modifiée ni rouverte. Pour transmettre de nouvelles informations, veuillez faire une nouvelle demande.",
     newRequest: "Faire une nouvelle demande",
@@ -261,7 +261,6 @@ export function RestoreByCode({
           <input
             value={code}
             onChange={(event) => setCode(event.target.value)}
-            placeholder="DV000123"
             autoComplete="off"
             className="mt-2 block h-11 w-44 rounded-full border border-border bg-background px-4 text-sm normal-case tracking-normal text-foreground outline-none transition-colors focus:border-gold/60"
           />
@@ -450,7 +449,6 @@ export function DocumentsPageView({ locale }: { locale: Locale }) {
               <input
                 value={code}
                 onChange={(event) => setCode(event.target.value)}
-                placeholder={page.restorePlaceholder}
                 className="mt-2 block h-11 w-44 rounded-full border border-border bg-background px-4 text-sm normal-case tracking-normal text-foreground outline-none transition-colors focus:border-gold/60"
               />
             </label>
@@ -464,7 +462,7 @@ export function DocumentsPageView({ locale }: { locale: Locale }) {
           </div>
           {restoreError && (
             <p className="mt-3 text-xs text-destructive">
-              {page.restoreLabel}: {page.restorePlaceholder}
+              {RESTORE_TEXT[locale].invalid}
             </p>
           )}
           {restoreCompleted && <CompletedNotice locale={locale} />}
