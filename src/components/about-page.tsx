@@ -1,17 +1,17 @@
 import { Link } from "@tanstack/react-router";
 import { MessageCircle } from "lucide-react";
 
-import childhood from "@/assets/about/childhood.jpg";
-import endovascular from "@/assets/about/endovascular-work.png";
-import graduation from "@/assets/about/graduation.jpg";
-import hypnotherapyCertificate from "@/assets/about/hypnotherapy-certificate.png";
-import mhcc from "@/assets/about/mhcc.jpg";
-import mhccSecond from "@/assets/about/mhcc-2.jpg";
-import nightShift from "@/assets/about/night-shift-libya.jpg";
-import rspcMinsk from "@/assets/about/rspc-minsk.jpg";
-import togo from "@/assets/about/togo-2022.jpg";
-import university from "@/assets/about/university.jpg";
-import workAtMhcc from "@/assets/about/work-at-mhcc.jpg";
+import childhood from "@/assets/about/childhood.webp";
+import endovascular from "@/assets/about/endovascular-work.webp";
+import graduation from "@/assets/about/graduation.webp";
+import hypnotherapyCertificate from "@/assets/about/hypnotherapy-certificate.webp";
+import mhcc from "@/assets/about/mhcc.webp";
+import mhccSecond from "@/assets/about/mhcc-2.webp";
+import nightShift from "@/assets/about/night-shift-libya.webp";
+import rspcMinsk from "@/assets/about/rspc-minsk.webp";
+import togo from "@/assets/about/togo-2022.webp";
+import university from "@/assets/about/university.webp";
+import workAtMhcc from "@/assets/about/work-at-mhcc.webp";
 import { Button } from "@/components/ui/button";
 import { aboutContent, type AboutSection } from "@/content/about";
 import { contactEmail, pagePath, type Locale } from "@/content/locales";
