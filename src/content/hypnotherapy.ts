@@ -191,7 +191,7 @@ export const hypnotherapyContent: Record<Locale, HypnotherapyContent> = {
           "Pendant une séance, vous restez conscient de ce qui se passe. Vous m'entendez, vous pouvez parler, faire vos propres choix, ouvrir les yeux et arrêter la séance à tout moment.",
         ],
         video: {
-          caption: "Le témoignage d'une personne ayant vécu une séance d'hypnothérapie",
+          caption: "LE TÉMOIGNAGE D'UNE PERSONNE APRES LA PREMIERE SÉANCE D'HYPNOTHÉRAPIE",
           emptyLabel: "Le témoignage vidéo paraîtra ici prochainement.",
         },
         paragraphsAfterVideo: [
