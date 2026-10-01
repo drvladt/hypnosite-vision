@@ -43,7 +43,6 @@ export const legalFr: LegalContent = {
       title: "Traitement des données",
       paragraphs: [
         "En continuant, vous confirmez avoir pris connaissance des conditions de traitement des données et acceptez le traitement des informations nécessaires à l'examen de votre demande.",
-        `Vous pouvez retirer votre consentement en écrivant à ${L("privacyEmail")}. Le retrait ne remet pas en cause la licéité des traitements effectués avant sa réception.`,
       ],
     },
     panel: {
