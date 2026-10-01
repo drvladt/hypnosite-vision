@@ -129,7 +129,9 @@ export const homeEn: HomeContent = {
     nextLabel: "Next review",
     playLabel: "Play video review",
     concernLabel: "Came for help with:",
-    items: [],
+    items: [
+      { name: "", concern: "", videoUrl: "", youtubeId: "fdKso7DpDI4" },
+    ],
   },
   steps: {
     eyebrow: "How it works",
