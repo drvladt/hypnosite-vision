@@ -289,6 +289,15 @@ export function IntakePageView({ locale }: { locale: Locale }) {
     void navigate({ to: pagePath(locale, "documents") });
   };
 
+  const hasForm = ready && !!session?.caseCode;
+  useEffect(() => {
+    if (!hasForm) return;
+    const t = window.setTimeout(() => {
+      document.getElementById("intake-form-frame")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 150);
+    return () => window.clearTimeout(t);
+  }, [hasForm]);
+
   return (
     <div className={`${WRAP} pb-16`}>
       <PageHeader page={page} />
@@ -305,6 +314,7 @@ export function IntakePageView({ locale }: { locale: Locale }) {
           </FlowCard>
         </>
       ) : (
+        <div id="intake-form-frame" className="scroll-mt-20">
         <FlowCard>
           <CaseCode label={page.caseLabel} code={session.caseCode} />
           {session.caseCode ? (
