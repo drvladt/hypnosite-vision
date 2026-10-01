@@ -2,7 +2,8 @@
  * In-memory state of a visitor's request flow (consultation → intake → documents → thank-you).
  *
  * The Patient ID is issued by the external server endpoint and kept in memory only:
- * never in the site URL, never in localStorage/sessionStorage, never in analytics,
+ * kept in sessionStorage of the current tab only (survives F5, cleared when the tab closes);
+ * never in the site URL, never in localStorage, never in analytics,
  * advertising events or client logs. No health data is kept here at all.
  */
 export type IntakeSession = {
@@ -15,7 +16,38 @@ export type IntakeSession = {
   intakeDone?: boolean;
 };
 
+const KEY = "dv-intake-session";
+const DONE_KEY = "dv-intake-completed";
+
+function store(): Storage | null {
+  try {
+    return typeof window === "undefined" ? null : window.sessionStorage;
+  } catch {
+    return null;
+  }
+}
+
+function load(): IntakeSession | null {
+  try {
+    const raw = store()?.getItem(KEY);
+    return raw ? (JSON.parse(raw) as IntakeSession) : null;
+  } catch {
+    return null;
+  }
+}
+
 let current: IntakeSession | null = null;
+let loaded = false;
+
+function setCurrent(value: IntakeSession | null) {
+  current = value;
+  try {
+    if (value) store()?.setItem(KEY, JSON.stringify(value));
+    else store()?.removeItem(KEY);
+  } catch {
+    /* storage unavailable */
+  }
+}
 
 export function isCaseCode(value: string) {
   return /^DV\d{6,}$/i.test(value.trim());
@@ -31,17 +63,27 @@ export function normalizeCaseCode(value: string): string | null {
 }
 
 export function readIntakeSession(): IntakeSession | null {
+  if (!loaded && typeof window !== "undefined") {
+    loaded = true;
+    current = load();
+    try {
+      const done = JSON.parse(store()?.getItem(DONE_KEY) || "[]") as string[];
+      done.forEach((c) => completed.add(c));
+    } catch {
+      /* ignore */
+    }
+  }
   return current;
 }
 
 /** Opens the flow after all three confirmations; `caseCode` comes from the server. */
 export function startIntakeSession(consentVersion: string, caseCode: string | null): IntakeSession {
-  current = { caseCode, consentVersion, policy: true, health: true, boundaries: true };
-  return current;
+  setCurrent({ caseCode, consentVersion, policy: true, health: true, boundaries: true });
+  return current!;
 }
 
 export function markIntakeDone() {
-  if (current) current = { ...current, intakeDone: true };
+  if (current) setCurrent({ ...current, intakeDone: true });
 }
 
 /** Codes whose request reached the thank-you page in this tab; they can no longer be reopened. */
@@ -54,7 +96,12 @@ export function isCaseCompleted(caseCode: string) {
 /** Closes the request: the code is locked and the active session is cleared. */
 export function completeIntakeSession() {
   if (current?.caseCode) completed.add(current.caseCode.toUpperCase());
-  current = null;
+  try {
+    store()?.setItem(DONE_KEY, JSON.stringify([...completed]));
+  } catch {
+    /* ignore */
+  }
+  setCurrent(null);
 }
 
 /**
@@ -69,17 +116,17 @@ export function restoreIntakeSession(
   const normalized = normalizeCaseCode(caseCode);
   if (!normalized) return "invalid";
   if (completed.has(normalized)) return "completed";
-  current = {
+  setCurrent({
     caseCode: normalized,
     consentVersion,
     policy: true,
     health: true,
     boundaries: true,
     intakeDone,
-  };
-  return current;
+  });
+  return current!;
 }
 
 export function clearIntakeSession() {
-  current = null;
+  setCurrent(null);
 }
