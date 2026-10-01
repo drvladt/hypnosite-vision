@@ -307,30 +307,6 @@ export function IntakePageView({ locale }: { locale: Locale }) {
       ) : (
         <FlowCard>
           <CaseCode label={page.caseLabel} code={session.caseCode} />
-          {session.caseCode && (
-            <label
-              htmlFor={`intake-form-submitted-${locale}`}
-              className="mt-5 flex cursor-pointer items-start gap-3 rounded-2xl border border-primary/20 bg-secondary/30 p-4 text-sm leading-relaxed text-foreground/90"
-            >
-              <Checkbox
-                id={`intake-form-submitted-${locale}`}
-                checked={formSubmitted}
-                onCheckedChange={(checked) => setFormSubmitted(checked === true)}
-                className="mt-0.5"
-              />
-              <span>{page.formSubmittedLabel}</span>
-            </label>
-          )}
-
-          <Button
-            size="lg"
-            onClick={continueToDocuments}
-            disabled={!session.caseCode || !formSubmitted}
-            className="mt-4 h-12 rounded-full px-6 text-sm shadow-none"
-          >
-            {page.continueLabel}
-            <ArrowRight aria-hidden="true" />
-          </Button>
           {session.caseCode ? (
             <div className="-mx-4 mt-5 overflow-hidden rounded-2xl border border-primary/20 sm:-mx-6 md:mx-0">
               <iframe
