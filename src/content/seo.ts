@@ -1,4 +1,4 @@
-import portraitAsset from "@/assets/fotoMe.png.asset.json";
+import portraitAsset from "@/assets/fotoMe.png";
 
 import { homePath, locales, pagePath, socialLinks, type Locale, type PageKey } from "./locales";
 
@@ -78,7 +78,7 @@ export function pageAlternateLinks(siteOrigin: string, page: PageKey) {
 }
 
 export function socialImage(siteOrigin: string): string {
-  return absoluteUrl(siteOrigin, portraitAsset.url);
+  return absoluteUrl(siteOrigin, portraitAsset);
 }
 
 export function socialImageAlt(locale: Locale): string {
