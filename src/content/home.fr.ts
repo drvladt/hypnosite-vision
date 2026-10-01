@@ -134,7 +134,9 @@ export const homeFr: HomeContent = {
     nextLabel: "Témoignage suivant",
     playLabel: "Lire le témoignage vidéo",
     concernLabel: "Motif de consultation :",
-    items: [],
+    items: [
+      { name: "", concern: "", videoUrl: "", youtubeId: "HjM5qWFGCV8" },
+    ],
   },
   steps: {
     eyebrow: "Comment cela se déroule",
