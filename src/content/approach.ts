@@ -46,7 +46,7 @@ export const approachContent: Record<Locale, ApproachContent> = {
           "Интерес к психологии и психотерапии постепенно привёл меня к гипнотерапии. Изучая её и применяя на практике, я увидел, что работа с эмоциональными реакциями нередко становится очень важной и эффектвной частью помощи. Это особенно актуально, когда симптомы усиливаются на фоне стресса, повторяются или их течение трудно объяснить только данными обследований. В таких ситуациях человеку важно не просто услышать, что «всё в порядке», а разобраться в происходящем и найти способы лучше справляться со своим состоянием.",
         ],
         video: {
-          caption: "Результат работы с эмоциональным состоянием — рассказ от первого лица",
+          caption: "Что изменилось после работы с эмоциональным состоянием — от первого лица",
           emptyLabel: "Видеоотзыв появится здесь в ближайшее время.",
         },
       },
@@ -97,7 +97,7 @@ export const approachContent: Record<Locale, ApproachContent> = {
           "Hypnotherapy does not replace medical care and is not automatically part of treatment. It is one of the tools that may be considered when appropriate.",
         ],
         video: {
-          caption: "A first-hand account of what working on your emotional well-being can achieve",
+          caption: "What changed after working on emotional well-being — in their own words",
           emptyLabel: "The video testimonial will appear here soon.",
         },
       },
@@ -152,7 +152,7 @@ export const approachContent: Record<Locale, ApproachContent> = {
           "L'hypnothérapie ne remplace pas la prise en charge médicale. Elle peut être envisagée comme un outil complémentaire lorsque la situation y est favorable.",
         ],
         video: {
-          caption: "Le résultat d'un travail sur son état émotionnel — raconté à la première personne",
+          caption: "Ce qui a changé après un travail sur l’état émotionnel — raconté avec ses propres mots",
           emptyLabel: "Le témoignage vidéo paraîtra ici prochainement.",
         },
       },
