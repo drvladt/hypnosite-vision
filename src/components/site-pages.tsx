@@ -307,6 +307,25 @@ export function IntakePageView({ locale }: { locale: Locale }) {
       ) : (
         <FlowCard>
           <CaseCode label={page.caseLabel} code={session.caseCode} />
+          {session.caseCode ? (
+            <div className="-mx-4 mt-5 overflow-hidden rounded-2xl border border-primary/20 sm:-mx-6 md:mx-0">
+              <iframe
+                src={`${intakeFormUrl(session.caseCode, locale)}&embedded=true`}
+                title={page.title}
+                className="h-[85vh] min-h-[560px] w-full md:h-[90vh]"
+                loading="lazy"
+              />
+            </div>
+          ) : (
+            <div className="mt-5 flex min-h-40 items-center justify-center rounded-2xl border border-dashed border-primary/25 bg-secondary/30 p-6 text-center">
+              <p className="flex items-center gap-2 text-sm text-muted-foreground">
+                <FileText className="size-4 text-primary" aria-hidden="true" />
+                {page.formPlaceholder}
+              </p>
+            </div>
+          )}
+          <p className="mt-4 text-xs leading-relaxed text-muted-foreground">{page.formNote}</p>
+
           {session.caseCode && (
             <label
               htmlFor={`intake-form-submitted-${locale}`}
@@ -331,25 +350,6 @@ export function IntakePageView({ locale }: { locale: Locale }) {
             {page.continueLabel}
             <ArrowRight aria-hidden="true" />
           </Button>
-          {session.caseCode ? (
-            <div className="-mx-4 mt-5 overflow-hidden rounded-2xl border border-primary/20 sm:-mx-6 md:mx-0">
-              <iframe
-                src={`${intakeFormUrl(session.caseCode, locale)}&embedded=true`}
-                title={page.title}
-                className="h-[85vh] min-h-[560px] w-full md:h-[90vh]"
-                loading="lazy"
-              />
-            </div>
-          ) : (
-            <div className="mt-5 flex min-h-40 items-center justify-center rounded-2xl border border-dashed border-primary/25 bg-secondary/30 p-6 text-center">
-              <p className="flex items-center gap-2 text-sm text-muted-foreground">
-                <FileText className="size-4 text-primary" aria-hidden="true" />
-                {page.formPlaceholder}
-              </p>
-            </div>
-          )}
-          <p className="mt-4 text-xs leading-relaxed text-muted-foreground">{page.formNote}</p>
-
         </FlowCard>
       )}
     </div>
