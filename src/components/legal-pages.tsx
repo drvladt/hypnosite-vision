@@ -9,6 +9,7 @@ import type { LegalBlock, LegalDoc } from "@/content/legal-types";
 import { homePath, pagePath, type Locale } from "@/content/locales";
 import { CaseApiNotConfiguredError, createCase } from "@/lib/case-api";
 import { startIntakeSession } from "@/lib/intake-session";
+import { RestoreByCode } from "@/components/site-pages";
 
 
 const WRAP = "mx-auto w-full max-w-4xl px-5 lg:px-8";
@@ -423,6 +424,15 @@ export function ConsentGatePageView({ locale }: { locale: Locale }) {
               </Link>
             </div>
           </div>
+          {status !== "issued" && (
+            <div className="mt-6 rounded-3xl border border-primary/12 bg-card p-6 md:p-7">
+              <RestoreByCode
+                locale={locale}
+                intakeDone={false}
+                onRestored={() => void navigate({ to: pagePath(locale, "intake") })}
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>
