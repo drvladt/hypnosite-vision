@@ -47,7 +47,7 @@ export const approachContent: Record<Locale, ApproachContent> = {
         ],
         video: {
           caption: "Что изменилось после работы с эмоциональным состоянием — от первого лица",
-          emptyLabel: "Видеоотзыв появится здесь в ближайшее время.",
+          youtubeId: "U5pSqriDDw4",
         },
       },
       {
@@ -98,7 +98,7 @@ export const approachContent: Record<Locale, ApproachContent> = {
         ],
         video: {
           caption: "WHAT CHANGED AFTER WORKING ON EMOTIONAL WELL-BEING — A PERSONAL HISTORY",
-          emptyLabel: "The video testimonial will appear here soon.",
+          youtubeId: "vaPGFs9FisA",
         },
       },
       {
@@ -153,7 +153,7 @@ export const approachContent: Record<Locale, ApproachContent> = {
         ],
         video: {
           caption: "CE QUI A CHANGÉ APRÈS UN TRAVAIL SUR L’ÉTAT ÉMOTIONNEL — AVIS PERSONNEL D'UN PATIENT",
-          emptyLabel: "Le témoignage vidéo paraîtra ici prochainement.",
+          youtubeId: "7QLrIGCcKxc",
         },
       },
       {
