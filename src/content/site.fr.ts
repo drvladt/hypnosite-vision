@@ -281,7 +281,6 @@ export const siteFr: SiteContent = {
     errorText:
       "La session de dépôt a expiré ou a été ouverte dans un autre navigateur. Saisissez votre code de demande pour continuer.",
     restoreLabel: "Code de demande",
-    restorePlaceholder: "DV000001",
     restoreAction: "Restaurer la session",
   },
   thanks: {

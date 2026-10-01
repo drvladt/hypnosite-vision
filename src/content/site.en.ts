@@ -279,7 +279,6 @@ export const siteEn: SiteContent = {
     errorText:
       "The upload session has expired or was opened in another browser. Enter your reference code to continue.",
     restoreLabel: "Reference code",
-    restorePlaceholder: "DV000001",
     restoreAction: "Restore session",
   },
   thanks: {

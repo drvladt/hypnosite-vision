@@ -62,7 +62,6 @@ export type DocumentsPage = InfoPage & {
   errorTitle: string;
   errorText: string;
   restoreLabel: string;
-  restorePlaceholder: string;
   restoreAction: string;
 };
 
