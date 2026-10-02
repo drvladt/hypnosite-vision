@@ -41,11 +41,19 @@ export const Route = createFileRoute("/api/public/upload-document")({
 
         if (!PATIENT_ID.test(code)) return Response.json({ error: "bad_code" }, { status: 400 });
         if (!name) return Response.json({ error: "bad_type" }, { status: 415 });
+        const decodedName = decodeURIComponent(name).slice(-200);
+        const ext = decodedName.match(ALLOWED_EXT)?.[1]?.toLowerCase() ?? "";
+        if (!ext || !ALLOWED_TYPES.has(type.toLowerCase())) {
+          return Response.json({ error: "bad_type" }, { status: 415 });
+        }
         if (length > MAX_BYTES) return Response.json({ error: "too_large" }, { status: 413 });
 
         const data = await request.arrayBuffer();
         if (data.byteLength === 0) return Response.json({ error: "empty" }, { status: 400 });
         if (data.byteLength > MAX_BYTES) return Response.json({ error: "too_large" }, { status: 413 });
+        if (!looksValid(new Uint8Array(data), ext)) {
+          return Response.json({ error: "bad_type" }, { status: 415 });
+        }
 
         try {
           const upstream = await fetch(target, {
