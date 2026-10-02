@@ -269,6 +269,7 @@ export const siteEn: SiteContent = {
     uploadErrorLabel: "Some files could not be sent. The remaining files are still listed — please try again.",
     tooManyLabel: "You can attach up to 20 files.",
     tooLargeLabel: "A file is larger than 30 MB — please reduce or split it.",
+    badTypeLabel: "Only PDF or image files (JPG, PNG, HEIC) can be uploaded.",
     removeLabel: "Remove file",
     optionalNote: "You can skip this step.",
     pickLabel: "Choose files",

@@ -270,6 +270,7 @@ export const siteRu: SiteContent = {
     uploadErrorLabel: "Не все файлы удалось отправить. Оставшиеся файлы в списке — попробуйте ещё раз.",
     tooManyLabel: "Можно прикрепить не более 20 файлов.",
     tooLargeLabel: "Файл больше 30 МБ — уменьшите его или разделите.",
+    badTypeLabel: "Можно загрузить только PDF или изображение (JPG, PNG, HEIC).",
     removeLabel: "Удалить файл",
     optionalNote: "Этот шаг можно пропустить.",
     pickLabel: "Выбрать файлы",

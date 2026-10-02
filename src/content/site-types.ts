@@ -53,6 +53,7 @@ export type DocumentsPage = InfoPage & {
   uploadErrorLabel: string;
   tooManyLabel: string;
   tooLargeLabel: string;
+  badTypeLabel: string;
   removeLabel: string;
   optionalNote: string;
   pickLabel: string;
