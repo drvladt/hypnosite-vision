@@ -48,20 +48,28 @@ function PageHeader({ page }: { page: InfoPage }) {
 function Sections({ page }: { page: InfoPage }) {
   return (
     <div className="mt-10 space-y-10">
-      {page.sections.map((section, index) => (
-        <section key={index}>
-          {section.heading && (
-            <h2 className="font-display text-xl font-medium text-primary md:text-2xl">
-              {section.heading}
-            </h2>
-          )}
-          {section.paragraphs?.map((text, i) => (
-            <p key={i} className="mt-4 text-base leading-relaxed text-foreground/90">
-              {text}
-            </p>
-          ))}
-        </section>
-      ))}
+      {page.sections.map((section, index) => {
+        const hasHeading = Boolean(section.heading?.trim());
+        return (
+          <section
+            key={index}
+            className="lg:grid lg:grid-cols-[minmax(0,17rem)_minmax(0,1fr)] lg:gap-12"
+          >
+            {section.heading && (
+              <h2 className="font-display text-xl font-medium text-primary md:text-2xl lg:sticky lg:top-24 lg:mt-0 lg:self-start">
+                {section.heading}
+              </h2>
+            )}
+            <div className={hasHeading ? "" : "lg:col-span-2"}>
+              {section.paragraphs?.map((text, i) => (
+                <p key={i} className="mt-4 text-base leading-relaxed text-foreground/90">
+                  {text}
+                </p>
+              ))}
+            </div>
+          </section>
+        );
+      })}
     </div>
   );
 }
