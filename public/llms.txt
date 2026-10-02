@@ -1,0 +1,31 @@
+# Dr. Vlad Tettegah — Cardiology & Hypnotherapy
+
+> Dr. Vlad Tettegah (Dr Vlad) is a medical doctor, cardiologist and clinical hypnotherapist. He offers online consultations in Russian, English and French, combining evidence-based cardiology with clinical hypnotherapy for the mind–body side of heart and stress-related symptoms.
+
+Key facts:
+- Profession: Physician — cardiologist and hypnotherapist
+- Education: Belarusian State Medical University
+- Membership: American Society of Clinical Hypnosis (ASCH), Associate Member
+- In medicine since 2019, with international clinical practice
+- Consultation languages: Russian, English, French
+- Brand: Dr. Vlad — Integrative Medicine & Hypnotherapy
+- Contact: support@drvladt.com
+
+How to request a consultation: fill in the intake form on the consultation page. The site issues a personal Patient ID; medical documents are uploaded separately and handled confidentially.
+
+## Main pages (English)
+- [Home](https://drvladt.com/en): overview of the practice
+- [About Dr. Vlad](https://drvladt.com/en/about): biography, education, clinical experience
+- [My approach](https://drvladt.com/en/my-approach): how cardiology and hypnotherapy are combined
+- [Hypnotherapy](https://drvladt.com/en/hypnotherapy): what clinical hypnotherapy is and who it helps
+- [Research](https://drvladt.com/en/research): scientific background
+- [Stories and results](https://drvladt.com/en/stories-and-results)
+- [Consultation](https://drvladt.com/en/consultation): request a consultation
+- [Contact](https://drvladt.com/en/contact)
+
+## Other languages
+- [Русская версия](https://drvladt.com/ru)
+- [Version française](https://drvladt.com/fr)
+
+## Optional
+- [Sitemap](https://drvladt.com/sitemap.xml)
