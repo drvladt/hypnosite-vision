@@ -10,16 +10,16 @@ import { siteContent } from "@/content/site";
 function ProseSection({ section, number }: { section: ApproachSection; number?: string | undefined }) {
   const title = section.title?.trim();
   return (
-    <section>
+    <section className="lg:grid lg:grid-cols-[minmax(0,17rem)_minmax(0,1fr)] lg:gap-12">
       {title && (
-        <div className="mb-7 grid gap-3 md:grid-cols-[3rem_1fr] md:items-start">
-          {number ? <span className="pt-2 text-xs font-bold text-gold">{number}</span> : null}
-          <h2 className="font-display text-3xl font-medium leading-tight text-primary md:text-4xl">
+        <div className="mb-7 grid gap-3 md:grid-cols-[3rem_1fr] md:items-start lg:sticky lg:top-24 lg:mb-0 lg:block lg:self-start">
+          {number ? <span className="pt-2 text-xs font-bold text-gold lg:block lg:pt-0">{number}</span> : null}
+          <h2 className="font-display text-3xl font-medium leading-tight text-primary md:text-4xl lg:mt-3">
             {title}
           </h2>
         </div>
       )}
-      <div className={title ? "md:pl-12" : ""}>
+      <div className={title ? "" : "lg:col-span-2"}>
         <div className="space-y-5">
           {section.paragraphs.map((paragraph) => (
             <p key={paragraph} className="text-base leading-8 text-foreground/85 md:text-lg md:leading-9">
