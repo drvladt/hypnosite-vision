@@ -171,6 +171,7 @@ export const legalFr: LegalContent = {
           "Pour protéger les informations, la limitation des accès, des connexions sécurisées, un stockage fermé, la vérification des fichiers téléversés et d'autres mesures organisationnelles et techniques de sécurité sont utilisées.",
           "Des cookies nécessaires peuvent être utilisés pour la session sécurisée, la sécurité du site et la mémorisation de la langue choisie.",
           "Aucun pixel publicitaire, heatmap, session replay ou enregistrement d'écran n'est utilisé sur les pages du questionnaire et du téléversement de documents médicaux. Les informations médicales et les réponses au questionnaire ne sont pas transmises aux systèmes d'analyse marketing.",
+          "Sur les autres pages publiques, pour les visiteurs situés hors UE/EEE, Royaume-Uni et Suisse, Google Analytics / Google Ads (Google LLC) est utilisé : statistiques de visite (page, pays, appareil) pour mesurer l'audience et l'efficacité publicitaire. Les visiteurs de l'UE/EEE, du Royaume-Uni et de la Suisse ne sont pas suivis. Vous pouvez vous y opposer via les paramètres des annonces Google (adssettings.google.com) ou un bloqueur de traceurs.",
         ],
       },
       {
