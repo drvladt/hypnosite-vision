@@ -238,7 +238,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
 
         <section id="approach" className="scroll-mt-24 border-y border-border bg-primary text-primary-foreground">
           <div className="mx-auto grid max-w-7xl gap-9 px-5 py-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-12 lg:px-8 lg:py-14">
-            <div><p className="eyebrow text-gold-light">{c.approach.eyebrow}</p><h2 className="mt-4 font-display text-4xl leading-tight md:text-5xl">{c.approach.title}</h2></div>
+            <div className="lg:sticky lg:top-28 lg:self-start"><p className="eyebrow text-gold-light">{c.approach.eyebrow}</p><h2 className="mt-4 font-display text-4xl leading-tight md:text-5xl">{c.approach.title}</h2></div>
             <div className="space-y-5 text-base leading-8 text-primary-foreground/78">
               {c.approach.paragraphs.map((text) => <p key={text}>{text}</p>)}
               <Link className="inline-flex items-center gap-2 border-b border-gold/60 pb-1 text-sm font-semibold text-gold-light transition-colors hover:text-primary-foreground" to={pagePath(locale, "approach")}>{c.approach.moreApproachLabel}<ArrowRight className="size-4" aria-hidden="true" /></Link>
@@ -284,7 +284,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
 
         <section className="border-y border-border bg-secondary/35">
           <div className="mx-auto grid max-w-7xl items-start gap-8 px-5 py-10 lg:grid-cols-[.55fr_1.45fr] lg:gap-10 lg:px-8 lg:py-14">
-            <div><p id="about" className="eyebrow">{c.about.eyebrow}</p><div className="mt-6 h-px w-16 bg-gold"/></div>
+            <div className="lg:sticky lg:top-28 lg:self-start"><p id="about" className="eyebrow">{c.about.eyebrow}</p><div className="mt-6 h-px w-16 bg-gold"/></div>
             <div>
               <h2 className="section-title">{c.about.title}</h2>
               <div className="mt-5 space-y-4 leading-7 text-foreground/75">{c.about.paragraphs.map((text) => <p key={text}>{text}</p>)}</div>
@@ -333,7 +333,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
 
         <section className="section-space">
           <div className="mx-auto grid max-w-7xl gap-8 px-5 lg:grid-cols-[.55fr_1.45fr] lg:gap-10 lg:px-8">
-            <div><p className="eyebrow">{c.faq.eyebrow}</p><h2 id="faq" className="section-title mt-4">{c.faq.title}</h2></div>
+            <div className="lg:sticky lg:top-28 lg:self-start"><p className="eyebrow">{c.faq.eyebrow}</p><h2 id="faq" className="section-title mt-4">{c.faq.title}</h2></div>
             <div>{c.faq.items.map(([question, answer]) => (
                <details key={question} className="group border-t border-border py-5 last:border-b">
                 <summary className="flex cursor-pointer list-none items-start justify-between gap-5 font-display text-xl marker:content-none"><span>{question}</span><ChevronDown className="mt-1 size-5 shrink-0 text-gold transition-transform duration-300 ease-out group-open:rotate-180" /></summary>
