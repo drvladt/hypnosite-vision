@@ -44,7 +44,7 @@ export const researchContent: Record<Locale, ResearchContent> = {
       },
       {
         paragraphs: [
-          "Для изучения этого вопроса проводится исследовательская работа «Интеграция эриксоновской недирективной гипнотерапии в комплексное ведение артериальной гипертензии I–II степени». Регистрационный номер: ISRCTN21345687. ORCID: 0009-0009-6738-1913.",
+          "Для изучения этого вопроса проводится исследовательская работа «Интеграция эриксоновской недирективной гипнотерапии в комплексное ведение артериальной гипертензии I–II степени». Регистрация в процессе. ORCID: 0009-0009-6738-1913.",
           "Набор участников начался в августе 2026 года. Набор и участие в исследовании возможны независимо от того, где человек находится на момент включения в исследование. Необходимо соответствовать клиническим критериям, а также иметь возможность пройти предусмотренные протоколом обследования и последующее наблюдение.",
         ],
         callout:
@@ -80,8 +80,8 @@ export const researchContent: Record<Locale, ResearchContent> = {
           label: "The study",
           title:
             "Integration of Ericksonian Non-Directive Hypnotherapy into the Comprehensive Management of Grade I–II Arterial Hypertension",
-          registrationLabel: "Registration number",
-          registration: "ISRCTN21345687",
+          registrationLabel: "Registration",
+          registration: "In progress",
           orcid: "0009-0009-6738-1913",
         },
       },
@@ -124,8 +124,8 @@ export const researchContent: Record<Locale, ResearchContent> = {
           label: "À propos de l'étude",
           title:
             "Intégration de l'hypnothérapie non directive ericksonienne dans la prise en charge globale de l'hypertension artérielle de grades I–II",
-          registrationLabel: "Numéro d'enregistrement",
-          registration: "ISRCTN21345687",
+          registrationLabel: "Enregistrement",
+          registration: "En cours",
           orcid: "0009-0009-6738-1913",
         },
       },
