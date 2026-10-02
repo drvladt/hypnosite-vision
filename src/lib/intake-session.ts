@@ -14,6 +14,8 @@ export type IntakeSession = {
   health: boolean;
   boundaries: boolean;
   intakeDone?: boolean;
+  /** Server confirmed the questionnaire was already submitted earlier. */
+  alreadySubmitted?: boolean;
 };
 
 const KEY = "dv-intake-session";
@@ -124,6 +126,22 @@ export function restoreIntakeSession(
     health: true,
     boundaries: true,
     intakeDone,
+  });
+  return current!;
+}
+
+/** The server confirmed the questionnaire was submitted: open only the documents step. */
+export function restoreSubmittedSession(caseCode: string, consentVersion: string): IntakeSession | null {
+  const normalized = normalizeCaseCode(caseCode);
+  if (!normalized) return null;
+  setCurrent({
+    caseCode: normalized,
+    consentVersion,
+    policy: true,
+    health: true,
+    boundaries: true,
+    intakeDone: true,
+    alreadySubmitted: true,
   });
   return current!;
 }

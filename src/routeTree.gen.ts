@@ -16,6 +16,7 @@ import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as RuRouteImport } from './routes/ru'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as LocaleSlugRouteImport } from './routes/$locale/$slug'
+import { Route as ApiPublicCaseStatusRouteImport } from './routes/api/public/case-status'
 import { Route as ApiPublicCreateCaseRouteImport } from './routes/api/public/create-case'
 import { Route as ApiPublicUploadDocumentRouteImport } from './routes/api/public/upload-document'
 
@@ -54,6 +55,11 @@ const LocaleSlugRoute = LocaleSlugRouteImport.update({
   path: '/$locale/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicCaseStatusRoute = ApiPublicCaseStatusRouteImport.update({
+  id: '/api/public/case-status',
+  path: '/api/public/case-status',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiPublicCreateCaseRoute = ApiPublicCreateCaseRouteImport.update({
   id: '/api/public/create-case',
   path: '/api/public/create-case',
@@ -73,6 +79,7 @@ export interface FileRoutesByFullPath {
   '/ru': typeof RuRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$locale/$slug': typeof LocaleSlugRoute
+  '/api/public/case-status': typeof ApiPublicCaseStatusRoute
   '/api/public/create-case': typeof ApiPublicCreateCaseRoute
   '/api/public/upload-document': typeof ApiPublicUploadDocumentRoute
 }
@@ -84,6 +91,7 @@ export interface FileRoutesByTo {
   '/ru': typeof RuRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$locale/$slug': typeof LocaleSlugRoute
+  '/api/public/case-status': typeof ApiPublicCaseStatusRoute
   '/api/public/create-case': typeof ApiPublicCreateCaseRoute
   '/api/public/upload-document': typeof ApiPublicUploadDocumentRoute
 }
@@ -96,6 +104,7 @@ export interface FileRoutesById {
   '/ru': typeof RuRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$locale/$slug': typeof LocaleSlugRoute
+  '/api/public/case-status': typeof ApiPublicCaseStatusRoute
   '/api/public/create-case': typeof ApiPublicCreateCaseRoute
   '/api/public/upload-document': typeof ApiPublicUploadDocumentRoute
 }
@@ -109,6 +118,7 @@ export interface FileRouteTypes {
     | '/ru'
     | '/sitemap.xml'
     | '/$locale/$slug'
+    | '/api/public/case-status'
     | '/api/public/create-case'
     | '/api/public/upload-document'
   fileRoutesByTo: FileRoutesByTo
@@ -120,6 +130,7 @@ export interface FileRouteTypes {
     | '/ru'
     | '/sitemap.xml'
     | '/$locale/$slug'
+    | '/api/public/case-status'
     | '/api/public/create-case'
     | '/api/public/upload-document'
   id:
@@ -131,6 +142,7 @@ export interface FileRouteTypes {
     | '/ru'
     | '/sitemap.xml'
     | '/$locale/$slug'
+    | '/api/public/case-status'
     | '/api/public/create-case'
     | '/api/public/upload-document'
   fileRoutesById: FileRoutesById
@@ -143,6 +155,7 @@ export interface RootRouteChildren {
   RuRoute: typeof RuRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   LocaleSlugRoute: typeof LocaleSlugRoute
+  ApiPublicCaseStatusRoute: typeof ApiPublicCaseStatusRoute
   ApiPublicCreateCaseRoute: typeof ApiPublicCreateCaseRoute
   ApiPublicUploadDocumentRoute: typeof ApiPublicUploadDocumentRoute
 }
@@ -198,6 +211,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LocaleSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/case-status': {
+      id: '/api/public/case-status'
+      path: '/api/public/case-status'
+      fullPath: '/api/public/case-status'
+      preLoaderRoute: typeof ApiPublicCaseStatusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/create-case': {
       id: '/api/public/create-case'
       path: '/api/public/create-case'
@@ -223,6 +243,7 @@ const rootRouteChildren: RootRouteChildren = {
   RuRoute: RuRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   LocaleSlugRoute: LocaleSlugRoute,
+  ApiPublicCaseStatusRoute: ApiPublicCaseStatusRoute,
   ApiPublicCreateCaseRoute: ApiPublicCreateCaseRoute,
   ApiPublicUploadDocumentRoute: ApiPublicUploadDocumentRoute,
 }

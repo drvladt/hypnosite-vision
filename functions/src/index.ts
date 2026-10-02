@@ -368,3 +368,81 @@ export const uploadDocument = onRequest(
     }
   },
 );
+
+// ---------------------------------------------------------------------------
+// Questionnaire submission status.
+// markIntakeSubmitted: called by the Google Forms Apps Script on form submit,
+//   authenticated by the shared secret INTAKE_WEBHOOK_SECRET (functions/.env).
+// getCaseStatus: called by the site; returns only "pending" | "submitted" | "not_found".
+// ---------------------------------------------------------------------------
+function readCaseId(body: unknown): string | null {
+  if (!isPlainObject(body)) return null;
+  const raw = String(body["case_id"] ?? "").trim().toUpperCase();
+  return PATIENT_ID_RE.test(raw) ? raw : null;
+}
+
+export const markIntakeSubmitted = onRequest(
+  { region: REGION, timeoutSeconds: 15, memory: "256MiB", minInstances: 0, maxInstances: 2 },
+  async (request, response) => {
+    response.set("Cache-Control", "no-store");
+    if (request.method !== "POST") {
+      response.status(405).json({ error: "method_not_allowed" });
+      return;
+    }
+    const expected = process.env["INTAKE_WEBHOOK_SECRET"] ?? "";
+    const given = isPlainObject(request.body) ? String(request.body["secret"] ?? "") : "";
+    if (expected.length < 16 || given !== expected) {
+      response.status(401).json({ error: "unauthorized" });
+      return;
+    }
+    const caseId = readCaseId(request.body);
+    if (!caseId) {
+      response.status(400).json({ error: "bad_code" });
+      return;
+    }
+    try {
+      const snap = await CONSENT_COLLECTION.where("case_id", "==", caseId).limit(1).get();
+      if (snap.empty) {
+        response.status(404).json({ error: "unknown_code" });
+        return;
+      }
+      await snap.docs[0]!.ref.update({
+        intake_submitted: true,
+        intake_submitted_at_utc: FieldValue.serverTimestamp(),
+      });
+      response.status(200).json({ ok: true });
+    } catch (error: unknown) {
+      logger.error("markIntakeSubmitted failed", {
+        error_type: error instanceof Error ? error.name : "UnknownError",
+      });
+      response.status(500).json({ error: "failed" });
+    }
+  },
+);
+
+export const getCaseStatus = onRequest(
+  { region: REGION, cors: ALLOWED_ORIGINS, timeoutSeconds: 10, memory: "256MiB", minInstances: 0, maxInstances: 3, concurrency: 40 },
+  async (request, response) => {
+    response.set("Cache-Control", "no-store");
+    if (request.method !== "POST") {
+      response.status(405).json({ error: "method_not_allowed" });
+      return;
+    }
+    const caseId = readCaseId(request.body);
+    if (!caseId) {
+      response.status(400).json({ error: "bad_code" });
+      return;
+    }
+    try {
+      const snap = await CONSENT_COLLECTION.where("case_id", "==", caseId).limit(1).get();
+      const status = snap.empty
+        ? "not_found"
+        : snap.docs[0]!.get("intake_submitted") === true
+          ? "submitted"
+          : "pending";
+      response.status(200).json({ status });
+    } catch {
+      response.status(500).json({ error: "failed" });
+    }
+  },
+);

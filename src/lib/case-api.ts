@@ -63,6 +63,24 @@ export async function createCase(locale: Locale, consents: ConsentValues): Promi
   return { patientId };
 }
 
+export type CaseStatus = "pending" | "submitted" | "not_found";
+
+/** Asks the server whether the questionnaire for this code was submitted. null = service unavailable. */
+export async function getCaseStatus(patientId: string): Promise<CaseStatus | null> {
+  try {
+    const res = await fetch("/api/public/case-status", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ case_id: patientId }),
+    });
+    if (!res.ok) return null;
+    const data = (await res.json()) as { status?: CaseStatus };
+    return data.status ?? null;
+  } catch {
+    return null;
+  }
+}
+
 /** Official Google Forms pre-filled parameter — the only place the Patient ID may travel. */
 export function intakeFormUrl(patientId: string | null, locale: Locale): string {
   const base = legalConfig.googleFormUrl[locale];
