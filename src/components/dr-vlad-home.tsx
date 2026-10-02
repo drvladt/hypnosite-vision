@@ -185,7 +185,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
               </div>
             </div>
             <div className="relative mt-5 overflow-hidden rounded-lg border border-primary/15 bg-card px-3 py-4 shadow-[0_18px_45px_-30px_color-mix(in_oklab,var(--primary)_38%,transparent)] sm:px-5 sm:py-5 md:px-8 md:py-7">
-              <img src={bannerAsset} alt="" className="pointer-events-none absolute inset-0 size-full object-cover object-center opacity-85" />
+              <img src={bannerAsset} alt="" className="pointer-events-none absolute inset-0 size-full scale-[1.13] object-cover object-center opacity-85" />
               <span className="pointer-events-none absolute inset-0 bg-background/10" aria-hidden="true" />
               <div className="relative mx-auto grid max-w-5xl grid-cols-2 gap-x-3 gap-y-6 sm:gap-x-4 md:gap-x-20 md:gap-y-10 lg:gap-x-28">
               {c.hero.badges.map((badge, index) => {
