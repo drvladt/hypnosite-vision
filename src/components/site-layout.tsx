@@ -96,7 +96,7 @@ export function SiteLayout({
             ))}
             <LanguageSwitcher locale={locale} label={home.nav.languageLabel} page={page} />
           </nav>
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex shrink-0 items-center gap-1 sm:gap-2 lg:hidden">
             <LanguageSwitcher locale={locale} label={home.nav.languageLabel} page={page} />
             <Button
               variant="ghost"
