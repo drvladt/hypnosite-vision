@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Brain, CalendarDays, ChevronDown, HeartPulse, Menu, MessageCircle, Play, Stethoscope, X } from "lucide-react";
 import { pagePath, socialLinks, type SocialType } from "@/content/locales";
 import { YouTubeFacade } from "@/components/youtube-facade";
@@ -62,7 +63,7 @@ import { contactEmail, type Locale } from "@/content/locales";
 function ConsultationButton({ label, locale, outline = false }: { label: string; locale: Locale; outline?: boolean }) {
   return (
     <Button asChild size="lg" variant={outline ? "outline" : "default"} className="h-12 rounded-full px-6 text-sm shadow-none sm:px-8">
-      <a href={pagePath(locale, "consultation")}>{label}<MessageCircle aria-hidden="true" /></a>
+      <Link to={pagePath(locale, "consultation")}>{label}<MessageCircle aria-hidden="true" /></Link>
     </Button>
   );
 }
@@ -215,7 +216,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
             </div>
             <div className="mt-9 border-t border-border pt-7 lg:ml-[calc(27.5%+2.5rem)]">
               <p className="max-w-4xl text-lg leading-8 text-foreground/80">{c.concerns.summary}</p>
-              <div className="mt-5 flex flex-col items-start gap-4 sm:flex-row sm:items-center"><Button asChild size="lg" className="h-12 rounded-full bg-primary px-6 text-primary-foreground shadow-none hover:bg-primary/90 sm:px-8"><a href={pagePath(locale, "consultation")}>{c.cta.primary}<MessageCircle aria-hidden="true" /></a></Button><span className="text-sm text-muted-foreground">{c.cta.note}</span></div>
+              <div className="mt-5 flex flex-col items-start gap-4 sm:flex-row sm:items-center"><Button asChild size="lg" className="h-12 rounded-full bg-primary px-6 text-primary-foreground shadow-none hover:bg-primary/90 sm:px-8"><Link to={pagePath(locale, "consultation")}>{c.cta.primary}<MessageCircle aria-hidden="true" /></Link></Button><span className="text-sm text-muted-foreground">{c.cta.note}</span></div>
             </div>
           </div>
         </section>
@@ -238,10 +239,10 @@ export function DrVladHome({ locale }: { locale: Locale }) {
             <div><p className="eyebrow text-gold-light">{c.approach.eyebrow}</p><h2 className="mt-4 font-display text-4xl leading-tight md:text-5xl">{c.approach.title}</h2></div>
             <div className="space-y-5 text-base leading-8 text-primary-foreground/78">
               {c.approach.paragraphs.map((text) => <p key={text}>{text}</p>)}
-              <a className="inline-flex items-center gap-2 border-b border-gold/60 pb-1 text-sm font-semibold text-gold-light transition-colors hover:text-primary-foreground" href={pagePath(locale, "approach")}>{c.approach.moreApproachLabel}<ArrowRight className="size-4" aria-hidden="true" /></a>
+              <Link className="inline-flex items-center gap-2 border-b border-gold/60 pb-1 text-sm font-semibold text-gold-light transition-colors hover:text-primary-foreground" to={pagePath(locale, "approach")}>{c.approach.moreApproachLabel}<ArrowRight className="size-4" aria-hidden="true" /></Link>
               <div id="hypnotherapy" className="scroll-mt-28 border-t border-primary-foreground/20 pt-5">
                 {c.approach.hypnotherapy.map((text, index) => <p key={text} className={index === 0 ? undefined : "mt-3.5"}>{text}</p>)}
-                <a className="mt-5 inline-flex items-center gap-2 border-b border-gold/60 pb-1 text-sm font-semibold text-gold-light transition-colors hover:text-primary-foreground" href={pagePath(locale, "hypnotherapy")}>{c.approach.moreHypnotherapyLabel}<ArrowRight className="size-4" aria-hidden="true" /></a>
+                <Link className="mt-5 inline-flex items-center gap-2 border-b border-gold/60 pb-1 text-sm font-semibold text-gold-light transition-colors hover:text-primary-foreground" to={pagePath(locale, "hypnotherapy")}>{c.approach.moreHypnotherapyLabel}<ArrowRight className="size-4" aria-hidden="true" /></Link>
               </div>
             </div>
           </div>
@@ -286,10 +287,10 @@ export function DrVladHome({ locale }: { locale: Locale }) {
               <h2 className="section-title">{c.about.title}</h2>
               <div className="mt-5 space-y-4 leading-7 text-foreground/75">{c.about.paragraphs.map((text) => <p key={text}>{text}</p>)}</div>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                <Button asChild variant="default" size="lg" className="font-semibold"><a href={pagePath(locale, "about")}>{c.about.moreAboutLabel}</a></Button>
-                <Button asChild variant="outline" size="lg" className="font-semibold"><a href={pagePath(locale, "consultation")}>{c.about.bookLabel}</a></Button>
+                <Button asChild variant="default" size="lg" className="font-semibold"><Link to={pagePath(locale, "about")}>{c.about.moreAboutLabel}</Link></Button>
+                <Button asChild variant="outline" size="lg" className="font-semibold"><Link to={pagePath(locale, "consultation")}>{c.about.bookLabel}</Link></Button>
               </div>
-              <div className="mt-7 rounded-md bg-primary p-7 text-primary-foreground md:p-8"><p id="research" className="eyebrow text-gold-light">{c.about.research.eyebrow}</p><p className="mt-4 max-w-3xl leading-7 text-primary-foreground/78">{c.about.research.text}</p><a className="mt-5 inline-flex items-center gap-2 border-b border-gold/60 pb-1 text-sm font-semibold text-gold-light transition-colors hover:text-primary-foreground" href={pagePath(locale, "research")}>{c.about.research.linkLabel}<ArrowRight className="size-4" aria-hidden="true" /></a></div>
+              <div className="mt-7 rounded-md bg-primary p-7 text-primary-foreground md:p-8"><p id="research" className="eyebrow text-gold-light">{c.about.research.eyebrow}</p><p className="mt-4 max-w-3xl leading-7 text-primary-foreground/78">{c.about.research.text}</p><Link className="mt-5 inline-flex items-center gap-2 border-b border-gold/60 pb-1 text-sm font-semibold text-gold-light transition-colors hover:text-primary-foreground" to={pagePath(locale, "research")}>{c.about.research.linkLabel}<ArrowRight className="size-4" aria-hidden="true" /></Link></div>
             </div>
           </div>
         </section>
