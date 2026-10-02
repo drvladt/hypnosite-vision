@@ -217,21 +217,21 @@ const STATUS_TEXT: Record<
 > = {
   ru: {
     waiting:
-      "После того как вы нажмёте «Отправить» в анкете выше, кнопка ниже станет активной автоматически (обычно через несколько секунд).",
+      "После того как вы нажмёте «Отправить» в анкете выше, кнопка ниже станет активной автоматически (обычно до 30 секунд).",
     received: "Анкета получена. Можно перейти к медицинским документам.",
     alreadySubmitted: (code) =>
       `Ваша анкета по обращению ${code} уже успешно принята в работу. Если вам необходимо отправить результаты анализов, снимки или выписки, вы можете прикрепить их ниже.`,
   },
   en: {
     waiting:
-      "Once you press “Submit” in the questionnaire above, the button below will become active automatically (usually within a few seconds).",
+      "Once you press “Submit” in the questionnaire above, the button below will become active automatically (usually within 30 seconds).",
     received: "Questionnaire received. You can continue to medical documents.",
     alreadySubmitted: (code) =>
       `Your questionnaire for request ${code} has already been received and is being processed. If you need to send test results, scans or medical reports, you can attach them below.`,
   },
   fr: {
     waiting:
-      "Dès que vous aurez cliqué sur « Envoyer » dans le questionnaire ci-dessus, le bouton ci-dessous s'activera automatiquement (en général en quelques secondes).",
+      "Dès que vous aurez cliqué sur « Envoyer » dans le questionnaire ci-dessus, le bouton ci-dessous s'activera automatiquement (en général jusqu'à 30 secondes).",
     received: "Questionnaire reçu. Vous pouvez passer aux documents médicaux.",
     alreadySubmitted: (code) =>
       `Votre questionnaire pour le dossier ${code} a déjà été reçu et est en cours de traitement. Si vous devez envoyer des résultats d'analyses, des images ou des comptes rendus, vous pouvez les joindre ci-dessous.`,
