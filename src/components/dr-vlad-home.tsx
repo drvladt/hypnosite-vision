@@ -185,14 +185,14 @@ export function DrVladHome({ locale }: { locale: Locale }) {
               </div>
             </div>
             <div className="relative mt-5 overflow-hidden rounded-lg border border-primary/15 bg-card px-3 py-4 shadow-[0_18px_45px_-30px_color-mix(in_oklab,var(--primary)_38%,transparent)] sm:px-5 sm:py-5 md:px-8 md:py-7">
-              <img src={bannerAsset} alt="" className="pointer-events-none absolute inset-0 size-full scale-[1.13] object-cover object-center opacity-85" />
+              <img src={bannerAsset} alt="" className="pointer-events-none absolute inset-0 size-full scale-[1.19] object-cover object-center opacity-85" />
               <span className="pointer-events-none absolute inset-0 bg-background/10" aria-hidden="true" />
               <div className="relative mx-auto grid max-w-5xl grid-cols-2 gap-x-3 gap-y-6 sm:gap-x-4 md:gap-x-20 md:gap-y-10 lg:gap-x-28">
               {c.hero.badges.map((badge, index) => {
                 const Icon = badgeIcons[index] ?? HeartPulse;
                 const accent = index % 2 === 0;
                 return (
-                  <div key={badge} className={index < 2 ? "-translate-y-1.5 sm:-translate-y-2 md:-translate-y-3 lg:-translate-y-4" : "translate-y-1.5 sm:translate-y-2 md:translate-y-3 lg:translate-y-4"}>
+                  <div key={badge} className={index < 2 ? "-translate-y-1.5 sm:-translate-y-2 md:-translate-y-3 lg:-translate-y-4 md:-translate-x-6 lg:-translate-x-12" : "translate-y-1.5 sm:translate-y-2 md:translate-y-3 lg:translate-y-4 md:translate-x-6 lg:translate-x-12"}>
                   <div className="group flex min-h-20 flex-col items-start gap-2 rounded-lg border border-gold/25 bg-background/20 p-2.5 shadow-[0_12px_30px_-24px_color-mix(in_oklab,var(--primary)_30%,transparent)] backdrop-blur-[1px] transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/45 hover:bg-background/35 sm:min-h-24 sm:flex-row sm:items-center sm:gap-3.5 sm:p-3.5 md:min-h-20 md:p-4">
                     <span className={`flex size-8 shrink-0 items-center justify-center rounded-xl sm:size-9 ${accent ? "bg-primary/10" : "bg-gold/12"}`}>
                       <Icon className={`size-4 sm:size-[18px] ${accent ? "text-primary" : "text-gold"} transition-transform duration-300 group-hover:-translate-y-0.5`} strokeWidth={1.5} aria-hidden="true" />
