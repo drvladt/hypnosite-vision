@@ -184,27 +184,21 @@ export function DrVladHome({ locale }: { locale: Locale }) {
                 <p className="max-w-4xl text-base leading-7 text-primary-foreground/85">{c.hero.portraitCaption}</p>
               </div>
             </div>
-            <div className="relative mt-5 overflow-hidden rounded-lg border border-primary/15 bg-card px-4 py-6 shadow-[0_18px_45px_-30px_color-mix(in_oklab,var(--primary)_38%,transparent)] sm:px-6 md:min-h-[31rem] md:px-8 md:py-10 lg:min-h-[34rem]">
-              <div className="pointer-events-none relative mx-auto mb-6 aspect-square w-[min(74vw,18rem)] md:absolute md:left-1/2 md:top-1/2 md:mb-0 md:w-[min(36vw,27rem)] md:-translate-x-1/2 md:-translate-y-1/2">
+            <div className="relative mt-5 overflow-hidden rounded-lg border border-primary/15 bg-card px-3 py-4 shadow-[0_18px_45px_-30px_color-mix(in_oklab,var(--primary)_38%,transparent)] sm:px-5 sm:py-5 md:px-8 md:py-7">
+              <div className="pointer-events-none absolute left-1/2 top-1/2 aspect-square w-[min(68vw,22rem)] -translate-x-1/2 -translate-y-1/2 opacity-30 md:w-[23rem]">
                 <span className="absolute inset-[3%] rounded-full bg-primary/5 shadow-[0_24px_55px_-28px_color-mix(in_oklab,var(--primary)_50%,transparent)]" aria-hidden="true" />
                 <img src={roundLogoAsset.url} alt="" className="relative size-full rounded-full object-contain" />
               </div>
-              <div className="relative grid grid-cols-2 gap-3 md:min-h-[25rem] md:grid-cols-[minmax(0,1fr)_minmax(17rem,1.15fr)_minmax(0,1fr)] md:grid-rows-2 md:gap-x-7 md:gap-y-12 lg:min-h-[28rem] lg:gap-x-12">
+              <div className="relative mx-auto grid max-w-5xl grid-cols-2 gap-3 sm:gap-4 md:gap-x-20 md:gap-y-5 lg:gap-x-28">
               {c.hero.badges.map((badge, index) => {
                 const Icon = badgeIcons[index] ?? HeartPulse;
                 const accent = index % 2 === 0;
-                const position = [
-                  "md:col-start-1 md:row-start-1 md:self-start",
-                  "md:col-start-3 md:row-start-1 md:self-start",
-                  "md:col-start-1 md:row-start-2 md:self-end",
-                  "md:col-start-3 md:row-start-2 md:self-end",
-                ][index] ?? "";
                 return (
-                  <div key={badge} className={`group flex h-full min-h-28 flex-col items-start gap-4 rounded-lg border border-gold/30 bg-background/90 p-4 shadow-[0_12px_30px_-20px_color-mix(in_oklab,var(--primary)_36%,transparent)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/55 md:min-h-32 md:p-5 ${position}`}>
-                    <span className={`flex size-10 items-center justify-center rounded-xl ${accent ? "bg-primary/10" : "bg-gold/12"}`}>
-                      <Icon className={`size-5 ${accent ? "text-primary" : "text-gold"} transition-transform duration-300 group-hover:-translate-y-0.5`} strokeWidth={1.5} aria-hidden="true" />
+                  <div key={badge} className="group flex min-h-24 items-center gap-3 rounded-lg border border-gold/30 bg-background/80 p-3 shadow-[0_12px_30px_-20px_color-mix(in_oklab,var(--primary)_36%,transparent)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/55 sm:min-h-28 sm:gap-4 sm:p-4 md:min-h-24 md:p-5">
+                    <span className={`flex size-9 shrink-0 items-center justify-center rounded-xl sm:size-10 ${accent ? "bg-primary/10" : "bg-gold/12"}`}>
+                      <Icon className={`size-4 sm:size-5 ${accent ? "text-primary" : "text-gold"} transition-transform duration-300 group-hover:-translate-y-0.5`} strokeWidth={1.5} aria-hidden="true" />
                     </span>
-                    <p className="font-display text-sm font-medium leading-tight text-primary md:text-[15px]">{badge}</p>
+                    <p className="font-display text-xs font-medium leading-snug text-primary sm:text-sm md:text-[15px]">{badge}</p>
                   </div>
                 );
               })}
