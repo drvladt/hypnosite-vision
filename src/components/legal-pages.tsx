@@ -351,18 +351,21 @@ export function ConsentGatePageView({ locale }: { locale: Locale }) {
                   <div className="text-sm leading-relaxed text-foreground/90">
                     <label htmlFor={`consent-${item.id}`} className="cursor-pointer">
                       {item.textBefore}
-                      {item.linkLabel && item.linkPage && (
-                        <Link
-                          to={pagePath(locale, item.linkPage)}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-primary underline underline-offset-4"
-                        >
-                          {item.linkLabel}
-                        </Link>
-                      )}
+                      {item.linkLabel}
                       {item.textAfter}
                     </label>
+                    {item.linkLabel && item.linkPage && (
+                      <Link
+                        to={pagePath(locale, item.linkPage)}
+                        target="_blank"
+                        rel="noreferrer"
+                        onClick={(event) => event.stopPropagation()}
+                        className="mt-2 flex w-fit items-center gap-2 text-sm text-primary underline underline-offset-4"
+                      >
+                        {item.linkLabel}
+                        <ExternalLink className="size-3.5" aria-hidden="true" />
+                      </Link>
+                    )}
                     {item.extraLinkLabel && item.extraLinkPage && (
                       <Link
                         to={pagePath(locale, item.extraLinkPage)}
