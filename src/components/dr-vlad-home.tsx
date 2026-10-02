@@ -55,6 +55,7 @@ function SocialIcon({ type, className }: { type: SocialType; className?: string 
 
 import portraitAsset from "@/assets/fotoMe.webp";
 import logoAsset from "@/assets/logo.webp";
+import roundLogoAsset from "@/assets/dr-vlad-round-logo.png.asset.json";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { Button } from "@/components/ui/button";
 import { homeContent } from "@/content/home";
@@ -183,12 +184,23 @@ export function DrVladHome({ locale }: { locale: Locale }) {
                 <p className="max-w-4xl text-base leading-7 text-primary-foreground/85">{c.hero.portraitCaption}</p>
               </div>
             </div>
-            <div className="mt-5 grid grid-cols-2 gap-3 md:max-w-xl md:gap-4">
+            <div className="relative mt-5 overflow-hidden rounded-lg border border-primary/15 bg-card px-4 py-6 shadow-[0_18px_45px_-30px_color-mix(in_oklab,var(--primary)_38%,transparent)] sm:px-6 md:min-h-[31rem] md:px-8 md:py-10 lg:min-h-[34rem]">
+              <div className="pointer-events-none relative mx-auto mb-6 aspect-square w-[min(74vw,18rem)] md:absolute md:left-1/2 md:top-1/2 md:mb-0 md:w-[min(36vw,27rem)] md:-translate-x-1/2 md:-translate-y-1/2">
+                <span className="absolute inset-[3%] rounded-full bg-primary/5 shadow-[0_24px_55px_-28px_color-mix(in_oklab,var(--primary)_50%,transparent)]" aria-hidden="true" />
+                <img src={roundLogoAsset.url} alt="" className="relative size-full rounded-full object-contain" />
+              </div>
+              <div className="relative grid grid-cols-2 gap-3 md:min-h-[25rem] md:grid-cols-[minmax(0,1fr)_minmax(17rem,1.15fr)_minmax(0,1fr)] md:grid-rows-2 md:gap-x-7 md:gap-y-12 lg:min-h-[28rem] lg:gap-x-12">
               {c.hero.badges.map((badge, index) => {
                 const Icon = badgeIcons[index] ?? HeartPulse;
                 const accent = index % 2 === 0;
+                const position = [
+                  "md:col-start-1 md:row-start-1 md:self-start",
+                  "md:col-start-3 md:row-start-1 md:self-start",
+                  "md:col-start-1 md:row-start-2 md:self-end",
+                  "md:col-start-3 md:row-start-2 md:self-end",
+                ][index] ?? "";
                 return (
-                  <div key={badge} className="group flex h-full flex-col items-start gap-4 rounded-2xl border border-primary/10 bg-card p-4 shadow-[0_4px_14px_-6px_color-mix(in_oklab,var(--primary)_22%,transparent)] transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/45 md:p-5" data-reveal style={{ "--reveal-delay": `${index * 80}ms` } as React.CSSProperties}>
+                  <div key={badge} className={`group flex h-full min-h-28 flex-col items-start gap-4 rounded-lg border border-gold/30 bg-background/90 p-4 shadow-[0_12px_30px_-20px_color-mix(in_oklab,var(--primary)_36%,transparent)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/55 md:min-h-32 md:p-5 ${position}`} data-reveal style={{ "--reveal-delay": `${index * 80}ms` } as React.CSSProperties}>
                     <span className={`flex size-10 items-center justify-center rounded-xl ${accent ? "bg-primary/10" : "bg-gold/12"}`}>
                       <Icon className={`size-5 ${accent ? "text-primary" : "text-gold"} transition-transform duration-300 group-hover:-translate-y-0.5`} strokeWidth={1.5} aria-hidden="true" />
                     </span>
@@ -196,6 +208,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
                   </div>
                 );
               })}
+              </div>
             </div>
           </div>
         </section>
