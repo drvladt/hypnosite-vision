@@ -131,21 +131,21 @@ export function DrVladHome({ locale }: { locale: Locale }) {
     <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
       <header data-home-header className="sticky top-0 z-50 border-b border-border/70 bg-background/92 backdrop-blur-md">
         <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 lg:px-8">
-          <a href="#top" className="flex items-center gap-3" aria-label={c.nav.toTop}>
+          <a href="#top" className="flex shrink-0 items-center gap-3" aria-label={c.nav.toTop}>
             <img src={logoAsset} alt="" className="size-11 rounded-full object-cover" />
             <span className="flex flex-col gap-1">
               <span className="font-display text-xl font-medium leading-none">Dr. Vlad</span>
               <span className="max-w-[150px] text-[8px] font-semibold uppercase leading-tight tracking-[0.14em] text-gold sm:max-w-none sm:text-[9px] sm:leading-none sm:tracking-[0.2em]">{c.subbrand}</span>
             </span>
           </a>
-          <nav className="hidden items-center gap-7 text-sm lg:flex" aria-label={c.nav.label}>
+          <nav className="hidden min-w-0 items-center gap-6 whitespace-nowrap text-sm 2xl:flex" aria-label={c.nav.label}>
             {c.nav.items.map((item) => (
               <a key={item.href} className="nav-link" href={item.href} onClick={(e) => handleNavClick(e, item.href)}>{item.label}</a>
             ))}
             <LanguageSwitcher locale={locale} label={c.nav.languageLabel} />
             <ConsultationButton label={c.nav.bookShort} locale={locale} outline />
           </nav>
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex items-center gap-2 2xl:hidden"><div className="hidden lg:block"><ConsultationButton label={c.nav.bookShort} locale={locale} outline /></div>
             <LanguageSwitcher locale={locale} label={c.nav.languageLabel} />
             <Button variant="ghost" size="icon" aria-label={menuOpen ? c.nav.closeMenu : c.nav.openMenu} onClick={() => setMenuOpen((value) => !value)}>
               {menuOpen ? <X /> : <Menu />}
@@ -153,7 +153,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
           </div>
         </div>
         {menuOpen && (
-          <nav className="border-t border-border bg-background px-5 py-5 lg:hidden" aria-label={c.nav.mobileLabel}>
+          <nav className="border-t border-border bg-background px-5 py-5 2xl:hidden" aria-label={c.nav.mobileLabel}>
             <div className="mx-auto grid max-w-7xl gap-1">
               {c.nav.items.map((item) => (
                 <a key={item.href} href={item.href} onClick={(e) => handleNavClick(e, item.href)} className="border-b border-border/60 py-3 text-sm">{item.label}</a>
@@ -167,9 +167,9 @@ export function DrVladHome({ locale }: { locale: Locale }) {
       <main id="top">
         <section className="relative border-b border-border py-10 md:py-12 lg:py-14">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
-            <div className="mb-8 grid items-end gap-7 lg:grid-cols-[1.2fr_.8fr] lg:gap-12">
+            <div className="mb-8 grid items-end gap-7 lg:grid-cols-[1.55fr_1fr] lg:gap-14">
               <div>
-                <h1 className="max-w-4xl font-display text-[clamp(2.15rem,5vw,4.65rem)] font-medium leading-[1.08]">{c.hero.title}</h1>
+                <h1 className="max-w-4xl font-display text-[clamp(2.15rem,5vw,4.65rem)] font-medium leading-[1.08] lg:text-[3.1rem] lg:leading-[1.1] xl:text-[3.5rem]">{c.hero.title}</h1>
               </div>
               <div className="border-l border-gold/40 pl-6">
                 <p className="whitespace-pre-line leading-7 text-foreground/75">{c.hero.lead}</p>
@@ -183,7 +183,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
                 <p className="max-w-4xl text-base leading-7 text-primary-foreground/85">{c.hero.portraitCaption}</p>
               </div>
             </div>
-            <div className="mt-5 grid grid-cols-2 gap-3 md:max-w-xl md:gap-4">
+            <div className="mt-5 grid grid-cols-2 gap-3 md:max-w-xl md:gap-4 lg:mt-6 lg:max-w-none lg:grid-cols-4 lg:gap-5">
               {c.hero.badges.map((badge, index) => {
                 const Icon = badgeIcons[index] ?? HeartPulse;
                 const accent = index % 2 === 0;
@@ -203,7 +203,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
         <section className="section-space bg-secondary/40">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <div className="grid gap-8 lg:grid-cols-[.55fr_1.45fr] lg:gap-14">
-              <div><p id="concerns" className="eyebrow">{c.concerns.eyebrow}</p><h2 className="section-title mt-4">{c.concerns.title}</h2></div>
+              <div className="lg:sticky lg:top-28 lg:self-start"><p id="concerns" className="eyebrow">{c.concerns.eyebrow}</p><h2 className="section-title mt-4">{c.concerns.title}</h2></div>
               <div className="grid gap-4 md:grid-cols-2">
                 {c.concerns.items.map((text, index) => (
                   <article key={text} className="group relative overflow-hidden rounded-2xl border border-border/60 bg-card p-6 shadow-[0_10px_30px_-18px_color-mix(in_oklab,var(--primary)_25%,transparent)] transition-all duration-300 hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_18px_40px_-20px_color-mix(in_oklab,var(--primary)_32%,transparent)] md:p-7" data-reveal style={{ "--reveal-delay": `${index * 75}ms` } as React.CSSProperties}>
@@ -232,13 +232,13 @@ export function DrVladHome({ locale }: { locale: Locale }) {
                 <p key={text} className={`${index === 0 ? "mt-5" : "mt-4"} max-w-xl leading-7 text-foreground/75`}>{text}</p>
               ))}
             </div>
-            <blockquote className="self-end border-l-2 border-gold py-2 pl-7 font-display text-2xl leading-relaxed md:text-3xl">{c.bigPicture.quote}<footer className="mt-7 flex items-center gap-3"><span className="h-px w-5 bg-gold/55" aria-hidden="true" /><span className="font-display text-base font-semibold text-gold">Dr. Vlad</span></footer></blockquote>
+            <blockquote className="self-end border-l-2 lg:self-center border-gold py-2 pl-7 font-display text-2xl leading-relaxed md:text-3xl">{c.bigPicture.quote}<footer className="mt-7 flex items-center gap-3"><span className="h-px w-5 bg-gold/55" aria-hidden="true" /><span className="font-display text-base font-semibold text-gold">Dr. Vlad</span></footer></blockquote>
           </div>
         </section>
 
         <section id="approach" className="scroll-mt-24 border-y border-border bg-primary text-primary-foreground">
           <div className="mx-auto grid max-w-7xl gap-9 px-5 py-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-12 lg:px-8 lg:py-14">
-            <div><p className="eyebrow text-gold-light">{c.approach.eyebrow}</p><h2 className="mt-4 font-display text-4xl leading-tight md:text-5xl">{c.approach.title}</h2></div>
+            <div className="lg:sticky lg:top-28 lg:self-start"><p className="eyebrow text-gold-light">{c.approach.eyebrow}</p><h2 className="mt-4 font-display text-4xl leading-tight md:text-5xl">{c.approach.title}</h2></div>
             <div className="space-y-5 text-base leading-8 text-primary-foreground/78">
               {c.approach.paragraphs.map((text) => <p key={text}>{text}</p>)}
               <Link className="inline-flex items-center gap-2 border-b border-gold/60 pb-1 text-sm font-semibold text-gold-light transition-colors hover:text-primary-foreground" to={pagePath(locale, "approach")}>{c.approach.moreApproachLabel}<ArrowRight className="size-4" aria-hidden="true" /></Link>
@@ -284,7 +284,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
 
         <section className="border-y border-border bg-secondary/35">
           <div className="mx-auto grid max-w-7xl items-start gap-8 px-5 py-10 lg:grid-cols-[.55fr_1.45fr] lg:gap-10 lg:px-8 lg:py-14">
-            <div><p id="about" className="eyebrow">{c.about.eyebrow}</p><div className="mt-6 h-px w-16 bg-gold"/></div>
+            <div className="lg:sticky lg:top-28 lg:self-start"><p id="about" className="eyebrow">{c.about.eyebrow}</p><div className="mt-6 h-px w-16 bg-gold"/></div>
             <div>
               <h2 className="section-title">{c.about.title}</h2>
               <div className="mt-5 space-y-4 leading-7 text-foreground/75">{c.about.paragraphs.map((text) => <p key={text}>{text}</p>)}</div>
@@ -333,7 +333,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
 
         <section className="section-space">
           <div className="mx-auto grid max-w-7xl gap-8 px-5 lg:grid-cols-[.55fr_1.45fr] lg:gap-10 lg:px-8">
-            <div><p className="eyebrow">{c.faq.eyebrow}</p><h2 id="faq" className="section-title mt-4">{c.faq.title}</h2></div>
+            <div className="lg:sticky lg:top-28 lg:self-start"><p className="eyebrow">{c.faq.eyebrow}</p><h2 id="faq" className="section-title mt-4">{c.faq.title}</h2></div>
             <div>{c.faq.items.map(([question, answer]) => (
                <details key={question} className="group border-t border-border py-5 last:border-b">
                 <summary className="flex cursor-pointer list-none items-start justify-between gap-5 font-display text-xl marker:content-none"><span>{question}</span><ChevronDown className="mt-1 size-5 shrink-0 text-gold transition-transform duration-300 ease-out group-open:rotate-180" /></summary>
