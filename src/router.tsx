@@ -2,7 +2,9 @@ import { QueryClient } from "@tanstack/react-query";
 import { createRouter } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
 
-// Recover from stale code chunks (after an update) with a single reload.
+// Recover from stale code chunks (after an update) with a single full page load.
+// Load the page the visitor was navigating TO, not reload the one they are leaving.
+let activeRouter: { latestLocation?: { href?: string } } | null = null;
 if (typeof window !== "undefined") {
   const KEY = "chunk-reload-at";
   const recover = (message: string) => {
@@ -10,7 +12,12 @@ if (typeof window !== "undefined") {
     const last = Number(sessionStorage.getItem(KEY) || 0);
     if (Date.now() - last < 10000) return false;
     sessionStorage.setItem(KEY, String(Date.now()));
-    window.location.reload();
+    const target = activeRouter?.latestLocation?.href;
+    if (target && target !== window.location.pathname + window.location.search + window.location.hash) {
+      window.location.assign(target);
+    } else {
+      window.location.reload();
+    }
     return true;
   };
   window.addEventListener("vite:preloadError", (event) => {
@@ -35,5 +42,6 @@ export const getRouter = () => {
     defaultPreloadStaleTime: 0,
   });
 
+  if (typeof window !== "undefined") activeRouter = router;
   return router;
 };
