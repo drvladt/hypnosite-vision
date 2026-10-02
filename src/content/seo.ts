@@ -135,6 +135,7 @@ function entityGraph(siteOrigin: string, locale: Locale) {
         sameAs: [
           ...socialLinks.filter(({ type }) => type !== "whatsapp").map(({ url }) => url),
           "https://orcid.org/0009-0009-6738-1913",
+          "https://www.google.com/search?kgmid=/g/11zy17q0z4",
         ],
       },
       {
@@ -148,6 +149,7 @@ function entityGraph(siteOrigin: string, locale: Locale) {
         availableLanguage: ["Russian", "English", "French"],
         founder: { "@id": personId },
         employee: { "@id": personId },
+        sameAs: ["https://www.google.com/search?kgmid=/g/11zy17q0z4"],
       },
       {
         "@type": "WebSite",
