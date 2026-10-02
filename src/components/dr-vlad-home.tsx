@@ -134,8 +134,8 @@ export function DrVladHome({ locale }: { locale: Locale }) {
           <a href="#top" className="flex items-center gap-3" aria-label={c.nav.toTop}>
             <img src={logoAsset} alt="" className="size-11 rounded-full object-cover" />
             <span className="flex flex-col gap-1">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.24em] text-gold leading-none">{c.hero.eyebrow}</span>
-              <span className="font-display text-lg font-medium leading-none">Dr. Vlad</span>
+              <span className="font-display text-xl font-medium leading-none">Dr. Vlad</span>
+              <span className="max-w-[150px] text-[8px] font-semibold uppercase leading-tight tracking-[0.14em] text-gold sm:max-w-none sm:text-[9px] sm:leading-none sm:tracking-[0.2em]">{c.subbrand}</span>
             </span>
           </a>
           <nav className="hidden items-center gap-7 text-sm lg:flex" aria-label={c.nav.label}>
@@ -357,7 +357,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
 
       <footer className="bg-background py-9">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 px-5 md:flex-row lg:px-8">
-            <div className="flex items-center gap-3"><img src={logoAsset} alt="" className="size-12 rounded-full"/><div><p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-gold">{c.hero.eyebrow}</p><p className="font-display text-xl">Dr. Vlad Tettegah</p><p className="text-xs text-muted-foreground">{c.footer.role}</p></div></div>
+            <div className="flex items-center gap-3"><img src={logoAsset} alt="" className="size-12 rounded-full"/><div><p className="font-display text-xl">Dr. Vlad Tettegah</p><p className="text-xs text-muted-foreground">{c.footer.role}</p></div></div>
             <div className="md:text-right">
               <div className="flex items-center gap-1.5 md:justify-end">
                 {socialLinks.map((social) => (
