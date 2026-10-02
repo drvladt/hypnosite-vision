@@ -52,8 +52,14 @@ export function initAnalytics(): Promise<boolean> {
 }
 
 /** Page path only — never query strings or hashes. */
+const SENSITIVE = /^\/(ru|en|fr)\/(konsultatsiya|consultation|anketa|intake|questionnaire|dokumenty|documents)(\/|$)/;
+
 export async function trackPageView(path: string) {
+  const sensitive = SENSITIVE.test(path);
+  (window as unknown as Record<string, boolean>)[`ga-disable-${MEASUREMENT_ID}`] = sensitive;
+  if (sensitive) return;
   if (!(await initAnalytics())) return;
+  if (SENSITIVE.test(window.location.pathname)) return;
   window.gtag?.("event", "page_view", {
     page_path: path,
     page_location: window.location.origin + path,
