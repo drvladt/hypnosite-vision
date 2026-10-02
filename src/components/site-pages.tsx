@@ -316,6 +316,7 @@ export function RestoreByCode({
           />
         </label>
         <Button type="submit" size="lg" disabled={busy} className="h-11 rounded-full px-6 text-sm shadow-none">
+          {busy ? <Loader2 className="size-4 animate-spin" aria-hidden="true" /> : null}
           {t.action}
         </Button>
       </form>
