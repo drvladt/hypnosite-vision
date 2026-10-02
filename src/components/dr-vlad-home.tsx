@@ -130,9 +130,9 @@ export function DrVladHome({ locale }: { locale: Locale }) {
   return (
     <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
       <header data-home-header className="sticky top-0 z-50 border-b border-border/70 bg-background/92 backdrop-blur-md">
-        <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 lg:px-8">
-          <a href="#top" className="flex shrink-0 items-center gap-3" aria-label={c.nav.toTop}>
-            <img src={logoAsset} alt="" className="size-11 rounded-full object-cover" />
+        <div className="mx-auto flex h-18 max-w-7xl items-center justify-between gap-2 px-5 lg:px-8">
+          <a href="#top" className="flex min-w-0 items-center gap-2 sm:gap-3" aria-label={c.nav.toTop}>
+            <img src={logoAsset} alt="" className="size-10 shrink-0 rounded-full object-cover sm:size-11" />
             <span className="flex flex-col gap-1">
               <span className="font-display text-xl font-medium leading-none">Dr. Vlad</span>
               <span className="max-w-[150px] text-[8px] font-semibold uppercase leading-tight tracking-[0.14em] text-gold sm:max-w-none sm:text-[9px] sm:leading-none sm:tracking-[0.2em]">{c.subbrand}</span>
