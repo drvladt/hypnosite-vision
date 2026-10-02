@@ -133,7 +133,10 @@ export function DrVladHome({ locale }: { locale: Locale }) {
         <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 lg:px-8">
           <a href="#top" className="flex items-center gap-3" aria-label={c.nav.toTop}>
             <img src={logoAsset} alt="" className="size-11 rounded-full object-cover" />
-            <span className="font-display text-lg font-medium">Dr. Vlad</span>
+            <span className="flex flex-col gap-1">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.24em] text-gold leading-none">{c.hero.eyebrow}</span>
+              <span className="font-display text-lg font-medium leading-none">Dr. Vlad</span>
+            </span>
           </a>
           <nav className="hidden items-center gap-7 text-sm lg:flex" aria-label={c.nav.label}>
             {c.nav.items.map((item) => (
@@ -166,8 +169,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <div className="mb-8 grid items-end gap-7 lg:grid-cols-[1.2fr_.8fr] lg:gap-12">
               <div>
-                <p className="eyebrow">{c.hero.eyebrow}</p>
-                <h1 className="mt-5 max-w-4xl font-display text-[clamp(2.15rem,5vw,4.65rem)] font-medium leading-[1.08]">{c.hero.title}</h1>
+                <h1 className="max-w-4xl font-display text-[clamp(2.15rem,5vw,4.65rem)] font-medium leading-[1.08]">{c.hero.title}</h1>
               </div>
               <div className="border-l border-gold/40 pl-6">
                 <p className="whitespace-pre-line leading-7 text-foreground/75">{c.hero.lead}</p>
@@ -355,7 +357,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
 
       <footer className="bg-background py-9">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 px-5 md:flex-row lg:px-8">
-            <div className="flex items-center gap-3"><img src={logoAsset} alt="" className="size-12 rounded-full"/><div><p className="font-display text-xl">Dr. Vlad Tettegah</p><p className="text-xs text-muted-foreground">{c.footer.role}</p></div></div>
+            <div className="flex items-center gap-3"><img src={logoAsset} alt="" className="size-12 rounded-full"/><div><p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-gold">{c.hero.eyebrow}</p><p className="font-display text-xl">Dr. Vlad Tettegah</p><p className="text-xs text-muted-foreground">{c.footer.role}</p></div></div>
             <div className="md:text-right">
               <div className="flex items-center gap-1.5 md:justify-end">
                 {socialLinks.map((social) => (
