@@ -567,7 +567,7 @@ export function DocumentsPageView({ locale }: { locale: Locale }) {
   };
 
   return (
-    <div className={`${WRAP} pb-16`}>
+    <div className={`${WRAP} pb-16 lg:max-w-5xl`}>
       <PageHeader page={page} />
       <Sections page={page} />
       {!ready ? null : !session ? (
@@ -638,7 +638,7 @@ export function DocumentsPageView({ locale }: { locale: Locale }) {
                 <Check className="size-4" aria-hidden="true" />
                 {page.selectedLabel}: {files.length}
               </p>
-              <ul className="mt-2 space-y-1">
+              <ul className="mt-2 space-y-1 md:grid md:grid-cols-2 md:gap-x-3 md:gap-y-1 md:space-y-0">
                 {files.map((file, i) => (
                   <li
                     key={`${file.name}-${i}`}
