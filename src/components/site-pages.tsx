@@ -386,7 +386,7 @@ export function IntakePageView({ locale }: { locale: Locale }) {
   }, [caseCode]);
 
   return (
-    <div className={`${WRAP} pb-16`}>
+    <div className={`${WRAP} pb-16 lg:max-w-6xl`}>
       <PageHeader page={page} />
       <Sections page={page} />
       {!ready ? null : !session ? (
@@ -402,10 +402,10 @@ export function IntakePageView({ locale }: { locale: Locale }) {
         </>
       ) : (
         <div id="intake-form-frame" className="scroll-mt-20">
+        <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:items-start lg:gap-8">
         <FlowCard>
-          <CaseCode label={page.caseLabel} code={session.caseCode} />
           {session.caseCode ? (
-            <div className="-mx-[38px] mt-5 overflow-hidden rounded-xl border border-primary/20 sm:-mx-6 sm:rounded-2xl md:mx-0">
+            <div className="-mx-[38px] overflow-hidden rounded-xl border border-primary/20 sm:-mx-6 sm:rounded-2xl md:mx-0 lg:-mx-8 lg:rounded-none lg:border-x-0">
               <iframe
                 src={`${intakeFormUrl(session.caseCode, locale)}&embedded=true`}
                 title={page.title}
@@ -414,7 +414,7 @@ export function IntakePageView({ locale }: { locale: Locale }) {
               />
             </div>
           ) : (
-            <div className="mt-5 flex min-h-40 items-center justify-center rounded-2xl border border-dashed border-primary/25 bg-secondary/30 p-6 text-center">
+            <div className="flex min-h-40 items-center justify-center rounded-2xl border border-dashed border-primary/25 bg-secondary/30 p-6 text-center">
               <p className="flex items-center gap-2 text-sm text-muted-foreground">
                 <FileText className="size-4 text-primary" aria-hidden="true" />
                 {page.formPlaceholder}
@@ -422,50 +422,57 @@ export function IntakePageView({ locale }: { locale: Locale }) {
             </div>
           )}
           <p className="mt-4 text-xs leading-relaxed text-muted-foreground">{page.formNote}</p>
-
-          {session.caseCode && serverSubmitted && (
-            <div
-              role="status"
-              className="mt-5 flex items-start gap-3 rounded-2xl border border-primary/30 bg-primary/10 p-4 text-sm leading-relaxed text-foreground"
-            >
-              <Check className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
-              <span>{st.received}</span>
-            </div>
-          )}
-          {session.caseCode && !serverSubmitted && !statusOffline && (
-            <div
-              role="status"
-              className="mt-5 flex items-start gap-3 rounded-2xl border border-primary/20 bg-secondary/30 p-4 text-sm leading-relaxed text-muted-foreground"
-            >
-              <Loader2 className="mt-0.5 size-4 shrink-0 animate-spin text-primary" aria-hidden="true" />
-              <span>{st.waiting}</span>
-            </div>
-          )}
-          {session.caseCode && !serverSubmitted && statusOffline && (
-            <label
-              htmlFor={`intake-form-submitted-${locale}`}
-              className="mt-5 flex cursor-pointer items-start gap-3 rounded-2xl border border-primary/20 bg-secondary/30 p-4 text-sm leading-relaxed text-foreground/90"
-            >
-              <Checkbox
-                id={`intake-form-submitted-${locale}`}
-                checked={formSubmitted}
-                onCheckedChange={(checked) => setFormSubmitted(checked === true)}
-                className="mt-0.5"
-              />
-              <span>{page.formSubmittedLabel}</span>
-            </label>
-          )}
-
-          <Button
-            size="lg"
-            onClick={continueToDocuments}
-            disabled={!session.caseCode || !canContinue}
-            className="mt-4 h-12 rounded-full px-6 text-sm shadow-none"
-          >
-            {page.continueLabel}
-            <ArrowRight aria-hidden="true" />
-          </Button>
         </FlowCard>
+
+        <aside className="mt-6 lg:sticky lg:top-24 lg:mt-10">
+          <div className="rounded-3xl border border-primary/12 bg-card p-6 shadow-[0_10px_30px_-24px_color-mix(in_oklab,var(--primary)_40%,transparent)] md:p-7">
+            <CaseCode label={page.caseLabel} code={session.caseCode} />
+
+            {session.caseCode && serverSubmitted && (
+              <div
+                role="status"
+                className="mt-5 flex items-start gap-3 rounded-2xl border border-primary/30 bg-primary/10 p-4 text-sm leading-relaxed text-foreground"
+              >
+                <Check className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
+                <span>{st.received}</span>
+              </div>
+            )}
+            {session.caseCode && !serverSubmitted && !statusOffline && (
+              <div
+                role="status"
+                className="mt-5 flex items-start gap-3 rounded-2xl border border-primary/20 bg-secondary/30 p-4 text-sm leading-relaxed text-muted-foreground"
+              >
+                <Loader2 className="mt-0.5 size-4 shrink-0 animate-spin text-primary" aria-hidden="true" />
+                <span>{st.waiting}</span>
+              </div>
+            )}
+            {session.caseCode && !serverSubmitted && statusOffline && (
+              <label
+                htmlFor={`intake-form-submitted-${locale}`}
+                className="mt-5 flex cursor-pointer items-start gap-3 rounded-2xl border border-primary/20 bg-secondary/30 p-4 text-sm leading-relaxed text-foreground/90"
+              >
+                <Checkbox
+                  id={`intake-form-submitted-${locale}`}
+                  checked={formSubmitted}
+                  onCheckedChange={(checked) => setFormSubmitted(checked === true)}
+                  className="mt-0.5"
+                />
+                <span>{page.formSubmittedLabel}</span>
+              </label>
+            )}
+
+            <Button
+              size="lg"
+              onClick={continueToDocuments}
+              disabled={!session.caseCode || !canContinue}
+              className="mt-5 h-12 w-full rounded-full px-6 text-sm shadow-none"
+            >
+              {page.continueLabel}
+              <ArrowRight aria-hidden="true" />
+            </Button>
+          </div>
+        </aside>
+        </div>
         </div>
       )}
     </div>
