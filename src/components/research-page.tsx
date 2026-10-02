@@ -50,7 +50,9 @@ function ProseSection({ section, number }: { section: ResearchSection; number?: 
                 <span className="font-semibold text-primary">{section.study.registrationLabel}:</span>{" "}
                 {section.study.registration}
               </p>
-              <p>{section.study.partner}</p>
+              <p>
+                <span className="font-semibold text-primary">ORCID:</span> {section.study.orcid}
+              </p>
             </div>
           </div>
         )}
