@@ -183,7 +183,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
                 <p className="max-w-4xl text-base leading-7 text-primary-foreground/85">{c.hero.portraitCaption}</p>
               </div>
             </div>
-            <div className="mt-5 grid grid-cols-2 gap-3 md:max-w-xl md:gap-4">
+            <div className="mt-5 grid grid-cols-2 gap-3 md:max-w-xl md:gap-4 lg:mt-6 lg:max-w-none lg:grid-cols-4 lg:gap-5">
               {c.hero.badges.map((badge, index) => {
                 const Icon = badgeIcons[index] ?? HeartPulse;
                 const accent = index % 2 === 0;
@@ -203,7 +203,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
         <section className="section-space bg-secondary/40">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <div className="grid gap-8 lg:grid-cols-[.55fr_1.45fr] lg:gap-14">
-              <div><p id="concerns" className="eyebrow">{c.concerns.eyebrow}</p><h2 className="section-title mt-4">{c.concerns.title}</h2></div>
+              <div className="lg:sticky lg:top-28 lg:self-start"><p id="concerns" className="eyebrow">{c.concerns.eyebrow}</p><h2 className="section-title mt-4">{c.concerns.title}</h2></div>
               <div className="grid gap-4 md:grid-cols-2">
                 {c.concerns.items.map((text, index) => (
                   <article key={text} className="group relative overflow-hidden rounded-2xl border border-border/60 bg-card p-6 shadow-[0_10px_30px_-18px_color-mix(in_oklab,var(--primary)_25%,transparent)] transition-all duration-300 hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_18px_40px_-20px_color-mix(in_oklab,var(--primary)_32%,transparent)] md:p-7" data-reveal style={{ "--reveal-delay": `${index * 75}ms` } as React.CSSProperties}>
@@ -232,7 +232,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
                 <p key={text} className={`${index === 0 ? "mt-5" : "mt-4"} max-w-xl leading-7 text-foreground/75`}>{text}</p>
               ))}
             </div>
-            <blockquote className="self-end border-l-2 border-gold py-2 pl-7 font-display text-2xl leading-relaxed md:text-3xl">{c.bigPicture.quote}<footer className="mt-7 flex items-center gap-3"><span className="h-px w-5 bg-gold/55" aria-hidden="true" /><span className="font-display text-base font-semibold text-gold">Dr. Vlad</span></footer></blockquote>
+            <blockquote className="self-end border-l-2 lg:self-center border-gold py-2 pl-7 font-display text-2xl leading-relaxed md:text-3xl">{c.bigPicture.quote}<footer className="mt-7 flex items-center gap-3"><span className="h-px w-5 bg-gold/55" aria-hidden="true" /><span className="font-display text-base font-semibold text-gold">Dr. Vlad</span></footer></blockquote>
           </div>
         </section>
 
