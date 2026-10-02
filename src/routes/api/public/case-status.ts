@@ -25,14 +25,14 @@ export const Route = createFileRoute("/api/public/case-status")({
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(parsed.data),
           });
-          if (!upstream.ok) return Response.json({ error: "unavailable" }, { status: 502, headers });
+          if (!upstream.ok) return Response.json({ status: "unavailable" }, { headers });
           const data = (await upstream.json()) as { status?: string };
           const status = ["pending", "submitted", "not_found"].includes(data.status ?? "")
             ? data.status
             : "pending";
           return Response.json({ status }, { headers });
         } catch {
-          return Response.json({ error: "unavailable" }, { status: 502, headers });
+          return Response.json({ status: "unavailable" }, { headers });
         }
       },
     },

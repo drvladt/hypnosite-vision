@@ -75,7 +75,7 @@ export async function getCaseStatus(patientId: string): Promise<CaseStatus | nul
     });
     if (!res.ok) return null;
     const data = (await res.json()) as { status?: CaseStatus };
-    return data.status ?? null;
+    return data.status === "pending" || data.status === "submitted" || data.status === "not_found" ? data.status : null;
   } catch {
     return null;
   }
