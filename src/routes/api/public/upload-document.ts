@@ -43,7 +43,9 @@ export const Route = createFileRoute("/api/public/upload-document")({
         if (!name) return Response.json({ error: "bad_type" }, { status: 415 });
         const decodedName = decodeURIComponent(name).slice(-200);
         const ext = decodedName.match(ALLOWED_EXT)?.[1]?.toLowerCase() ?? "";
-        if (!ext || !ALLOWED_TYPES.has(type.toLowerCase())) {
+        const mime = type.toLowerCase();
+        // Browsers often report HEIC/HEIF as octet-stream; magic bytes below are the real check.
+        if (!ext || (!ALLOWED_TYPES.has(mime) && mime !== "application/octet-stream")) {
           return Response.json({ error: "bad_type" }, { status: 415 });
         }
         if (length > MAX_BYTES) return Response.json({ error: "too_large" }, { status: 413 });
