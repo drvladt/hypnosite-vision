@@ -25,16 +25,16 @@ function ItalicLines({ lines, className }: { lines: string[]; className?: string
 function ProseSection({ section, number }: { section: HypnotherapySection; number?: string | undefined }) {
   const title = section.title?.trim();
   return (
-    <section>
+    <section className="lg:grid lg:grid-cols-[minmax(0,17rem)_minmax(0,1fr)] lg:gap-12">
       {title && (
-        <div className={`mb-5 grid gap-3 md:items-start ${number ? "md:grid-cols-[3rem_1fr]" : ""}`}>
-          {number ? <span className="pt-2 text-xs font-bold text-gold">{number}</span> : null}
-          <h2 className="font-display text-3xl font-medium leading-tight text-primary md:text-4xl">
+        <div className="mb-5 grid gap-3 md:grid-cols-[3rem_1fr] md:items-start lg:sticky lg:top-24 lg:mb-0 lg:block lg:self-start">
+          {number ? <span className="pt-2 text-xs font-bold text-gold lg:block lg:pt-0">{number}</span> : null}
+          <h2 className="font-display text-3xl font-medium leading-tight text-primary md:text-4xl lg:mt-3">
             {title}
           </h2>
         </div>
       )}
-      <div className={title ? "md:pl-12" : ""}>
+      <div className={title ? "" : "lg:col-span-2"}>
         {section.openingItalics?.length ? (
           <ItalicLines lines={section.openingItalics} className="mb-5 space-y-3" />
         ) : null}
