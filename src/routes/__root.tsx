@@ -90,7 +90,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "msvalidate.01", content: "1D20E556450613F27FB4E7CD97C1E1D8" },
-      { name: "yandex-verification", content: "58a9e3ed2b8cc113" },
+      { name: "yandex-verification", content: "4e478feada8f5a1c" },
       { name: "author", content: "Dr. Vlad Tettegah" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
