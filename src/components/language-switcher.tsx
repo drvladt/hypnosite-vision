@@ -25,7 +25,7 @@ export function LanguageSwitcher({
   page?: PageKey;
 }) {
   return (
-    <nav aria-label={label} className={cn("flex items-center gap-1 text-xs font-semibold tracking-widest", className)}>
+    <nav aria-label={label} className={cn("flex items-center gap-0.5 text-xs font-semibold tracking-wider sm:gap-1 sm:tracking-widest", className)}>
       {locales.map((item) => (
         <Link
           key={item}
@@ -35,7 +35,7 @@ export function LanguageSwitcher({
           aria-current={item === locale ? "true" : undefined}
           title={localeNames[item]}
           className={cn(
-            "rounded-full px-2 py-1 transition-colors duration-200",
+            "rounded-full px-1.5 py-1 transition-colors sm:px-2 duration-200",
             item === locale ? "bg-secondary text-foreground" : "text-muted-foreground hover:text-foreground",
           )}
         >

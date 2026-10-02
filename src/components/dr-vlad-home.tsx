@@ -130,9 +130,9 @@ export function DrVladHome({ locale }: { locale: Locale }) {
   return (
     <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
       <header data-home-header className="sticky top-0 z-50 border-b border-border/70 bg-background/92 backdrop-blur-md">
-        <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 lg:px-8">
-          <a href="#top" className="flex shrink-0 items-center gap-3" aria-label={c.nav.toTop}>
-            <img src={logoAsset} alt="" className="size-11 rounded-full object-cover" />
+        <div className="mx-auto flex h-18 max-w-7xl items-center justify-between gap-2 px-5 lg:px-8">
+          <a href="#top" className="flex min-w-0 items-center gap-2 sm:gap-3" aria-label={c.nav.toTop}>
+            <img src={logoAsset} alt="" className="size-10 shrink-0 rounded-full object-cover sm:size-11" />
             <span className="flex flex-col gap-1">
               <span className="font-display text-xl font-medium leading-none">Dr. Vlad</span>
               <span className="max-w-[150px] text-[8px] font-semibold uppercase leading-tight tracking-[0.14em] text-gold sm:max-w-none sm:text-[9px] sm:leading-none sm:tracking-[0.2em]">{c.subbrand}</span>
@@ -145,7 +145,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
             <LanguageSwitcher locale={locale} label={c.nav.languageLabel} />
             <ConsultationButton label={c.nav.bookShort} locale={locale} outline />
           </nav>
-          <div className="flex items-center gap-2 2xl:hidden"><div className="hidden lg:block"><ConsultationButton label={c.nav.bookShort} locale={locale} outline /></div>
+          <div className="flex shrink-0 items-center gap-1 sm:gap-2 2xl:hidden"><div className="hidden lg:block"><ConsultationButton label={c.nav.bookShort} locale={locale} outline /></div>
             <LanguageSwitcher locale={locale} label={c.nav.languageLabel} />
             <Button variant="ghost" size="icon" aria-label={menuOpen ? c.nav.closeMenu : c.nav.openMenu} onClick={() => setMenuOpen((value) => !value)}>
               {menuOpen ? <X /> : <Menu />}
@@ -202,7 +202,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
 
         <section className="section-space bg-secondary/40">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
-            <div className="grid gap-8 lg:grid-cols-[.55fr_1.45fr] lg:gap-14">
+            <div className="grid gap-8 grid-cols-1 lg:grid-cols-[.55fr_1.45fr] lg:gap-14">
               <div className="lg:sticky lg:top-28 lg:self-start"><p id="concerns" className="eyebrow">{c.concerns.eyebrow}</p><h2 className="section-title mt-4">{c.concerns.title}</h2></div>
               <div className="grid gap-4 md:grid-cols-2">
                 {c.concerns.items.map((text, index) => (
@@ -265,7 +265,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
                 ))}
               </ul>
             </div>
-            <div className="mt-10 grid gap-7 border-t border-border pt-8 lg:grid-cols-[.55fr_1.45fr]">
+            <div className="mt-10 grid gap-7 border-t border-border pt-8 grid-cols-1 lg:grid-cols-[.55fr_1.45fr]">
               <div>
                 <h3 id="suitable" className="font-display text-3xl">{c.consultation.suitableTitle}</h3>
                 {c.consultation.suitableIntro && (
@@ -283,7 +283,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
         </section>
 
         <section className="border-y border-border bg-secondary/35">
-          <div className="mx-auto grid max-w-7xl items-start gap-8 px-5 py-10 lg:grid-cols-[.55fr_1.45fr] lg:gap-10 lg:px-8 lg:py-14">
+          <div className="mx-auto grid max-w-7xl items-start gap-8 px-5 py-10 grid-cols-1 lg:grid-cols-[.55fr_1.45fr] lg:gap-10 lg:px-8 lg:py-14">
             <div className="lg:sticky lg:top-28 lg:self-start"><p id="about" className="eyebrow">{c.about.eyebrow}</p><div className="mt-6 h-px w-16 bg-gold"/></div>
             <div>
               <h2 className="section-title">{c.about.title}</h2>
@@ -332,7 +332,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
         </section>
 
         <section className="section-space">
-          <div className="mx-auto grid max-w-7xl gap-8 px-5 lg:grid-cols-[.55fr_1.45fr] lg:gap-10 lg:px-8">
+          <div className="mx-auto grid max-w-7xl gap-8 px-5 grid-cols-1 lg:grid-cols-[.55fr_1.45fr] lg:gap-10 lg:px-8">
             <div className="lg:sticky lg:top-28 lg:self-start"><p className="eyebrow">{c.faq.eyebrow}</p><h2 id="faq" className="section-title mt-4">{c.faq.title}</h2></div>
             <div>{c.faq.items.map(([question, answer]) => (
                <details key={question} className="group border-t border-border py-5 last:border-b">
