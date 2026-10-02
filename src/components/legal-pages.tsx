@@ -410,7 +410,7 @@ export function ConsentGatePageView({ locale }: { locale: Locale }) {
               size="lg"
               disabled={!allChecked || status === "pending"}
               onClick={() => void proceed()}
-              className="mt-6 h-12 w-full rounded-full px-6 text-sm shadow-none"
+              className="mt-6 h-auto min-h-12 w-full whitespace-normal rounded-full px-6 py-3 text-center text-sm leading-snug shadow-none"
             >
               {status === "pending" ? page.panel.loadingLabel : page.panel.button}
               {status !== "pending" && <ArrowRight aria-hidden="true" />}
