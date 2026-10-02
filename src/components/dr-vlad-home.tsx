@@ -138,14 +138,14 @@ export function DrVladHome({ locale }: { locale: Locale }) {
               <span className="max-w-[150px] text-[8px] font-semibold uppercase leading-tight tracking-[0.14em] text-gold sm:max-w-none sm:text-[9px] sm:leading-none sm:tracking-[0.2em]">{c.subbrand}</span>
             </span>
           </a>
-          <nav className="hidden min-w-0 items-center gap-5 text-sm lg:flex xl:gap-7" aria-label={c.nav.label}>
+          <nav className="hidden min-w-0 items-center gap-6 whitespace-nowrap text-sm 2xl:flex" aria-label={c.nav.label}>
             {c.nav.items.map((item) => (
               <a key={item.href} className="nav-link" href={item.href} onClick={(e) => handleNavClick(e, item.href)}>{item.label}</a>
             ))}
             <LanguageSwitcher locale={locale} label={c.nav.languageLabel} />
             <ConsultationButton label={c.nav.bookShort} locale={locale} outline />
           </nav>
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex items-center gap-2 2xl:hidden"><div className="hidden lg:block"><ConsultationButton label={c.nav.bookShort} locale={locale} outline /></div>
             <LanguageSwitcher locale={locale} label={c.nav.languageLabel} />
             <Button variant="ghost" size="icon" aria-label={menuOpen ? c.nav.closeMenu : c.nav.openMenu} onClick={() => setMenuOpen((value) => !value)}>
               {menuOpen ? <X /> : <Menu />}
@@ -153,7 +153,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
           </div>
         </div>
         {menuOpen && (
-          <nav className="border-t border-border bg-background px-5 py-5 lg:hidden" aria-label={c.nav.mobileLabel}>
+          <nav className="border-t border-border bg-background px-5 py-5 2xl:hidden" aria-label={c.nav.mobileLabel}>
             <div className="mx-auto grid max-w-7xl gap-1">
               {c.nav.items.map((item) => (
                 <a key={item.href} href={item.href} onClick={(e) => handleNavClick(e, item.href)} className="border-b border-border/60 py-3 text-sm">{item.label}</a>
