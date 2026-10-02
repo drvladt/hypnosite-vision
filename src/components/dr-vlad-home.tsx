@@ -200,7 +200,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
                   "md:col-start-3 md:row-start-2 md:self-end",
                 ][index] ?? "";
                 return (
-                  <div key={badge} className={`group flex h-full min-h-28 flex-col items-start gap-4 rounded-lg border border-gold/30 bg-background/90 p-4 shadow-[0_12px_30px_-20px_color-mix(in_oklab,var(--primary)_36%,transparent)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/55 md:min-h-32 md:p-5 ${position}`} data-reveal style={{ "--reveal-delay": `${index * 80}ms` } as React.CSSProperties}>
+                  <div key={badge} className={`group flex h-full min-h-28 flex-col items-start gap-4 rounded-lg border border-gold/30 bg-background/90 p-4 shadow-[0_12px_30px_-20px_color-mix(in_oklab,var(--primary)_36%,transparent)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/55 md:min-h-32 md:p-5 ${position}`}>
                     <span className={`flex size-10 items-center justify-center rounded-xl ${accent ? "bg-primary/10" : "bg-gold/12"}`}>
                       <Icon className={`size-5 ${accent ? "text-primary" : "text-gold"} transition-transform duration-300 group-hover:-translate-y-0.5`} strokeWidth={1.5} aria-hidden="true" />
                     </span>
