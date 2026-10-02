@@ -192,7 +192,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
                 const Icon = badgeIcons[index] ?? HeartPulse;
                 const accent = index % 2 === 0;
                 return (
-                  <div key={badge} className={index < 2 ? "-translate-y-1.5 sm:-translate-y-2 md:-translate-y-3 lg:-translate-y-4 md:-translate-x-6 lg:-translate-x-12" : "translate-y-1.5 sm:translate-y-2 md:translate-y-3 lg:translate-y-4 md:translate-x-6 lg:translate-x-12"}>
+                  <div key={badge} className={`${index < 2 ? "-translate-y-1.5 sm:-translate-y-2 md:-translate-y-3 lg:-translate-y-4" : "translate-y-1.5 sm:translate-y-2 md:translate-y-3 lg:translate-y-4"} ${index % 2 === 0 ? "md:-translate-x-6 lg:-translate-x-12" : "md:translate-x-6 lg:translate-x-12"}`}>
                   <div className="group flex min-h-20 flex-col items-start gap-2 rounded-lg border border-gold/25 bg-background/20 p-2.5 shadow-[0_12px_30px_-24px_color-mix(in_oklab,var(--primary)_30%,transparent)] backdrop-blur-[1px] transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/45 hover:bg-background/35 sm:min-h-24 sm:flex-row sm:items-center sm:gap-3.5 sm:p-3.5 md:min-h-20 md:p-4">
                     <span className={`flex size-8 shrink-0 items-center justify-center rounded-xl sm:size-9 ${accent ? "bg-primary/10" : "bg-gold/12"}`}>
                       <Icon className={`size-4 sm:size-[18px] ${accent ? "text-primary" : "text-gold"} transition-transform duration-300 group-hover:-translate-y-0.5`} strokeWidth={1.5} aria-hidden="true" />
