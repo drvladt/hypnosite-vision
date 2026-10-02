@@ -249,7 +249,7 @@ export function ConsentGatePageView({ locale }: { locale: Locale }) {
 
       {NOT_READY && <NotReadyBanner text={content.notReadyWarning} />}
 
-      <div className="mt-10 grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
+      <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
         <div className="space-y-8">
           {page.next && (
             <section>
