@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { legalContent, type LegalPageKey } from "@/content/legal";
 import { legalConfig, missingLegalVars } from "@/content/legal-config";
 import type { LegalBlock, LegalDoc } from "@/content/legal-types";
-import { homePath, pagePath, type Locale } from "@/content/locales";
+import { pagePath, type Locale } from "@/content/locales";
 import { CaseApiNotConfiguredError, createCase } from "@/lib/case-api";
 import { startIntakeSession } from "@/lib/intake-session";
 import { RestoreByCode } from "@/components/site-pages";
