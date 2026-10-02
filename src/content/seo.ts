@@ -132,7 +132,10 @@ function entityGraph(siteOrigin: string, locale: Locale) {
           alternateName: "ASCH — Associate Member",
         },
         worksFor: { "@id": organizationId },
-        sameAs: socialLinks.filter(({ type }) => type !== "whatsapp").map(({ url }) => url),
+        sameAs: [
+          ...socialLinks.filter(({ type }) => type !== "whatsapp").map(({ url }) => url),
+          "https://orcid.org/0009-0009-6738-1913",
+        ],
       },
       {
         "@type": ["MedicalBusiness", "MedicalOrganization"],
