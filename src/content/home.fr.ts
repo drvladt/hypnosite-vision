@@ -32,6 +32,7 @@ export const homeFr: HomeContent = {
     note: "Consultation gratuite · En ligne · Jusqu'à 60 minutes · Confidentiel",
     write: "Écrire au Dr. Vlad",
   },
+  subbrand: "Integrative Medicine & Hypnotherapy",
   hero: {
     eyebrow: "Médecine intégrative · Hypnothérapie",
     title:

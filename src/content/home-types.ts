@@ -1,4 +1,6 @@
 export type HomeContent = {
+  /** Fixed English sub-brand shown under "Dr. Vlad" in the site header on every page. */
+  subbrand: string;
   meta: {
     title: string;
     description: string;
