@@ -17,11 +17,13 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { siteContent } from "@/content/site";
 import type { InfoPage } from "@/content/site-types";
 import { contactEmail, homePath, pagePath, type Locale } from "@/content/locales";
-import { intakeFormUrl } from "@/lib/case-api";
+import { getCaseStatus, intakeFormUrl } from "@/lib/case-api";
 import {
   markIntakeDone,
+  normalizeCaseCode,
   readIntakeSession,
   restoreIntakeSession,
+  restoreSubmittedSession,
   completeIntakeSession,
   type IntakeSession,
 } from "@/lib/intake-session";
@@ -209,6 +211,33 @@ const RESTORE_TEXT: Record<
   },
 };
 
+const STATUS_TEXT: Record<
+  Locale,
+  { waiting: string; received: string; alreadySubmitted: (code: string) => string }
+> = {
+  ru: {
+    waiting:
+      "После того как вы нажмёте «Отправить» в анкете выше, кнопка ниже станет активной автоматически (обычно через несколько секунд).",
+    received: "Анкета получена. Можно перейти к медицинским документам.",
+    alreadySubmitted: (code) =>
+      `Ваша анкета по обращению ${code} уже успешно принята в работу. Если вам необходимо отправить результаты анализов, снимки или выписки, вы можете прикрепить их ниже.`,
+  },
+  en: {
+    waiting:
+      "Once you press “Submit” in the questionnaire above, the button below will become active automatically (usually within a few seconds).",
+    received: "Questionnaire received. You can continue to medical documents.",
+    alreadySubmitted: (code) =>
+      `Your questionnaire for request ${code} has already been received and is being processed. If you need to send test results, scans or medical reports, you can attach them below.`,
+  },
+  fr: {
+    waiting:
+      "Dès que vous aurez cliqué sur « Envoyer » dans le questionnaire ci-dessus, le bouton ci-dessous s'activera automatiquement (en général en quelques secondes).",
+    received: "Questionnaire reçu. Vous pouvez passer aux documents médicaux.",
+    alreadySubmitted: (code) =>
+      `Votre questionnaire pour le dossier ${code} a déjà été reçu et est en cours de traitement. Si vous devez envoyer des résultats d'analyses, des images ou des comptes rendus, vous pouvez les joindre ci-dessous.`,
+  },
+};
+
 function CompletedNotice({ locale }: { locale: Locale }) {
   const t = RESTORE_TEXT[locale];
   return (
@@ -234,10 +263,31 @@ export function RestoreByCode({
   onRestored: (session: IntakeSession) => void;
 }) {
   const t = RESTORE_TEXT[locale];
+  const navigate = useNavigate();
   const [code, setCode] = useState("");
+  const [busy, setBusy] = useState(false);
   const [error, setError] = useState<"invalid" | "completed" | null>(null);
-  const submit = () => {
-    const result = restoreIntakeSession(code, siteContent[locale].consultation.consent.version, intakeDone);
+  const submit = async () => {
+    const version = siteContent[locale].consultation.consent.version;
+    const normalized = normalizeCaseCode(code);
+    if (!normalized) {
+      setError("invalid");
+      return;
+    }
+    setBusy(true);
+    const status = await getCaseStatus(normalized);
+    setBusy(false);
+    if (status === "not_found") {
+      setError("invalid");
+      return;
+    }
+    if (status === "submitted") {
+      restoreSubmittedSession(normalized, version);
+      setError(null);
+      void navigate({ to: pagePath(locale, "documents") });
+      return;
+    }
+    const result = restoreIntakeSession(normalized, version, intakeDone);
     if (result === "invalid" || result === "completed") {
       setError(result);
       return;
@@ -281,9 +331,15 @@ export function IntakePageView({ locale }: { locale: Locale }) {
   const navigate = useNavigate();
   const [{ ready, session }, setState] = useFlowSession();
   const [formSubmitted, setFormSubmitted] = useState(false);
+  /** Confirmed by the server (Apps Script signal). */
+  const [serverSubmitted, setServerSubmitted] = useState(false);
+  /** Status service unreachable several times in a row: fall back to the manual checkbox. */
+  const [statusOffline, setStatusOffline] = useState(false);
+  const canContinue = serverSubmitted || (statusOffline && formSubmitted);
+  const st = STATUS_TEXT[locale];
 
   const continueToDocuments = () => {
-    if (!session?.caseCode || !formSubmitted) return;
+    if (!session?.caseCode || !canContinue) return;
     markIntakeDone();
     void navigate({ to: pagePath(locale, "documents") });
   };
@@ -296,6 +352,38 @@ export function IntakePageView({ locale }: { locale: Locale }) {
     }, 150);
     return () => window.clearTimeout(t);
   }, [hasForm]);
+
+  const caseCode = session?.caseCode ?? null;
+  useEffect(() => {
+    if (!caseCode) return;
+    let stopped = false;
+    let failures = 0;
+    let timer: number | undefined;
+    const tick = async () => {
+      if (stopped) return;
+      if (document.visibilityState === "visible") {
+        const status = await getCaseStatus(caseCode);
+        if (stopped) return;
+        if (status === null) {
+          failures += 1;
+          if (failures >= 3) setStatusOffline(true);
+        } else {
+          failures = 0;
+          setStatusOffline(false);
+          if (status === "submitted") {
+            setServerSubmitted(true);
+            return;
+          }
+        }
+      }
+      timer = window.setTimeout(tick, 4000);
+    };
+    void tick();
+    return () => {
+      stopped = true;
+      if (timer) window.clearTimeout(timer);
+    };
+  }, [caseCode]);
 
   return (
     <div className={`${WRAP} pb-16`}>
@@ -335,7 +423,25 @@ export function IntakePageView({ locale }: { locale: Locale }) {
           )}
           <p className="mt-4 text-xs leading-relaxed text-muted-foreground">{page.formNote}</p>
 
-          {session.caseCode && (
+          {session.caseCode && serverSubmitted && (
+            <div
+              role="status"
+              className="mt-5 flex items-start gap-3 rounded-2xl border border-primary/30 bg-primary/10 p-4 text-sm leading-relaxed text-foreground"
+            >
+              <Check className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
+              <span>{st.received}</span>
+            </div>
+          )}
+          {session.caseCode && !serverSubmitted && !statusOffline && (
+            <div
+              role="status"
+              className="mt-5 flex items-start gap-3 rounded-2xl border border-primary/20 bg-secondary/30 p-4 text-sm leading-relaxed text-muted-foreground"
+            >
+              <Loader2 className="mt-0.5 size-4 shrink-0 animate-spin text-primary" aria-hidden="true" />
+              <span>{st.waiting}</span>
+            </div>
+          )}
+          {session.caseCode && !serverSubmitted && statusOffline && (
             <label
               htmlFor={`intake-form-submitted-${locale}`}
               className="mt-5 flex cursor-pointer items-start gap-3 rounded-2xl border border-primary/20 bg-secondary/30 p-4 text-sm leading-relaxed text-foreground/90"
@@ -353,7 +459,7 @@ export function IntakePageView({ locale }: { locale: Locale }) {
           <Button
             size="lg"
             onClick={continueToDocuments}
-            disabled={!session.caseCode || !formSubmitted}
+            disabled={!session.caseCode || !canContinue}
             className="mt-4 h-12 rounded-full px-6 text-sm shadow-none"
           >
             {page.continueLabel}
@@ -423,7 +529,22 @@ export function DocumentsPageView({ locale }: { locale: Locale }) {
   };
 
   const [restoreCompleted, setRestoreCompleted] = useState(false);
-  const restore = () => {
+  const restore = async () => {
+    const normalized = normalizeCaseCode(code);
+    const status = normalized ? await getCaseStatus(normalized) : null;
+    if (normalized && status === "submitted") {
+      const s = restoreSubmittedSession(normalized, c.consultation.consent.version);
+      if (s) {
+        setRestoreError(false);
+        setRestoreCompleted(false);
+        setState({ ready: true, session: s });
+        return;
+      }
+    }
+    if (status === "not_found") {
+      setRestoreError(true);
+      return;
+    }
     const restored = restoreIntakeSession(code, c.consultation.consent.version);
     if (restored === "invalid" || restored === "completed") {
       setRestoreError(restored === "invalid");
@@ -478,6 +599,13 @@ export function DocumentsPageView({ locale }: { locale: Locale }) {
       ) : (
         <FlowCard>
           <CaseCode label={page.caseLabel} code={session.caseCode} />
+          {session.alreadySubmitted && session.caseCode && (
+            <div className="mt-4 rounded-2xl border border-gold/50 bg-gold/10 p-4">
+              <p role="status" className="text-sm leading-relaxed text-foreground/90">
+                {STATUS_TEXT[locale].alreadySubmitted(session.caseCode)}
+              </p>
+            </div>
+          )}
           <p className="mt-4 text-sm text-muted-foreground">{page.optionalNote}</p>
           <label className="mt-5 flex cursor-pointer items-center gap-3 rounded-2xl border border-dashed border-primary/25 bg-secondary/30 p-5 text-sm text-foreground/90 transition-colors hover:border-gold/45">
             <Paperclip className="size-4 text-primary" aria-hidden="true" />
