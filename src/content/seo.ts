@@ -135,6 +135,7 @@ function entityGraph(siteOrigin: string, locale: Locale) {
         sameAs: [
           ...socialLinks.filter(({ type }) => type !== "whatsapp").map(({ url }) => url),
           "https://orcid.org/0009-0009-6738-1913",
+          "https://www.linkedin.com/in/dr-vladt/",
           "https://www.google.com/search?kgmid=/g/11zy17q0z4",
         ],
       },
