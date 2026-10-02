@@ -138,7 +138,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
               <span className="max-w-[150px] text-[8px] font-semibold uppercase leading-tight tracking-[0.14em] text-gold sm:max-w-none sm:text-[9px] sm:leading-none sm:tracking-[0.2em]">{c.subbrand}</span>
             </span>
           </a>
-          <nav className="hidden items-center gap-7 text-sm lg:flex" aria-label={c.nav.label}>
+          <nav className="hidden items-center gap-4 whitespace-nowrap text-[13px] lg:flex xl:gap-6 xl:text-sm" aria-label={c.nav.label}>
             {c.nav.items.map((item) => (
               <a key={item.href} className="nav-link" href={item.href} onClick={(e) => handleNavClick(e, item.href)}>{item.label}</a>
             ))}
@@ -167,9 +167,9 @@ export function DrVladHome({ locale }: { locale: Locale }) {
       <main id="top">
         <section className="relative border-b border-border py-10 md:py-12 lg:py-14">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
-            <div className="mb-8 grid items-end gap-7 lg:grid-cols-[1.2fr_.8fr] lg:gap-12">
+            <div className="mb-8 grid items-end gap-7 lg:grid-cols-[1.55fr_1fr] lg:gap-14">
               <div>
-                <h1 className="max-w-4xl font-display text-[clamp(2.15rem,5vw,4.65rem)] font-medium leading-[1.08]">{c.hero.title}</h1>
+                <h1 className="max-w-4xl font-display text-[clamp(2.15rem,5vw,4.65rem)] font-medium leading-[1.08] lg:text-[3.1rem] lg:leading-[1.1] xl:text-[3.5rem]">{c.hero.title}</h1>
               </div>
               <div className="border-l border-gold/40 pl-6">
                 <p className="whitespace-pre-line leading-7 text-foreground/75">{c.hero.lead}</p>
