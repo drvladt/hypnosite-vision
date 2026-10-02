@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { legalContent, type LegalPageKey } from "@/content/legal";
 import { legalConfig, missingLegalVars } from "@/content/legal-config";
 import type { LegalBlock, LegalDoc } from "@/content/legal-types";
-import { homePath, pagePath, type Locale } from "@/content/locales";
+import { pagePath, type Locale } from "@/content/locales";
 import { CaseApiNotConfiguredError, createCase } from "@/lib/case-api";
 import { startIntakeSession } from "@/lib/intake-session";
 import { RestoreByCode } from "@/components/site-pages";
@@ -417,15 +417,9 @@ export function ConsentGatePageView({ locale }: { locale: Locale }) {
               {allChecked ? page.panel.buttonNote : page.panel.blockedNote}
             </p>
 
-
-            <div className="mt-5">
-              <Link to={homePath[locale]} className="text-sm text-primary underline underline-offset-4">
-                {page.panel.secondaryLabel}
-              </Link>
-            </div>
           </div>
           {status !== "issued" && (
-            <div className="mt-6 rounded-3xl border border-primary/12 bg-card p-6 md:p-7">
+            <div className="mt-4 rounded-3xl border border-primary/12 bg-card p-6 md:p-7">
               <RestoreByCode
                 locale={locale}
                 intakeDone={false}
