@@ -78,7 +78,10 @@ export function SiteLayout({
         <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 lg:px-8">
           <Link to={homePath[locale]} className="flex items-center gap-3" aria-label={home.nav.toTop}>
             <img src={logoAsset} alt="" className="size-11 rounded-full object-cover" />
-            <span className="font-display text-lg font-medium">Dr. Vlad</span>
+            <span className="flex flex-col gap-1">
+              <span className="font-display text-xl font-medium leading-none">Dr. Vlad</span>
+              <span className="max-w-[150px] text-[8px] font-semibold uppercase leading-tight tracking-[0.14em] text-gold sm:max-w-none sm:text-[9px] sm:leading-none sm:tracking-[0.2em]">{home.subbrand}</span>
+            </span>
           </Link>
           <nav className="hidden items-center gap-6 text-sm lg:flex" aria-label={c.common.navLabel}>
             {NAV_PAGES.map((item) => (

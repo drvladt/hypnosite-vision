@@ -32,6 +32,7 @@ export const homeRu: HomeContent = {
     note: "Бесплатная консультация · Онлайн · До 60 минут · Конфиденциально",
     write: "Написать Dr. Vlad",
   },
+  subbrand: "Integrative Medicine & Hypnotherapy",
   hero: {
     eyebrow: "Интегративная медицина · Гипнотерапия",
     title:
