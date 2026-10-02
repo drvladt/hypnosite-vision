@@ -315,7 +315,7 @@ export function RestoreByCode({
             className="mt-2 block h-11 w-44 rounded-full border border-border bg-background px-4 text-sm normal-case tracking-normal text-foreground outline-none transition-colors focus:border-gold/60"
           />
         </label>
-        <Button type="submit" size="lg" className="h-11 rounded-full px-6 text-sm shadow-none">
+        <Button type="submit" size="lg" disabled={busy} className="h-11 rounded-full px-6 text-sm shadow-none">
           {t.action}
         </Button>
       </form>
