@@ -55,7 +55,7 @@ function SocialIcon({ type, className }: { type: SocialType; className?: string 
 
 import portraitAsset from "@/assets/fotoMe.webp";
 import logoAsset from "@/assets/logo.webp";
-import roundLogoAsset from "@/assets/dr-vlad-round-logo.png.asset.json";
+import bannerAsset from "@/assets/banner.webp";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { Button } from "@/components/ui/button";
 import { homeContent } from "@/content/home";
@@ -185,16 +185,14 @@ export function DrVladHome({ locale }: { locale: Locale }) {
               </div>
             </div>
             <div className="relative mt-5 overflow-hidden rounded-lg border border-primary/15 bg-card px-3 py-4 shadow-[0_18px_45px_-30px_color-mix(in_oklab,var(--primary)_38%,transparent)] sm:px-5 sm:py-5 md:px-8 md:py-7">
-              <div className="pointer-events-none absolute left-1/2 top-1/2 aspect-square w-[min(68vw,22rem)] -translate-x-1/2 -translate-y-1/2 opacity-30 md:w-[23rem]">
-                <span className="absolute inset-[3%] rounded-full bg-primary/5 shadow-[0_24px_55px_-28px_color-mix(in_oklab,var(--primary)_50%,transparent)]" aria-hidden="true" />
-                <img src={roundLogoAsset.url} alt="" className="relative size-full rounded-full object-contain" />
-              </div>
+              <img src={bannerAsset} alt="" className="pointer-events-none absolute inset-0 size-full object-cover object-center opacity-85" />
+              <span className="pointer-events-none absolute inset-0 bg-background/10" aria-hidden="true" />
               <div className="relative mx-auto grid max-w-5xl grid-cols-2 gap-3 sm:gap-4 md:gap-x-20 md:gap-y-5 lg:gap-x-28">
               {c.hero.badges.map((badge, index) => {
                 const Icon = badgeIcons[index] ?? HeartPulse;
                 const accent = index % 2 === 0;
                 return (
-                  <div key={badge} className="group flex min-h-24 flex-col items-start gap-2 rounded-lg border border-gold/30 bg-background/80 p-3 shadow-[0_12px_30px_-20px_color-mix(in_oklab,var(--primary)_36%,transparent)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/55 sm:min-h-28 sm:flex-row sm:items-center sm:gap-4 sm:p-4 md:min-h-24 md:p-5">
+                  <div key={badge} className="group flex min-h-24 flex-col items-start gap-2 rounded-lg border border-gold/40 bg-background/55 p-3 shadow-[0_12px_30px_-20px_color-mix(in_oklab,var(--primary)_36%,transparent)] backdrop-blur-[2px] transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/60 hover:bg-background/65 sm:min-h-28 sm:flex-row sm:items-center sm:gap-4 sm:p-4 md:min-h-24 md:p-5">
                     <span className={`flex size-9 shrink-0 items-center justify-center rounded-xl sm:size-10 ${accent ? "bg-primary/10" : "bg-gold/12"}`}>
                       <Icon className={`size-4 sm:size-5 ${accent ? "text-primary" : "text-gold"} transition-transform duration-300 group-hover:-translate-y-0.5`} strokeWidth={1.5} aria-hidden="true" />
                     </span>
