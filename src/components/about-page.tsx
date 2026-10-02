@@ -124,24 +124,28 @@ export function AboutPageView({ locale }: { locale: Locale }) {
       </section>
 
       <div className="mx-auto mt-12 w-full max-w-6xl px-5 md:mt-16 md:px-8">
-        <ProseSection
-          section={{ title: countries.title ?? "", paragraphs: countries.paragraphs.slice(0, 2) }}
-          number="03"
-        />
-        <EditorialImage
-          src={togo}
-          alt={c.captions.togo}
-          caption={c.captions.togo}
-          className="mt-10 md:ml-12 md:w-[44%]"
-          imageClassName="aspect-[3/4] object-[center_42%]"
-        />
-        <div className="mt-10 md:pl-12">
-          <ProseSection
-            section={{ paragraphs: countries.paragraphs.slice(2), emphasis: countries.emphasis ?? "" }}
-            number=""
+        <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,24rem)] lg:items-start lg:gap-14">
+          <div>
+            <ProseSection
+              section={{ title: countries.title ?? "", paragraphs: countries.paragraphs.slice(0, 2) }}
+              number="03"
+            />
+            <div className="mt-10 md:pl-12">
+              <ProseSection
+                section={{ paragraphs: countries.paragraphs.slice(2), emphasis: countries.emphasis ?? "" }}
+                number=""
+              />
+            </div>
+          </div>
+          <EditorialImage
+            src={togo}
+            alt={c.captions.togo}
+            caption={c.captions.togo}
+            className="mt-10 lg:sticky lg:top-24 lg:mt-0"
+            imageClassName="aspect-[3/4] object-[center_42%]"
           />
         </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-2 md:items-center">
+        <div className="mt-10 grid gap-6 md:grid-cols-2 md:items-center lg:mt-14">
           <EditorialImage
             src={rspcMinsk}
             alt={c.captions.minsk}
@@ -157,20 +161,24 @@ export function AboutPageView({ locale }: { locale: Locale }) {
         </div>
       </div>
 
-      <section className="mx-auto mt-12 w-full max-w-4xl px-5 md:mt-16 md:px-8">
-        <ProseSection
-          section={{ title: hypnotherapy.title ?? "", paragraphs: hypnotherapy.paragraphs.slice(0, 3) }}
-          number="04"
-        />
-        <EditorialImage
-          src={hypnotherapyCertificate}
-          alt={c.captions.certificate}
-          caption={c.captions.certificate}
-          className="mt-10 md:ml-12"
-          imageClassName="aspect-[1.45/1] object-contain"
-        />
-        <div className="mt-10 md:pl-12">
-          <ProseSection section={{ paragraphs: hypnotherapy.paragraphs.slice(3) }} number="" />
+      <section className="mx-auto mt-12 w-full max-w-6xl px-5 md:mt-16 md:px-8">
+        <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] lg:items-center lg:gap-14">
+          <div>
+            <ProseSection
+              section={{ title: hypnotherapy.title ?? "", paragraphs: hypnotherapy.paragraphs.slice(0, 3) }}
+              number="04"
+            />
+            <div className="mt-10 md:pl-12">
+              <ProseSection section={{ paragraphs: hypnotherapy.paragraphs.slice(3) }} number="" />
+            </div>
+          </div>
+          <EditorialImage
+            src={hypnotherapyCertificate}
+            alt={c.captions.certificate}
+            caption={c.captions.certificate}
+            className="mt-10 lg:mt-0"
+            imageClassName="aspect-[1.45/1] object-contain"
+          />
         </div>
       </section>
 
