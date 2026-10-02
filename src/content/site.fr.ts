@@ -271,6 +271,7 @@ export const siteFr: SiteContent = {
     uploadErrorLabel: "Certains fichiers n'ont pas pu être envoyés. Ceux qui restent sont toujours dans la liste — veuillez réessayer.",
     tooManyLabel: "Vous pouvez joindre 20 fichiers au maximum.",
     tooLargeLabel: "Un fichier dépasse 30 Mo — veuillez le réduire ou le diviser.",
+    badTypeLabel: "Seuls les fichiers PDF ou images (JPG, PNG, HEIC) sont acceptés.",
     removeLabel: "Retirer le fichier",
     optionalNote: "Vous pouvez passer cette étape.",
     pickLabel: "Choisir des fichiers",
