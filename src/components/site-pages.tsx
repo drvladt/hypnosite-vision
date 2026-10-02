@@ -474,7 +474,8 @@ export function IntakePageView({ locale }: { locale: Locale }) {
 
 const MAX_FILES = 20;
 const MAX_FILE_BYTES = 30 * 1024 * 1024;
-const ACCEPT = ".pdf,.jpg,.jpeg,.png,.heic,.heif,.webp,.doc,.docx,.txt,.rtf";
+const ACCEPT = ".pdf,.jpg,.jpeg,.png,.heic,.heif";
+const ALLOWED_EXT = /\.(pdf|jpe?g|png|heic|heif)$/i;
 
 export function DocumentsPageView({ locale }: { locale: Locale }) {
   const c = siteContent[locale];
@@ -492,8 +493,10 @@ export function DocumentsPageView({ locale }: { locale: Locale }) {
   const addFiles = (list: FileList | null) => {
     setUploadError(null);
     const picked = Array.from(list ?? []);
-    const next = [...files, ...picked.filter((f) => f.size <= MAX_FILE_BYTES)];
-    if (picked.some((f) => f.size > MAX_FILE_BYTES)) setUploadError(page.tooLargeLabel);
+    const typed = picked.filter((f) => ALLOWED_EXT.test(f.name));
+    if (typed.length < picked.length) setUploadError(page.badTypeLabel);
+    const next = [...files, ...typed.filter((f) => f.size <= MAX_FILE_BYTES)];
+    if (typed.some((f) => f.size > MAX_FILE_BYTES)) setUploadError(page.tooLargeLabel);
     if (next.length > MAX_FILES) setUploadError(page.tooManyLabel);
     setFiles(next.slice(0, MAX_FILES));
   };
