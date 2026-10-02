@@ -166,8 +166,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <div className="mb-8 grid items-end gap-7 lg:grid-cols-[1.2fr_.8fr] lg:gap-12">
               <div>
-                <p className="eyebrow">{c.hero.eyebrow}</p>
-                <h1 className="mt-5 max-w-4xl font-display text-[clamp(2.15rem,5vw,4.65rem)] font-medium leading-[1.08]">{c.hero.title}</h1>
+                <h1 className="max-w-4xl font-display text-[clamp(2.15rem,5vw,4.65rem)] font-medium leading-[1.08]">{c.hero.title}</h1>
               </div>
               <div className="border-l border-gold/40 pl-6">
                 <p className="whitespace-pre-line leading-7 text-foreground/75">{c.hero.lead}</p>
