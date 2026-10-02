@@ -194,11 +194,11 @@ export function DrVladHome({ locale }: { locale: Locale }) {
                 const Icon = badgeIcons[index] ?? HeartPulse;
                 const accent = index % 2 === 0;
                 return (
-                  <div key={badge} className="group flex min-h-24 items-center gap-3 rounded-lg border border-gold/30 bg-background/80 p-3 shadow-[0_12px_30px_-20px_color-mix(in_oklab,var(--primary)_36%,transparent)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/55 sm:min-h-28 sm:gap-4 sm:p-4 md:min-h-24 md:p-5">
+                  <div key={badge} className="group flex min-h-24 flex-col items-start gap-2 rounded-lg border border-gold/30 bg-background/80 p-3 shadow-[0_12px_30px_-20px_color-mix(in_oklab,var(--primary)_36%,transparent)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/55 sm:min-h-28 sm:flex-row sm:items-center sm:gap-4 sm:p-4 md:min-h-24 md:p-5">
                     <span className={`flex size-9 shrink-0 items-center justify-center rounded-xl sm:size-10 ${accent ? "bg-primary/10" : "bg-gold/12"}`}>
                       <Icon className={`size-4 sm:size-5 ${accent ? "text-primary" : "text-gold"} transition-transform duration-300 group-hover:-translate-y-0.5`} strokeWidth={1.5} aria-hidden="true" />
                     </span>
-                    <p className="font-display text-xs font-medium leading-snug text-primary sm:text-sm md:text-[15px]">{badge}</p>
+                    <p className="w-full break-words font-display text-xs font-medium leading-snug text-primary sm:text-sm md:text-[15px]">{badge}</p>
                   </div>
                 );
               })}
