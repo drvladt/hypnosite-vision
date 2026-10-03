@@ -72,9 +72,9 @@ export type SocialType = (typeof socialLinks)[number]["type"];
 
 /** Warm invitation shown above the footer social icons. */
 export const socialInvite: Record<Locale, string> = {
-  ru: "Познай себя — вместе. Подписывайся:",
-  en: "Exploring within, together. Subscribe:",
-  fr: "Se comprendre, ensemble. Abonne-toi :",
+  ru: "Познай себя — вместе. Подписывайся!",
+  en: "Exploring within, together. Subscribe!",
+  fr: "Se comprendre, ensemble. Abonne-toi !",
 };
 
 const LOCALE_STORAGE_KEY = "drvlad-preferred-locale";
