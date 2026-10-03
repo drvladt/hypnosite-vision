@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Brain, CalendarDays, ChevronDown, HeartPulse, Menu, MessageCircle, Play, Stethoscope, X } from "lucide-react";
-import { pagePath, socialLinks, type SocialType } from "@/content/locales";
+import { pagePath, socialInvite, socialLinks, type SocialType } from "@/content/locales";
 import { YouTubeFacade } from "@/components/youtube-facade";
 
 // Minimal universally-recognizable globe: circle + equator + two meridians, no extra parallels
