@@ -70,6 +70,13 @@ export const socialLinks = [
 
 export type SocialType = (typeof socialLinks)[number]["type"];
 
+/** Warm invitation shown above the footer social icons. */
+export const socialInvite: Record<Locale, string> = {
+  ru: "Познай себя — вместе. Подписывайтесь:",
+  en: "Exploring within, together. Subscribe:",
+  fr: "Se comprendre, ensemble. Abonne-toi :",
+};
+
 const LOCALE_STORAGE_KEY = "drvlad-preferred-locale";
 
 /** Remembers the visitor's manual language choice (wins over auto-detection). */
