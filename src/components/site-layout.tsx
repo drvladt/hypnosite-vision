@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { homeContent } from "@/content/home";
 import { siteContent } from "@/content/site";
 import { legalContent } from "@/content/legal";
-import { homePath, pagePath, socialLinks, type Locale, type PageKey } from "@/content/locales";
+import { homePath, pagePath, socialInvite, socialLinks, type Locale, type PageKey } from "@/content/locales";
 
 const NAV_PAGES: PageKey[] = ["approach", "about", "hypnotherapy", "research", "contact"];
 const FOOTER_PAGES: PageKey[] = [
@@ -150,7 +150,8 @@ export function SiteLayout({
                 <span className="font-display text-base font-medium">Dr. Vlad Tettegah</span>
               </div>
               <p className="mt-3 text-sm text-muted-foreground">{home.footer.role}</p>
-              <div className="mt-4 flex items-center gap-2">
+              <p className="mt-5 font-display text-sm italic text-gold">{socialInvite[locale]}</p>
+              <div className="mt-2.5 flex items-center gap-2">
                 {socialLinks.map((link) => (
                   <a
                     key={link.type}
@@ -159,7 +160,7 @@ export function SiteLayout({
                     rel="noreferrer noopener"
                     aria-label={link.label}
                     title={link.label}
-                    className="flex size-9 items-center justify-center rounded-full border border-primary/15 text-primary transition-colors duration-200 hover:border-gold/50 hover:text-gold"
+                    className="flex size-9 items-center justify-center rounded-full border border-gold/40 bg-background text-primary shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-gold hover:text-gold hover:shadow-md"
                   >
                     <SocialIcon type={link.type} className="size-4" />
                   </a>
