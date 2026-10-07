@@ -169,7 +169,7 @@ export const legalEn: LegalContent = {
           "To protect information, access restrictions, secure connections, closed storage, validation of uploaded files and other organisational and technical security measures are used.",
           "Necessary cookies may be used for the secure session, site security and remembering the chosen language.",
           "No advertising pixels, heatmaps, session replay or screen recording are used on the form and medical document upload pages. Medical information and form answers are not sent to marketing analytics systems.",
-          "On other public pages, for visitors outside the EU/EEA, the UK and Switzerland, Google Analytics / Google Ads (Google LLC) is used: visit statistics (page, country, device) to measure traffic and advertising performance. Visitors from the EU/EEA, the UK and Switzerland are not tracked. You can opt out in Google Ads Settings (adssettings.google.com) or with a tracker blocker.",
+          "On other public pages, for visitors outside the EU/EEA, the UK and Switzerland, Google Analytics / Google Ads (Google LLC) and the Meta Pixel (Meta Platforms Ireland Limited) are used: visit statistics (page, country, device) to measure traffic and advertising performance. Visitors from the EU/EEA, the UK and Switzerland are not tracked. You can opt out in Google Ads Settings (adssettings.google.com), in your Facebook ad preferences, or with a tracker blocker.",
         ],
       },
       {
