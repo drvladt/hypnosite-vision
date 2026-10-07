@@ -70,7 +70,7 @@ function loadTag() {
 /** Meta Pixel (Facebook) — standard snippet, loaded only when consent allows. */
 function loadMetaPixel() {
   const w = window as unknown as Record<string, unknown>;
-  if (w.fbq) return;
+  if (w["fbq"]) return;
   const queue: unknown[][] = [];
   const fbq = (...args: unknown[]) => {
     if ((fbq as unknown as { callMethod?: unknown }).callMethod) {
@@ -84,8 +84,8 @@ function loadMetaPixel() {
   n.loaded = true;
   n.version = "2.0";
   n.queue = queue;
-  w.fbq = fbq;
-  w._fbq = fbq;
+  w["fbq"] = fbq;
+  w["_fbq"] = fbq;
   const t = document.createElement("script");
   t.async = true;
   t.src = "https://connect.facebook.net/en_US/fbevents.js";
