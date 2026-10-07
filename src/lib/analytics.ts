@@ -140,5 +140,18 @@ export async function trackPageView(path: string) {
     page_path: path,
     page_location: window.location.origin + path,
   });
-  window.fbq?.("track", "PageView");
+  const eventId = crypto.randomUUID();
+  window.fbq?.("track", "PageView", {}, { eventID: eventId });
+  try {
+    const cookie = (name: string) =>
+      new RegExp(`(?:^|; )${name}=([^;]*)`).exec(document.cookie)?.[1];
+    void fetch("/api/public/meta-event", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      keepalive: true,
+      body: JSON.stringify({ eventId, path, fbp: cookie("_fbp"), fbc: cookie("_fbc") }),
+    }).catch(() => {});
+  } catch {
+    /* never affect the site */
+  }
 }
