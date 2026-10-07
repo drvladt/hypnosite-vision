@@ -354,6 +354,14 @@ export function IntakePageView({ locale }: { locale: Locale }) {
     return () => window.clearTimeout(t);
   }, [hasForm]);
 
+  useEffect(() => {
+    if (!serverSubmitted) return;
+    const t = window.setTimeout(() => {
+      document.getElementById("intake-form-frame")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+    return () => window.clearTimeout(t);
+  }, [serverSubmitted]);
+
   const caseCode = session?.caseCode ?? null;
   useEffect(() => {
     if (!caseCode) return;
