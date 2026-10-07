@@ -17,8 +17,8 @@ export const legalEn: LegalContent = {
     metaDescription:
       "How the consultation works, how your data is handled, and what you confirm before filling in the pre-consultation form.",
     intro: [
-      "The form helps Dr Vlad review your situation and understand whether a consultation could be helpful in your case.",
-      "You can describe your complaints, health condition, previous investigations and treatment. After submitting, you may optionally attach medical documents.",
+      "The form helps Dr Vlad review your situation individually and in depth before we meet.",
+      "It is a detailed questionnaire designed for a thorough and personalised assessment. It takes about 15–20 minutes to complete. We recommend filling it out in a quiet environment free from distractions. After submitting, you can also attach your medical records and test results.",
     ],
     access: {
       title: "Confidentiality",
