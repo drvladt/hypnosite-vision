@@ -1,6 +1,8 @@
-// Google tag (GA4 + Google Ads). Outside EU/EEA/UK/CH it loads directly;
-// inside those regions it loads only after the visitor accepts the cookie banner.
+// Google tag (GA4 + Google Ads) and Meta Pixel. Outside EU/EEA/UK/CH they load
+// directly; inside those regions they load only after the visitor accepts the
+// cookie banner.
 const MEASUREMENT_ID = "G-M5Y68VX41E";
+const META_PIXEL_ID = "1774467930473821";
 const CONSENT_KEY = "drvlad-cookie-consent";
 export const CONSENT_EVENT = "drvlad-consent-needed";
 
@@ -13,6 +15,7 @@ declare global {
   interface Window {
     dataLayer?: unknown[];
     gtag?: (...args: unknown[]) => void;
+    fbq?: (...args: unknown[]) => void;
   }
 }
 
