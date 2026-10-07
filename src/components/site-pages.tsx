@@ -403,7 +403,8 @@ export function IntakePageView({ locale }: { locale: Locale }) {
         </>
       ) : (
         <div id="intake-form-frame" className="scroll-mt-20">
-        <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:items-start lg:gap-8">
+        <div className={serverSubmitted ? "mx-auto max-w-xl" : "lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:items-start lg:gap-8"}>
+        {!serverSubmitted && (
         <FlowCard>
           {session.caseCode ? (
             <div className="-mx-[38px] overflow-hidden rounded-xl border border-primary/20 sm:-mx-6 sm:rounded-2xl md:mx-0 lg:-mx-8 lg:rounded-none lg:border-x-0">
@@ -424,8 +425,9 @@ export function IntakePageView({ locale }: { locale: Locale }) {
           )}
           <p className="mt-4 text-xs leading-relaxed text-muted-foreground">{page.formNote}</p>
         </FlowCard>
+        )}
 
-        <aside className="mt-6 lg:sticky lg:top-24 lg:mt-10">
+        <aside className={serverSubmitted ? "mt-6" : "mt-6 lg:sticky lg:top-24 lg:mt-10"}>
           <div className="rounded-3xl border border-primary/12 bg-card p-6 shadow-[0_10px_30px_-24px_color-mix(in_oklab,var(--primary)_40%,transparent)] md:p-7">
             <CaseCode label={page.caseLabel} code={session.caseCode} />
 
