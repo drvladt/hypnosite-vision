@@ -17,8 +17,8 @@ export const legalFr: LegalContent = {
     metaDescription:
       "Informations sur la consultation, la confidentialité et le traitement des données personnelles avant de remplir le questionnaire.",
     intro: [
-      "Le questionnaire permet au Dr Vlad d'examiner votre situation au préalable et de déterminer si une consultation pourrait être utile dans votre cas.",
-      "Vous pouvez décrire vos plaintes, votre état de santé, les examens et traitements antérieurs. Après l'envoi, vous pourrez si nécessaire joindre des documents médicaux.",
+      "Le questionnaire permet au Dr Vlad d'étudier votre situation de manière approfondie et personnalisée avant l'échange.",
+      "Il s'agit d'un questionnaire détaillé conçu pour une analyse précise et personnalisée. Prévoyez environ 15 à 20 minutes et remplissez-le au calme, sans vous presser. Après l'envoi, vous pourrez également joindre vos bilans et comptes-rendus médicaux.",
     ],
     access: {
       title: "Confidentialité",
