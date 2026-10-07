@@ -1,6 +1,8 @@
-// Google tag (GA4 + Google Ads). Outside EU/EEA/UK/CH it loads directly;
-// inside those regions it loads only after the visitor accepts the cookie banner.
+// Google tag (GA4 + Google Ads) and Meta Pixel. Outside EU/EEA/UK/CH they load
+// directly; inside those regions they load only after the visitor accepts the
+// cookie banner.
 const MEASUREMENT_ID = "G-M5Y68VX41E";
+const META_PIXEL_ID = "1774467930473821";
 const CONSENT_KEY = "drvlad-cookie-consent";
 export const CONSENT_EVENT = "drvlad-consent-needed";
 
@@ -13,6 +15,7 @@ declare global {
   interface Window {
     dataLayer?: unknown[];
     gtag?: (...args: unknown[]) => void;
+    fbq?: (...args: unknown[]) => void;
   }
 }
 
@@ -64,6 +67,32 @@ function loadTag() {
   window.gtag("config", MEASUREMENT_ID, { send_page_view: false });
 }
 
+/** Meta Pixel (Facebook) — standard snippet, loaded only when consent allows. */
+function loadMetaPixel() {
+  const w = window as unknown as Record<string, unknown>;
+  if (w["fbq"]) return;
+  const queue: unknown[][] = [];
+  const fbq = (...args: unknown[]) => {
+    if ((fbq as unknown as { callMethod?: unknown }).callMethod) {
+      (fbq as unknown as { callMethod: (...a: unknown[]) => void }).callMethod(...args);
+    } else {
+      queue.push(args);
+    }
+  };
+  const n = fbq as unknown as { push?: unknown; loaded?: boolean; version?: string; queue?: unknown[][] };
+  n.push = fbq;
+  n.loaded = true;
+  n.version = "2.0";
+  n.queue = queue;
+  w["fbq"] = fbq;
+  w["_fbq"] = fbq;
+  const t = document.createElement("script");
+  t.async = true;
+  t.src = "https://connect.facebook.net/en_US/fbevents.js";
+  document.head.appendChild(t);
+  fbq("init", META_PIXEL_ID);
+}
+
 export function initAnalytics(): Promise<boolean> {
   if (started) return started;
   const attempt = (async () => {
@@ -75,6 +104,7 @@ export function initAnalytics(): Promise<boolean> {
       return false;
     }
     loadTag();
+    loadMetaPixel();
     return true;
   })();
   started = attempt;
@@ -110,4 +140,5 @@ export async function trackPageView(path: string) {
     page_path: path,
     page_location: window.location.origin + path,
   });
+  window.fbq?.("track", "PageView");
 }

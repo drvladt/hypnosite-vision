@@ -30,7 +30,7 @@ export const legalConfig = {
   publicContactEmail: contactEmail as string | null,
   /** Confirmed by Dr Vlad: 25.09.2026. */
   effectiveDate: "25.09.2026" as string | null,
-  privacyVersion: "1.0",
+  privacyVersion: "1.1",
   consentVersion: "1.0",
   termsVersion: "1.0",
   /** Hosting: Lovable (edge deployment on Cloudflare infrastructure). */
