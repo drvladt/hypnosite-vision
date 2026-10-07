@@ -18,6 +18,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as LocaleSlugRouteImport } from './routes/$locale/$slug'
 import { Route as ApiPublicCaseStatusRouteImport } from './routes/api/public/case-status'
 import { Route as ApiPublicCreateCaseRouteImport } from './routes/api/public/create-case'
+import { Route as ApiPublicMetaEventRouteImport } from './routes/api/public/meta-event'
 import { Route as ApiPublicUploadDocumentRouteImport } from './routes/api/public/upload-document'
 
 const IndexRoute = IndexRouteImport.update({
@@ -65,6 +66,11 @@ const ApiPublicCreateCaseRoute = ApiPublicCreateCaseRouteImport.update({
   path: '/api/public/create-case',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicMetaEventRoute = ApiPublicMetaEventRouteImport.update({
+  id: '/api/public/meta-event',
+  path: '/api/public/meta-event',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiPublicUploadDocumentRoute = ApiPublicUploadDocumentRouteImport.update({
   id: '/api/public/upload-document',
   path: '/api/public/upload-document',
@@ -81,6 +87,7 @@ export interface FileRoutesByFullPath {
   '/$locale/$slug': typeof LocaleSlugRoute
   '/api/public/case-status': typeof ApiPublicCaseStatusRoute
   '/api/public/create-case': typeof ApiPublicCreateCaseRoute
+  '/api/public/meta-event': typeof ApiPublicMetaEventRoute
   '/api/public/upload-document': typeof ApiPublicUploadDocumentRoute
 }
 export interface FileRoutesByTo {
@@ -93,6 +100,7 @@ export interface FileRoutesByTo {
   '/$locale/$slug': typeof LocaleSlugRoute
   '/api/public/case-status': typeof ApiPublicCaseStatusRoute
   '/api/public/create-case': typeof ApiPublicCreateCaseRoute
+  '/api/public/meta-event': typeof ApiPublicMetaEventRoute
   '/api/public/upload-document': typeof ApiPublicUploadDocumentRoute
 }
 export interface FileRoutesById {
@@ -106,6 +114,7 @@ export interface FileRoutesById {
   '/$locale/$slug': typeof LocaleSlugRoute
   '/api/public/case-status': typeof ApiPublicCaseStatusRoute
   '/api/public/create-case': typeof ApiPublicCreateCaseRoute
+  '/api/public/meta-event': typeof ApiPublicMetaEventRoute
   '/api/public/upload-document': typeof ApiPublicUploadDocumentRoute
 }
 export interface FileRouteTypes {
@@ -120,6 +129,7 @@ export interface FileRouteTypes {
     | '/$locale/$slug'
     | '/api/public/case-status'
     | '/api/public/create-case'
+    | '/api/public/meta-event'
     | '/api/public/upload-document'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -132,6 +142,7 @@ export interface FileRouteTypes {
     | '/$locale/$slug'
     | '/api/public/case-status'
     | '/api/public/create-case'
+    | '/api/public/meta-event'
     | '/api/public/upload-document'
   id:
     | '__root__'
@@ -144,6 +155,7 @@ export interface FileRouteTypes {
     | '/$locale/$slug'
     | '/api/public/case-status'
     | '/api/public/create-case'
+    | '/api/public/meta-event'
     | '/api/public/upload-document'
   fileRoutesById: FileRoutesById
 }
@@ -157,6 +169,7 @@ export interface RootRouteChildren {
   LocaleSlugRoute: typeof LocaleSlugRoute
   ApiPublicCaseStatusRoute: typeof ApiPublicCaseStatusRoute
   ApiPublicCreateCaseRoute: typeof ApiPublicCreateCaseRoute
+  ApiPublicMetaEventRoute: typeof ApiPublicMetaEventRoute
   ApiPublicUploadDocumentRoute: typeof ApiPublicUploadDocumentRoute
 }
 
@@ -225,6 +238,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicCreateCaseRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/meta-event': {
+      id: '/api/public/meta-event'
+      path: '/api/public/meta-event'
+      fullPath: '/api/public/meta-event'
+      preLoaderRoute: typeof ApiPublicMetaEventRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/upload-document': {
       id: '/api/public/upload-document'
       path: '/api/public/upload-document'
@@ -245,6 +265,7 @@ const rootRouteChildren: RootRouteChildren = {
   LocaleSlugRoute: LocaleSlugRoute,
   ApiPublicCaseStatusRoute: ApiPublicCaseStatusRoute,
   ApiPublicCreateCaseRoute: ApiPublicCreateCaseRoute,
+  ApiPublicMetaEventRoute: ApiPublicMetaEventRoute,
   ApiPublicUploadDocumentRoute: ApiPublicUploadDocumentRoute,
 }
 export const routeTree = rootRouteImport
