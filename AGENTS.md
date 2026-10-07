@@ -11,3 +11,4 @@
 
 - Patient documents upload one file per request to /api/public/upload-document, which streams them into the linked Google Drive (per-Patient-ID folder) and never stores them — keeps medical files out of this app.
 - Patient documents go site route /api/public/upload-document -> own Cloud Function uploadDocument -> Google Drive (no Lovable gateway), so uploads keep working independent of Lovable.
+- Apps Script notifies the site that a questionnaire arrived via POST to the Cloud Function markIntakeSubmitted at https://europe-west1-dr-vlad-website-production.cloudfunctions.net/markIntakeSubmitted, JSON body `{secret, case_id}` (secret read from the script property INTAKE_WEBHOOK_SECRET); the server rejects anything else, so never switch it to a header or a `{code}` body — that is what silently stops the "continue to documents" button.
