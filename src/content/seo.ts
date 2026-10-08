@@ -246,8 +246,6 @@ export function pageStructuredData(
               url: "https://doi.org/10.1186/ISRCTN16573611",
               sameAs: "https://doi.org/10.1186/ISRCTN16573611",
               healthCondition: { "@type": "MedicalCondition", name: "Arterial hypertension" },
-              sponsor: { "@id": graph.organizationId },
-              funder: { "@id": graph.organizationId },
               subjectOf: { "@id": `${pageUrl}#webpage` },
             },
           ]
