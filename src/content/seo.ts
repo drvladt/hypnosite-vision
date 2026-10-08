@@ -231,6 +231,14 @@ export function pageStructuredData(
             position: 1,
             name: "Dr Vlad",
             item: absoluteUrl(siteOrigin, homePath[locale]),
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: title,
+            item: pageUrl,
+          },
+        ],
       },
       ...(page === "research"
         ? [
@@ -250,14 +258,6 @@ export function pageStructuredData(
             },
           ]
         : []),
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: title,
-            item: pageUrl,
-          },
-        ],
-      },
     ],
   });
 }
