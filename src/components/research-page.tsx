@@ -48,7 +48,14 @@ function ProseSection({ section, number }: { section: ResearchSection; number?: 
             <div className="mt-4 space-y-1.5 text-base leading-7 text-foreground/85 md:text-lg md:leading-8">
               <p>
                 <span className="font-semibold text-primary">{section.study.registrationLabel}:</span>{" "}
-                {section.study.registration}
+                <a
+                  href={`https://doi.org/10.1186/${section.study.registration}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-primary underline decoration-gold/60 underline-offset-4 transition-colors hover:text-gold"
+                >
+                  {section.study.registration}
+                </a>
               </p>
               <p>
                 <span className="font-semibold text-primary">ORCID:</span> {section.study.orcid}
