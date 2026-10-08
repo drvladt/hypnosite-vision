@@ -169,39 +169,43 @@ export const homeFr: HomeContent = {
     items: [
       [
         "Faut-il un bilan complet avant la consultation ?",
-        "Non. Vous pouvez remplir le questionnaire avec les informations dont vous disposez déjà. Après les avoir étudiées et après l'entretien, le médecin peut recommander, si nécessaire, des examens complémentaires cliniquement pertinents.",
+        "Non. Vous pouvez remplir le questionnaire avec les données dont vous disposez déjà. Si des examens complémentaires s'avèrent nécessaires, le Dr.\u00a0Vlad vous expliquera lors de la consultation ce qui doit être précisé et pourquoi.",
       ],
       [
-        "Puis-je consulter si un diagnostic cardiovasculaire est déjà posé ?",
-        "Oui. Un diagnostic n'exclut pas l'influence de l'anxiété, du stress, des troubles du sommeil, du mode de vie et d'autres facteurs sur votre état. Le travail intégratif s'ajoute au suivi cardiologique et au traitement nécessaires.",
+        "Pourquoi l'hypnothérapie est-elle une méthode efficace ?",
+        "La plupart des symptômes somatiques liés à l'anxiété — palpitations, extrasystoles, lourdeur à la poitrine ou variations tensionnelles — sont déclenchés par une réponse du système nerveux autonome que la simple logique ou la volonté ne peuvent pas désactiver.\n\nL'hypnothérapie clinique agit directement sur la régulation du système nerveux autonome et les schémas de stress profonds, permettant de dissocier les symptômes physiques de la boucle anxieuse.",
+      ],
+      [
+        "Que se passe-t-il pendant la première consultation ?",
+        "Le Dr.\u00a0Vlad analyse vos antécédents médicaux, vos symptômes, vos bilans antérieurs et votre mode de vie. Cet entretien est entièrement consacré à l'évaluation clinique et à l'élaboration d'un plan de soin adapté ; aucune séance d'hypnose n'a lieu lors de ce premier rendez-vous.",
+      ],
+      [
+        "Que faire si je pense que l'hypnose n'agit pas sur moi ou si j'ai du mal à me détendre ?",
+        "L'hypnothérapie clinique ne repose pas sur un « don particulier pour la transe » ni sur l'extinction du contrôle conscient. Il s'agit d'un processus structuré d'attention focalisée. Les techniques sont adaptées individuellement à l'état de votre système nerveux et à votre réactivité.",
       ],
       [
         "L'approche intégrative signifie-t-elle renoncer aux médicaments ?",
-        "Non. Le Dr. Vlad ne propose pas d'arrêter de vous-même un traitement prescrit ni de remplacer un traitement médical nécessaire par l'hypnothérapie ou des méthodes psychologiques. L'objectif de l'approche intégrative est de réunir les traitements fondés sur les preuves et les méthodes psychothérapeutiques complémentaires dans un plan unique et justifié.",
+        "Non. Le Dr.\u00a0Vlad ne propose pas d'arrêter un traitement prescrit ni de remplacer les soins médicaux indispensables par l'hypnothérapie ou des approches psychologiques. L'objectif est d'associer la médecine fondée sur les preuves et les méthodes thérapeutiques complémentaires dans le cadre d'une approche unifiée et équilibrée.",
       ],
       [
-        "L'hypnothérapie convient-elle à tout le monde ?",
-        "Non. La décision est prise individuellement après l'étude des symptômes, des antécédents, des objectifs et des limites éventuelles. Si l'hypnothérapie ne convient pas, le Dr. Vlad expliquera quelles autres démarches ou formes d'aide envisager.",
+        "Cette approche convient-elle à tout le monde ?",
+        "Elle est particulièrement indiquée en cas de symptômes fonctionnels, d'anxiété, de stress chronique ou de troubles psychosomatiques après un bilan cardiologique qui a écarté toute cause nécessitant une prise en charge urgente.",
       ],
       [
         "L'hypnothérapie est-elle pratiquée pendant la première consultation ?",
-        "Non. La première consultation sert à analyser en détail votre situation et à définir les étapes suivantes. Si l'hypnothérapie peut être utile, Dr. Vlad expliquera séparément quels objectifs elle viserait et comment le travail pourrait être organisé.",
-      ],
-      [
-        "Vais-je perdre le contrôle pendant l'hypnothérapie ?",
-        "Non. L'hypnose clinique non directive n'implique aucune perte de contrôle de soi ni transfert de contrôle à une autre personne. Il s'agit d'un état d'attention focalisée dans lequel la personne reste consciente de ce qui se passe, entend le praticien, conserve sa capacité de décision et peut interrompre la séance à tout moment. Selon l'objectif, l'attention peut être orientée vers les sensations corporelles, les souvenirs ou les réactions émotionnelles.",
+        "Non. La consultation initiale est strictement diagnostique et analytique. Son but est d'évaluer votre situation clinique, d'écarter d'éventuelles contre-indications et de définir une stratégie sûre. Les séances pratiques ne débutent qu'une fois ce cadre établi, si le suivi est indiqué.",
       ],
       [
         "Et si ma situation ne relève pas de votre spécialité ?",
-        "Le Dr. Vlad vous le dira et, dans la mesure où les informations disponibles le permettent, vous orientera : examens complémentaires, prise en charge médicale en présentiel ou autre spécialiste du domaine concerné.",
+        "Si l'analyse montre que votre état nécessite une prise en charge médicale urgente en présentiel, des explorations hospitalières spécifiques ou une autre spécialité, le Dr.\u00a0Vlad vous l'indiquera en toute transparence et précisera le type de spécialiste ou d'évaluation à privilégier.",
       ],
       [
         "Quels documents faut-il préparer ?",
-        "Si vous en disposez, il est nécessaire de préparer vos comptes rendus médicaux, les résultats d'examens et d'analyses de la dernière année, ainsi que la liste de vos traitements avec les posologies.",
+        "Les électrocardiogrammes (ECG) récents, échocardiographies, Holter ECG, bilans sanguins et comptes rendus médicaux sont les plus utiles. Si vous n'en disposez pas, vous pouvez tout de même remplir le questionnaire avec vos données actuelles.",
       ],
       [
         "Combien coûte la suite du travail ?",
-        "La première consultation est gratuite. Si un travail individuel ultérieur est indiqué, le Dr. Vlad expliquera le format recommandé, la durée prévisible et le coût. La décision de continuer vous appartient.",
+        "La consultation initiale est gratuite. Si un suivi individuel est indiqué, le Dr.\u00a0Vlad vous expliquera le format recommandé, la durée estimée et les honoraires. La décision de poursuivre vous appartient entièrement.",
       ],
     ],
   },
