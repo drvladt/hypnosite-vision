@@ -168,7 +168,7 @@ export const homeEn: HomeContent = {
       ],
       [
         "Why is hypnotherapy an effective method?",
-        "Most somatic anxiety symptoms — palpitations, missed beats, chest tightness, or shortness of breath — are triggered by an autonomic stress response that logic and willpower cannot simply switch off.\n\nHypnotherapy works directly with autonomic nervous system regulation and deeply rooted stress patterns, helping decouple physical symptoms from the underlying anxiety loop.",
+        "Most somatic anxiety symptoms — palpitations, missed beats, chest tightness, or shortness of breath — are triggered by an autonomic stress response that logic and willpower cannot simply switch off.\nHypnotherapy works directly with autonomic nervous system regulation and deeply rooted stress patterns, helping decouple physical symptoms from the underlying anxiety loop.",
       ],
       [
         "What happens during the initial consultation?",
