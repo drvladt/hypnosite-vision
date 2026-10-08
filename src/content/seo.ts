@@ -240,6 +240,24 @@ export function pageStructuredData(
           },
         ],
       },
+      ...(page === "research"
+        ? [
+            {
+              "@type": "MedicalTrial",
+              "@id": absoluteUrl(siteOrigin, "/#trial-isrctn16573611"),
+              name: "Integration of Ericksonian Non-Directive Hypnotherapy into the Comprehensive Management of Grade I–II Arterial Hypertension",
+              identifier: {
+                "@type": "PropertyValue",
+                propertyID: "ISRCTN",
+                value: "ISRCTN16573611",
+              },
+              url: "https://doi.org/10.1186/ISRCTN16573611",
+              sameAs: "https://doi.org/10.1186/ISRCTN16573611",
+              healthCondition: { "@type": "MedicalCondition", name: "Arterial hypertension" },
+              subjectOf: { "@id": `${pageUrl}#webpage` },
+            },
+          ]
+        : []),
     ],
   });
 }
