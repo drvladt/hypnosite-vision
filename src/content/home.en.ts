@@ -163,40 +163,44 @@ export const homeEn: HomeContent = {
     title: "Frequently asked questions",
     items: [
       [
-        "Do I need a full check-up before the consultation?",
-        "No. You can complete the questionnaire with the information you already have. After reading it and speaking with you, the doctor may recommend further tests if they are clinically needed.",
+        "Do I need a complete medical workup before the consultation?",
+        "No. You can complete the intake form with the medical data you currently have. If additional examinations are required, Dr. Vlad will explain during the consultation what needs to be clarified and why.",
       ],
       [
-        "Can I come if I already have a cardiac diagnosis?",
-        "Yes. A diagnosis doesn't rule out the influence of anxiety, stress, poor sleep, lifestyle, and other factors on how you feel. Integrative work is done in addition to the cardiology follow-up and treatment you need.",
+        "Why is hypnotherapy an effective method?",
+        "Most somatic anxiety symptoms — palpitations, missed beats, chest tightness, or shortness of breath — are triggered by an autonomic stress response that logic and willpower cannot simply switch off.\n\nHypnotherapy works directly with autonomic nervous system regulation and deeply rooted stress patterns, helping decouple physical symptoms from the underlying anxiety loop.",
       ],
       [
-        "Does an integrative approach mean giving up medication?",
-        "No. Dr. Vlad will never suggest stopping prescribed medication on your own, or replacing necessary medical treatment with hypnotherapy or psychological methods. The aim is to combine the evidence-based treatment you need with complementary psychological methods in one well-founded plan.",
+        "What happens during the initial consultation?",
+        "Dr. Vlad reviews your medical history, symptoms, prior test results, and lifestyle context. The consultation is focused on clinical analysis and creating a clear care roadmap, so no hypnotic induction is conducted during this first session.",
       ],
       [
-        "Is hypnotherapy suitable for everyone?",
-        "No. The decision is made individually, after reviewing your symptoms, medical history, goals, and possible contraindications. If hypnotherapy isn't suitable, Dr. Vlad will explain which other steps or forms of help are suitable for you.",
+        "What if I am not hypnotizable or struggle to relax?",
+        "Clinical hypnotherapy does not rely on a “special trance talent” or completely switching off conscious control. It is a structured process of focused attention. The techniques are individually tailored to your nervous system’s current state and responsiveness.",
       ],
       [
-        "Is hypnotherapy done during the first consultation?",
-        "No. The first consultation is focused on understanding your situation and deciding what to do next. If hypnotherapy may be appropriate, Dr. Vlad will explain how it could be used in your case and discuss the next steps with you.",
+        "Does an integrative approach mean stopping medication?",
+        "No. Dr. Vlad does not recommend discontinuing prescribed medications on your own or replacing essential medical treatment with hypnotherapy or psychological interventions. The purpose of an integrative approach is to combine evidence-based medicine with complementary therapeutic methods within a unified, balanced plan.",
       ],
       [
-        "Will I lose control during hypnotherapy?",
-        "No. During hypnosis, you remain aware of what is happening and stay in control. You can hear and respond to the practitioner, make your own decisions, and stop the session at any time.\u00a0Depending on the purpose of the session, your attention may be focused on physical sensations, thoughts, images, memories, or emotions.",
+        "Is this approach suitable for everyone?",
+        "It is best suited for individuals experiencing functional cardiac symptoms, health anxiety, chronic stress, or psychosomatic conditions where a medical evaluation has not revealed an acute life-threatening cause.",
       ],
       [
-        "What if my situation doesn't match your specialisation?",
-        "Dr. Vlad will tell you so and, as far as the available information allows, will suggest a next step: further tests, in-person medical care, or another specialist in the relevant field.",
+        "Is hypnotherapy conducted during the initial consultation?",
+        "No. The initial consultation is strictly diagnostic and analytical. Its purpose is to understand your clinical picture, rule out contraindications, and formulate a safe, targeted strategy. Practical hypnotherapy sessions, if indicated, begin only after this foundation is established.",
       ],
       [
-        "Which documents should I prepare?",
-        "If you have them, please prepare medical reports, test and investigation results from the past year, and a list of your current medication with dosages.",
+        "What happens if my situation does not match your specialization?",
+        "If the review reveals that your case requires in-person emergency care, specialized hospital diagnostics, or another field of medicine, Dr. Vlad will state this clearly and outline what type of specialist or assessment you should seek.",
+      ],
+      [
+        "What documents should I prepare?",
+        "Recent ECGs, echocardiography reports, 24-hour Holter monitoring data, blood test results, and discharge summaries are most helpful. If you do not have these documents yet, you can still submit the intake questionnaire with what is currently available.",
       ],
       [
         "How much does further work cost?",
-        "The first consultation is free. If further individual work is indicated, Dr. Vlad will explain the recommended format, the likely duration, and the cost. The decision to continue is always yours.",
+        "The initial consultation is free of charge. If further individual work is indicated, Dr. Vlad will explain the recommended format, expected duration, and cost. Any decision to proceed is entirely up to you.",
       ],
     ],
   },
