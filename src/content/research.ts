@@ -60,7 +60,7 @@ export const researchContent: Record<Locale, ResearchContent> = {
           title:
             "Интеграция эриксоновской недирективной гипнотерапии в комплексное ведение артериальной гипертензии I–II степени",
           registrationLabel: "Регистрация",
-          registration: "В процессе",
+          registration: "ISRCTN16573611",
           orcid: "0009-0009-6738-1913",
         },
         callout:
@@ -97,7 +97,7 @@ export const researchContent: Record<Locale, ResearchContent> = {
           title:
             "Integration of Ericksonian Non-Directive Hypnotherapy into the Comprehensive Management of Grade I–II Arterial Hypertension",
           registrationLabel: "Registration",
-          registration: "In progress",
+          registration: "ISRCTN16573611",
           orcid: "0009-0009-6738-1913",
         },
       },
@@ -141,7 +141,7 @@ export const researchContent: Record<Locale, ResearchContent> = {
           title:
             "Intégration de l'hypnothérapie non directive ericksonienne dans la prise en charge globale de l'hypertension artérielle de grades I–II",
           registrationLabel: "Enregistrement",
-          registration: "En cours",
+          registration: "ISRCTN16573611",
           orcid: "0009-0009-6738-1913",
         },
       },
