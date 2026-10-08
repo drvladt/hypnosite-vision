@@ -173,7 +173,7 @@ export const homeFr: HomeContent = {
       ],
       [
         "Pourquoi l'hypnothérapie est-elle une méthode efficace ?",
-        "La plupart des symptômes somatiques liés à l'anxiété — palpitations, extrasystoles, lourdeur à la poitrine ou variations tensionnelles — sont déclenchés par une réponse du système nerveux autonome que la simple logique ou la volonté ne peuvent pas désactiver.\n\nL'hypnothérapie clinique agit directement sur la régulation du système nerveux autonome et les schémas de stress profonds, permettant de dissocier les symptômes physiques de la boucle anxieuse.",
+        "La plupart des symptômes somatiques liés à l'anxiété — palpitations, extrasystoles, lourdeur à la poitrine ou variations tensionnelles — sont déclenchés par une réponse du système nerveux autonome que la simple logique ou la volonté ne peuvent pas désactiver.\nL'hypnothérapie clinique agit directement sur la régulation du système nerveux autonome et les schémas de stress profonds, permettant de dissocier les symptômes physiques de la boucle anxieuse.",
       ],
       [
         "Que se passe-t-il pendant la première consultation ?",
