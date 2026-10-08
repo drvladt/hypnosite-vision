@@ -140,7 +140,7 @@ export const researchContent: Record<Locale, ResearchContent> = {
           label: "À propos de l'étude",
           title:
             "Intégration de l'hypnothérapie non directive ericksonienne dans la prise en charge globale de l'hypertension artérielle de grades I–II",
-          registrationLabel: "Enregistrement",
+          registrationLabel: "Reference de l'étude ",
           registration: "ISRCTN16573611",
           orcid: "0009-0009-6738-1913",
         },
