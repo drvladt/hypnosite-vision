@@ -52,9 +52,9 @@ export const siteRu: SiteContent = {
       eyebrow: "Обо мне",
       title: "Обо мне",
       lead: "Врач-кардиолог и сертифицированный гипнотерапевт.",
-      metaTitle: "Обо мне — Dr. Vlad Tettegah",
+      metaTitle: "Обо мне — Доктор Влад Тетега (Dr. Vlad Tettegah)",
       metaDescription:
-        "Dr. Vlad Tettegah — врач-кардиолог и сертифицированный гипнотерапевт: образование, практика и научная работа.",
+        "Доктор Влад Тетега (Dr. Vlad Tettegah) — врач-кардиолог и сертифицированный гипнотерапевт: образование, практика и научная работа.",
       sections: [
         {
           bullets: [
