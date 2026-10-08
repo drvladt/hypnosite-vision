@@ -59,7 +59,7 @@ export const researchContent: Record<Locale, ResearchContent> = {
           label: "Исследование",
           title:
             "Интеграция эриксоновской недирективной гипнотерапии в комплексное ведение артериальной гипертензии I–II степени",
-          registrationLabel: "Регистрация",
+          registrationLabel: "Номер регистрации",
           registration: "ISRCTN16573611",
           orcid: "0009-0009-6738-1913",
         },
