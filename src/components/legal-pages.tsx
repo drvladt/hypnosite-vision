@@ -9,6 +9,7 @@ import type { LegalBlock, LegalDoc } from "@/content/legal-types";
 import { pagePath, type Locale } from "@/content/locales";
 import { CaseApiNotConfiguredError, createCase } from "@/lib/case-api";
 import { startIntakeSession } from "@/lib/intake-session";
+import { trackEvent } from "@/lib/analytics";
 import { RestoreByCode } from "@/components/site-pages";
 
 
@@ -221,6 +222,7 @@ export function ConsentGatePageView({ locale }: { locale: Locale }) {
     try {
       const result = await createCase(locale, checked);
       startIntakeSession(legalConfig.consentVersion, result.patientId);
+      void trackEvent("generate_lead", { method: "case_creation", language: locale });
       try {
         window.sessionStorage.removeItem(CONSENT_DRAFT_KEY);
       } catch {
