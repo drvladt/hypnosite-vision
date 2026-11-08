@@ -59,11 +59,12 @@ import { LanguageSwitcher } from "@/components/language-switcher";
 import { Button } from "@/components/ui/button";
 import { homeContent } from "@/content/home";
 import { contactEmail, type Locale } from "@/content/locales";
+import { trackEvent } from "@/lib/analytics";
 
-function ConsultationButton({ label, locale, outline = false }: { label: string; locale: Locale; outline?: boolean }) {
+function ConsultationButton({ label, locale, outline = false, place }: { label: string; locale: Locale; outline?: boolean; place: string }) {
   return (
     <Button asChild size="lg" variant={outline ? "outline" : "default"} className="h-12 rounded-full px-6 text-sm shadow-none sm:px-8">
-      <Link to={pagePath(locale, "consultation")}>{label}<MessageCircle aria-hidden="true" /></Link>
+      <Link to={pagePath(locale, "consultation")} onClick={() => void trackEvent("click_review_case", { button_location: place, language: locale })}>{label}<MessageCircle aria-hidden="true" /></Link>
     </Button>
   );
 }
@@ -143,9 +144,9 @@ export function DrVladHome({ locale }: { locale: Locale }) {
               <a key={item.href} className="nav-link" href={item.href} onClick={(e) => handleNavClick(e, item.href)}>{item.label}</a>
             ))}
             <LanguageSwitcher locale={locale} label={c.nav.languageLabel} />
-            <ConsultationButton label={c.nav.bookShort} locale={locale} outline />
+            <ConsultationButton label={c.nav.bookShort} locale={locale} outline place="header" />
           </nav>
-          <div className="flex shrink-0 items-center gap-1 sm:gap-2 2xl:hidden"><div className="hidden lg:block"><ConsultationButton label={c.nav.bookShort} locale={locale} outline /></div>
+          <div className="flex shrink-0 items-center gap-1 sm:gap-2 2xl:hidden"><div className="hidden lg:block"><ConsultationButton label={c.nav.bookShort} locale={locale} outline place="header" /></div>
             <LanguageSwitcher locale={locale} label={c.nav.languageLabel} />
             <Button variant="ghost" size="icon" aria-label={menuOpen ? c.nav.closeMenu : c.nav.openMenu} onClick={() => setMenuOpen((value) => !value)}>
               {menuOpen ? <X /> : <Menu />}
@@ -158,7 +159,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
               {c.nav.items.map((item) => (
                 <a key={item.href} href={item.href} onClick={(e) => handleNavClick(e, item.href)} className="border-b border-border/60 py-3 text-sm">{item.label}</a>
               ))}
-              <div className="pt-4"><ConsultationButton label={c.cta.primary} locale={locale} /></div>
+              <div className="pt-4"><ConsultationButton label={c.cta.primary} locale={locale} place="mobile_menu" /></div>
             </div>
           </nav>
         )}
@@ -173,7 +174,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
               </div>
               <div className="border-l border-gold/40 pl-6">
                 <p className="whitespace-pre-line leading-7 text-foreground/75">{c.hero.lead}</p>
-                <div className="mt-7"><ConsultationButton label={c.cta.primary} locale={locale} /></div>
+                <div className="mt-7"><ConsultationButton label={c.cta.primary} locale={locale} place="hero" /></div>
               </div>
             </div>
             <div className="overflow-hidden rounded-lg bg-primary">
@@ -218,7 +219,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
             </div>
             <div className="mt-9 border-t border-border pt-7 lg:ml-[calc(27.5%+2.5rem)]">
               <p className="max-w-4xl text-lg leading-8 text-foreground/80">{c.concerns.summary}</p>
-              <div className="mt-5 flex flex-col items-start gap-4 sm:flex-row sm:items-center"><Button asChild size="lg" className="h-12 rounded-full bg-primary px-6 text-primary-foreground shadow-none hover:bg-primary/90 sm:px-8"><Link to={pagePath(locale, "consultation")}>{c.cta.primary}<MessageCircle aria-hidden="true" /></Link></Button><span className="text-sm text-muted-foreground">{c.cta.note}</span></div>
+              <div className="mt-5 flex flex-col items-start gap-4 sm:flex-row sm:items-center"><Button asChild size="lg" className="h-12 rounded-full bg-primary px-6 text-primary-foreground shadow-none hover:bg-primary/90 sm:px-8"><Link to={pagePath(locale, "consultation")} onClick={() => void trackEvent("click_review_case", { button_location: "concerns", language: locale })}>{c.cta.primary}<MessageCircle aria-hidden="true" /></Link></Button><span className="text-sm text-muted-foreground">{c.cta.note}</span></div>
             </div>
           </div>
         </section>
@@ -290,7 +291,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
               <div className="mt-5 space-y-4 leading-7 text-foreground/75">{c.about.paragraphs.map((text) => <p key={text}>{text}</p>)}</div>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <Button asChild variant="default" size="lg" className="font-semibold"><Link to={pagePath(locale, "about")}>{c.about.moreAboutLabel}</Link></Button>
-                <Button asChild variant="outline" size="lg" className="font-semibold"><Link to={pagePath(locale, "consultation")}>{c.about.bookLabel}</Link></Button>
+                <Button asChild variant="outline" size="lg" className="font-semibold"><Link to={pagePath(locale, "consultation")} onClick={() => void trackEvent("click_review_case", { button_location: "about", language: locale })}>{c.about.bookLabel}</Link></Button>
               </div>
               <div className="mt-7 rounded-md bg-primary p-7 text-primary-foreground md:p-8"><p id="research" className="eyebrow text-gold-light">{c.about.research.eyebrow}</p><p className="mt-4 max-w-3xl leading-7 text-primary-foreground/78">{c.about.research.text}</p><Link className="mt-5 inline-flex items-center gap-2 border-b border-gold/60 pb-1 text-sm font-semibold text-gold-light transition-colors hover:text-primary-foreground" to={pagePath(locale, "research")}>{c.about.research.linkLabel}<ArrowRight className="size-4" aria-hidden="true" /></Link></div>
             </div>
@@ -327,7 +328,7 @@ export function DrVladHome({ locale }: { locale: Locale }) {
               ))}
             </div>
             <p className="mt-6 max-w-3xl leading-7 text-foreground/75" data-reveal style={{ "--reveal-delay": `${c.steps.items.length * 120}ms` } as React.CSSProperties}>{c.steps.closing}</p>
-            <div className="mt-6" data-reveal style={{ "--reveal-delay": `${(c.steps.items.length + 1) * 120}ms` } as React.CSSProperties}><ConsultationButton label={c.cta.primary} locale={locale} /></div>
+            <div className="mt-6" data-reveal style={{ "--reveal-delay": `${(c.steps.items.length + 1) * 120}ms` } as React.CSSProperties}><ConsultationButton label={c.cta.primary} locale={locale} place="steps" /></div>
           </div>
         </section>
 
