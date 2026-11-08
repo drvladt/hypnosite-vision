@@ -127,6 +127,34 @@ export function setConsent(value: "granted" | "denied") {
   }
 }
 
+/**
+ * Google Analytics custom event (GA4 only — never Meta). Params must be
+ * low-cardinality and non-personal: no Patient ID, no health data.
+ * On flow pages (where page views are disabled) the hit is sent with a
+ * neutral page_location so the sensitive URL never reaches Google.
+ */
+export async function trackEvent(name: "click_review_case" | "generate_lead", params: Record<string, string> = {}) {
+  try {
+    if (!(await initAnalytics())) return;
+    const key = `ga-disable-${MEASUREMENT_ID}`;
+    const w = window as unknown as Record<string, boolean>;
+    const sensitive = SENSITIVE.test(window.location.pathname);
+    const restore = () => {
+      if (sensitive) w[key] = SENSITIVE.test(window.location.pathname);
+    };
+    if (sensitive) w[key] = false;
+    window.gtag?.("event", name, {
+      ...params,
+      ...(sensitive ? { page_location: window.location.origin + "/", page_path: "/" } : {}),
+      event_callback: restore,
+      event_timeout: 2000,
+    });
+    setTimeout(restore, 2500);
+  } catch {
+    /* never affect the site */
+  }
+}
+
 /** Page path only — never query strings or hashes. */
 const SENSITIVE = /^\/(ru|en|fr)\/(konsultatsiya|consultation|anketa|intake|questionnaire|dokumenty|documents)(\/|$)/;
 
